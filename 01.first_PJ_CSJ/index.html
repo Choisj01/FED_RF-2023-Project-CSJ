@@ -83,11 +83,41 @@ a {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+
+    .inbox{
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gnb{
+        
+        height: 100%;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 20px;
+        width: 100%;
+        height: 100%;
+    }
     
 .logo img{
     width: 100px;
     height: 90px;
 
+}
+
+.cont1>.part-box{
+    height: 500px;
+}
+
+.cont2>.part-box{
+    height: 800px;
 }
 
 </style>
@@ -98,7 +128,7 @@ a {
     <!-- 상단영역 -->
     <header class="top-aria">
       <div class="inbox">
-          <div class="part-box">
+          <div class="part-box col-2">
               <!-- 로고박스 -->
               <h1 class="logo">
                   <a href="#">
@@ -106,10 +136,10 @@ a {
                   </a>
               </h1>
           </div>              
-          <div class="part-box">
+          <div class="part-box col-8">
           <!-- 네비게이션 박스 -->
           <nav class="gnb">
-              <ul class="top-menu">
+              <ul class="top-menu menu">
                   <li class="menu m1">
                       <a href="#">Our value</a>
                   </li>
@@ -122,9 +152,12 @@ a {
                   <li class="menu m4">
                       <a href="#">News</a>
                   </li>
+                </ul>
+            </nav>
+            </div>
       <!-- 주문하기, 사이트맵 버튼 -->
-      <div class="part-box">
-          <ul class="last-menu">
+      <div class="part-box col-2">
+          <ul class="last-menu menu">
               <li>
                   <a href="#">주문하기</a>
               </li>
@@ -138,6 +171,25 @@ a {
 
       </div>
   </header>
+
+  <div>
+    <section class="inbox cont1">
+        <div class="part-box col-6">
+
+        </div>
+        <div class="part-box col-6">
+
+        </div>
+    </section>
+  </div>
+
+  <div>
+    <section class="inbox cont2">
+        <div class="part-box col-12">
+
+        </div>
+    </section>
+  </div>
   
   
 </body>
