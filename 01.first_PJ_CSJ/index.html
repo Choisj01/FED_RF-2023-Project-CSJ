@@ -6,6 +6,8 @@
     <title>1차 개인프로젝트_SHAKESHACK</title>
 </head>
 <style>
+/* 폰트 스타일 넣기!!!! */
+
 
 /* 기본 초기화 */
 html,
@@ -59,6 +61,10 @@ ol {
     list-style: none;
 }
 
+/* 초기화 css 끝 */
+
+/* 공통클래스 요소 넣는 css */
+
 /* a 요소 공통 */
 a {
     color: #222;
@@ -106,15 +112,23 @@ a {
         height: 100%;
     }
     
+    /* 상단 네비게이션 바 내 이미지 */
 .logo img{
-    width: 100px;
-    height: 90px;
-
+    width: 80px;
+    height: 72px;
+    padding: 10px;
 }
 
+/* 메인 콘텐츠 영역 */
+
 /* 배너 */
-.cont1>.part-box{
+/* 배너이미지 */
+#banner{
+    background: url(./shackshack/ssimages/main_banner1.jpg) no-repeat center;
     height: 500px;
+}   
+.cont1>.part-box{
+    height: 500px;   
 }
 
 /* 브랜드스토리 */
@@ -129,6 +143,12 @@ a {
 
 /* 뉴스 */
 .cont4>.part-box{
+    height: 500px;
+}
+
+
+/* 하단영역 */
+.cont5>.part-box{
     height: 200px;
 }
 
@@ -185,7 +205,7 @@ a {
 
       </div>
   </header>
-
+<!-- 콘텐츠 영역 -->
   <div id="banner">
     <section class="inbox cont1">
         <div class="part-box col-12">
@@ -197,7 +217,10 @@ a {
 
   <div id="brand-story">
     <section class="inbox cont2">
-        <div class="part-box col-12">
+        <div class="part-box col-6">
+
+        </div>
+        <div class="part-box col-6">
 
         </div>
     </section>
