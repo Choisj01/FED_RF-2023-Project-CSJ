@@ -5,48 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1차 개인프로젝트_SHAKESHACK</title>
 </head>
+<link rel="stylesheet" href="./shackshack/css/reset.css">
 <style>
 /* 폰트 스타일 넣기!!!! */
 
-
-/* 기본 초기화 */
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-dt,
-dd,
-p,
-figure,
-figcaption {
-    margin: 0;
-    padding: 0;
-}
-
-/* ul, ol 순번, 블릿없앰 */
-ul,ol{
-    list-style: none;
-}
-
-/* a 요소 리셋 */
-a{
-    color: #222;
-    text-decoration: none; 
-}
-
-/* heading 요소 글자크기 */
-/* h1,h2,h3,h4,h5,h6{
-    font-size: 100%; */
-    /* 박스 디자인시 글자크기로 인한 
-    영향을 없애기 위한 초기화!! */
-/* } */
 
 /* 공사중 표시 */
 body *{
@@ -136,6 +98,8 @@ a {
 /* 배너이미지 */
 #banner>.inbox>.part-box img{
     /* background-size: 100% 100%; */
+    display: block;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center/cover;
 } 
