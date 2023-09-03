@@ -112,9 +112,10 @@ a {
         height: 100%;
     }
     
-    /* 상단 네비게이션 바 내 이미지 */
+ /* 상단 네비게이션 바 내 이미지 */
+
 .logo img{
-    width: 80px;
+    /* width: 80px; */
     height: 72px;
     padding: 10px;
 }
@@ -122,11 +123,12 @@ a {
 /* 메인 콘텐츠 영역 */
 
 /* 배너 */
-/* 배너이미지 */
 #banner{
-    background: url(./shackshack/ssimages/main_banner1.jpg) no-repeat center;
-    height: 500px;
+   
+    background-size: 100% 100%;
 }   
+/* 배너이미지 */
+
 .cont1>.part-box{
     height: 500px;   
 }
@@ -209,7 +211,9 @@ a {
   <div id="banner">
     <section class="inbox cont1">
         <div class="part-box col-12">
-
+            <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
+            <img src="./shackshack/ssimages/ssbanner3.PNG" alt="배너2">
+            <img src="./shackshack/ssimages/Be-Our-Partner_Hero_Daegu_South-Korea.jpg" alt="배너3">
         </div>
        
     </section>
