@@ -91,11 +91,21 @@ a {
 }
 
 /* 배너 */
-/* #banner{
-    
-   
-   background-size: 100% 100%;
-}    */
+#banner{
+    position: relative; 
+    /* 부모자격 */
+}
+
+.inbox .cont1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 
+.first-banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
 /* 배너이미지 */
 #banner>.inbox>.part-box img{
@@ -107,9 +117,11 @@ a {
 } 
 
 /* 브랜드스토리 */
+/* .brand-story 박스 배경색 */
 #brand-story{
     background-color: #6db33eb6;
 }
+
 .cont2>.part-box{
     height: 500px;
 }
@@ -135,8 +147,6 @@ a {
 .cont5>.part-box{
     height: 200px;
 }
-
-
 
 </style>
 <!-- js구역 -->
@@ -192,7 +202,7 @@ a {
 <!-- 콘텐츠 영역 -->
   <div id="banner">
       <section class="inbox cont1">
-      <div class="part-box col-12">
+      <div class="part-box first-banner col-12">
       <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
            
         </div>
@@ -216,7 +226,7 @@ a {
     </section>
   </div>
   
-  <div id="mmenu">
+  <div id="ss-menu">
     <section class="inbox cont3">
         <div class="part-box col-12">
 
@@ -227,7 +237,6 @@ a {
   <div id="News">
     <section class="inbox cont4">
         <div class="part-box col-12">
-
         </div>
     </section>
   </div>
