@@ -6,26 +6,25 @@
     <title>1차 개인프로젝트_SHAKESHACK</title>
     <!-- 파비콘 첨부 -->
     <link rel="shortcut icon" href="/01.first_PJ_CSJ/shackshack/ssimages/favicon/81429310402b40a2b7389864a8150f33.ico (1)/android-icon-36x36.png" />
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cute+Font&family=Gowun+Dodum&family=Gugi&family=Moirai+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500&family=Poor+Story&display=swap" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="./shackshack/css/reset.css">
 <style>
 /* 폰트 스타일 넣기!!!! */
 
+/*
+ font-family: 'Bagel Fat One', cursive;
+font-family: 'Cute Font', cursive;
+font-family: 'Gowun Dodum', sans-serif;
+font-family: 'Gugi', cursive;
+font-family: 'Moirai One', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Poor Story', cursive; 
+*/
 
-/* 공사중 표시 */
-body *{
-    outline: 2px dashed #777;
-}
 
-/* ul,ol 초기화 : 3無 */
-ul,
-ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* 초기화 css 끝 */
 
 /* 공통클래스 요소 넣는 css */
 
@@ -90,31 +89,16 @@ a {
     height: 500px;   
 }
 
-/* 배너 */
-#banner{
-    position: relative; 
-    /* 부모자격 */
-}
-
-.inbox .cont1{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-} 
-.first-banner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
 
 /* 배너이미지 */
-#banner>.inbox>.part-box img{
-    /* background-size: 100% 100%; */
+#banner > .inbox > .part-box img {
     display: block;
-    width: 100%;
+    width: 100%; /* 이미지를 가로로 화면에 맞추기 */
+    height: auto; /* 이미지의 세로 비율을 자동 조절 */
     background-repeat: no-repeat;
     background-position: center/cover;
-} 
+}
+
 
 /* 브랜드스토리 */
 /* .brand-story 박스 배경색 */
@@ -122,28 +106,58 @@ a {
     background-color: #6db33eb6;
 }
 
+/* 배너 영역박스 세로크기 */
 .cont2>.part-box{
     height: 500px;
 }
 
+.cont2 {
+    position: relative; /* 부모 요소를 relative로 설정 */
+}
+
+
+.pbox{
+    text-align: center;
+}
+
+.cont2 a {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 위쪽 여백 조절 */
+    /* 다른 스타일 속성 추가 가능 */
+    font-size: 20px;
+    color: lightgreen;
+    text-shadow: 1px 1px 15px #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: scale(0.8);
+   
+}
+
+.cont2 a:hover{
+    color: #fff;
+    transform: scale(1);
+   
+}
+
+
+/* 유투브 영상 */
 .video-box iframe{
     width: 100%;
     height: 100%;
     
 }
 
-/* 메뉴소개 */
+/* 메뉴소개박스 세로 크기 */
 .cont3>.part-box{
     height: 500px;
 }
 
-/* 뉴스 */
+/* 뉴스 박스 세로 크기 */
 .cont4>.part-box{
     height: 500px;
 }
 
 
-/* 하단영역 */
+/* 하단영역 박스 세로 크기 */
 .cont5>.part-box{
     height: 200px;
 }
@@ -218,10 +232,8 @@ a {
 
 
         </div>
-        <div class="part-box col-6">
-            <p>SHAKESHACK에 대해 궁금하시다면 여기를 클릭해주세요!</p>
-            <a href="#">더보기</a>
-
+        <div class="part-box pbox col-6">
+            <a href="#" class="innerp-box">SHAKESHACK에 대해 궁금하시다면 여기를 클릭해주세요!</a>
         </div>
     </section>
   </div>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지 제목</title>
+    <style>
+        /* 전체 컨테이너 스타일 */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* 1열로 나눔 */
+            grid-template-rows: auto auto auto auto auto auto;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 네비게이션 스타일 */
+        .navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            grid-row: 1 / 2; /* 1번 행에 배치 */
+        }
+
+        /* 배너 스타일 */
+        .banner {
+            background-image: url('배너 이미지 주소');
+            background-size: cover;
+            height: 300px;
+            grid-row: 2 / 3; /* 2번 행에 배치 */
+        }
+
+        /* 브랜드 스토리 스타일 */
+        .brand-story {
+            background-color: #f4f4f4;
+            padding: 20px;
+            grid-row: 3 / 4; /* 3번 행에 배치 */
+        }
+
+        /* 메뉴 소개 스타일 */
+        .menu-introduction {
+            padding: 20px;
+            grid-row: 4 / 5; /* 4번 행에 배치 */
+        }
+
+        /* 뉴스 스타일 */
+        .news {
+            background-color: #f4f4f4;
+            padding: 20px;
+            grid-row: 5 / 6; /* 5번 행에 배치 */
+        }
+
+        /* 푸터 스타일 */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            grid-row: 6 / 7; /* 6번 행에 배치 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <!-- 네비게이션 내용 추가 -->
+        </div>
+        
+        <div class="banner">
+            <!-- 배너 내용 추가 -->
+        </div>
+        
+        <div class="brand-story">
+            <!-- 브랜드 스토리 내용 추가 -->
+        </div>
+        
+        <div class="menu-introduction">
+            <!-- 메뉴 소개 내용 추가 -->
+        </div>
+        
+        <div class="news">
+            <!-- 뉴스 내용 추가 -->
+        </div>
+        
+        <div class="footer">
+            <!-- 푸터 내용 추가 -->
+        </div>
+    </div>
+</body>
+</html>
