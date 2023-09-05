@@ -71,9 +71,13 @@ width: 100%;
 }
 
 
-/* 브랜드스토리 더보기 a태그 */
+/* 브랜드스토리 파트박스 */
 .pbox{
     text-align: center;
+}
+
+.short-story{
+    font-size: 21px;
 }
 
 .cont2 a {
