@@ -84,9 +84,12 @@ a {
 }
 
 /* 메인 콘텐츠 영역 */
-
+.cont1{
+    width: 100%;
+}
 .cont1>.part-box{
-    height: 500px;   
+height: 500px;   
+width: 100%;
 }
 
 
@@ -94,7 +97,7 @@ a {
 #banner > .inbox > .part-box img {
     display: block;
     width: 100%; /* 이미지를 가로로 화면에 맞추기 */
-    height: auto; /* 이미지의 세로 비율을 자동 조절 */
+    height: 100%; /* 이미지의 세로 비율을 자동 조절 */
     background-repeat: no-repeat;
     background-position: center/cover;
 }
@@ -106,9 +109,12 @@ a {
     background-color: #6db33eb6;
 }
 
-/* 배너 영역박스 세로크기 */
+/* 배너  세로크기 */
 .cont2>.part-box{
     height: 500px;
+}
+#banner{
+    position: relative;
 }
 
 .cont2 {
@@ -122,7 +128,6 @@ a {
 
 .cont2 a {
     text-align: center; /* 가운데 정렬 */
-    margin-top: 20px; /* 위쪽 여백 조절 */
     /* 다른 스타일 속성 추가 가능 */
     font-size: 20px;
     color: lightgreen;
@@ -215,13 +220,16 @@ a {
   </header>
 <!-- 콘텐츠 영역 -->
   <div id="banner">
-      <section class="inbox cont1">
-      <div class="part-box first-banner col-12">
-      <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
-           
-        </div>
-       
-    </section>
+    <div class="cont1">
+        <section class="">
+            <div class="part-box first-banner col-12">
+            <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
+                 
+              </div>
+             
+          </section>
+    </div>
+      
   </div>
 
   <div id="brand-story">
