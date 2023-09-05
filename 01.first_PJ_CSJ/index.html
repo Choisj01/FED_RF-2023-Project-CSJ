@@ -10,166 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cute+Font&family=Gowun+Dodum&family=Gugi&family=Moirai+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500&family=Poor+Story&display=swap" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="./shackshack/css/reset.css">
-<style>
-/* 폰트 스타일 넣기!!!! */
+<link rel="stylesheet" href="./shackshack/css/common.css">
+<link rel="stylesheet" href="./shackshack/css/main.css">
 
-/*
- font-family: 'Bagel Fat One', cursive;
-font-family: 'Cute Font', cursive;
-font-family: 'Gowun Dodum', sans-serif;
-font-family: 'Gugi', cursive;
-font-family: 'Moirai One', cursive;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Noto Sans KR', sans-serif;
-font-family: 'Poor Story', cursive; 
-*/
-
-
-
-/* 공통클래스 요소 넣는 css */
-
-/* a 요소 공통 */
-a {
-    color: #222;
-
-    text-decoration: none;
-  }
-
-  body>div,body>div>*{
-    outline: 2px dashed blue;
-  }
-
-  /* 12 그리드 클래스 : 한줄에 합이 12컬럼이 되도록 셋팅! */
-  .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-
-
-    .inbox{
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .gnb{
-        
-        height: 100%;
-    }
-
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0 20px;
-        width: 100%;
-        height: 100%;
-    }
-    
- /* 상단 네비게이션 바 내 이미지 */
-
-.logo img{
-    /* width: 80px; */
-    height: 72px;
-    padding: 10px;
-}
-
-/* 메인 콘텐츠 영역 */
-.cont1{
-    width: 100%;
-}
-.cont1>.part-box{
-height: 500px;   
-width: 100%;
-}
-
-
-/* 배너이미지 */
-#banner > .inbox > .part-box img {
-    display: block;
-    width: 100%; /* 이미지를 가로로 화면에 맞추기 */
-    height: 100%; /* 이미지의 세로 비율을 자동 조절 */
-    background-repeat: no-repeat;
-    background-position: center/cover;
-}
-
-
-/* 브랜드스토리 */
-/* .brand-story 박스 배경색 */
-#brand-story{
-    background-color: #6db33eb6;
-}
-
-/* 배너  세로크기 */
-.cont2>.part-box{
-    height: 500px;
-}
-#banner{
-    position: relative;
-}
-
-.cont2 {
-    position: relative; /* 부모 요소를 relative로 설정 */
-}
-
-
-.pbox{
-    text-align: center;
-}
-
-.cont2 a {
-    text-align: center; /* 가운데 정렬 */
-    /* 다른 스타일 속성 추가 가능 */
-    font-size: 20px;
-    color: lightgreen;
-    text-shadow: 1px 1px 15px #000;
-    font-family: 'Noto Sans KR', sans-serif;
-    transform: scale(0.8);
-   
-}
-
-.cont2 a:hover{
-    color: #fff;
-    transform: scale(1);
-   
-}
-
-
-/* 유투브 영상 */
-.video-box iframe{
-    width: 100%;
-    height: 100%;
-    
-}
-
-/* 메뉴소개박스 세로 크기 */
-.cont3>.part-box{
-    height: 500px;
-}
-
-/* 뉴스 박스 세로 크기 */
-.cont4>.part-box{
-    height: 500px;
-}
-
-
-/* 하단영역 박스 세로 크기 */
-.cont5>.part-box{
-    height: 200px;
-}
-
-</style>
 <!-- js구역 -->
-<script></script>
+<script>
+
+</script>
 
 <body>
     <!-- 상단영역 -->
@@ -187,16 +34,16 @@ width: 100%;
           <!-- 네비게이션 박스 -->
           <nav class="gnb">
               <ul class="top-menu menu">
-                  <li class="menu m1">
+                  <li class="menu menu1 m1">
                       <a href="#">Our value</a>
                   </li>
-                  <li class="menu m2">
+                  <li class="menu menu1 m2">
                       <a href="#">Menu</a>
                   </li>
-                  <li class="menu m3">
+                  <li class="menu menu1 m3">
                       <a href="#">Locations</a>
                   </li>
-                  <li class="menu m4">
+                  <li class="menu menu1 m4">
                       <a href="#">News</a>
                   </li>
                 </ul>
@@ -205,13 +52,11 @@ width: 100%;
       <!-- 주문하기, 사이트맵 버튼 -->
       <div class="part-box col-2">
           <ul class="last-menu menu">
-              <li>
+              <li class="order menu1">
                   <a href="#">주문하기</a>
               </li>
-              <li>
-                  <a href="">사이트맵
-
-                  </a>
+              <li class="full-menu menu1">
+                  <a href="#">전체메뉴탭</a>
                 
               </li>
           </ul>
@@ -219,33 +64,35 @@ width: 100%;
       </div>
   </header>
 <!-- 콘텐츠 영역 -->
+<!-- 배너영역 -->
   <div id="banner">
-    <div class="cont1">
-        <section class="">
+        <section class="inbox cont1">
             <div class="part-box first-banner col-12">
-            <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
+                <img src="./shackshack/ssimages/main_banner1.jpg" alt="배너1">
                  
-              </div>
+            </div>
              
-          </section>
-    </div>
+        </section>
       
   </div>
-
+<!-- 브랜드 스토리 영역 -->
   <div id="brand-story">
     <section class="inbox cont2">
+        <!-- 유튜브 동영상 -->
         <div class="part-box video-box col-6">
             <iframe src="https://www.youtube.com/embed/wSOZObcqQrU" title="[🎁댓글 이벤트] SHAKE SHACK KOREA BRAND FILM 쉐이크쉑 코리아 브랜드 필름">
             </iframe>
 
 
         </div>
+        <!-- 브랜드 스토리 보러가기 -->
         <div class="part-box pbox col-6">
             <a href="#" class="innerp-box">SHAKESHACK에 대해 궁금하시다면 여기를 클릭해주세요!</a>
         </div>
     </section>
   </div>
   
+  <!-- 메인페이지 메뉴소개 영역 -->
   <div id="ss-menu">
     <section class="inbox cont3">
         <div class="part-box col-12">
@@ -253,14 +100,14 @@ width: 100%;
         </div>
     </section>
   </div>
-
+<!-- 뉴스 영역 -->
   <div id="News">
     <section class="inbox cont4">
         <div class="part-box col-12">
         </div>
     </section>
   </div>
-
+<!-- 하단 영역 -->
   <div id="footer">
     <section class="inbox cont5">
         <div class="part-box col-12">

@@ -1,6 +1,6 @@
 @charset "ut-8f";
 
-/* 1차 개인 PJ - reset.css  */
+/* 1차 개인 PJ index.html의 리셋 css - reset.css  */
 
 /* 기본 초기화 */
 html,
@@ -40,3 +40,7 @@ a{
     /* 박스 디자인시 글자크기로 인한 
     영향을 없애기 위한 초기화!! */
 /* } */
+
+body>div,body>div>*{
+    outline: 2px dashed blue;
+  }
