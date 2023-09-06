@@ -21,6 +21,7 @@
  /* 로고 이미지 */
 
 .logo img{
+  
     /* width: 80px; */
     height: 72px;
     padding: 10px 118px;
@@ -33,8 +34,9 @@
     width: 100%;
 }
 
+/* 배너 박스 세로 크기 */
 .cont1>.part-box{
-height: 500px;   
+height: 700px;   
 width: 100%;
 }
 
@@ -49,7 +51,7 @@ width: 100%;
 }
 
 
-/* 배너  세로크기 */
+/* 브랜드스토리  세로크기 */
 .cont2>.part-box{
     height: 500px;
 }
@@ -108,7 +110,7 @@ width: 100%;
 
 /* 메뉴소개박스 세로 크기 */
 .cont3>.part-box{
-    height: 500px;
+    height: 700px;
 }
 
 /* 뉴스 박스 세로 크기 */
