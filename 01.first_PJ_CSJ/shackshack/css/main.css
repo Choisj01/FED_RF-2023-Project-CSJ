@@ -1,125 +1,149 @@
 @charset "utf-8";
 /* 개인 1차 프로젝트 index.html 메인css-main.css */
 
-   /**************** 개별  css ***********************/
-    /* 네비게이션 박스 */
-    .gnb{
-        
-        height: 100%;
-        
-    }
-
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0 20px;
-        width: 100%;
-        height: 100%;
-    }
-    
- /* 로고 이미지 */
-
-.logo img{
-  
-    /* width: 80px; */
-    height: 72px;
-    padding: 10px 118px;
+/**************** 개별  css ***********************/
+/* 네비게이션 박스 */
+.gnb {
+  height: 100%;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 40px;
+  /* width: 100%; */
+  height: 100%;
+}
 
+/* 로고 이미지 */
+
+.logo img {
+  /* width: 80px; */
+  height: 72px;
+  padding: 10px 118px;
+}
 
 /****************** 메인 콘텐츠 영역 *********************/
-.cont1{
-    width: 100%;
+.cont1 {
+  width: 100%;
 }
 
 /* 배너 박스 세로 크기 */
-.cont1>.part-box{
-height: 700px;   
-width: 100%;
+.cont1 > .part-box {
+  position: relative;
+  /* 부모자격 */
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 21/9;
 }
-
 
 /* 배너이미지 */
-#banner > .inbox > .part-box img {
-    display: block;
-    width: 100%; /* 이미지를 가로로 화면에 맞추기 */
-    height: 100%; /* 이미지의 세로 비율을 자동 조절 */
-    background-repeat: no-repeat;
-    background-position: center/cover;
+#bannerwwww > .inbox > .part-box img {
+  display: block;
+  width: 100%; /* 이미지를 가로로 화면에 맞추기 */
+  height: 100%; /* 이미지의 세로 비율을 자동 조절 */
+  object-fit: cover;
+  /* background-repeat: no-repeat;
+    background-position: center/cover; */
 }
 
+#slide {
+  display: flex;
+  /* 플렉스박스!!! */
+
+  /*사진을 싸고 있는 슬라이드*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#slide li {
+  flex-shrink: 0;
+  /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+  flex-basis: 100%;
+  /* 가로크기를 부모박스 크기에 맞춤! */
+  /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+}
+
+#slide li img {
+  /*이미지는 박스에 맞춤!*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 이미지 비율유지 채우기! */
+}
 
 /* 브랜드스토리  세로크기 */
-.cont2>.part-box{
-    height: 500px;
+.cont2 > .part-box {
+  height: 500px;
 }
-#banner{
-    position: relative;
+#banner {
+  position: relative;
 }
-#banner.inbox{
-    width: 100%;
+#banner.inbox {
+  width: 100%;
 }
-
 
 .cont2 {
-    position: relative; /* 부모 요소를 relative로 설정 */
+  position: relative; /* 부모 요소를 relative로 설정 */
 }
 
 /* 브랜드스토리 */
 /* .brand-story 박스 배경색 */
-#brand-story{
-    background-color: #6db33eb6;
+#brand-story {
+  background-color: #6db33eb6;
 }
-
 
 /* 브랜드스토리 파트박스 */
-.pbox{
-    text-align: center;
+.pbox {
+  text-align: center;
 }
 
-.short-story{
+.short-story {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
     font-size: 21px;
+    margin: 0 auto;
 }
 
 .cont2 a {
-    text-align: center; /* 가운데 정렬 */
-    /* 다른 스타일 속성 추가 가능 */
-    font-size: 20px;
-    color: lightgreen;
-    text-shadow: 1px 1px 15px #000;
-    font-family: 'Noto Sans KR', sans-serif;
-    transform: scale(0.8);
-   
+  text-align: center; /* 가운데 정렬 */
+  /* 다른 스타일 속성 추가 가능 */
+  font-size: 20px;
+  color: lightgreen;
+  text-shadow: 1px 1px 15px #000;
+  font-family: "Noto Sans KR", sans-serif;
+  transform: scale(0.8);
 }
 
-.cont2 a:hover{
-    color: #fff;
-    transform: scale(1);
-   
+.cont2 a:hover {
+  color: #fff;
+  transform: scale(1);
 }
-
 
 /* 유투브 영상 */
-.video-box iframe{
-    width: 100%;
-    height: 100%;
-    
+.video-box iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* 메뉴소개박스 세로 크기 */
-.cont3>.part-box{
-    height: 700px;
+.cont3 > .part-box {
+  height: 700px;
 }
 
 /* 뉴스 박스 세로 크기 */
-.cont4>.part-box{
-    height: 500px;
+.cont4 > .part-box {
+  height: 500px;
 }
 
-
 /* 하단영역 박스 세로 크기 */
-.cont5>.part-box{
-    height: 200px;
+.cont5 > .part-box {
+  height: 200px;
 }
