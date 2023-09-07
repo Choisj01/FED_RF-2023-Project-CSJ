@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SHAKESHACK</title>
+        <!-- 파비콘 첨부 -->
+    <link rel="shortcut icon" href="/01.first_PJ_CSJ/shackshack/ssimages/favicon/81429310402b40a2b7389864a8150f33.ico (1)/android-icon-36x36.png" />
         <!-- css영역 -->
         <style>
             /* 기본 초기화 */
@@ -39,11 +41,16 @@
                 text-decoration: none;
             }
 
+            /* 공사중 */
+            body * {
+                outline: 2px dashed blue;
+            }
+
             /* heading 요소 글자크기 */
             /* h1,h2,h3,h4,h5,h6{
-    font-size: 100%; */
-            /* 박스 디자인시 글자크기로 인한 
-    영향을 없애기 위한 초기화!! */
+                font-size: 100%; */
+            /* 박스 디자인시 글자크기로 인한
+                영향을 없애기 위한 초기화!! */
             /* } */
 
             /* 12 그리드 클래스 : 한줄에 합이 12컬럼이 되도록 셋팅! */
@@ -83,6 +90,52 @@
             .col-12 {
                 width: 100%;
             }
+
+            /* 네비게이션 겉박스 */
+            .top-aria {
+                /* 높이값으로 박스 범위 지정 */
+                height: 100px;
+            }
+            header.top {
+                /* 옆으로 흐르게 플렉스 박스 줌 */
+                display: flex;
+                /* 중앙위치 */
+                justify-content: center;
+                align-items: center;
+                /* 겉박스와 높이크기 동일하게 조정 */
+                height: 100px;
+            }
+
+            /* 로고 이미지 박스 위치조정 */
+            .logo-part {
+                text-align: center;
+                position: relative;
+                /* 부모자격 */
+            }
+            h1.logo {
+                /* 로고 이미지 위치 정렬 */
+
+                position: absolute;
+                top: -29px;
+                left: 180px;
+            }
+            /* 네비게이션 메뉴들 ul 플렉스 박스 정렬1 */
+            .gnb > ul {
+                display: flex;
+                gap: 0 42px;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            /* 네비게이션 메뉴들 ul 플렉스 박스 정렬2 */
+            .etc-menu > ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0 34px;
+            }
+
+            
         </style>
 
         <!-- js -->
