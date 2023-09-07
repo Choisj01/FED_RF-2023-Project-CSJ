@@ -82,7 +82,7 @@
 .cont2 > .part-box {
     height: 500px;
     text-align: center;
-    margin: 10px 0;
+    margin: 50px 0;
     line-height: 41px;
 }
 #banner {
@@ -139,7 +139,7 @@
     border-radius: 20%;
 }
 .video-box iframe {
-    width: 80%;
+    width: 68%;
     height: 100%;
     border: none;
 }
@@ -150,7 +150,9 @@
 }
 
 .menu-intro ul{
-    display: flex;
+  display: flex;
+  justify-content: center;
+  gap: 0 57px;
     
 }
 
