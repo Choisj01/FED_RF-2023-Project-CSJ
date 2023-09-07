@@ -150,10 +150,13 @@
 }
 
 .menu-intro ul{
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 0 57px;
     
+}
+.menu-intro>ul>li{
+  width: 25%;
 }
 
 /* 뉴스 박스 세로 크기 */
