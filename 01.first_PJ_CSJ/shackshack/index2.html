@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SHAKESHACK</title>
         <!-- 파비콘 첨부 -->
-    <link rel="shortcut icon" href="/01.first_PJ_CSJ/shackshack/ssimages/favicon/81429310402b40a2b7389864a8150f33.ico (1)/android-icon-36x36.png" />
+        <link
+            rel="shortcut icon"
+            href="/01.first_PJ_CSJ/shackshack/ssimages/favicon/81429310402b40a2b7389864a8150f33.ico (1)/android-icon-36x36.png"
+        />
         <!-- css영역 -->
         <style>
             /* 기본 초기화 */
@@ -126,7 +129,7 @@
                 justify-content: center;
                 align-items: center;
             }
-            
+
             /* 네비게이션 메뉴들 ul 플렉스 박스 정렬2 */
             .etc-menu > ul {
                 display: flex;
@@ -135,18 +138,108 @@
                 gap: 0 34px;
             }
 
-            
+            #banner {
+                position: relative;
+            }
+            #banner.inbox {
+                width: 100%;
+            }
+
+            .cont1 {
+                width: 100%;
+            }
+
+            /* 배너 박스 세로 크기 */
+            .cont1 > .part-box {
+                position: relative;
+                /* 부모자격 */
+                overflow: hidden;
+                width: 100%;
+                aspect-ratio: 19/6;
+            }
+
+            /* 배너이미지 */
+            #bannerwwww > .inbox > .part-box img {
+                display: block;
+                width: 100%; /* 이미지를 가로로 화면에 맞추기 */
+                height: 100%; /* 이미지의 세로 비율을 자동 조절 */
+                object-fit: cover;
+                /* background-repeat: no-repeat;
+    background-position: center/cover; */
+            }
+
+            #slide {
+                display: flex;
+                /* 플렉스박스!!! */
+
+                /*사진을 싸고 있는 슬라이드*/
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            #slide li {
+                flex-shrink: 0;
+                /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+                flex-basis: 100%;
+                /* 가로크기를 부모박스 크기에 맞춤! */
+                /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+            }
+
+            #slide li img {
+                /*이미지는 박스에 맞춤!*/
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* 이미지 비율유지 채우기! */
+            }
         </style>
 
         <!-- js -->
-        <script></script>
+        <script>
+            // DOM 선택함수
+            const qs = (x) => document.querySelector(x);
+            const qsa = (x) => document.querySelectorAll(x);
+
+            // addEvent 함수
+            // ele - 요소, evt - 이벤트, fn - 함수
+            const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
+
+            window.addEventListener("load", () => {
+                // 변경 대상: #slide
+                const slide = qs("#slide");
+
+                setInterval(() => {
+                    // 2. 슬라이드 li 새로 읽기
+                    let eachOne = slide.querySelectorAll("li");
+
+                    //1.대상이동하기
+                    slide.style.left = "-100%";
+                    //2.트랜지션주기
+                    slide.style.transition = ".4s ease-in-out";
+                    // 이동시간 후 맨앞li 잘라서 맨뒤로 이동하기
+                    // appendChild(요소)
+                    setTimeout(() => {
+                        // 3.맨앞li 맨뒤로 이동
+                        slide.appendChild(eachOne[0]);
+                        // 4.slide left값 0
+                        slide.style.left = "0";
+                        // 5.트랜지션 없애기
+                        slide.style.transition = "none";
+                    }, 400);
+                }, 3000); //////// 인터발함수 /////////////
+            }); ////////////// 로드구역 ////////////////
+        </script>
     </head>
 
     <body>
-        <!-- 네비게이션 -->
+        <!-- 1.네비게이션 -->
         <div id="top-aria">
             <header class="top inbox">
-                <!-- 1. 로고파트 -->
+                <!-- 1-1. 로고파트 -->
                 <div class="logo-part col-2">
                     <h1 class="logo">
                         <a href="#">
@@ -154,7 +247,7 @@
                         </a>
                     </h1>
                 </div>
-                <!-- 2. 네비파트 -->
+                <!-- 1-2. 네비파트 -->
                 <div class="nav-part col-8">
                     <nav class="gnb">
                         <ul>
@@ -183,8 +276,21 @@
                 </div>
             </header>
         </div>
-        <!-- 3. 배너파트 -->
-        <div></div>
+        <!-- 2. 배너파트 -->
+        <div id="banner">
+            <section class="inbox cont1">
+                <div class="part-box first-banner col-12">
+                    <!--슬라이드-->
+                    <ul id="slide">
+                        <li><img src="../shackshack/ssimages/main1.jpg" alt="slide" /></li>
+                        <li><img src="../shackshack/ssimages/main_banner1.jpg" alt="slide" /></li>
+                        <li>
+                            <img src="../shackshack/ssimages/Be-Our-Partner_Hero_Daegu_South-Korea.jpg" alt="slide" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
         <!-- 4. 브랜드 스토리 파트 -->
         <div></div>
         <!-- 5. 메뉴 파트 -->
