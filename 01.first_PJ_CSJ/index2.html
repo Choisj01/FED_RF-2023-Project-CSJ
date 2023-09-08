@@ -5,18 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SHAKESHACK</title>
         <!-- 파비콘 첨부 -->
-        <!-- <link
-            rel="shortcut icon"
-            href="/01.first_PJ_CSJ/shackshack/ssimages/favicon/81429310402b40a2b7389864a8150f33.ico (1)/android-icon-36x36.png"
-        /> -->
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
             href="http://www.shakeshack.kr/resources/images/favicon_io/favicon-32x32.png"
         />
+        <!-- 폰트 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cute+Font&family=Gowun+Dodum&family=Gugi&family=Moirai+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500&family=Poor+Story&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- css영역 -->
         <style>
+            /***************************** 폰트 스타일 넣기!!!! ****************************/
+
+            /*
+                   font-family: 'Bagel Fat One', cursive;
+                  font-family: 'Cute Font', cursive;
+                  font-family: 'Gowun Dodum', sans-serif;
+                  font-family: 'Gugi', cursive;
+                  font-family: 'Moirai One', cursive;
+                  font-family: 'Nanum Gothic', sans-serif;
+                  font-family: 'Noto Sans KR', sans-serif;
+                  font-family: 'Poor Story', cursive; 
+                  */
+
             /* 기본 초기화 */
             html,
             body,
@@ -99,7 +114,7 @@
             .col-12 {
                 width: 100%;
             }
-
+            /****************************** 상단영역 ******************************/
             /* 네비게이션 겉박스 */
             .top-aria {
                 /* 높이값으로 박스 범위 지정 */
@@ -120,6 +135,7 @@
                 text-align: center;
                 position: relative;
                 /* 부모자격 */
+                left: 140px;
             }
             h1.logo {
                 /* 로고 이미지 위치 정렬 */
@@ -144,6 +160,16 @@
                 gap: 0 34px;
             }
 
+            .menu{
+                /* 네비게이션 메뉴 공통 폰트 설정 */
+                font-size: 17px;
+                font-family: 'Gowun Dodum', sans-serif;
+                font-weight: bold;
+            }
+
+
+
+            /***************** 배너파트 ************************/
             #banner {
                 position: relative;
             }
@@ -218,7 +244,7 @@
                 align-items: center;
             }
             /* 아이프레임 크기조정 */
-            .video-box>iframe {
+            .video-box > iframe {
                 width: 100%;
                 height: 100%;
             }
@@ -270,7 +296,7 @@
         <div id="top-aria">
             <header class="top inbox">
                 <!-- 1-1. 로고파트 -->
-                <div class="logo-part col-2">
+                <div class="logo-part col-3">
                     <h1 class="logo">
                         <a href="#">
                             <img src="./shackshack/ssimages/ssimages/small_logo.PNG" alt="쉑쉑로고" />
@@ -278,8 +304,8 @@
                     </h1>
                 </div>
                 <!-- 1-2. 네비파트 -->
-                <div class="nav-part col-8">
-                    <nav class="gnb">
+                <div class="nav-part col-6">
+                    <nav class="gnb menu">
                         <ul>
                             <li>
                                 <a href="#">브랜드스토리</a>
@@ -297,8 +323,8 @@
                     </nav>
                 </div>
                 <!-- 1-3. 기타메뉴 -->
-                <div class="nav-part2 col-2">
-                    <nav class="etc-menu">
+                <div class="nav-part2 col-3">
+                    <nav class="etc-menu menu" >
                         <ul>
                             <li><a href="#"> 주문하기 </a></li>
                             <li><a href="#"> 전체메뉴탭 </a></li>
@@ -327,7 +353,10 @@
             <section class="inbox cont2">
                 <!-- 유튜브 동영상 -->
                 <div class="part-box video-box col-12">
-                    <iframe src="https://www.youtube.com/embed/wSOZObcqQrU" title="[🎁댓글 이벤트] SHAKE SHACK KOREA BRAND FILM 쉐이크쉑 코리아 브랜드 필름"></iframe>
+                    <iframe
+                        src="https://www.youtube.com/embed/wSOZObcqQrU"
+                        title="[🎁댓글 이벤트] SHAKE SHACK KOREA BRAND FILM 쉐이크쉑 코리아 브랜드 필름"
+                    ></iframe>
                 </div>
                 <!-- 브랜드 스토리 보러가기 -->
                 <div class="part-box pbox col-12">
