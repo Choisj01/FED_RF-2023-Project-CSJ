@@ -160,14 +160,12 @@
                 gap: 0 34px;
             }
 
-            .menu{
+            .menu {
                 /* 네비게이션 메뉴 공통 폰트 설정 */
                 font-size: 17px;
-                font-family: 'Gowun Dodum', sans-serif;
+                font-family: "Gowun Dodum", sans-serif;
                 font-weight: bold;
             }
-
-
 
             /***************** 배너파트 ************************/
             #banner {
@@ -252,6 +250,21 @@
             .pbox {
                 height: 350px;
             }
+
+            /* 쉑쉑 강남 지점 소개 */
+            #intro-gangnam {
+                height: 500px;
+                position: relative;
+                text-align: center;
+            }
+
+            .intro-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 19px;
+                height: 500px;
+            }
         </style>
 
         <!-- js -->
@@ -308,23 +321,23 @@
                     <nav class="gnb menu">
                         <ul>
                             <li>
-                                <a href="#">브랜드스토리</a>
+                                <a href="#">OUR VALUES</a>
                             </li>
                             <li>
-                                <a href="#">메뉴</a>
+                                <a href="#">MENU</a>
                             </li>
                             <li>
-                                <a href="#">위치안내</a>
+                                <a href="#">LOCATIONS</a>
                             </li>
                             <li>
-                                <a href="#">뉴스</a>
+                                <a href="#">NEWS & EVENT</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <!-- 1-3. 기타메뉴 -->
                 <div class="nav-part2 col-3">
-                    <nav class="etc-menu menu" >
+                    <nav class="etc-menu menu">
                         <ul>
                             <li><a href="#"> 주문하기 </a></li>
                             <li><a href="#"> 전체메뉴탭 </a></li>
@@ -374,8 +387,22 @@
                 </div>
             </section>
         </div>
-        <!-- 5. 메뉴 파트 -->
-        <div></div>
+        <!-- 새 지점 소개 영역  -->
+        <div id="intro-gangnam">
+            <div class="intro-inbox">
+                <div class="gangnam">
+                    <img src="./shackshack/ssimages/main_banner_230825.jpg" alt="쉑쉑 강남점" />
+                </div>
+                <div class="gangnam-p">
+                    <h3>GANGNAM DAERO</h3>
+                    <p>
+                        쉐이크쉑 한국 1호점, 강남점이<br />
+                        강남대로로 찾아왔습니다.
+                    </p>
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+        </div>
         <!-- 6. 하단영역 -->
         <div></div>
     </body>
