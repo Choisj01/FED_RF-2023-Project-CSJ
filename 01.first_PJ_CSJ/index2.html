@@ -233,6 +233,7 @@
                 align-items: center;
                 /* 브랜드스토리 속박스 높이 */
                 height: 500px;
+                padding: 16px 5px;
             }
             /* 브랜드 스토리 동영상 박스 */
             .video-box {
@@ -245,6 +246,8 @@
             .video-box > iframe {
                 width: 100%;
                 height: 100%;
+                display: block;
+                border-radius: 43px;
             }
             /* 브랜드 스토리 파트 문구 박스 */
             .pbox {
@@ -270,17 +273,47 @@
 
             /* 쉑쉑 강남 지점 소개 */
             #intro-gangnam {
-                height: 500px;
-                position: relative;
-                text-align: center;
+                display: flex;
+                align-items: center;
             }
 
-            .intro-box {
+            /* .intro-box {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 19px;
                 height: 500px;
+            } */
+
+            .gangnam-pbox {
+                text-align: center;
+            }
+            .gangnam-pbox h3 {
+                padding: 25px 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .gangnam-pbox p {
+                font-size: 18px;
+                padding: 47px 0;
+            }
+
+            .gangnam-pbox a {
+                display: block;
+                padding: 45px 0;
+                font-size: 16px;
+            }
+
+            .gangnam {
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .gangnam img {
+                width: 90%;
+                height: 80%;
+                border-radius: 77px;
             }
         </style>
 
@@ -406,16 +439,18 @@
         </div>
         <!-- 새 지점 소개 영역  -->
         <div id="intro-gangnam">
-            <div class="intro-inbox">
-                <div class="gangnam">
-                    <img src="./shackshack/ssimages/main_banner_230825.jpg" alt="쉑쉑 강남점" />
-                </div>
+            <div class="gangnam-pbox col-6">
                 <h3>GANGNAM DAERO</h3>
                 <p>
                     쉐이크쉑 한국 1호점, 강남점이<br />
                     강남대로로 찾아왔습니다.
                 </p>
                 <a href="#">자세히 보기</a>
+            </div>
+            <div class="intro-inbox col-6">
+                <div class="gangnam">
+                    <img src="./shackshack/ssimages/main_banner_230825.jpg" alt="쉑쉑 강남점" />
+                </div>
             </div>
         </div>
         <!-- 6. 하단영역 -->
