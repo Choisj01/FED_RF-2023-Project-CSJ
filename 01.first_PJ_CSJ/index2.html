@@ -116,10 +116,19 @@
                 width: 100%;
             }
             /****************************** 상단영역 ******************************/
+            body{
+                padding-top: 100px;
+            }
             /* 네비게이션 겉박스 */
-            .top-aria {
+            #top-aria {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
                 /* 높이값으로 박스 범위 지정 */
                 height: 100px;
+                z-index: 999;
+                background-color: #fff;
             }
             header.top {
                 /* 옆으로 흐르게 플렉스 박스 줌 */
@@ -265,12 +274,12 @@
                 padding: 48px 25px;
                 font-size: 17px;
             }
-            .pbox a {
+            /* .pbox a {
                 display: block;
                 text-align: center;
                 position: relative;
                 top: 19px;
-            }
+            } */
 
             /* 쉑쉑 강남 지점 소개 */
             #intro-gangnam {
@@ -300,10 +309,16 @@
                 padding: 47px 0;
             }
 
-            .gangnam-pbox a {
-                display: block;
-                padding: 45px 0;
+            /* 공통 버튼 박스 디자인 */
+            .btn-box{
+                text-align: center;
+            }
+            .btn-box a {
+                display: inline-block;
+                padding: 12px;
                 font-size: 16px;
+                border-radius: 10px;
+                border: 1px solid #000;
             }
 
             .gangnam {
@@ -315,6 +330,14 @@
                 width: 90%;
                 height: 80%;
                 border-radius: 77px;
+            }
+
+
+            .footer{
+                display: flex;
+            }
+            .footer-nav{
+                min-height: 300px;
             }
         </style>
 
@@ -434,7 +457,7 @@
                         세계가 사랑하는 브랜드, 쉐이크쉑이 되었습니다.
                         <br />
                     </p>
-                    <a href="#">브랜드스토리 보러가기</a>
+                    <div class="btn-box"><a href="#">브랜드스토리 보러가기</a></div>
                 </div>
             </section>
         </div>
@@ -446,7 +469,7 @@
                     쉐이크쉑 한국 1호점, 강남점이<br />
                     강남대로로 찾아왔습니다.
                 </p>
-                <a href="#">자세히 보기</a>
+                <div class="btn-box"><a href="#">자세히 보기</a></div>
             </div>
             <div class="intro-inbox col-6">
                 <div class="gangnam">
@@ -457,8 +480,30 @@
         <!-- 6. 하단영역 -->
         <div id="footer">
           <div class="inbox footer">
-            <div class="footer-nav col-9"></div>
-            <div class="footer-nav col-3"></div>
+            <div class="footer-nav col-9">
+                Menu
+                Locations
+                Our Values
+                News & Event
+                Order Now
+                SHAKESHACK Global
+            </div>
+            <div class="footer-nav col-3">
+                Download Our App
+            </div>
+
+          </div>
+          <div class="inbox footer">
+            <div class="footer-nav col-12">
+                고객센터
+                SPC 홈페이지
+                안전보건경영방침
+                윤리신고센터
+                영상정보처리기기운영·관리방침
+                ©2004-2023 Shake Shack. All rights Reserved.
+
+                Some information on this site may vary slightly by location and in stadium, event venues and international Shacks.
+            </div>
 
           </div>
 
