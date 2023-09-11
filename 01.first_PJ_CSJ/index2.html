@@ -344,6 +344,10 @@
             }
 
             /* 하단영역 */
+            #footer{
+              background-color:#222;
+            }
+
             .footer{
                 display: flex;
                 padding: 50px;
@@ -360,6 +364,34 @@
                top: 10px;
                font-weight: bold;
              }
+             .footer-nav>ul>li>a {
+                color: white;
+            }
+            /* 앱스토어 이미지 */
+            .app-store>ul{
+                display: flex;
+                position: absolute;
+                top: 34px;
+                left: -3px;
+                gap: 10px 5px;
+
+            }
+
+            .app-store p{
+                color: #fff;
+                font-weight: bold;
+            }
+
+
+            .app-store>ul>li>a>img{
+                width: 180px;
+                height: 60px;
+                width: 180px;
+                height: 60px;
+                border-radius: 7px;
+                
+            }
+
 
 
         </style>
@@ -525,7 +557,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-nav col-3">
+            <div class="footer-nav app-store col-3">
                 <p>Download Our App</p>
                 <ul>
                     <li>
