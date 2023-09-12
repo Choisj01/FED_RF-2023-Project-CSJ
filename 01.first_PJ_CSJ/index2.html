@@ -11,6 +11,8 @@
             sizes="32x32"
             href="http://www.shakeshack.kr/resources/images/favicon_io/favicon-32x32.png"
         />
+        <!-- 링크아이콘 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <!-- 폰트 -->
         <link
             href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cute+Font&family=Gowun+Dodum&family=Gugi&family=Moirai+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500&family=Poor+Story&display=swap"
@@ -393,10 +395,31 @@
                 border-radius: 7px;
                 
             }
-
-            .insta a{
-                background: url(./shackshack/ssimages/icon_insta-_6_.png) no-repeat;
+            /* 하단영역 sns */
+            .sns-link{
+                position: relative;
+                top: 65%;
             }
+
+            .sns-link>ul{
+                display: flex;
+                justify-content: center;
+                gap: 14px 20px;
+             
+            }
+
+            .sns-link>ul>li{
+               /* font-size 20px;px; */
+            }
+
+
+          .sns-link>ul>li>a{
+            color: #fff;
+            font-size: 35px;
+          }
+          .sns-link>ul>li>a>span{
+            display: none;
+          }
 
 
 
@@ -576,10 +599,34 @@
                 </ul>
                 <div class="sns-link">
                     <ul>
-                        <li class="insta"><a href="https://www.instagram.com/shakeshackkr/" target="_blank">Instagram</a></li>
-                        <li class="youtube"><a href="https://www.youtube.com/channel/UCw86ggEkvY8_RXpvCFjNS6g" target="_blank">Youtube</a></li>
-                        <li class="facebook"><a href="https://www.facebook.com/shakeshackkorea" target="_blank">Facebook</a></li>
-                        <li class="kakao"><a href="https://pf.kakao.com/_xdlBDj" target="_blank">Kakao Channel</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/shakeshackkr/" class="fa-brands fa-square-instagram" target="_blank">
+                                <span>Instagram
+
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCw86ggEkvY8_RXpvCFjNS6g"  class="fa-brands fa-youtube" target="_blank">
+                                <span>Youtube
+
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/shakeshackkorea" class="fa-brands fa-square-facebook" target="_blank">
+                                <span>Facebook
+
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pf.kakao.com/_xdlBDj" class="fa-solid fa-comments" target="_blank">
+                                <span>Kakao Channel
+
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
