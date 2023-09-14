@@ -267,12 +267,17 @@ h1.logo {
 .pbox h2 {
     text-align: center;
     padding: 23px;
+    font-family: 'Gowun Batang', serif;
+    letter-spacing: 4px;
 }
 /* 브랜드 스토리문구 */
 .pbox p {
     text-align: center;
     padding: 48px 25px;
     font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 2;
+
 }
 /* .pbox a {
                 display: block;
@@ -320,6 +325,13 @@ h1.logo {
     font-size: 16px;
     border-radius: 23px;
     border: 3px solid #75b849;
+}
+/* 컨텐츠 박스 a태그 오버시 */
+.btn-box a:hover{
+    background-color: #75b849;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 .gangnam {
