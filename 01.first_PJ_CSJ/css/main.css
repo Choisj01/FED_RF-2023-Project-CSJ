@@ -74,6 +74,7 @@ body {
     height: 100px;
     z-index: 999;
     background-color: #fff;
+    border-bottom: 1px solid #ccc;
 }
 header.top {
     /* 옆으로 흐르게 플렉스 박스 줌 */
