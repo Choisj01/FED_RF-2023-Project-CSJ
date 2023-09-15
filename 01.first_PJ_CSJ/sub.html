@@ -261,6 +261,19 @@ h1.logo {
     /* background-repeat: no-repeat;
     background-position: center/cover; */
 }
+/* 배너 안 문구박스 넣기 */
+.menu-tit{
+    position: absolute;
+    background-color: #222222c4;
+    color: #fff;
+    width: 250px;
+    height: 116px;
+    margin: 0 auto;
+    text-align: center;
+    top: 180px;
+    left: 384px;
+    padding: 13px;
+}
 
 
 
@@ -460,7 +473,13 @@ h1.logo {
                 <div class="part-box first-banner col-12">
                     <!--슬라이드-->
                     <ul id="sub-banner">
-                        <li><img src="./shackshack/ssimages/main2.jpg" alt="slide" /></li>
+                        <div class="menu-tit">
+                            <h2>MENU</h2>
+                        </div>
+                        <li>
+                            <img src="./shackshack/ssimages/main2.jpg" alt="slide" />
+                            
+                        </li>
                     </ul>
                 </div>
             </section>
