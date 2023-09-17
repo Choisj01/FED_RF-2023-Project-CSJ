@@ -283,6 +283,41 @@ h1.logo {
     line-height: 2;
 
 }
+
+
+/* 메뉴 박스 */
+/* 메뉴 속박스 크기 위치 설정 */
+.menu-inbox{
+        height: 850px;
+        max-width: 1440px;
+        text-align: center;
+        margin: 0 auto;
+}
+.menu-inbox h3{
+    padding: 55px 0;
+    font-size: 30px;
+}
+
+/* 메뉴 아이콘 박스 */
+.menu-icon>ul{
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+    
+}
+.menu-icon>ul>li{
+    width: 44px;
+    height: 50px;
+}
+.menu-icon>ul>li>a>img{
+    width: 44px;
+    height: 50px;
+}
+.menu-icon span{
+    display: none;
+}
+
+
 /* .pbox a {
                 display: block;
                 text-align: center;
