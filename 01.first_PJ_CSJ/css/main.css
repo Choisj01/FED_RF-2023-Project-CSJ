@@ -262,7 +262,10 @@ h1.logo {
 }
 /* 브랜드 스토리 파트 문구 박스 */
 .pbox {
-    height: 350px;
+    height: 380px;
+    border: 1px solid lightgray;
+    border-radius: 77px;
+    padding: 65px 0;
 }
 /* 브랜드스토리 제목 */
 .pbox h2 {
@@ -303,16 +306,28 @@ h1.logo {
 
 .gangnam-pbox {
     text-align: center;
+      /* position: relative; */
+    border: 1px solid lightgray;
+    border-radius: 77px;
+    margin: 12px 27px;
+    padding: 94px 0px;
+  
 }
 .gangnam-pbox h3 {
     padding: 25px 0;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
+    position: relative;
+    top: -15px;
+
 }
 
 .gangnam-pbox p {
     font-size: 18px;
     padding: 47px 0;
+    position: relative;
+    top: -16px;
+
 }
 
 /* 공통 버튼 박스 디자인 */
