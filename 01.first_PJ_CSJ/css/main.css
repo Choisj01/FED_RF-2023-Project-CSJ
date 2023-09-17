@@ -317,6 +317,23 @@ h1.logo {
     display: none;
 }
 
+/* 메뉴 이미지 박스 */
+.menu-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-list ul{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 68vh;
+}
+.menu-list img{
+    width: 300px;
+    height: 210px;
+}
+
 
 /* .pbox a {
                 display: block;
