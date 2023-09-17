@@ -309,10 +309,27 @@ h1.logo {
     width: 44px;
     height: 50px;
 }
+
 .menu-icon>ul>li>a>img{
     width: 44px;
     height: 50px;
 }
+
+/* 이미지 숨기기 클래스 */
+.blind img:last-child{
+    display: none;
+ }
+
+ /* .menu-icon:hover에 오버시 마지막 이미지 보이기 */
+.menu-icon:hover .blind img:last-child{
+    display: inline;
+   }
+/* .menu-icon:hover에 오버시 첫번쨰 이미지 숨기기 */
+.menu-icon:hover .blind img:first-child{
+   display: none;
+}
+
+
 .menu-icon span{
     display: none;
 }
