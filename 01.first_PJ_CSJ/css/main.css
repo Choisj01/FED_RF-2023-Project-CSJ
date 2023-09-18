@@ -288,7 +288,7 @@ h1.logo {
 /* 메뉴 박스 */
 /* 메뉴 속박스 크기 위치 설정 */
 .menu-inbox{
-        height: 850px;
+        height: 800px;
         max-width: 1440px;
         text-align: center;
         margin: 0 auto;
@@ -320,6 +320,7 @@ h1.logo {
     outline: 1px solid rgb(150 155 147);
     border-radius: 4px;
 }
+/* 초록색 메뉴 아이콘 이미지 */
 .himg{
     position: absolute;
     display: none;
@@ -327,9 +328,9 @@ h1.logo {
 
 
 /* 이미지 숨기기 클래스 */
-.blind img:last-child{
+/* .blind img:last-child{
     display: none;
- }
+ } */
 
  /* .menu-icon:hover에 오버시 마지막 이미지 보이기 */
 .menu-icon:hover .blind img:last-child{
@@ -348,26 +349,44 @@ h1.logo {
 /* 메뉴 이미지 박스 */
 .menu-list{
     display: flex;
-    /* justify-content: space-evenly; */
+    position: relative;
+    top: 118px;
+
 }
 .menu-list ul{
     display: flex;
     position: relative;
-    justify-content: center;
     align-items: center;
-    height: 50.6vh;
     gap: 0 80px;
-    overflow: hidden;
+    /* overflow: hidden; */
+
+}
+.menu-list>ul>li{
+    outline: 2px solid #e6e6e6;
+    border-radius: 10px 10px;
 }
 .menu-list img{
     width: 300px;
     height: 210px;
+    outline: 1px solid #e6e6e6;
+    border-radius: 10px 10px 0 0;
 }
-.disc-wrap{
+.menu-disc>h4{
+    padding: 10px 0;
+    letter-spacing: 0.6px;
+}
+
+.menu-disc>h4>span{
+    font-size: 12px;
+    padding: 0 5px;
+    display: inline-block;
     position: relative;
-    top: 0;
-    left: 0;
+    vertical-align: super;
 }
+
+
+
+
 
 /* .pbox a {
                 display: block;
