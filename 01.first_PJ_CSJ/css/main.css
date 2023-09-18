@@ -313,6 +313,10 @@ h1.logo {
 .menu-icon>ul>li>a>img{
     width: 44px;
     height: 50px;
+    /* position: absolute; */
+}
+.himg{
+    position: absolute;
 }
 
 /* 이미지 숨기기 클래스 */
@@ -322,11 +326,11 @@ h1.logo {
 
  /* .menu-icon:hover에 오버시 마지막 이미지 보이기 */
 .menu-icon:hover .blind img:last-child{
-    display: inline;
+    /* display: inline; */
    }
 /* .menu-icon:hover에 오버시 첫번쨰 이미지 숨기기 */
 .menu-icon:hover .blind img:first-child{
-   display: none;
+   /* display: none; */
 }
 
 
