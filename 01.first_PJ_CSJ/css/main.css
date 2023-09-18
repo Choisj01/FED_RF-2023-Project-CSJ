@@ -303,6 +303,9 @@ h1.logo {
     display: flex;
     justify-content: center;
     gap: 0 40px;
+    position: relative;
+    top: 0;
+    left: 0;
     
 }
 .menu-icon>ul>li{
@@ -313,11 +316,15 @@ h1.logo {
 .menu-icon>ul>li>a>img{
     width: 44px;
     height: 50px;
-    /* position: absolute; */
+    position: absolute;
+    outline: 1px solid rgb(150 155 147);
+    border-radius: 4px;
 }
 .himg{
     position: absolute;
+    display: none;
 }
+
 
 /* 이미지 숨기기 클래스 */
 .blind img:last-child{
@@ -341,20 +348,26 @@ h1.logo {
 /* 메뉴 이미지 박스 */
 .menu-list{
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 .menu-list ul{
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 68vh;
+    height: 50.6vh;
+    gap: 0 80px;
+    overflow: hidden;
 }
 .menu-list img{
     width: 300px;
     height: 210px;
 }
-
+.disc-wrap{
+    position: relative;
+    top: 0;
+    left: 0;
+}
 
 /* .pbox a {
                 display: block;
