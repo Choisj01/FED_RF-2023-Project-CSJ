@@ -30,4 +30,78 @@
              slide.style.transition = "none";
          }, 400);
      }, 3000); //////// 인터발함수 /////////////
+
+
+    const menuIcon = qsa('.menu-icon>ul>li');
+
+    menuIcon.forEach(ele=>{
+        addEvt(ele,'click',(e)=>{
+            // a요소 기본이동막기
+            e.preventDefault();
+            // 클래스 모두 지우기
+            menuIcon.forEach(el=>el.classList.remove('on'));
+            // 해당요소만 클래스 on넣기
+            ele.classList.add('on');
+
+            // 하위 a요소의 클래스명 읽기 (리스트 클래스명과 같음!)
+            let clsName = ele.querySelector('a').getAttribute('class');
+            console.log('클래스명:',clsName);
+
+            // 메뉴 리스트박스 클래스명으로 새로 생성함수 호출!
+            goSlideMenu("."+clsName);
+        })
+    })
+
+
+    // 슬라이드 메뉴 함수 //////////
+    function goSlideMenu(clsName){ // clsName - 분류별 클래스명
+        // 이동버튼
+        const btns = qsa('.btns-box button');
+        // 슬라이드
+        const ssMenu = qs('.menu-list>'+clsName);
+        ssMenu.style.left = '0px';
+        // 슬라이드 순번곱할 변수
+        let sldNum = 0;
+        console.log('한계수:',ssMenu);
+        // 슬라이드 이동 한계수
+        const LIMIT_NUM = ssMenu.querySelectorAll('li').length-4;
+        console.log('한계수:',LIMIT_NUM);
+
+        // 전체 메뉴 리스트
+        const menuList = qsa('.menu-list>ul');
+
+        
+        // 메뉴 리스트 모두 숨기고 해당메뉴만 보이기
+        menuList.forEach(ele=>ele.classList.remove('on'));
+        ssMenu.classList.add('on');
+
+    
+        btns.forEach(ele=>{
+            addEvt(ele,'click',()=>{
+                let isR = ele.classList.contains('btnR');
+                console.log('오른쪽?',isR);
+    
+                if(isR){
+    
+                    sldNum++;
+                    if(sldNum>LIMIT_NUM) sldNum = LIMIT_NUM;
+                }
+                else{
+                    sldNum--;
+                    if(sldNum<0) sldNum = 0;
+    
+                }
+                ssMenu.style.left = (-380*sldNum)+'px';
+                ssMenu.style.transition = '1.2s';
+            }); //////// click //////////
+        }); 
+
+    } ////////////// goSlideMenu 함수 /////////
+
+
+    // 최초호출(첫메뉴인 버거를 보냄)
+    goSlideMenu('.burger');
+
+
+
  }); ////////////// 로드구역 ////////////////
