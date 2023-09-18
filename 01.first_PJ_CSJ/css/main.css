@@ -289,6 +289,7 @@ h1.logo {
 /* 메뉴 속박스 크기 위치 설정 */
 #menu-box{
     /* background-color: #75b849; */
+    background: url(../shackshack/ssimages/ss_bg1.jpg) no-repeat center/cover ;
 }
 .menu-inbox{
         height: 800px;
