@@ -298,7 +298,8 @@ h1.logo {
 }
 .menu-inbox h3{
     padding: 55px 0;
-    font-size: 30px;
+    font-size: 35px;
+    font-style: revert;
 }
 
 /* 메뉴 아이콘 박스 */
