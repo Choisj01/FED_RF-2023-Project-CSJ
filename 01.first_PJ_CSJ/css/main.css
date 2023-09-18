@@ -287,6 +287,9 @@ h1.logo {
 
 /* 메뉴 박스 */
 /* 메뉴 속박스 크기 위치 설정 */
+#menu-box{
+    background-color: #75b849;
+}
 .menu-inbox{
         height: 800px;
         max-width: 1440px;
@@ -374,6 +377,7 @@ h1.logo {
 .menu-disc>h4{
     padding: 10px 0;
     letter-spacing: 0.6px;
+    color: #fff;
 }
 
 .menu-disc>h4>span{
