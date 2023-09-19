@@ -380,15 +380,27 @@ h1.logo {
     position: relative;
 
 }
+button{
+    background-color: transparent;
+    border: none; /* 버튼 주변의 테두리(border)도 없애려면 추가합니다. */
+}
 .btnL{
     position: absolute;
-    top: 200px;
-    left: -50px;
+    top: 206px;
+    left: -130px;
+    font-size: 88px;
+    color: #222;
+    cursor: pointer;
+
 }
 .btnR{
     position: absolute;
-    top: 200px;
-    right: -50px;
+    top: 206px;
+    right: -130px;
+    font-size: 88px;
+    color: #222;
+    cursor: pointer;
+
 }
 
 /* 메뉴 이미지 박스 */
@@ -456,20 +468,21 @@ h1.logo {
 
 /* 메뉴박스 더보기 a태그 */
 .more-view a{
+    display: inline-block;
     position: absolute; 
     position: relative;
     top: 157px;
-    background-color: #222;
+    background-color: gray;
     color: #fff;
     font-size: 15px;
     border-radius: 24px;
     padding: 10px;
     font-family: 'Nanum Gothic', sans-serif;
-    transform: scale(1);
 }
 .more-view a:hover{
-    background-color: gray;
-    transform: scale(1.5);
+    display: inline-block;
+    background-color: #222;
+    transform: scale(1.1);
 
 }
 
