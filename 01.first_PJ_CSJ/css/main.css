@@ -454,7 +454,24 @@ h1.logo {
     vertical-align: super;
 }
 
+/* 메뉴박스 더보기 a태그 */
+.more-view a{
+    position: absolute; 
+    position: relative;
+    top: 157px;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 24px;
+    padding: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    transform: scale(1);
+}
+.more-view a:hover{
+    background-color: gray;
+    transform: scale(1.5);
 
+}
 
 
 
