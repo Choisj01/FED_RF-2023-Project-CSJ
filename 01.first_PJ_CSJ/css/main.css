@@ -168,6 +168,7 @@ h1.logo {
     color: white;
     font-weight: bold;
     transform: scale(1.1);
+    text-shadow: 2px 2px 2px gray;
 }
 
 .menu {
@@ -281,6 +282,9 @@ h1.logo {
     font-size: 17px;
     letter-spacing: 0px;
     line-height: 2;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
 
 }
 
@@ -432,6 +436,7 @@ h1.logo {
     margin: 0;
     padding: 0;
     border-radius: 0 0 10px 10px;
+    margin-top: -3px;
 }
 
 .menu-disc>h4{
@@ -497,6 +502,8 @@ h1.logo {
     padding: 47px 0;
     position: relative;
     top: -16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 1px;
 
 }
 
@@ -508,14 +515,17 @@ h1.logo {
 .btn-box a {
     display: inline-block;
     padding: 12px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 23px;
     border: 3px solid #75b849;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 1px;
 }
 /* 컨텐츠 박스 a태그 오버시 */
 .btn-box a:hover{
     background-color: #75b849;
     color: white;
+    text-shadow: 2px 2px 2px gray;
     font-weight: bold;
     transform: scale(1.1);
 }
