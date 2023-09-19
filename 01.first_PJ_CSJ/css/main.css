@@ -260,6 +260,7 @@ h1.logo {
     height: 100%;
     display: block;
     border-radius: 43px;
+    border: none;
 }
 /* 브랜드 스토리 파트 문구 박스 */
 .pbox {
