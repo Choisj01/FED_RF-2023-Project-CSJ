@@ -289,7 +289,7 @@ h1.logo {
 /* 메뉴 속박스 크기 위치 설정 */
 #menu-box{
     /* background-color: #75b849; */
-    /* background: url(../shackshack/ssimages/ss_bg1.jpg) no-repeat center/cover ; */
+    background: url(../shackshack/ssimages/ss_bg5.png) no-repeat center/cover ;
 }
 .menu-inbox{
         height: 800px;
@@ -304,6 +304,15 @@ h1.logo {
 }
 
 /* 메뉴 아이콘 박스 */
+.menu-icon{
+    border-top: 2px solid gray;
+    padding: 10px;
+    border-bottom: 2px solid gray;
+    background-color: #fff;
+}
+
+
+
 .menu-icon>ul{
     display: flex;
     justify-content: center;
@@ -417,11 +426,20 @@ h1.logo {
     outline: 1px solid #e6e6e6;
     border-radius: 10px 10px 0 0;
 }
+
+.menu-disc{
+    background-color: #75b849;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+}
+
 .menu-disc>h4{
     padding: 10px 0;
     letter-spacing: 0.6px;
-    /* color: #fff; */
+    color: #fff;
 }
+
 
 .menu-disc>h4>span{
     font-size: 12px;
