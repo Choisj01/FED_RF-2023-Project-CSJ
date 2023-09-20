@@ -678,7 +678,7 @@ button {
 }
 
 .sns-link > ul > li > a {
-    color: #fff;
+    color: lightgray;
     font-size: 35px;
 }
 .sns-link > ul > li > a > span {
