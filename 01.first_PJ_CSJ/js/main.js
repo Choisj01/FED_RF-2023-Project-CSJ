@@ -128,11 +128,4 @@ addEvt(window,'scroll',()=>{
     console.log('적용상태값:',stsChg);
 }); ///////// scroll ////////////
 
-// 클릭 이벤트 핸들러를 추가합니다.
-document.getElementById("myLink").addEventListener("click", function(event) {
-    // 기본 이벤트(링크 이동)를 중단합니다.
-    event.preventDefault();
 
-    // 알럿 창을 띄웁니다.
-    alert("아직 준비 중 입니다!");
-});
