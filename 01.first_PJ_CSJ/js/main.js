@@ -1,7 +1,7 @@
 /* 1차 프로젝트: shakeshack PJ(index2.html) - main.js  */
 
-// 부드러운 스크롤 모듈
-
+// 부드러운 스크롤 적용
+startSS();
 
  // DOM 선택함수
  const qs = (x) => document.querySelector(x);

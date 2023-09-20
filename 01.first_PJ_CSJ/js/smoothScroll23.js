@@ -6,7 +6,7 @@
 // startSS()함수를 호출하여 사용
 function startSS() {
     // 전체 스크롤 대상일때 document를 보냄
-    new SmoothScroll(document, 30, 22)
+    new SmoothScroll(document, 60, 22)
     // 특정박스일 경우 document.querySelector(선택요소)를 씀!
     // new SmoothScroll(document.querySelector('.wrap'), 30, 22)
 }
@@ -14,6 +14,12 @@ function startSS() {
 // 전역변수 스크롤 위치값
 let pos;
 // 다른 코딩으로 스크롤 이동시 이 변수에 일치필요!!!
+
+// 전역변수 pos를 셋팅하는 함수(외부에서 이것사용!)
+function setPos(val) {
+    // val - 위치값 전달변수
+    pos = val;
+  }
 
 function SmoothScroll(target, speed, smooth) {
     // target - 대상요소, speed - 스크롤애니속도, smooth - 부드러운정도
@@ -92,3 +98,4 @@ function SmoothScroll(target, speed, smooth) {
         );
     }()
 }
+
