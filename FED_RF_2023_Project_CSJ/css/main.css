@@ -1,0 +1,726 @@
+@charset "utf-8";
+/* 1차 프로젝트: shakeshack PJ(index2.html) - main.css  */
+@import url(./reset.css);
+
+/***************************** 폰트 스타일 넣기!!!! ****************************/
+
+/*
+                 font-family: 'Gowun Batang', serif;
+                 font-family: 'Jua', sans-serif;
+                 font-family: 'Nanum Gothic', sans-serif;
+                 font-family: 'Noto Sans KR', sans-serif;
+
+                  */
+
+/* heading 요소 글자크기 */
+/* h1,h2,h3,h4,h5,h6{
+                font-size: 100%; */
+/* 박스 디자인시 글자크기로 인한
+                영향을 없애기 위한 초기화!! */
+/* } */
+
+/* 12 그리드 클래스 : 한줄에 합이 12컬럼이 되도록 셋팅! */
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+
+    /* 박스 왼쪽으로 이동시키기 위함 */
+    left: -220px;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+
+/****************************** 상단영역 ******************************/
+body {
+    padding-top: 100px;
+}
+/* 네비게이션 겉박스 */
+#top-aria {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 높이값으로 박스 범위 지정 */
+    height: 100px;
+    z-index: 999;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+header.top {
+    /* 옆으로 흐르게 플렉스 박스 줌 */
+    display: flex;
+    /* 중앙위치 */
+    justify-content: center;
+    align-items: center;
+    /* 겉박스와 높이크기 동일하게 조정 */
+    height: 100px;
+}
+
+/* 로고 이미지 박스 위치조정 */
+.logo-part {
+    text-align: center;
+    position: relative;
+    /* 부모자격 */
+    left: 140px;
+}
+h1.logo {
+    /* 로고 이미지 위치 정렬 */
+
+    position: absolute;
+    top: -29px;
+    left: 180px;
+}
+/* 로고 이미지 크기 조정 */
+.logo img {
+    width: 50px;
+}
+
+.gnb > ul > li > a {
+    /* 인라인요소 트랜스폼 주기 위해서는 인라인 블록으로 바꿔줘야함! */
+    display: inline-block;
+}
+/* gnb a 태그 오버시 효과 */
+.gnb > ul > li:hover > a {
+    color: #75b849;
+    transform: scale(1.1);
+    /* text-shadow: 2px 2px 4px rgba(72, 71, 71, 0.5); */
+}
+/* 네비게이션 메뉴들 ul 플렉스 박스 정렬1 */
+.gnb > ul {
+    display: flex;
+    gap: 0 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
+.line-ani > li > a::after {
+    content: "";
+    display: block;
+
+    /* 변경요소 */
+    width: 0%;
+    margin-left: 100%;
+
+    /* 글자와의 간격 */
+    margin-top: 4px;
+
+    height: 2px;
+    background-color: #75b849;
+
+    /* 트랜지션 */
+    transition: all 0.3s;
+}
+
+/* 상위메뉴 li에 오버시 밑줄 */
+.line-ani > li:hover a::after {
+    width: 100%;
+    margin-left: 0%;
+    /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
+    transition: width 0.3s;
+}
+
+/* 네비게이션 메뉴들 ul 플렉스 박스 정렬2 */
+.etc-menu > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 34px;
+}
+.etc-menu > ul > li > a {
+    border: 4px solid #75b849;
+    border-radius: 30px;
+    padding: 5px 28px;
+    display: inline-block;
+}
+.etc-menu > ul > li > a:hover {
+    background-color: #75b849;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 2px gray;
+}
+
+.menu {
+    /* 네비게이션 메뉴 공통 폰트 설정 */
+    font-size: 18px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: bold;
+}
+
+/***************** 배너파트 ************************/
+#banner {
+    position: relative;
+}
+#banner.inbox {
+    width: 100%;
+}
+
+.cont1 {
+    width: 100%;
+}
+
+/* 배너 박스 세로 크기 */
+.cont1 > .part-box {
+    position: relative;
+    /* 부모자격 */
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/5.8;
+}
+
+/* 배너이미지 */
+#bannerwwww > .inbox > .part-box img {
+    display: block;
+    width: 100%; /* 이미지를 가로로 화면에 맞추기 */
+    height: 100%; /* 이미지의 세로 비율을 자동 조절 */
+    object-fit: cover;
+    /* background-repeat: no-repeat;
+    background-position: center/cover; */
+}
+
+#slide {
+    display: flex;
+    /* 플렉스박스!!! */
+
+    /*사진을 싸고 있는 슬라이드*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slide li {
+    flex-shrink: 0;
+    /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+    flex-basis: 100%;
+    /* 가로크기를 부모박스 크기에 맞춤! */
+    /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+}
+
+#slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 비율유지 채우기! */
+}
+
+/* 브랜드스토리 파트 */
+.cont2 {
+    display: flex;
+    align-items: center;
+    /* 브랜드스토리 속박스 높이 */
+    height: 500px;
+    padding: 16px 5px;
+}
+/* 브랜드 스토리 동영상 박스 */
+.video-box {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 14px;
+}
+/* 아이프레임 크기조정 */
+.video-box > iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 43px;
+    border: none;
+}
+/* 브랜드 스토리 파트 문구 박스 */
+.pbox {
+    height: 380px;
+    border: 1px solid lightgray;
+    border-radius: 77px;
+    padding: 65px 0;
+}
+/* 브랜드스토리 제목 */
+.pbox h2 {
+    text-align: center;
+    padding: 23px;
+    font-family: "Gowun Batang", serif;
+    letter-spacing: 4px;
+}
+/* 브랜드 스토리문구 */
+.pbox p {
+    text-align: center;
+    padding: 48px 25px;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 2;
+    font-family: "Nanum Gothic", sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* 메뉴 박스 */
+/* 메뉴 속박스 크기 위치 설정 */
+#menu-box {
+    /* background-color: #75b849; */
+    background: url(../shackshack/ssimages/ss_bg5.png) no-repeat center/cover;
+}
+.menu-inbox {
+    height: 800px;
+    max-width: 1440px;
+    text-align: center;
+    margin: 0 auto;
+}
+.menu-inbox h3 {
+    padding: 55px 0;
+    font-size: 35px;
+    font-style: revert;
+}
+
+/* 메뉴 아이콘 박스 */
+.menu-icon {
+    border-top: 2px solid gray;
+    padding: 10px;
+    border-bottom: 2px solid gray;
+    background-color: #fff;
+}
+
+.menu-icon > ul {
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.menu-icon > ul > li {
+    width: 44px;
+    height: 50px;
+}
+
+.menu-icon > ul > li > a > img {
+    width: 44px;
+    height: 50px;
+    position: absolute;
+    outline: 1px solid rgb(150 155 147);
+    border-radius: 4px;
+    display: none;
+}
+.menu-icon > ul > li > a > img:first-of-type {
+    display: block;
+}
+.menu-icon > ul > li.on > a > img:first-of-type,
+.menu-icon > ul > li:hover > a > img:first-of-type {
+    display: none;
+}
+.menu-icon > ul > li.on > a > img:last-of-type,
+.menu-icon > ul > li:hover > a > img:last-of-type {
+    display: block;
+}
+
+/* 초록색 메뉴 아이콘 이미지 */
+/* .himg{
+    position: absolute;
+    display: none;
+} */
+
+/* 이미지 숨기기 클래스 */
+/* .blind img:last-child{
+    display: none;
+ } */
+
+/* .menu-icon:hover에 오버시 마지막 이미지 보이기 */
+.menu-icon:hover .blind img:last-child {
+    /* display: inline; */
+}
+/* .menu-icon:hover에 오버시 첫번쨰 이미지 숨기기 */
+.menu-icon:hover .blind img:first-child {
+    /* display: none; */
+}
+
+.menu-icon span {
+    display: none;
+}
+.menu-list-wrap {
+    position: relative;
+}
+button {
+    background-color: transparent;
+    border: none; /* 버튼 주변의 테두리(border)도 없애려면 추가합니다. */
+}
+.btnL {
+    position: absolute;
+    top: 206px;
+    left: -130px;
+    font-size: 70px;
+    color: #222;
+    cursor: pointer;
+    border: 1px solid;
+    background-color: #fff;
+    border-radius: 10%;
+}
+.btnL span {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+}
+
+.btnR {
+    position: absolute;
+    top: 206px;
+    right: -130px;
+    font-size: 70px;
+    color: #222;
+    cursor: pointer;
+    border: 1px solid;
+    background-color: #fff;
+    border-radius: 10%;
+}
+.btnR span {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+}
+
+/* 메뉴 이미지 박스 */
+.menu-list {
+    position: relative;
+    top: 118px;
+    width: 1440px;
+    overflow: hidden;
+    padding: 2px;
+}
+/* 움직일 박스 */
+.menu-list ul.menu-slide {
+    position: relative;
+    left: 0;
+    display: none;
+    position: relative;
+    align-items: center;
+    gap: 0 80px;
+    /* overflow: hidden; */
+}
+.menu-list ul.menu-slide.on {
+    display: flex;
+}
+.menu-list > ul > li {
+    position: relative;
+    outline: 2px solid #e6e6e6;
+    border-radius: 10px 10px;
+}
+.menu-list > ul > li > span {
+    position: absolute;
+    top: 24px;
+    left: 209px;
+    border: 1px 1px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: orangered;
+    font-weight: bold;
+    border: 1px solid #75b849;
+    transform: rotate(375deg);
+}
+.menu-list img {
+    width: 300px;
+    height: 210px;
+    outline: 1px solid #75b849;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu-disc {
+    background-color: #75b849;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: -3px;
+}
+
+.menu-disc > h4 {
+    padding: 10px 0;
+    letter-spacing: 0.6px;
+    color: #fff;
+}
+
+.menu-disc > h4 > span {
+    font-size: 12px;
+    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    vertical-align: super;
+}
+
+/* 메뉴박스 더보기 a태그 */
+.more-view a {
+    display: inline-block;
+    position: absolute;
+    position: relative;
+    top: 157px;
+    background-color: gray;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 24px;
+    padding: 10px;
+    font-family: "Nanum Gothic", sans-serif;
+}
+.more-view a:hover {
+    display: inline-block;
+    background-color: #222;
+    transform: scale(1.1);
+}
+
+/* .pbox a {
+                display: block;
+                text-align: center;
+                position: relative;
+                top: 19px;
+            } */
+
+/* 쉑쉑 강남 지점 소개 */
+#intro-gangnam {
+    display: flex;
+    align-items: center;
+}
+
+/* .intro-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 19px;
+                height: 500px;
+            } */
+
+.gangnam-pbox {
+    text-align: center;
+    /* position: relative; */
+    border: 1px solid lightgray;
+    border-radius: 77px;
+    margin: 12px 27px;
+    padding: 94px 0px;
+}
+.gangnam-pbox h3 {
+    padding: 25px 0;
+    font-size: 27px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+}
+
+.gangnam-pbox p {
+    font-size: 18px;
+    padding: 47px 0;
+    position: relative;
+    top: -16px;
+    font-family: "Nanum Gothic", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* 공통 버튼 박스 디자인 */
+.btn-box {
+    text-align: center;
+}
+/* 컨텐츠 박스 a태그  */
+.btn-box a {
+    display: inline-block;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 23px;
+    border: 3px solid #75b849;
+    font-family: "Nanum Gothic", sans-serif;
+    letter-spacing: 1px;
+}
+/* 컨텐츠 박스 a태그 오버시 */
+.btn-box a:hover {
+    background-color: #75b849;
+    color: white;
+    text-shadow: 2px 2px 2px gray;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.gangnam {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gangnam img {
+    width: 80%;
+    /* height: 80%; */
+    border-radius: 77px;
+}
+
+/* 하단영역 */
+#footer {
+    background-color: #222;
+    padding: 12px 14px 0px 108px;
+}
+
+.footer {
+    display: flex;
+    /* padding: 50px; */
+}
+.footer-nav {
+    min-height: 300px;
+    position: relative;
+}
+.footer-nav > ul {
+    font-size: 18px;
+    line-height: 41px;
+    position: absolute;
+    left: 200px;
+    top: -6px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.footer-nav > ul > li > a {
+    color: white;
+    display: inline-block;
+}
+
+/* footer-nav 가상요소로 밑줄만들기 - 공통클래스로 독립 */
+.footer-line-ani > li > a::after {
+    content: "";
+    display: block;
+
+    /* 변경요소 */
+    width: 0%;
+    margin-left: 100%;
+
+    /* 글자와의 간격 */
+    margin-top: 4px;
+
+    height: 2px;
+    background-color: #fff;
+
+    /* 트랜지션 */
+    transition: all 0.3s;
+}
+
+/* 상위메뉴 li에 오버시 밑줄 */
+.footer-line-ani > li:hover a::after {
+    width: 100%;
+    margin-left: 0%;
+    /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
+    transition: width 0.3s;
+}
+
+/* 앱스토어 이미지 */
+.app-store > ul {
+    display: flex;
+    position: absolute;
+    top: 75px;
+    left: -25px;
+    gap: 10px 17px;
+}
+
+.app-store p {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    padding: 10px;
+    left: -4px;
+    top: 57px;
+}
+
+.app-store > ul > li > a > img {
+    width: 180px;
+    height: 60px;
+    border-radius: 7px;
+}
+/* 하단영역 sns */
+.sns-link {
+    position: relative;
+    top: 65%;
+}
+
+.sns-link > ul {
+    display: flex;
+    /* justify-content: center; */
+    gap: 14px 20px;
+    position: absolute;
+    top: 50px;
+    left: 177px;
+}
+
+.sns-link > ul > li {
+    /* font-size 20px;px; */
+}
+
+.sns-link > ul > li > a {
+    color: lightgray;
+    font-size: 35px;
+}
+.sns-link > ul > li > a > span {
+    display: none;
+}
+
+/* 하단 info영역 */
+
+.footer-bottom > ul > li > a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.pinfo {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.policy {
+    display: flex;
+    gap: 0 15px;
+    padding: 15px 203px;
+    position: relative;
+    top: 75px;
+}
+
+.info {
+    position: absolute;
+    top: 200px;
+    left: 199px;
+}
+
+.copyright {
+    position: absolute;
+    left: 199px;
+    top: 150px;
+}
+
+.line-box {
+    width: 96%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    top: 28px;
+}
