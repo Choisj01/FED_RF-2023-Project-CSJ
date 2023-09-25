@@ -238,6 +238,49 @@ h1.logo {
     /* 이미지 비율유지 채우기! */
 }
 
+/* 배너 슬라이드 버튼 */
+/*이동버튼*/
+.abtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*Y축 중앙이동*/
+}
+
+/*왼쪽버튼*/
+.ab1 {
+    left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+    right: 50px;
+}
+/* 배너 블릿버튼 */
+.indic {
+    display: flex;
+    /* 플렉스박스 */
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+}
+
+.indic li {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.indic li img {
+    position: absolute;
+    /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 0;
+}
+
 /* 브랜드스토리 파트 */
 .cont2 {
     display: flex;
@@ -286,6 +329,12 @@ h1.logo {
     font-family: "Nanum Gothic", sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
+}
+/* 브랜드 스토리 문구 박스 */
+/* 글자개별박스 셋팅 */
+.stage-letters span {
+    /* 트랜스폼 적용위해 */
+    display: block;
 }
 
 /* 메뉴 박스 */
@@ -547,6 +596,9 @@ button {
 /* 공통 버튼 박스 디자인 */
 .btn-box {
     text-align: center;
+    position: relative;
+    top: -60px
+;
 }
 /* 컨텐츠 박스 a태그  */
 .btn-box a {
