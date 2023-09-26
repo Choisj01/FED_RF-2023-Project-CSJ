@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
 
       // 하위 a요소의 클래스명 읽기 (리스트 클래스명과 같음!)
       let clsName = ele.querySelector("a").getAttribute("class");
-      console.log("클래스명:", clsName);
+      // console.log("클래스명:", clsName);
 
       // 메뉴 리스트박스 클래스명으로 새로 생성함수 호출!
       goSlideMenu("." + clsName);
@@ -69,10 +69,10 @@ window.addEventListener("load", () => {
     ssMenu.style.left = "0px";
     // 슬라이드 순번곱할 변수
     let sldNum = 0;
-    console.log("한계수:", ssMenu);
+    // console.log("한계수:", ssMenu);
     // 슬라이드 이동 한계수
     const LIMIT_NUM = ssMenu.querySelectorAll("li").length - 4;
-    console.log("한계수:", LIMIT_NUM);
+    // console.log("한계수:", LIMIT_NUM);
 
     // 전체 메뉴 리스트
     const menuList = qsa(".menu-list>ul");
@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
       btns.forEach((ele) => {
         addEvt(ele, "click", () => {
           let isR = ele.classList.contains("btnR");
-          console.log("오른쪽?", isR);
+          // console.log("오른쪽?", isR);
 
           if (isR) {
             sldNum++;
@@ -116,7 +116,7 @@ let stsChg = 0;
 
 addEvt(window,'scroll',()=>{
     posY = getBCR(menuIcon)
-    // console.log(winH,getBCR(menuIcon));
+    // // console.log(winH,getBCR(menuIcon));
     if((posY > winH || posY < -330)  && !stsChg){ 
         
         stsChg = 1;
@@ -125,7 +125,7 @@ addEvt(window,'scroll',()=>{
     else if((posY <= winH && posY >= -330) && stsChg) {
         stsChg = 0;
     }
-    console.log('적용상태값:',stsChg);
+    // console.log('적용상태값:',stsChg);
 }); ///////// scroll ////////////
 
 
@@ -133,39 +133,27 @@ addEvt(window,'scroll',()=>{
 //1. 구현요구사항 : span태그 문장 하나씩 등장
 
   // 2. 대상선정 : .stage-letters
-  const stage = domFn.qs('.stage-letters');
-  console.log('대상:',stage);
+  const stage = qsa('.stage-letters');
+  // console.log('대상:',stage);
 
-  // 3. 글자 데이터 변수할당
-  const myText = '무궁화꽃이 피었습니다!';
+ 
+  stage.forEach(ele=>{
+    qsaEl(ele,'span').forEach((el,i)=>{
+      el.style.transitionDelay = (0.5*i)+'s';
+    })
+  })
 
-  // 4. 데이터글자 한글자씩 태그로 싸기
-  // for of 사용!
+  // 화면절반값
+  const WIN_HT = window.innerHeight/2;
 
-  // html태그변수
-  let hcode = '';
-  // 순번증가변수
-  let seqNum = 0;
-
-  for(let x of myText){
-    // console.log(x);
-    if(x== ' ')
-        hcode += '&nbsp;&nbsp;';
-    else
-        hcode += 
-        `<span style="transition-delay: ${seqNum*0.2}s;">${x}</span>`;
-
-    // 순차적인 지연시간 생성을 위한 숫자변수 증가
-    seqNum++;
-    // &nbsp; 는 공백문자로 no break space란말.
-  } //////// for of ///////////
-
-  console.log('코드:',hcode);
-
-  // 5. 스테이지박스에 코드 출력하기
-  stage.innerHTML = hcode;
-
-  // 6. 일정시간뒤 등장클래스 .on주기
-  setTimeout(() => {
-    stage.classList.add('on');
-  }, 2000);
+  // 6. 스크롤 위치에 오면 등장클래스 .on주기
+  addEvt(window,'scroll',()=>{
+    for(let x of stage){
+      // 화면절반보다 위로 올라오면 클래스on주기
+      if(getBCR(x) < WIN_HT){
+        // x는 각 stage요소
+          x.classList.add('on');
+      }
+      // console.log(getBCR(x),WIN_HT);
+    } ///////// for of ///////
+  }); ///////// scroll /////////////

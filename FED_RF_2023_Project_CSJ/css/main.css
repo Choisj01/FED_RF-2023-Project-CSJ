@@ -332,10 +332,22 @@ h1.logo {
 }
 /* 브랜드 스토리 문구 박스 */
 /* 글자개별박스 셋팅 */
+.stage-letters {
+    margin-bottom: 100px;
+}
 .stage-letters span {
     /* 트랜스폼 적용위해 */
-    display: block;
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: .8s;
 }
+.stage-letters.on span {
+    transform: translateY(0%);
+    opacity: 1;
+
+}
+
 
 /* 메뉴 박스 */
 /* 메뉴 속박스 크기 위치 설정 */
