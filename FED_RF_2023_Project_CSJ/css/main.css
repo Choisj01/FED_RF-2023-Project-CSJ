@@ -261,8 +261,8 @@ h1.logo {
     display: flex;
     /* 플렉스박스 */
     position: absolute;
-    bottom: 50px;
-    left: 80px;
+    bottom: 32px;
+    left: 190px;
 }
 
 .indic li {
