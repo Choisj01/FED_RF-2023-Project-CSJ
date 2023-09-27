@@ -1,48 +1,46 @@
 /* 1차 프로젝트: shakeshack PJ(index2.html) - main.js  */
 
+// DOM메서드 모듈
+import dFn from './dom.js';
+
+// 슬라이드 기능 모듈
+import slideFn from './ban_style1.js';
+
+// 슬라이드 함수호출
+slideFn(dFn.qs('.first-banner'));
+
 // 부드러운 스크롤 적용
 startSS();
 
-// DOM 선택함수
-const qs = (x) => document.querySelector(x);
-const qsEl = (ele,x) => ele.querySelector(x);
-const qsa = (x) => document.querySelectorAll(x);
-const qsaEl = (ele,x) => ele.querySelectorAll(x);
-
-// addEvent 함수
-// ele - 요소, evt - 이벤트, fn - 함수
-const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
-
-const getBCR = (ele) => ele.getBoundingClientRect().top;
 
 window.addEventListener("load", () => {
-  // 변경 대상: #slide
-  const slide = qs("#slide");
+  // // 변경 대상: #slide
+  // const slide = dFn.qs("#slide");
 
-  setInterval(() => {
-    // 2. 슬라이드 li 새로 읽기
-    let eachOne = slide.querySelectorAll("li");
+  // setInterval(() => {
+  //   // 2. 슬라이드 li 새로 읽기
+  //   let eachOne = slide.querySelectorAll("li");
 
-    //1.대상이동하기
-    slide.style.left = "-100%";
-    //2.트랜지션주기
-    slide.style.transition = ".4s ease-in-out";
-    // 이동시간 후 맨앞li 잘라서 맨뒤로 이동하기
-    // appendChild(요소)
-    setTimeout(() => {
-      // 3.맨앞li 맨뒤로 이동
-      slide.appendChild(eachOne[0]);
-      // 4.slide left값 0
-      slide.style.left = "0";
-      // 5.트랜지션 없애기
-      slide.style.transition = "none";
-    }, 400);
-  }, 3000); //////// 인터발함수 /////////////
+  //   //1.대상이동하기
+  //   slide.style.left = "-100%";
+  //   //2.트랜지션주기
+  //   slide.style.transition = ".4s ease-in-out";
+  //   // 이동시간 후 맨앞li 잘라서 맨뒤로 이동하기
+  //   // appendChild(요소)
+  //   setTimeout(() => {
+  //     // 3.맨앞li 맨뒤로 이동
+  //     slide.appendChild(eachOne[0]);
+  //     // 4.slide left값 0
+  //     slide.style.left = "0";
+  //     // 5.트랜지션 없애기
+  //     slide.style.transition = "none";
+  //   }, 400);
+  // }, 3000); //////// 인터발함수 /////////////
 
-  const menuIcon = qsa(".menu-icon>ul>li");
+  const menuIcon = dFn.qsa(".menu-icon>ul>li");
 
   menuIcon.forEach((ele) => {
-    addEvt(ele, "click", (e) => {
+    dFn.addEvt(ele, "click", (e) => {
       // a요소 기본이동막기
       e.preventDefault();
       // 클래스 모두 지우기
@@ -63,9 +61,9 @@ window.addEventListener("load", () => {
   function goSlideMenu(clsName) {
     // clsName - 분류별 클래스명
     // 이동버튼
-    const btns = qsa(".btns-box button");
+    const btns = dFn.qsa(".btns-box button");
     // 슬라이드
-    const ssMenu = qs(".menu-list>" + clsName);
+    const ssMenu = dFn.qs(".menu-list>" + clsName);
     ssMenu.style.left = "0px";
     // 슬라이드 순번곱할 변수
     let sldNum = 0;
@@ -75,7 +73,7 @@ window.addEventListener("load", () => {
     // console.log("한계수:", LIMIT_NUM);
 
     // 전체 메뉴 리스트
-    const menuList = qsa(".menu-list>ul");
+    const menuList = dFn.qsa(".menu-list>ul");
 
     // 메뉴 리스트 모두 숨기고 해당메뉴만 보이기
     menuList.forEach((ele) => ele.classList.remove("on"));
@@ -84,7 +82,7 @@ window.addEventListener("load", () => {
     // 한계수가 0보다 클때만 버튼 클릭기능 넣기
     if (LIMIT_NUM > 0) {
       btns.forEach((ele) => {
-        addEvt(ele, "click", () => {
+        dFn.addEvt(ele, "click", () => {
           let isR = ele.classList.contains("btnR");
           // console.log("오른쪽?", isR);
 
@@ -107,20 +105,20 @@ window.addEventListener("load", () => {
 }); ////////////// 로드구역 ////////////////
 
 
-const menuIcon = qs('.menu-icon');
+const menuIcon = dFn.qs('.menu-icon');
 const winH = window.innerHeight;
 // BCR값
 let posY = 0;
 // 변경반영여부(0-반영전,1-반영후)
 let stsChg = 0;
 
-addEvt(window,'scroll',()=>{
-    posY = getBCR(menuIcon)
-    // // console.log(winH,getBCR(menuIcon));
+dFn.addEvt(window,'scroll',()=>{
+    posY = dFn.getBCR(menuIcon)
+    // // console.log(winH,dFn.getBCR(menuIcon));
     if((posY > winH || posY < -330)  && !stsChg){ 
         
         stsChg = 1;
-        qsEl(menuIcon,'ul>li').click();
+        dFn.qsEl(menuIcon,'ul>li').click();
     }
     else if((posY <= winH && posY >= -330) && stsChg) {
         stsChg = 0;
@@ -133,12 +131,12 @@ addEvt(window,'scroll',()=>{
 //1. 구현요구사항 : span태그 문장 하나씩 등장
 
   // 2. 대상선정 : .stage-letters
-  const stage = qsa('.stage-letters');
+  const stage = dFn.qsa('.stage-letters');
   // console.log('대상:',stage);
 
  
   stage.forEach(ele=>{
-    qsaEl(ele,'span').forEach((el,i)=>{
+    dFn.qsaEl(ele,'span').forEach((el,i)=>{
       el.style.transitionDelay = (0.5*i)+'s';
     })
   })
@@ -147,13 +145,13 @@ addEvt(window,'scroll',()=>{
   const WIN_HT = window.innerHeight/2;
 
   // 6. 스크롤 위치에 오면 등장클래스 .on주기
-  addEvt(window,'scroll',()=>{
+  dFn.addEvt(window,'scroll',()=>{
     for(let x of stage){
       // 화면절반보다 위로 올라오면 클래스on주기
-      if(getBCR(x) < WIN_HT){
+      if(dFn.getBCR(x) < WIN_HT){
         // x는 각 stage요소
           x.classList.add('on');
       }
-      // console.log(getBCR(x),WIN_HT);
+      // console.log(dFn.getBCR(x),WIN_HT);
     } ///////// for of ///////
   }); ///////// scroll /////////////

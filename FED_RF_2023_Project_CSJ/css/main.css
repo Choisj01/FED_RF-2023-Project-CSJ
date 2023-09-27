@@ -30,7 +30,7 @@
     width: 25%;
 
     /* 박스 왼쪽으로 이동시키기 위함 */
-    left: -220px;
+    /* left: -220px; */
 }
 .col-4 {
     width: 33.33%;
@@ -77,6 +77,8 @@ body {
     border-bottom: 1px solid #ccc;
 }
 header.top {
+    max-width: 1200px;
+    margin: 0 auto;
     /* 옆으로 흐르게 플렉스 박스 줌 */
     display: flex;
     /* 중앙위치 */
@@ -88,17 +90,18 @@ header.top {
 
 /* 로고 이미지 박스 위치조정 */
 .logo-part {
-    text-align: center;
-    position: relative;
+    /* text-align: center;
+    position: relative; */
     /* 부모자격 */
-    left: 140px;
+    /* left: 140px; */
 }
 h1.logo {
+    padding-left: 20px;
     /* 로고 이미지 위치 정렬 */
 
-    position: absolute;
+    /* position: absolute;
     top: -29px;
-    left: 180px;
+    left: 180px; */
 }
 /* 로고 이미지 크기 조정 */
 .logo img {
@@ -118,9 +121,10 @@ h1.logo {
 /* 네비게이션 메뉴들 ul 플렉스 박스 정렬1 */
 .gnb > ul {
     display: flex;
-    gap: 0 42px;
+    gap: 0 5vw;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
 }
 
 /* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
@@ -151,17 +155,15 @@ h1.logo {
 }
 
 /* 네비게이션 메뉴들 ul 플렉스 박스 정렬2 */
-.etc-menu > ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0 34px;
+.etc-menu  {
+    text-align: right;
 }
-.etc-menu > ul > li > a {
+.etc-menu a {
     border: 4px solid #75b849;
     border-radius: 30px;
     padding: 5px 28px;
     display: inline-block;
+    margin-right: 10px;
 }
 .etc-menu > ul > li > a:hover {
     background-color: #75b849;
@@ -209,7 +211,7 @@ h1.logo {
     background-position: center/cover; */
 }
 
-#slide {
+.slide {
     display: flex;
     /* 플렉스박스!!! */
 
@@ -221,7 +223,7 @@ h1.logo {
     height: 100%;
 }
 
-#slide li {
+.slide li {
     flex-shrink: 0;
     /* 부모박스크기만큼 줄어들지 않음 -> 0 */
     flex-basis: 100%;
@@ -230,7 +232,7 @@ h1.logo {
     등분할시 자동 100%임! */
 }
 
-#slide li img {
+.slide li img {
     /*이미지는 박스에 맞춤!*/
     width: 100%;
     height: 100%;
@@ -279,6 +281,13 @@ h1.logo {
 .indic li img:last-child {
     /*회색이미지만 투명하게*/
     opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 1;
+    /*우선적용!*/
 }
 
 /* 브랜드스토리 파트 */
