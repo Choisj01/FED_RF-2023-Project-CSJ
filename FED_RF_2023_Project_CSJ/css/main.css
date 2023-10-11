@@ -797,3 +797,9 @@ button {
     position: relative;
     top: 28px;
 }
+
+/* 미디어쿼리 적용 */
+
+@media screen {
+    
+}
