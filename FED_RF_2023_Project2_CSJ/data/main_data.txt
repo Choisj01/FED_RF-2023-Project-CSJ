@@ -110,3 +110,7 @@ kakao
 
 Copyright 2021. Cotieshop All rights reserved.
 
+*메인페이지 비디오 링크
+https://player.vimeo.com/video/579214369
+https://player.vimeo.com/video/579215391
+
