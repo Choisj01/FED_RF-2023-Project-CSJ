@@ -1,0 +1,189 @@
+1. 상단 네비게이션 바 메뉴
+
+Brands
+하위)petsochic,maxbone,milknpepper      
+Outdoor
+하위)봄여름의류,가을겨울의류,하네스,목줄,리드줄,액세서리,이동가방
+Indoor
+하위)리빙,장난감,고양이
+Cotielog
+Store
+Buy Shop
+
+2.메인 배너 컨텐츠 텍스트
+(1)
+Every Pet Deserves 
+The Best
+(2)
+가치있는 우리는 사랑받기 충분합니다. 
+값진 소재와 세련된 디자인을 함께 즐기고 만족할 수 있습니다.
+
+(2)span 태그 버튼
+Discover more
+
+2.About US
+
+(1-1)길지 않은 생애를 사는
+반려동물에게 줄 수 있는 최고의 선물은
+반려인과 함께하는 시간입니다.
+(1-2)Cotieshop의 팀원들은 반려동물과 함께하는 시간을
+더 가치있게 만들어주는 제품을 찾기 위해서 해외 직구, 대형 백화점,
+유럽의 작은 펫샵 등을 찾아 다니며
+품질과 디자인을 비교하던 꼼꼼한 반려인이었습니다
+
+(2-1)이렇게 찾아낸 프리미엄 제품들과
+훌륭한 브랜드들은 우리만 알고 있기에는
+너무 아쉬웠습니다.
+(2-2)그래서 우리는 반려동물의 시각에서 바라본 좋은 디자인을
+더 많은 반려인들과 나누고자 합니다.
+
+(3-1)우리가 진짜를 구입하고 그 가치를 평생 느끼며
+만족하고 즐기는 것처럼
+(3-2)우리의 반려동물들도 값진 소재에 더해진 장인의 손길과 시간이 흘러도
+세련된 디자인을 누리기에 충분합니다.
+Cotieshop은 우리의 반려동물에게 행복한 시간을 선물한다는 사명으로
+오늘도 치열하게 고민하고 발로 뛰겠습니다.
+
+(4)Every Pet Deserves
+The Best
+
+(5)
+Who’s cotie?
+
+꼬띠샵의 마스코트 꼬띠
+이름 : 꼬띠
+생년월일 : 2020년 7월 9일
+견종(품종) : 꼬똥 드 툴레아
+성별 : 여자
+몸무게 : 비밀
+좋아하는것 : 간식, 장난감, 물티슈
+
+(6)
+Contact Us
+
+(7)
+꼬띠샵 정보
+대표번호
+Tel.(02) 2678-3096~7 Fax.(02) 2678-3099
+
+주소
+서울특별시 용산구 우사단로2길 1, 3층 (지번 : 서울특별시 용산구 보광동 274-17 3층)
+
+영업시간
+09:30 - 18:00 (점심시간 12:30 -13:30)
+
+(8)
+교통안내
+지하철
+6호선 이태원역
+
+자동차
+인근 공영주차장 이용 (유료)
+
+버스
+한국폴리텍1대학 (03-281, 03-282)
+(간선) 400, 405, 421
+보광동삼거리 (03-542)
+(마을) 용산01
+
+Map View(스팬태그 버튼)
+
+
+
+
+3.  PET SO CHIC 컨텐츠 소개
+
+(1)
+Brands
+
+프랑스 파리는 파리지앵의 본고장입니다. 
+이곳에서 시작된 펫 소 시크는
+우아함, 세련됨, 고상함을 대표하고 흠잡을 데 없는  
+스타일을 연출합니다.
+
+(2)span 태그 버튼
+Discover more
+
+4. maxbone 컨텐츠 소개
+
+(1) 
+반려동물과 내가 함께하는 
+스타일의 최종 목적지는 맥스본입니다. 
+현대적인 라이프 스타일을 반영하고 재미와 기능을 
+같이 생각합니다.
+
+(2)span 태그 버튼
+Discover more
+
+5. 텍스트 없음
+
+6. MILK&PEPPER 컨텐츠 소개
+
+(1)
+일년 내내 우아할 수 있는 
+밀크&페퍼는 세련되고 독창적입니다. 
+계절마다 제안하는 상상력과 영감은 최적의 
+스타일리쉬를 제공합니다.
+                            
+(2)span 태그 버튼
+Discover more
+
+7. 제품 간단 소개 (5박스)
+
+New
+
+MILK & PEPPER
+밀크 앤 페퍼 PERROQUET 앵무새 강아지 장난감
+
+MILK & PEPPER
+밀크 앤 페퍼 YAEL Bandana Rayé Rouge 야엘 줄무늬 반다나 레드
+
+MILK & PEPPER
+밀크 앤 페퍼 PALOMA Palmier Orange-Kaki 팔로마 오렌지 야자수 레인코트
+
+MILK & PEPPER
+밀크 앤 페퍼 SUZANNE Harnais 수잔 하트 하네스
+
+MILK & PEPPER
+밀크 앤 페퍼 JAYDEN Harnais set 제이든 그린 야자수 하네스+리드줄 세트
+
+8. 흐르는 글자 박스
+
+PET SO CHIC
+MAXBONE
+MILK & PEPPER
+PET SO CHIC
+MAXBONE
+MILK & PEPPER
+
+9. Cotielog
+
+(1)
+Cotielog
+
+2022.04 우수 리뷰 고객 캐리커쳐
+오프라인 입점 매장 안내
+2021 GDWEB 디자인 어워즈 GRAND PRIZE 수상🎉
+
+(2) span 태그 버튼
+more
+
+10. 인스타그램
+Instagram@@cotie_shop
+
+11. 하단영역
+About Us
+Buy Shop
+
+Cotieshop
+
+facebook
+instagram
+kakao
+
+Copyright 2021. Cotieshop All rights reserved.
+
+*메인페이지 비디오 링크
+https://player.vimeo.com/video/579214369
+https://player.vimeo.com/video/579215391
+
