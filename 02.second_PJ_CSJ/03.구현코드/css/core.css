@@ -43,4 +43,9 @@ body {
 .etc-menu {
     display: flex;
 }
+
+.fa-magnifying-glass{
+    width: 10px;
+    height: 10px;
+}
 /************************ 3. 하단영역 ************************/
