@@ -15,4 +15,17 @@ html,body{
     top: 0;
     left: 0;
 }
+.header_inner{
+    display: flex;
+
+}
+#logo{
+    
+}
+.top-menu{
+    display: flex;
+}
+.etc-menu{
+    display: flex;
+}
 /************************ 3. 하단영역 ************************/
