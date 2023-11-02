@@ -17,7 +17,7 @@ font-family: 'Noto Sans KR', sans-serif;
 html,
 body {
     /* background: #ccc7bb; */
-    background: rgba(160, 136, 111, 0.405);
+    background: #F0EDE6;
 }
 /* 상단 겉박스 */
 #header {
@@ -35,7 +35,7 @@ body {
     box-sizing: border-box;
     padding: 26px;
     padding-left: 60px;
-    gap: 0 300px;
+    gap: 0 357px;
 }
 /* 로고 박스 */
 h1#logo {
@@ -45,7 +45,7 @@ h1#logo {
 
 #nav{
     position: relative;
-    right: -205px;
+    right: -243px;
 }
 /* 네비게이션 박스 */
 .top-menu {
@@ -55,7 +55,7 @@ h1#logo {
 /* 네비게이션 메뉴 li */
 .top-menu li{
     position: relative;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 .top-menu>li>a{
@@ -74,6 +74,11 @@ h1#logo {
     gap: 0 29px;
 
 }
+.etc-menu .search{
+    position: relative;
+    top: 6px;
+    right: -10px;
+}
 
 .etc-menu a {
     font-size: 1.5rem;
@@ -90,11 +95,22 @@ h1#logo {
     white-space: nowrap;
 }
 
+.buy-shop::after{
+    content: '👜';
+    display: block;
+    width: 10px;
+    height: 10px;
+    color: #fff;
+    position: relative;
+    right: -111px;
+    top: -25px;
+}
+
 /* 장바구니 아이콘 */
-.basket {
+/* .basket {
     position: relative;
     right: 22px;
     font-size: 1.5rem;
-}
+} */
 
 /************************ 3. 하단영역 ************************/
