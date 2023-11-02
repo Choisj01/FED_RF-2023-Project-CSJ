@@ -6,3 +6,8 @@
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
+
+/* 메인비주얼 영역 */
+#main-visual-wrap{
+    height: 700px;
+}
