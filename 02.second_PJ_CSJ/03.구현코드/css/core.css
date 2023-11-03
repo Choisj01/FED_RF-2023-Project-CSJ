@@ -44,7 +44,7 @@ h1#logo {
     left: -5px;
 }
 
-#nav{
+#gnb{
     position: relative;
     right: -243px;
 }
@@ -96,22 +96,13 @@ h1#logo {
     white-space: nowrap;
 }
 
-.buy-shop::after{
-    content: '👜';
-    display: block;
-    width: 10px;
-    height: 10px;
-    color: #fff;
-    position: relative;
-    right: -111px;
-    top: -25px;
-}
+
 
 /* 장바구니 아이콘 */
-/* .basket {
+.basket {
     position: relative;
     right: 22px;
     font-size: 1.5rem;
-} */
+}
 
 /************************ 3. 하단영역 ************************/
