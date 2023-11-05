@@ -9,10 +9,11 @@
 
 /* 메인비주얼 영역 */
 #main-visual-wrap{
-    position: relative;
+    /* position: relative;
     height: 100vh;
-    top: 0
-    ;
+    top: 0; */
+    position: relative;
+    width: 100%;
 }
 
 .main-visual{
@@ -27,16 +28,50 @@ h2.main-visual-title {
     /* font-size: min(20vw,20px); */
     white-space: nowrap;
     position: relative;
-    left: -48px;
+    left: -93px;
+    top: 100px;
+    font-size: 127px;
+    font-family: 'Lora', serif;
+    z-index: 10;
+}
+h2.main-visual-title2 {
+    text-align: center;
+    /* font-size: min(10vw,95px); */
+    /* font-size: min(20vw,20px); */
+    white-space: nowrap;
+    position: relative;
+    left: 1px;
     top: 100px;
     font-size: 127px;
     font-family: 'Lora', serif;
     z-index: 10;
 }
 
+
 .main-visual img{
     display: block;
     width: 100%;
     position: relative;
     top:0;
+}
+
+.layer-img-bx{
+    width:7.5vw;
+    position: absolute;
+    z-index: 100;
+}
+
+.main-layer1{
+    top: -90px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: ;
+}
+.main-layer2{
+    top: 577px;
+    left: -375px;
+}
+.main-layer3{
+    top: 360px;
+    left: 1176px;
 }
