@@ -15,7 +15,7 @@ font-family: 'Noto Sans KR', sans-serif;
 */
 /************************ 1. 상단영역 ************************/
 html,
-body {
+body * {
     /* background: #ccc7bb; */
     background: #F0EDE6;
     cursor: url(../images/main/cursor-pointer.png), auto;
@@ -177,6 +177,32 @@ h1#logo {
     font-size: 1.5rem;
 }
 
+/* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
+.line-ani > li> a::after {
+    content: "";
+    display: block;
+
+    /* 변경요소 */
+    width: 0%;
+    margin-left: 100%;
+
+    /* 글자와의 간격 */
+    margin-top: 6px;
+
+    height: 5px;
+    border-radius: 5px;
+    background-color: #000;
+
+    /* 트랜지션 */
+    transition: all 0.3s;
+}
+/* 상위메뉴 li에 오버시 밑줄 */
+.line-ani > li:hover a::after {
+    width: 100%;
+    margin-left: 0%;
+    /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
+    transition: width 0.3s;
+}
 /* 서브메뉴 박스 */
 ul.sub-menu {
     width: 10vw;
@@ -227,3 +253,24 @@ ul.sub-menu {
 }
 
 /************************ 3. 하단영역 ************************/
+#footer{
+    width: 100%;
+}
+.footer-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-nav{
+    position: relative;
+}
+
+.sns-bx>ul {
+    display: flex;
+}

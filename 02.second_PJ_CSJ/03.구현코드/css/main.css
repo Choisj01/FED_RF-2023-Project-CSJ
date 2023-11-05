@@ -46,8 +46,7 @@ h2.main-visual-title2 {
     font-family: 'Lora', serif;
     z-index: 10;
 }
-
-
+/* 메인 페이지 비주얼 이미지 gif */
 .main-visual img{
     display: block;
     width: 100%;
@@ -55,6 +54,7 @@ h2.main-visual-title2 {
     top:0;
 }
 
+/* 메인페이지 레이어 이미지 박스 */
 .layer-img-bx{
     width:7.5vw;
     position: absolute;
@@ -65,13 +65,29 @@ h2.main-visual-title2 {
     top: -90px;
     left: 20px;
     transform: rotate(0deg);
-    transition: ;
+}
+/* 마우스 오버시 레이어 이미지 돌리기 */
+.main-layer1:hover{
+    transform: rotate(30deg);
+    transition: .1s;
 }
 .main-layer2{
     top: 577px;
     left: -375px;
+    transform: rotate(0deg);
+}
+/* 마우스 오버시 레이어 이미지 돌리기 */
+.main-layer2:hover{
+    transform: rotate(90deg);
+    transition: .1s;
 }
 .main-layer3{
     top: 360px;
     left: 1176px;
+    transform: rotate(0deg);
+}
+/* 마우스 오버시 레이어 이미지 돌리기 */
+.main-layer3:hover{
+    transform: rotate(30deg);
+    transition: .1s;
 }
