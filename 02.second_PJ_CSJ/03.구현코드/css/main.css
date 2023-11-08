@@ -54,15 +54,23 @@ h2.main-visual-title2 {
     top:0;
 }
 
+.free-items{
+    position: absolute;
+    top: 217px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 217px);
+}
+
 /* 메인페이지 레이어 이미지 박스 */
 .layer-img-bx{
     width:7.5vw;
     position: absolute;
-    z-index: 100;
+    /* z-index: 9999; */
 }
 
 .main-layer1{
-    top: -90px;
+    top: -5px;
     left: 20px;
     transform: rotate(0deg);
 }
@@ -72,8 +80,8 @@ h2.main-visual-title2 {
     transition: .1s;
 }
 .main-layer2{
-    top: 577px;
-    left: -375px;
+    top: 50%;
+    left: 10%;
     transform: rotate(0deg);
 }
 /* 마우스 오버시 레이어 이미지 돌리기 */
@@ -83,8 +91,9 @@ h2.main-visual-title2 {
 }
 .main-layer3{
     top: 360px;
-    left: 1176px;
+    right: 5vw;
     transform: rotate(0deg);
+    z-index: 99;
 }
 /* 마우스 오버시 레이어 이미지 돌리기 */
 .main-layer3:hover{
