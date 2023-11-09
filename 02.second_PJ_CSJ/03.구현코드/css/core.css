@@ -29,6 +29,9 @@ body{
     z-index: 9999;
     top: 0;
     left: 0;
+    background-color: #F0EDE6;
+    border-bottom: 1px solid #000;
+
 }
 #header:hover{    
     background: #F0EDE6;
@@ -36,6 +39,7 @@ body{
 /* 상단영역 속박스 */
 .header_inner {
     display: flex;
+    position: relative;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -47,7 +51,8 @@ body{
 /* 로고 박스 */
 h1#logo {
     position: relative;
-    left: -5px;
+    left: -10%;
+
 }
 /* 네비게이션 겉박스 */
 #gnb{
@@ -57,6 +62,9 @@ h1#logo {
 /* 네비게이션 속박스 */
 .top-menu {
     display: flex;
+    position: relative;
+    right: -25%;
+
 }
 
 /* 네비게이션 메뉴 li */
@@ -147,8 +155,7 @@ h1#logo {
 .etc-menu {
     display: flex;
     position: relative;
-    right: 18px;
-    right: -30px;
+    right: -15%;
     gap: 0 29px;
 
 }
