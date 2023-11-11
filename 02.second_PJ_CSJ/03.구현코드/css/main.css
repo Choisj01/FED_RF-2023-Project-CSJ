@@ -29,7 +29,7 @@
     top: -27%;
     left: -33%;
     transform: translate(-50%,-50%);
-    z-index: 9999;
+    z-index: 99;
 }
 /* 메인비주얼 h2 텍스트1 */
 h2.main-visual-title {
@@ -41,7 +41,6 @@ h2.main-visual-title {
     left: 0;
     font-size: 7vw;
     font-family: 'Lora', serif;
-    z-index: 10;
 }
 /* 메인비주얼 h2 텍스트2 */
 h2.main-visual-title2 {
@@ -53,7 +52,6 @@ h2.main-visual-title2 {
     left: 0;
     font-size: 7vw;
     font-family: 'Lora', serif;
-    z-index: 10;
 }
 /* 메인 페이지 비주얼 이미지 gif */
 .main-visual img{
@@ -62,6 +60,44 @@ h2.main-visual-title2 {
     position: relative;
     top: 22%;
 }
+.main-visual-txt2 h3{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-size: 1.3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 컨텐츠 a태그 버튼 */
+
+.ab-btn-bx{
+    width: 80%;
+    margin: 0 auto;
+}
+/* .ab-btn-bx:after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 80%;
+    background-image: url(../../03.구현코드/images/button-basic-stroke.svg);
+} */
+.ab-btn-bx>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.ab-btn-bx a:hover{
+    cursor: url(../images/main/cursor-hand.png);
+}
+    
 
 .free-items{
     position: absolute;
@@ -114,5 +150,56 @@ h2.main-visual-title2 {
     transform: rotate(30deg);
     transition: .1s;
 }
+
+/* 브랜드 컨텐츠 랩박스스 */
+#brands-wrap{
+    padding-top: 200px;
+}
+
+/* 브랜드컨텐츠 섹션 박스 h2 */
+section.title h2{
+    width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 70px;
+    font-size: 6.4rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+}
+
+/* 컨텐츠 박스 1 - 펫소시크 */
+.petsochic{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 브랜드 텍스트 랩박스 */
+.brands-text{
+    margin: 0 auto;
+}
+
+/* 브랜드 이미지svg 박스 */
+.text-img {
+    text-align: center;
+    width: 100%;
+}
+/* 브랜드 이미지 svg */
+.text-img img {
+    width: 100%;
+}
+
+.p-text {
+    margin: 55px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+
 
 

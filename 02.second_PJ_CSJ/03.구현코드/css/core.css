@@ -5,8 +5,7 @@
 
 /* 구글 웹폰트 링크 */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+KR&display=swap");
 
 /* 
     font-family: 'Lora', serif;
@@ -15,8 +14,8 @@ font-family: 'Noto Sans KR', sans-serif;
 */
 /************************ 1. 상단영역 ************************/
 
-body{
-    background: #F0EDE6;
+body {
+    background: #f0ede6;
     padding-top: 127px;
     cursor: url(../images/main/cursor-pointer.png), auto;
 }
@@ -29,12 +28,11 @@ body{
     z-index: 9999;
     top: 0;
     left: 0;
-    background-color: #F0EDE6;
+    background-color: #f0ede6;
     border-bottom: 1px solid #000;
-
 }
-#header:hover{    
-    background: #F0EDE6;
+#header:hover {
+    background: #f0ede6;
 }
 /* 상단영역 속박스 */
 .header_inner {
@@ -52,10 +50,9 @@ body{
 h1#logo {
     position: relative;
     left: -10%;
-
 }
 /* 네비게이션 겉박스 */
-#gnb{
+#gnb {
     position: relative;
     right: -7%;
 }
@@ -64,102 +61,101 @@ h1#logo {
     display: flex;
     position: relative;
     right: -28%;
-
 }
 
 /* 네비게이션 메뉴 li */
-.top-menu>li{
+.top-menu > li {
     position: relative;
     padding: 0 20px;
 }
 
 /* 상위 메뉴 마우스 오버시 가상요소 만들기 */
-.top-menu>li:nth-child(1):before{
+.top-menu > li:nth-child(1):before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #000; /* 까만색 점 색상 */
-    border-radius: 50%; 
-    top: -10%; 
-    left: 64px; 
+    border-radius: 50%;
+    top: -10%;
+    left: 64px;
     transform: translate(-50%, -50%); /* 중앙 정렬 */
     opacity: 0; /* 처음에는 보이지 않게 설정 */
     transition: opacity 0.4s; /* 트랜지션 효과를 적용 */
 }
-.top-menu>li:nth-child(2):before{
+.top-menu > li:nth-child(2):before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #000; /* 까만색 점 색상 */
-    border-radius: 50%; 
-    top: -10%; 
-    left: 65px; 
+    border-radius: 50%;
+    top: -10%;
+    left: 65px;
     transform: translate(-50%, -50%); /* 중앙 정렬 */
     opacity: 0; /* 처음에는 보이지 않게 설정 */
     transition: opacity 0.4s; /* 트랜지션 효과를 적용 */
 }
-.top-menu>li:nth-child(3):before{
+.top-menu > li:nth-child(3):before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #000; /* 까만색 점 색상 */
-    border-radius: 50%; 
-    top: -10%; 
-    left: 64px; 
+    border-radius: 50%;
+    top: -10%;
+    left: 64px;
     transform: translate(-50%, -50%); /* 중앙 정렬 */
     opacity: 0; /* 처음에는 보이지 않게 설정 */
     transition: opacity 0.4s; /* 트랜지션 효과를 적용 */
 }
-.top-menu>li:nth-child(4):before{
+.top-menu > li:nth-child(4):before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #000; /* 까만색 점 색상 */
-    border-radius: 50%; 
-    top: -10%; 
-    left: 72px; 
+    border-radius: 50%;
+    top: -10%;
+    left: 72px;
     transform: translate(-50%, -50%); /* 중앙 정렬 */
     opacity: 0; /* 처음에는 보이지 않게 설정 */
     transition: opacity 0.4s; /* 트랜지션 효과를 적용 */
 }
-.top-menu>li:nth-child(5):before{
+.top-menu > li:nth-child(5):before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #000; /* 까만색 점 색상 */
-    border-radius: 50%; 
-    top: -10%; 
-    left: 59px; 
+    border-radius: 50%;
+    top: -10%;
+    left: 59px;
     transform: translate(-50%, -50%); /* 중앙 정렬 */
     opacity: 0; /* 처음에는 보이지 않게 설정 */
     transition: opacity 0.4s ease-in-out; /* 트랜지션 효과를 적용 */
 }
 /* 마우스 오버시 보이기 */
-.top-menu>li:hover::before {
+.top-menu > li:hover::before {
     opacity: 1;
 }
 
-.top-menu>li>a{
+.top-menu > li > a {
     /* position: relative; */
     display: block;
     font-size: 1.8rem;
     font-weight: bold;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
 }
+
 /* 기타메뉴 박스 */
 .etc-menu {
     display: flex;
     position: relative;
     right: -15%;
     gap: 0 29px;
-
 }
-.etc-menu .search{
+.etc-menu .search {
     position: relative;
     top: 6px;
     right: -10px;
@@ -168,10 +164,10 @@ h1#logo {
 .etc-menu a {
     font-size: 1.7rem;
     font-weight: bold;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
 }
 /* 기타메뉴 돋보기 아이콘 */
-.fa-magnifying-glass{
+.fa-magnifying-glass {
     position: relative;
     top: -5px;
     width: 15px;
@@ -190,7 +186,7 @@ h1#logo {
 }
 
 /* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
-.line-ani > li> a::after {
+.line-ani > li > a::after {
     content: "";
     display: block;
 
@@ -216,7 +212,7 @@ h1#logo {
     transition: width 0.3s;
 }
 /* 서브메뉴 박스 */
-ul.sub-menu {
+.sub-menu {
     width: 10vw;
     display: block;
     position: absolute;
@@ -224,55 +220,77 @@ ul.sub-menu {
     background: #000;
     border-radius: 10px;
     /* 서브메뉴 숨기기 - 코드 추가 필요함!! */
-    display: block;   
+    display: none;
+    z-index: 99999;
 }
 
-.sub1{
-    left: -12px;
+.sub1 {
+        left: -21px;
 }
-.sub2{
-    left: 5px;
+.sub2 {
+    left: -14px;
 }
-.sub3{
-    left: 0;
+.sub3 {
+    left: -31px;
 }
 
-.sub-menu>li {
+/* 마우스 오버 시 서브 메뉴 표시 */
+/* .top-menu li:hover .sub-menu {
+    display: block;
+} */
+
+.top-menu li:hover .sub-menu,
+    .top-menu .sub-menu:hover {
+      display: block;
+    }
+
+.sub-menu > li {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    
-
 }
 
-.sub-menu>li>a {
+.sub-menu > li > a {
     display: block;
     position: relative;
     width: 100%;
     height: 100%;
     font-size: 1.2rem;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     font-weight: bold;
     color: #fff;
     left: 0;
 }
 
-.sub-menu>span {
+.sub-menu > span {
     text-align: center;
 }
 
 /************************ 3. 하단영역 ************************/
-#footer{
+/* 하단영역 svg 이미지 */
+#footer-move{
+    width: 100%;
+    position: relative;
+    top: 4px;
+    /* 애니메이션 실행 */
+    animation: moveUpDown .5s linear alternate infinite;
+}
+.footer-move{
+    position: relative;
+}
+
+#footer {
     width: 100%;
     height: 50vh;
     position: relative;
     background-color: #000;
 }
-.footer-inbox{
+.footer-inbox {
     max-width: 1600px;
+    height: 100%;
     margin: 0 auto;
     /* 부모자격 */
     position: relative;
@@ -284,14 +302,14 @@ ul.sub-menu {
     flex-wrap: wrap;
 }
 
-.footer-nav{
+.footer-nav {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2%;
     padding: 10px;
 }
 /* 밑줄 가상요소 */
-.footer-nav>ul>li>a::after{
+.footer-nav > ul > li > a::after {
     content: "";
     display: block;
 
@@ -306,84 +324,108 @@ ul.sub-menu {
     border-radius: 5px;
     background-color: #fff;
 }
-.footer-nav>ul>li:hover a::after {
+.footer-nav > ul > li:hover a::after {
     width: 100%;
     margin-left: 0%;
     /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
     transition: width 0.4s;
 }
 /* sns 박스 */
-.sns-bx{
+.sns-bx {
     width: 300px;
     position: absolute;
-    right: 10%;
-    top: 0;
+    right: 15%;
+    top: 15%;
 }
-.sns-bx>ul {
+.sns-bx > ul {
     display: flex;
     position: absolute;
     gap: 10%;
 }
-.sns-bx>ul>li {
+.sns-bx > ul > li {
     padding: 10px;
 }
-.sns-bx>ul>li>a{
+.sns-bx > ul > li > a {
     font-size: 1.4vw;
     color: #fff;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     font-weight: bold;
 }
 /* 밑줄 가상요소 */
-.sns-bx>ul>li>a::after{
+.sns-bx > ul > li > a::after {
     content: "";
     display: block;
-
+    
     /* 변경요소 */
     width: 0%;
     margin-left: 100%;
-
+    
     /* 글자와의 간격 */
     margin-top: 6px;
-
+    
     height: 5px;
     border-radius: 5px;
     background-color: #fff;
 }
-.sns-bx>ul>li:hover a::after {
+
+.sns-bx > ul > li:nth-of-type(3) > a::after {
+    background-color: yellow;
+}
+.sns-bx > ul > li:hover a::after {
     width: 100%;
     margin-left: 0%;
     /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
     transition: width 0.4s;
 }
 
-.footer-nav>ul>li {
+.footer-nav > ul > li {
     padding: 9px;
 }
-.footer-nav>ul>li>a {
+.footer-nav > ul > li > a {
     font-size: 4vw;
     color: #fff;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     font-weight: bold;
 }
 
-.footer-info{
-    position: absolute;
-    left: 0;
-    top:0;
+.footer-info {
+    position: relative;
+    left: -14%;
+    top: 62%;
 }
-.footer-info a{
+.footer-info a {
     color: #fff;
 }
-.footer-info-txt p{
+.footer-info-txt p {
     color: #fff;
 }
 
-
-.copy-right-bx{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.copy-right-bx{
+/* 하단영역 인포박스 가상요소만들기 - 클릭시 정보 보이도록 클릭용 */
+.footer-info a::after{
+    content: '∨';
+    display: block;
+    width: 20px;
+    height: 20px;
     color: #fff;
+    position: relative;
+    top:0%;
+    left: 0%;
+
 }
+
+.copy-right-bx {
+    color: #fff;
+    position: relative;
+    left: -60%;
+    top: 82%;
+}
+
+/* 하단영역 박스 move 이미지 애니메이션 */
+@keyframes moveUpDown {
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(3vh); /* 움직일 거리를 조절 */
+    }
+  }
