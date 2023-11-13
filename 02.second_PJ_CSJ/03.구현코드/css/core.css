@@ -212,7 +212,7 @@ h1#logo {
     transition: width 0.3s;
 }
 /* 서브메뉴 박스 */
-.sub-menu {
+.smenu {
     width: 10vw;
     display: block;
     position: absolute;
@@ -224,27 +224,12 @@ h1#logo {
     z-index: 99999;
 }
 
-.sub1 {
-        left: -21px;
-}
-.sub2 {
-    left: -14px;
-}
-.sub3 {
-    left: -31px;
-}
-
-/* 마우스 오버 시 서브 메뉴 표시 */
-/* .top-menu li:hover .sub-menu {
-    display: block;
-} */
-
-.top-menu li:hover .sub-menu,
-    .top-menu .sub-menu:hover {
+.top-menu li:hover .smenu,
+    .top-menu .smenu:hover {
       display: block;
     }
 
-.sub-menu > li {
+.smenu>ul>li {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -253,7 +238,7 @@ h1#logo {
     box-sizing: border-box;
 }
 
-.sub-menu > li > a {
+.smenu>ul>li> a {
     display: block;
     position: relative;
     width: 100%;
