@@ -200,6 +200,21 @@ section.title h2{
     font-weight: bold;
 }
 
+/* 브랜드 동영상 영역 */
+div#main-brands-vid {
+    /* 겉박스 높이설정 */
+    height: 700px;
+}
 
+.main-brands-vid {
+    /* 내부박스 높이 설정 */
+    height: 700px;
+    position: relative;
+    left: -5.6%;
+}
 
-
+/* 브랜드 동영상 아이프레임 크기설정 */
+.main-brands-vid iframe{
+    width: 1100px;
+    height: 500px;
+}
