@@ -200,21 +200,81 @@ section.title h2{
     font-weight: bold;
 }
 
+/* 컨텐츠 브랜드 동영상 위에 레이어 이미지 박스 */
+.vid-free-items {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 150px;
+}
+
+.vid-layer1 {
+    left: 59%;
+    top: 20%;
+    position: absolute;
+    width: 7vw;
+}
+.vid-layer2 {
+    left: 46%;
+    top: 4%;
+    position: absolute;
+}
+.vid-layer2 img {
+    width: 5vw;
+}
+
+.vid-layer3 {
+    position: absolute;
+    left: 42.2%;
+    top: 40.6%;
+    width: 14vw;
+}
+
+.vid-layer3 img {
+    width: 14vw;
+}
+
+.vid-layer4 {
+    position: absolute;
+    left: 7%;
+    top: 100%;
+    width: 3.8vw;
+}
+
+.vid-layer4 img {
+    width: 3.8vw;
+}
+.vid-layer5 {
+    position: absolute;
+    right: 19%;
+    bottom: -280%;
+}
+
+.vid-layer5 img {
+    width: 5vw;
+}
+
+
+
 /* 브랜드 동영상 영역 */
-div#main-brands-vid {
-    /* 겉박스 높이설정 */
-    height: 700px;
+#main-brands-vid {
+    margin-top: 100px;
 }
 
 .main-brands-vid {
     /* 내부박스 높이 설정 */
-    height: 700px;
+    height: 1000px;
     position: relative;
     left: -5.6%;
+    margin-top: 100px;
 }
+
 
 /* 브랜드 동영상 아이프레임 크기설정 */
 .main-brands-vid iframe{
-    width: 1100px;
-    height: 500px;
+    width: 80vw;
+    height: 800px;
+    position: absolute;
+    left: 50px;
+    top: 0;
 }
