@@ -1,6 +1,6 @@
-[ React_PJ 설치스크립트 ]
+[ Cotie_PJ 설치스크립트 ]
 1. 리액트 앱 설치하기
-- 설치위치: React_PJ\02.구현소스
+- 설치위치: Cotie_PJ\02.구현소스
 - 설치이름: cotie-app
 - 스크립트: npx create-react-app cotie-app
 
