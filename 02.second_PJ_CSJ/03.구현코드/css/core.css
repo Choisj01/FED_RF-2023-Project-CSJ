@@ -236,7 +236,7 @@ h1#logo {
     background: #000;
     border-radius: 10px;
     /* 서브메뉴 숨기기 - 코드 추가 필요함!! */
-    /* display: none; */
+    display: none;
     z-index: 99999;
 }
 
