@@ -280,3 +280,48 @@ section.title h2{
     left: 50px;
     top: 0;
 }
+
+
+/* 메인페이지 멕스본 인트로 컨텐츠영역 */
+#maxbone-wrap{
+    width: 100%;
+    position: relative;
+}
+/* 맥스본 내부 박스 1 */
+.max-bone-intro{
+    width: 1300px;
+    height: 800px;
+    /* 박스 옆으로 흐르게 */
+    display: flex;
+    /* 가운데 정렬 */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 맥스본 내부박스 2 - 동영상박스 + 글자이미지박스 */
+#mb-vid-bx{
+    width: 1300px;
+    position: relative;
+    display: flex;
+}
+
+
+.max-bone-intro {
+    max-width: 1400px;
+    height: 800px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mb-txt-bx {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.mb-img-bx {
+    position: relative;
+}
