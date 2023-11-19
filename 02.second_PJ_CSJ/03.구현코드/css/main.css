@@ -59,7 +59,22 @@ h2.main-visual-title2 {
     width: 100%;
     position: relative;
     top: 22%;
+    opacity: 0; /* 초기에 숨겨진 상태 */
+    animation: fadeInRotate 1s ease-in-out forwards; 
+    /* fadeInRotate 애니메이션을 적용 */
 }
+/* 메인페이지 메인비주얼 이미지 나타나기 효과 애니메이션 */
+@keyframes fadeInRotate {
+    0% {
+      opacity: 0;
+      transform: rotate(-40deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+
 .main-visual-txt2 h3{
     width: 80%;
     position: relative;
@@ -123,6 +138,9 @@ h2.main-visual-title2 {
     left: 25%;
 
     transform: rotate(0deg);
+
+    position: absolute;
+    z-index: 9999;
 }
 /* 마우스 오버시 레이어 이미지 돌리기 */
 .main-layer1:hover{
@@ -151,7 +169,7 @@ h2.main-visual-title2 {
     transition: .1s;
 }
 
-/* 브랜드 컨텐츠 랩박스스 */
+/***************** 브랜드 컨텐츠 랩박스 *****************/
 #brands-wrap{
     padding-top: 200px;
 }
@@ -282,7 +300,7 @@ section.title h2{
 }
 
 
-/* 메인페이지 멕스본 인트로 컨텐츠영역 */
+/********** 메인페이지 멕스본 인트로 컨텐츠영역 **************888*/
 #maxbone-wrap{
     width: 100%;
     position: relative;
@@ -298,14 +316,9 @@ section.title h2{
     position: relative;
 }
 
-/* 맥스본 내부박스 2 - 동영상박스 + 글자이미지박스 */
-#mb-vid-bx{
-    width: 1300px;
-    position: relative;
-    display: flex;
-}
 
 
+/* 맥스본 속박스 */
 .max-bone-intro {
     max-width: 1400px;
     height: 800px;
@@ -313,15 +326,220 @@ section.title h2{
     margin: 0 auto;
     position: relative;
 }
-
+/* 맥스본 내부 이미지+텍스트 박스 */
 .mb-txt-bx {
     position: relative;
     left: 0;
     top: 0;
     width: 500px;
     margin: 0 auto;
+    margin-top: 230px;
+    box-sizing: border-box;
+    margin-right: 50px;
 }
-
+/* 맥스본 로고 이미지 */
+.mb-txt-bx img {
+    margin-bottom: 66px;
+    /* margin: 0 auto; */
+    text-align: center;
+    margin-left: 23px;
+}
+/* 멕스본 텍스트 */
+.mb-txt-bx p {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    margin-bottom: 66px;
+}
+/* 맥스본 이미지 박스 */
 .mb-img-bx {
     position: relative;
 }
+/* 맥스본 이미지 */
+.mb-img-bx img {
+    height: 954px;
+}
+
+/* 맥스본 레이어 이미지 */
+/* 레이어 이미지 박스 */
+.layer-img-toy {
+    position: relative;
+    width: 26rem;
+    top: 110px;
+}
+/* 맥스본 박스 레이어 이미지 */
+.layer-img-toy img {
+    width: 26rem;
+    position: relative;
+    left: -50px;
+    opacity: 1;/* 처음에 안보임 */
+    animation: toyFadeInRotate 1s linear ease-out left;
+
+    
+}
+@keyframes toyFadeInRotate {
+    0%{
+        opacity: 0;
+        transform: rotate(350deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+/* 맥스본 내부박스 2 - 동영상박스 + 글자이미지박스 */
+#mb-vid-bx{
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+/* 맥스본 메인 동영상 박스 */
+div#mb-vid-bx {
+    width: 1450px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 맥스본 동영상 아이프레임 */
+.mb-vid-bx iframe {
+    width: 700px;
+    height: 960px;
+    position: relative;
+    left: -30px;
+}
+/* 맥스본 로고이미지 박스 */
+.show-txt {
+    position: relative;
+    left: -80px;
+}
+/* 맥스본 로고이미지 span */
+.show-txt span {
+    margin: 0 10px;
+}
+
+
+
+/*********************** 밀크앤페퍼 컨텐츠 영역 ***********************/
+/* 밀크앤 페퍼 레이어 이미지 박스 */
+.mp-layer-bx {
+    width: 600px;
+    position: relative;
+    left: 76%;
+    top: -150px;
+}
+/* 고양이 손 레이어 이미지 박스 */
+.layer-img-cathand {
+    position: absolute;
+    right: 10px;
+    top: -90px;
+}
+/* 하트 레이어 이미지 박스 */
+.layer-img-heart {
+    position: absolute;
+    left: -52px;
+    top: 243px;
+}
+
+.layer-img-cathand img {
+    width: 500px;
+}
+
+.layer-img-heart img {
+    width: 160px;
+}
+
+/* 메인페이지 밀크앤페퍼 속박스 */
+.milkpepper-inbox {
+    display: flex;
+    max-width: 1450px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 0 145px;
+    box-sizing: border-box;
+}
+/* 밀크앤 페퍼 이미지 */
+.mp-img-bx img {
+    max-width: 650px;
+    height: 850px;
+}
+/* 밀크앤페퍼 텍스트박스 */
+.mp-txt-bx {
+    width: 400px;
+}
+/* 밀크앤페퍼 로고 이미지 */
+.mp-txt-bx img {
+    width: 400px;
+    margin: 50px 0;
+}
+/* 밀크앤페퍼 소개 텍스트 p태그 */
+.mp-txt-bx p {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/************************* 컨텐츠 박스 - newproduct *************************/
+
+/* newproduct 타이틀 h2 */
+.new-txt-bx h2{
+    font-size: 6.7rem;
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.new-product-list ul{
+    display: flex;
+}
+
+/************************* 흐르는 글자 박스 - flowfont *************************/
+/* 내부 흘러가는 박스(움직일 박스) */
+.flow-txt{
+    position: relative;
+    left: 0;
+    width: 200vw;
+    display: flex;
+    margin: 100px 0;
+}
+.flow-txt ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex:1;
+    display: flex;
+}
+.flow-txt li{
+    flex: 1;
+    text-align: center;
+    font-size: 6rem;
+    white-space: nowrap;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 2px rgba(128, 128, 128, 0.76);
+    padding: 32px 52px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/* 흘러가는 텍스트 애니 클래스1 */
+.txt-ani1{
+    animation: txt-ani1 12s linear infinite;
+}
+/*  흘러가는 글자 키프레임1 */
+@keyframes txt-ani1 {
+    to{
+        left: -100%;
+    }
+}
+

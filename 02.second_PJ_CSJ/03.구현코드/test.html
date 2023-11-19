@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>서서히 나타나고 회전하는 이미지</title>
+  <style>
+    .image-box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      opacity: 0; /* 초기에 숨겨진 상태 */
+      animation: fadeInRotate 3s ease-in-out forwards; /* fadeInRotate 애니메이션을 적용 */
+    }
+
+    @keyframes fadeInRotate {
+      0% {
+        opacity: 0;
+        transform: rotate(0deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="image-box" id="myImage"></div>
+
+<script>
+  window.onload = function() {
+    var box = document.getElementById('myImage');
+    box.style.opacity = '1'; // 이미지를 보이게 함
+  };
+</script>
+
+</body>
+</html>
+o
