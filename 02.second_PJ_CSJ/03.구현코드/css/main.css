@@ -402,17 +402,22 @@ div#mb-vid-bx {
     display: flex;
     align-items: center;
 }
+
+.mb-vid-bx {
+    position: relative;
+    left: 10%;
+}
 /* 맥스본 동영상 아이프레임 */
 .mb-vid-bx iframe {
     width: 700px;
     height: 960px;
     position: relative;
-    left: -30px;
+    left: 0;
 }
 /* 맥스본 로고이미지 박스 */
 .show-txt {
     position: relative;
-    left: -80px;
+    left: 6%;
 }
 /* 맥스본 로고이미지 span */
 .show-txt span {
@@ -554,7 +559,7 @@ ul.new-lists-bx h3 {
     left: 0;
     width: 200vw;
     display: flex;
-    margin: 100px 0;
+    margin-top: 150px;
 }
 .flow-txt ul{
     margin: 0;
@@ -601,8 +606,64 @@ ul.new-lists-bx h3 {
     text-align: center;
     font-family: 'Lora', serif;
 }
-/*  */
+/* cotielog 컨텐츠 박스 */
 .cotielog-cont {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    height: 136vh;
+}
+
+.cotielog-cont ul {
+    position: relative;
+}
+
+.cotielog-cont li:nth-of-type(1) {
+    position: relative;
+    top: 32px;
+    left: 12%;
+    width: 400px;
+    height: 500px;
+}
+.cotielog-cont li:nth-of-type(1) img{
+    width: 400px;
+    height: 420px;
+    
+}
+.cotielog-cont li:nth-of-type(1) h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.cotielog-cont li:nth-of-type(2) {
+    position: relative;
+    top: -120px;
+    left: 54%;
+    width: 425px;
+    height: 520px;
+}
+.cotielog-cont li:nth-of-type(2) img{
+    width: 425px;
+    height: 520px;
+}
+.cotielog-cont li:nth-of-type(2) h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.cotielog-cont li:nth-of-type(3) {
+    position: relative;
+    top: -350px;
+    left: 12%;
+    width: 400px;
+    height: 500px;
+}
+.cotielog-cont li:nth-of-type(3) img{
+    width: 400px;
+    height: 420px;
+}
+.cotielog-cont li:nth-of-type(3) h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
 }
