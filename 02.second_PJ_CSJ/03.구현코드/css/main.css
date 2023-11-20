@@ -102,7 +102,6 @@ h2.main-visual-title2 {
 } */
 .ab-btn-bx>a{
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     font-size: 1.2rem;
@@ -191,7 +190,6 @@ section.title h2{
     width: 1600px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 /* 브랜드 텍스트 랩박스 */
@@ -307,8 +305,8 @@ section.title h2{
 }
 /* 맥스본 내부 박스 1 */
 .max-bone-intro{
-    width: 1300px;
-    height: 800px;
+    max-width: 1300px;
+    height: 90vh;
     /* 박스 옆으로 흐르게 */
     display: flex;
     /* 가운데 정렬 */
@@ -402,7 +400,6 @@ div#mb-vid-bx {
     margin: 0 auto;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 /* 맥스본 동영상 아이프레임 */
@@ -460,7 +457,6 @@ div#mb-vid-bx {
     margin: 0 auto;
     margin-top: 120px;
     margin-bottom: 200px;
-    justify-content: center;
     align-items: center;
     gap: 0 145px;
     box-sizing: border-box;
@@ -490,17 +486,66 @@ div#mb-vid-bx {
 }
 
 /************************* 컨텐츠 박스 - newproduct *************************/
-
+.new-product-list{
+      /* 드래그선택 안되게하기 */
+      user-select: none;
+      -webkit-user-drag: none;
+}
 /* newproduct 타이틀 h2 */
+.new-txt-bx {
+    margin-bottom: 65px;
+}
+
 .new-txt-bx h2{
     font-size: 6.7rem;
     text-align: center;
     font-family: 'Lora', serif;
 }
 
-.new-product-list ul{
+ul.new-lists-bx{
+    display: flex;
+    gap: 60px;
+    margin-left: 11%;
+}
+ul.new-lists-bx img{
+    width: 468px;
+    height: 600px;
+}
+
+ul.new-lists-bx h3 {
+    font-size: 1.3rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.new-lists-bx span{
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 스와이퍼 적용 CSS */
+.swiper {
+    max-width: 1300px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+/* 스와이퍼 개별 슬라이드 리스트 */
+.swiper-slide {
+    font-size: 18px;
+
+    /* 플렉스 설정 */
     display: flex;
 }
+
+/* 직접 이미지요소를 배경처럼 사용! */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /************************* 흐르는 글자 박스 - flowfont *************************/
 /* 내부 흘러가는 박스(움직일 박스) */
@@ -543,3 +588,21 @@ div#mb-vid-bx {
     }
 }
 
+/********************************** cotielog 박스 **********************************/
+/* cotielog 타이틀 박스  */
+.cotielog-title {
+    margin: 150px 0;
+}
+
+/* cotielog 타이틀 박스 h2 */
+.cotielog-title h2 {
+    /* font-size: 6rem; */
+    font-size: 6.3rem;
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+/*  */
+.cotielog-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+}
