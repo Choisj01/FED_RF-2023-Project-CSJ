@@ -550,7 +550,7 @@ ul.new-lists-bx h3 {
     right: 40%;
     transform: translateY(100%);
     width: 100px;
-    background: url(https://as2.ftcdn.net/v2/jpg/02/72/79/67/1000_F_272796771_cKV1oGBrqbUo3AXLj5nxIkJJS5pHAEld.jpg) no-repeat 0/100% 100%;
+    background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
 
 }
 .swiper-button-prev{
@@ -558,7 +558,7 @@ ul.new-lists-bx h3 {
     left: 40%;
     transform: translateY(100%) rotate(180deg);
     width: 100px;
-    background: url(https://as2.ftcdn.net/v2/jpg/02/72/79/67/1000_F_272796771_cKV1oGBrqbUo3AXLj5nxIkJJS5pHAEld.jpg) no-repeat 0/100% 100%;
+    background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
 
 }
 
@@ -609,6 +609,9 @@ ul.new-lists-bx h3 {
 }
 
 /********************************** cotielog 박스 **********************************/
+.cotielog-inbox {
+    margin-bottom: 10%;
+}
 /* cotielog 타이틀 박스  */
 .cotielog-title {
     margin: 150px 0;
