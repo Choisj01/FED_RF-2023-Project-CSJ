@@ -507,14 +507,13 @@ div#mb-vid-bx {
     font-family: 'Lora', serif;
 }
 
-ul.new-lists-bx{
-    display: flex;
-    gap: 60px;
-    margin-left: 11%;
+.mySwiper{
+    padding-left: 10%;
 }
 ul.new-lists-bx img{
-    width: 468px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 ul.new-lists-bx h3 {
@@ -529,21 +528,17 @@ ul.new-lists-bx h3 {
 }
 
 /* 스와이퍼 적용 CSS */
-.swiper {
-    max-width: 1300px;
-    height: 700px;
-    margin: 0 auto;
-}
 
 /* 스와이퍼 개별 슬라이드 리스트 */
 .swiper-slide {
     font-size: 18px;
 
-    /* 플렉스 설정 */
-    display: flex;
 }
 
 /* 직접 이미지요소를 배경처럼 사용! */
+.swiper-slide>.imbx {
+    width: 100%;
+}
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -551,6 +546,27 @@ ul.new-lists-bx h3 {
     object-fit: cover;
 }
 
+.swiper-button-next{
+    top: auto;
+    right: 40%;
+    transform: translateY(100%);
+    width: 100px;
+    background: url(https://as2.ftcdn.net/v2/jpg/02/72/79/67/1000_F_272796771_cKV1oGBrqbUo3AXLj5nxIkJJS5pHAEld.jpg) no-repeat 0/100% 100%;
+
+}
+.swiper-button-prev{
+    top: auto;
+    left: 40%;
+    transform: translateY(100%) rotate(180deg);
+    width: 100px;
+    background: url(https://as2.ftcdn.net/v2/jpg/02/72/79/67/1000_F_272796771_cKV1oGBrqbUo3AXLj5nxIkJJS5pHAEld.jpg) no-repeat 0/100% 100%;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    background: #f00;
+    content: '';
+}
 
 /************************* 흐르는 글자 박스 - flowfont *************************/
 /* 내부 흘러가는 박스(움직일 박스) */

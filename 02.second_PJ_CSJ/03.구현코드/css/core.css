@@ -47,6 +47,7 @@ body {
     left: 0;
     background-color: #f0ede6;
     border-bottom: 1px solid #000;
+    transition: .4s;
 }
 #header:hover {
     background: #f0ede6;
@@ -62,6 +63,14 @@ body {
     padding: 26px;
     padding-left: 60px;
     gap: 0 3vw;
+    transition: .4s;
+}
+#header.on .header_inner{
+    padding: 0;
+}
+#header.on2{
+    transform: translateY(-100%);
+    opacity: 0;
 }
 /* 로고 박스 */
 h1#logo {
@@ -232,12 +241,17 @@ h1#logo {
 .smenu {
     width: 10vw;
     position: absolute;
-    top: 50px;
-    background: #000;
-    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
     /* 서브메뉴 숨기기 - 코드 추가 필요함!! */
     display: none;
     z-index: 99999;
+}
+.smenu ul{
+    background: #000;
+    border-radius: 10px;
+
 }
 
 .top-menu li:hover .smenu,

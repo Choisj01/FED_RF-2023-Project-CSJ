@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         <!-- 폰트어썸 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+        
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <!-- 메인CSS -->
         <link rel="stylesheet" href="./css/main.css" />
@@ -19,7 +21,7 @@
          <!-- Swiper JS -->
          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  
-        <script src="./js/main.js" defer ></script>
+        <script src="./js/main.js" type="module"></script>
     </head>
     <body>
         <!-- 1.상단영역 -->
@@ -232,7 +234,7 @@
                         <img src="./images/main/brand-maxbone.gif" alt="맥스본 이미지" />
                     </div>
                 </div>
-                <div class="layer-img-toy">
+                <div class="layer-img-toy show-ele">
                     <img src="./images/main/layer-toy.png" alt="레이어 이미지" />
                 </div>
                 <!-- 맥스본 동영상 + 글자이미지 박스 -->
@@ -252,7 +254,7 @@
         <!-- 5. 컨텐츠 박스 - milknpepper -->
         <div id="milkpepper-wrap">
             <section>
-                <div class="mp-layer-bx">
+                <div class="mp-layer-bx show-ele2">
                     <div class="layer-img-cathand">
                         <img src="./images/main/layer-hand.png" alt="레이어 이미지" />
                     </div>
@@ -293,35 +295,35 @@
                     <ul class="new-lists-bx swiper-wrapper">
                         <li class="swiper-slide">
                             <a href="#">
-                                <img src="./images/main/bird-toy.jpg" alt="앵무새장난감" />
+                                <div class="imbx"><img src="./images/main/bird-toy.jpg" alt="앵무새장난감" /></div>
                                 <h3>MILK & PEPPER</h3>
                                 <span>밀크 앤 페퍼 PERROQUET 앵무새 강아지 장난감</span>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="#">
-                                <img src="./images/main/Bandana-red.jpg" alt="반다나레드" />
+                                <div class="imbx"><img src="./images/main/Bandana-red.jpg" alt="반다나레드" /></div>
                                 <h3>MILK & PEPPER</h3>
                                 <span>밀크 앤 페퍼 YAEL Bandana Rayé Rouge 야엘 줄무늬 반다나 <br>레드</span>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="#">
-                                <img src="./images/main/rain-coat1.jpg" alt="야자수 레인코드" />
+                                <div class="imbx"><img src="./images/main/rain-coat1.jpg" alt="야자수 레인코드" /></div>
                                 <h3>MILK & PEPPER</h3>
                                 <span>밀크 앤 페퍼 PALOMA Palmier Orange-Kaki 팔로마 오렌지 <br>야자수 레인코트</span>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="#">
-                                <img src="./images/main/SUZANNE-Harnais1.jpg" alt="수잔하트 하네스" />
+                                <div class="imbx"><img src="./images/main/SUZANNE-Harnais1.jpg" alt="수잔하트 하네스" /></div>
                                 <h3>MILK & PEPPER</h3>
                                 <span>밀크 앤 페퍼 SUZANNE Harnais 수잔 하트 하네스</span>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="#">
-                                <img src="./images/main/JAYDEN-Harnais1.jpg" alt="제이든 그린 야자수 하네스" />
+                                <div class="imbx"><img src="./images/main/JAYDEN-Harnais1.jpg" alt="제이든 그린 야자수 하네스" /></div>
                                 <h3>MILK & PEPPER</h3>
                                 <span
                                     >밀크 앤 페퍼 JAYDEN Harnais set 제이든 그린 야자수 하네스<br />
@@ -329,8 +331,9 @@
                                 >
                             </a>
                         </li>
-                        <div class="swiper-pagination"></div>
                     </ul>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <!-- 스와이프 박스 끝 -->
             </div>
