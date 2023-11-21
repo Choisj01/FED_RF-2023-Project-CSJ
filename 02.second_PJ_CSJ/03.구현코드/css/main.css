@@ -90,26 +90,25 @@ h2.main-visual-title2 {
 /* 컨텐츠 a태그 버튼 */
 
 .ab-btn-bx{
-    width: 80%;
+    width: 150px;
     margin: 0 auto;
+    border: 2px solid #222;
+    border-radius: 20px;
+    padding: 5px;
 }
-/* .ab-btn-bx:after{
-    content: '';
-    display: block;
-    position: relative;
-    width: 80%;
-    background-image: url(../../03.구현코드/images/button-basic-stroke.svg);
-} */
+
 .ab-btn-bx>a{
     display: flex;
-    align-items: center;
     position: relative;
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: none;
+    justify-content: center;
 }
 
-.ab-btn-bx a:hover{
-    cursor: url(../images/main/cursor-hand.png);
+.ab-btn-bx:hover a{
+    /* 마우스 커서가 안변함 */
+    cursor: url(../images/main/cursorhand1.png);
 }
     
 
