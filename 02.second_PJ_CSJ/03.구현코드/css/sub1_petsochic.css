@@ -63,11 +63,9 @@ div#sub-petsochic-visual-wrap {
 
 /* 펫소시크 메인 이미지 레이어 이미지2 */
 .layer-img-bx.psc-layer2 {
-    width: 39%;/* height: 100%; */
+    width: 39%;
     position: absolute;
     right: 100px;
-    /* left: 0; */
-    /* z-index: 100; */
     top: 70%;
 }
 
