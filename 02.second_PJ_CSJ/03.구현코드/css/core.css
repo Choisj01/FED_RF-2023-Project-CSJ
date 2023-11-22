@@ -212,7 +212,7 @@ h1#logo {
 }
 
 /* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
-.line-ani > li > a::after {
+.buy-shop>.line-ani > li > a::after {
     content: "";
     display: block;
 
@@ -253,56 +253,67 @@ h1#logo {
     border-radius: 10px;
 }
 
-/* 서브메뉴 마우스 오버시 */
-.smenu>.line-ani>li>a::after {
+/* 상위메뉴 li 마우스 오버시 하위 메뉴 */
+.top-menu li:hover .smenu,
+    .top-menu .smenu:hover {
+        display: block;
+    }
+    
+    .smenu>ul>li {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    /* 서브메뉴 박스 a태그 */
+    .smenu>ul>li> a {
+        display: block;
+        /* position: relative; */
+        width: 100%;
+        height: 100%;
+        font-size: 1.2rem;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: bold;
+        color: #fff;
+        left: 0;
+    }
+    
+    .sub-menu > span {
+    text-align: center;
+}
+
+/******************* 서브메뉴 마우스 오버시 *******************/
+/* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
+.line-ani > li> a::after {
     content: "";
     display: block;
+
+    /* 변경요소 */
     width: 0%;
     margin-left: 100%;
-    margin-top: 6px;
-    height: 5px;
-    border-radius: 5px;
+
+    /* 글자와의 간격 */
+    margin-top: 4px;
+
+    height: 2px;
     background-color: #fff;
+    
+    /* 트랜지션 */
     transition: all 0.3s;
 }
 
-.smenu>.line-ani>li:hover a::after{
+/* 상위메뉴 li에 오버시 밑줄 */
+.line-ani > li:hover a::after {
     width: 100%;
-    margin-left: 0;
-    transition: width .3s;
+    margin-left: 0%;
+    /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
+    transition: width 0.3s;
 }
 
 
 
-.top-menu li:hover .smenu,
-    .top-menu .smenu:hover {
-      display: block;
-    }
-
-.smenu>ul>li {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.smenu>ul>li> a {
-    display: block;
-    /* position: relative; */
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: bold;
-    color: #fff;
-    left: 0;
-}
-
-.sub-menu > span {
-    text-align: center;
-}
 
 /************************ 3. 하단영역 ************************/
 /* 하단영역 svg 이미지 */
