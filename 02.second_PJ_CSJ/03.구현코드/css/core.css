@@ -291,7 +291,7 @@ h1#logo {
     position: relative;
     top: 4px;
     /* 애니메이션 실행 */
-    animation: moveUpDown .5s linear alternate infinite;
+    animation: moveUpDown 1.1s linear alternate infinite;
 }
 .footer-move{
     position: relative;
@@ -441,6 +441,6 @@ h1#logo {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(3vh); /* 움직일 거리를 조절 */
+      transform: translateY(3.2vh); /* 움직일 거리를 조절 */
     }
   }
