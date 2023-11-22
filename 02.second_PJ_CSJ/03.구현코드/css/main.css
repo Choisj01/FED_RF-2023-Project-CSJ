@@ -9,9 +9,7 @@
 
 /* 메인비주얼 영역 */
 #main-visual-wrap{
-    /* position: relative;
-    height: 100vh;
-    top: 0; */
+   
     position: relative;
     width: 100%;
 }
