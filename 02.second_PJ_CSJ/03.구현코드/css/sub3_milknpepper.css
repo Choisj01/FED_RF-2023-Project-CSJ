@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* Second PJ(cotieshop) 서브3(MILK & PEPPER) CSS - sub3_milknpepper.css */
+
+/* 공통 외부 css */
+@import url(./reset.css);
+/* 상단, 하단영역 공통 css */
+@import url(./core.css);
+
+@import url(./common.css);
+

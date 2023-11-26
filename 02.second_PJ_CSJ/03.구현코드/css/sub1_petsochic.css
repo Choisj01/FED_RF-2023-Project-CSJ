@@ -9,6 +9,7 @@
 
 @import url(./common.css);
 
+/********************* 2. 펫소시크 페이지 메인이미지 영역 *********************/
 /* petsochic 브랜드 타이틀+이미지+레이어 이미지 랩핑박스 */
 div#sub-petsochic-visual-wrap {
     width: 100%;
@@ -73,3 +74,134 @@ div#sub-petsochic-visual-wrap {
     position: relative;
     z-index: 10;
 }
+
+/******************************* 3. 펫소시크 브랜드 소개 영역  *******************************/
+.petsochic{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* 브랜드 텍스트 랩박스 */
+.brands-text{
+    margin: 0 auto;
+}
+
+/* 브랜드 이미지svg 박스 */
+.text-img {
+    text-align: center;
+    width: 100%;
+}
+
+/* 브랜드 이미지 svg */
+.text-img img {
+    width: 60%;
+}
+
+.psc-text{
+    margin: 55px 0;
+    text-align: center;
+}
+
+.psc-text h4 {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 35px;
+
+}
+
+.psc-text p {
+    font-size: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0 31px;
+    color: #222;
+}
+
+/********************************** 4. 창업자 스토리 영역  **********************************/
+article.founder-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.found-txt{
+    margin: 0 auto;
+    margin-left: 20px;
+}
+
+.found-txt h4{
+    margin: 25px 0; 
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.found-txt p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222;
+}
+.hello-img-bx img {
+    width: 80%;
+    margin-left: 47px;
+}
+
+/****************************************** 5. 펫소시크 동영상 영역  ******************************************/
+#psc-brand-vid{
+    margin-top: 220px;
+    margin-bottom: 200px;
+}
+
+.psc-vid-inbox{
+    max-width: 1600px;
+    height: 800px;
+    position: relative;
+}
+.psc-vid-inbox iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -90px;
+}
+ /* 동영상 박스 왼쪽 정렬을 위한 기존 클래스 지우기 기존 display:flex + 가운데 정렬이 있었음 */
+.vp-center {
+    display: block;
+}
+
+/******************************************** 6. 펫소시크 철학 소개 영역 ********************************************/
+.philosophy-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 250px;
+}
+
+/*************************************************** 7.펫소시크 브랜드 타이틀 영역 ***************************************************/
+
+.psc-title-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.psc-title-inbox h1{
+    text-align: center;
+    font-size: 6.2rem;
+    font-weight: bold;
+    font-family: "Lora", serif;
+}
+.psc-title-img-bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+
