@@ -113,3 +113,14 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  const imgTg = $(".image-container");
+  imgTg.addClass('on');
+  setTimeout(addOnClass,3000);
+  function addOnClass(){
+    imgTg.removeClass('on');
+    setTimeout(()=>{
+      imgTg.addClass('on');
+      setTimeout(addOnClass,2000);      
+    },1000)
+  }
