@@ -415,7 +415,7 @@ section.title h2{
 .layer-img-toy {
     position: relative;
     width: 26rem;
-    top: 110px;
+    top: -6px;
 }
 /* 맥스본 박스 레이어 이미지 */
 .layer-img-toy img {
@@ -443,6 +443,7 @@ section.title h2{
     margin: 0 auto;
     position: relative;
     display: flex;
+    top: -216px;
 }
 /* 맥스본 메인 동영상 박스 */
 div#mb-vid-bx {
@@ -451,6 +452,8 @@ div#mb-vid-bx {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: 20px;
 }
 
 .mb-vid-bx {
@@ -468,6 +471,9 @@ div#mb-vid-bx {
 .show-txt {
     position: relative;
     left: 6%;
+}
+.delayed-image {
+    margin: 0 16px;
 }
 /* 맥스본 로고이미지 span */
 .show-txt span {
