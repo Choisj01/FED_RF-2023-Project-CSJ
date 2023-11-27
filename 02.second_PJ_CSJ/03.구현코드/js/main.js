@@ -9,13 +9,13 @@ const winH = window.innerHeight;
 
 // console.log(showEle);
 
-// 1
+// 1 레이어 이미지 - 장난감
 const showEle = dFn.qs('.show-ele');
 showEle.style.opacity = 0;
 showEle.style.transform = 'translateX(-100%) rotate(360deg)';
 showEle.style.transition = '.4s ease-in-out';
 
-// 2
+// 2 레이어 이미지 - 고양이 손 하트
 const showEle2 = dFn.qs('.show-ele2');
 showEle2.style.opacity = 0;
 showEle2.style.transform = 'translateX(100%)';
