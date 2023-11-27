@@ -93,6 +93,8 @@ h2.main-visual-title2 {
     border: 2px solid #222;
     border-radius: 20px;
     padding: 5px;
+    cursor: url(../images/main/cursorhand1.png);
+    transform: scale(1);
 }
 
 .ab-btn-bx>a{
@@ -103,10 +105,12 @@ h2.main-visual-title2 {
     cursor: none;
     justify-content: center;
 }
-
+.ab-btn-bx:hover{
+    background-color: #222;
+    transform: scale(1.1);
+}
 .ab-btn-bx:hover a{
-    /* 마우스 커서가 안변함 */
-    cursor: url(../images/main/cursorhand1.png);
+    color: #fff;
 }
     
 
@@ -126,7 +130,7 @@ h2.main-visual-title2 {
 }
 
 .layer-img-bx>img {
-    width: 6.8vw;
+    width: 7.5vw;
 }
 
 .main-layer1{
@@ -163,6 +167,21 @@ h2.main-visual-title2 {
 .main-layer3:hover{
     transform: rotate(30deg);
     transition: .1s;
+}
+
+/*  브랜드 레이어 이미지 - 생선 이미지 */
+.brand-free-items {
+    position: relative;
+}
+
+.fish-layer {
+    position: absolute;
+    right: 18%;
+    top: 168px;
+    transform: rotate(0deg);
+}
+.fish-layer:hover {
+    transform: rotate(30deg);
 }
 
 /***************** 브랜드 컨텐츠 랩박스 *****************/
