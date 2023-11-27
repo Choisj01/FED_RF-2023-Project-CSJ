@@ -244,7 +244,7 @@ h1#logo {
     left: 50%;
     transform: translateX(-50%);
     padding-top: 20px;
-    /* 서브메뉴 숨기기 - 코드 추가 필요함!! */
+
     display: none;
     z-index: 99999;
 }
