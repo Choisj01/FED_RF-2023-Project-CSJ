@@ -114,6 +114,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  // maxbone 로고 이미지 박스
   const imgTg = $(".image-container");
   imgTg.addClass('on');
   setTimeout(addOnClass,3000);
