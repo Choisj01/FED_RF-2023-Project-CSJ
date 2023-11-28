@@ -21,10 +21,11 @@
 
          <!-- Swiper JS -->
          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+         <script type="module" src="./js/core.js"></script>
 </head>
 <body>
-      <!-- 1.상단영역 -->
-      <div class="top-bx">
+       <!-- 1.상단영역 -->
+       <div class="top-bx">
         <div id="header">
             <header class="header_inner">
                 <h1 id="logo">
@@ -36,24 +37,24 @@
                             <a href="#"><span>Brands</span></a>
 
                             <div class="smenu">
-                                <ul>
+                                <ul class="line-ani">
                                     <li>
-                                        <a href="#"><span>PET SO CHIC</span></a>
+                                        <a href="sub1_petsochic.html"><span>PET SO CHIC</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span>MAXBONE</span></a>
+                                        <a href="sub2_maxbone.html"><span>MAXBONE</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span>MILK&amp;PEPPER</span></a>
+                                        <a href="sub3_milknpepper.html"><span>MILK&amp;PEPPER</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="m7">
-                            <a href="#"><span>Outdoor</span></a>
+                            <a href="sub5_item_list.html"><span>Outdoor</span></a>
 
                             <div class="smenu">
-                                <ul>
+                                <ul class="line-ani">
                                     <li>
                                         <a href="#"><span>봄여름의류</span></a>
                                     </li>
@@ -79,10 +80,10 @@
                             </div>
                         </li>
                         <li class="m3">
-                            <a href="#"><span>Indoor</span></a>
+                            <a href="sub5_item_list.html"><span>Indoor</span></a>
 
                             <div class="smenu">
-                                <ul>
+                                <ul class="line-ani">
                                     <li>
                                         <a href="#"><span>리빙</span></a>
                                     </li>
@@ -122,13 +123,59 @@
             </header>
         </div>
     </div>
+    <!-- 3. maxbone 브랜드 타이틀+이미지 영역 -->
+    <div id="sub-maxbone-visual-wrap">
+        <div class="maxbone-visual">
+            <div class="mb-visual-txt">
+                <h2 class="mb-visual-title">MAXBONE</h2>
+            </div>
+            <div class="mb-img-wrap">
+                <img src="./images/sub2_maxbone/visual-maxbone.gif" alt="맥스본 이미지" />
+            </div>
+        </div>
+        <!-- 펫소시크 레이어 이미지 박스 -->
+        <div class="mb-free-items">
+            <div class="layer-img-bx mb-layer1">
+                <img src="./images/sub2_maxbone/layer-line-black.jpg" alt="레이어 선 이미지">
+            </div>
+           <div class="layer-img-bx mb-layer2">
+               <img src="./images/sub2_maxbone/layer-heart-broken.jpg" alt="맥스본 레이어 이미지">
+           </div>
+           <div class="layer-img-bx mb-layer3">
+               <img src="./images/sub2_maxbone/layer-loop.png" alt="맥스본 레이어 이미지">
+           </div>
+        </div>
+    </div>
+
+     <!-- 4. 컨텐츠 박스 - maxbone 인트로소개 -->
+     <div id="brands-wrap">
+            <div class="maxbone-title">
+                <div class="mb-intro-img">
+                    <img src="./images/sub2_maxbone/intro-maxbone-01.jpg" alt="맥스본 이미지" />
+                </div>
+                <div class="brands-text">
+                    <div class="text-img">
+                        <img src="./images/sub2_maxbone/logo-maxbone.svg" alt="맥스본 로고이미지" />
+                    </div>
+                    <div class="mb-text">
+                        <h4>모든 반려동물은 최상의 것을 <br>
+                            누릴 자격이 있습니다.</h4>
+                        <p>
+                            맥스본은 시간을 초월하는 아름다운 제품이 심플한 디자인과 <br>
+                            불편함을 해소할 수 있는 기능성을 모두 갖출 때 탄생한다고 믿습니다. <br>
+                            ‘Every pet deserves the best.’라는 모토를 가지고 만든 맥스본의 제품은 <br>
+                            반려동물에게 최고의 선물이 되어 줍니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
  
 
 
 
 
-     <!-- 하단영역 -->
+     <!-- 하단영역
      <div id="footer-move">
         <div class="footer-move">
             <img src="../03.구현코드/images/main/footer-layer.svg" alt="하단영역 레이어이미지" />
@@ -173,7 +220,7 @@
                 <p class="copyright">Copyright 2021. Cotieshop All rights reserved.</p>
             </div>
         </footer>
-    </div>
+    </div> -->
 
 </body>
 </html>

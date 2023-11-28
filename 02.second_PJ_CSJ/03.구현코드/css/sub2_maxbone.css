@@ -9,3 +9,106 @@
 
 @import url(./common.css);
 
+/***************************************** 3. maxbone 브랜드 타이틀+이미지 영역 *****************************************/
+div#sub-maxbone-visual-wrap {
+    height: 180vh;
+}
+/* 타이틀 텍스트 박스 */
+.mb-visual-txt {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+/* 타이틀 h2 */
+h2.mb-visual-title {
+    text-align: center;
+    font-size: 7rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    position: relative;
+}
+/* 맥스본 메인 이미지 박스 */
+.mb-img-wrap {
+    max-width: 1600px;
+    /* 가운데 정렬하기 위한 flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 이미지 태그 가운데 정렬 */
+    margin: 0 auto;
+}
+/* 맥스본 메인이미지 */
+.mb-img-wrap img {
+    width: 1000px;
+    position: relative;
+    z-index: 10;
+}
+/* 메인 레이어 이미지 전체 박스 */
+.mb-free-items {
+    /* 레이어 이미지 위치이동 */
+    position: relative;
+    top: -750px;
+    left: 0;
+    width: 100%;
+}
+/* 레이어 이미지-선 박스 */
+.mb-layer1 {
+    /* 위치이동 */
+    position: relative;
+    top: -170px;
+    width: 100%;
+}
+/* 레이어 이미지-하트 박스 */
+.mb-layer2 {
+    position: relative;
+    left: 196px;
+    top: -145px;
+    width: 200px;
+}
+/* 레이어 이미지-로프 박스 */
+.mb-layer3 {
+    width: 330px;
+    position: relative;
+    left: 73%;
+    top: -35px;
+}
+
+/********************************* 4. 컨텐츠 박스 - maxbone 인트로소개 *********************************/
+.maxbone-title {
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands-text {
+    width: 600px;
+    margin: 0 auto;
+}
+.text-img {
+    margin-bottom: 45px;
+}
+.text-img img {
+    position: relative;
+    left: 12%;
+}
+
+/* 맥스본 인트로 로고이미지+ 텍스트 랩박스 */
+.mb-text {
+    text-align: center;
+}
+.mb-text h4 {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    letter-spacing: -2.2px;
+}
+.mb-text p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    letter-spacing: -1.8px;
+    font-weight: bold;
+}

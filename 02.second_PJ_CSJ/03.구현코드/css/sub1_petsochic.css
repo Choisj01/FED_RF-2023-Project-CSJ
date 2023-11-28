@@ -249,7 +249,12 @@ article.founder-inbox{
     margin: 100px 0;
 }
 
-/************************************ 8.md's choice ************************************/
+/************************************ 8.md's choice (스와이퍼 적용 영역) ************************************/
+/* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
+div#newproduct-wrap {
+    height: 110vh;
+    padding-bottom: 100px;
+}
 .new-product-list{
   /* 드래그선택 안되게하기 */
   user-select: none;
@@ -370,4 +375,41 @@ background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
 .swiper-button-next:after, .swiper-button-prev:after {
 background: #f00;
 content: '';
+}
+
+
+/************************* 9. 페이지 이동 박스 영역 -> maxbone으로 *************************/
+.move-page-inbox {
+    position: relative;
+    width: 100%;
+}
+
+.move-page-inbox b {
+    position: absolute;
+    top: 33%;
+    left: 32%;
+    font-size: 8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
+}
+
+.move-page-inbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.move-page-inbox a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+
+.txt_inner {
+    position: absolute;
+    top: 57%;
+    left: 45%;
+}
+
+.txt_inner span {
+    font-size: 2.8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
 }

@@ -9,17 +9,6 @@ const winH = window.innerHeight;
 
 // console.log(showEle);
 
-// 1
-const showEle = dFn.qs('.show-ele');
-showEle.style.opacity = 0;
-showEle.style.transform = 'translateX(-100%) rotate(360deg)';
-showEle.style.transition = '.4s ease-in-out';
-
-// 2
-const showEle2 = dFn.qs('.show-ele2');
-showEle2.style.opacity = 0;
-showEle2.style.transform = 'translateX(100%)';
-showEle2.style.transition = '.4s ease-in-out';
 
 // 지난 마지막 위치값
 let lastDir = 0;
@@ -28,15 +17,6 @@ let lastDir = 0;
 const hdr = dFn.qs('#header');
 
 function showFn(){
-  // 1
-  let tg = dFn.getBCR(showEle);
-  if(tg < winH/3){ showEle.style.opacity = 1;
-  showEle.style.transform = 'translateX(0) rotate(0deg)';}
-
-  // 2
-  let tg2 = dFn.getBCR(showEle2);
-  if(tg2 < winH/3){ showEle2.style.opacity = 1;
-  showEle2.style.transform = 'translateX(0)';}
 
     // 상단 메뉴
     let scY = window.scrollY
