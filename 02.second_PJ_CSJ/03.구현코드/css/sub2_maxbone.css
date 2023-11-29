@@ -109,7 +109,7 @@ h2.mb-visual-title {
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
-    letter-spacing: -0.4px;
+    letter-spacing: 0.1px;
     font-weight: bold;
 }
 
@@ -235,6 +235,7 @@ div#colab-intro-wrap {
     position: relative;
     height: 960px;
     box-sizing: border-box;
+    margin-top: 138px;
     margin-bottom: 100px;
 }
 
@@ -278,6 +279,9 @@ div#colab-intro-wrap {
 }
 
 /************************************* 8. 맥스본 매거진 컬렉션 박스 *************************************/
+div#magazine-wrap {
+    margin-top: 250px;
+}
 /* 맥스본 매거진 속박스  */
 .mb-magazin-inbox {
     max-width: 1200px;
@@ -338,6 +342,7 @@ ul.cont-flex2 {
 /* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
 div#newproduct-wrap {
     height: 110vh;
+    padding-top: 200px;
     padding-bottom: 100px;
 }
 .new-product-list{
