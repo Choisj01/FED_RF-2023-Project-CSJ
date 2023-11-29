@@ -10,14 +10,189 @@
 @import url(./common.css);
 
 /****************************** 2. 밀크앤페퍼 브랜드 타이틀+이미지 영역 ******************************/
+
+/* 밀크앤 페퍼 메인 타이틀 전체 랩핑 박스 */
+div#sub-milkpepper-visual-wrap {
+    height: 137vh;
+    margin-top: 100px;
+    position: relative;
+    
+}
+/* 메인 타이틀 영역 속박스 */
 .mnp-visual {
     max-width: 1450px;
     height: 127vh;
     margin: 0 auto;
 }
 
+/* 밀크앤 페퍼 타이틀 h2 */
 .mnp-visual-txt h2 {
     text-align: center;
-    font-size: 7.1rem;
+    font-size: 10rem;
     font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+/* 밀크앤페퍼 타이틀 이미지 랩박스 */
+.mp-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+.mp-img-wrap img {
+    width: 50vw;
+}
+
+/* 밀크페퍼 메인 타이틀 영역 레이어 이미지 박스  */
+.mnp-free-items {
+    /* position: absolute; */
+    position: relative;
+    top: -818px;
+    left: 0;
+}
+/* 레이어 이미지 각 박스 공통 css */
+.layer-img-bx{
+    position: absolute;
+}
+
+/*  고양이 레이어 이미지 박스 */
+.mnp-layer2 {
+    position: absolute;
+    top: 315px;
+    left: 5%;
+    z-index: 110;
+}
+/* 고양이 손,하트 레이어 이미지 박스 */
+.mnp-layer3 {
+    position: absolute;
+    right: -12%;
+}
+/* 고양이 손,하트 레이어이미지 박스 속 하트 이미지 박스 */
+.mnp-layer4 {
+    position: absolute;
+    top: 321px;
+    /* right: 12px; */
+    left: -24%;
+}
+
+/***************************** 3. 컨텐츠 박스 - 밀크앤페퍼 인트로소개 *****************************/
+.mnp-title {
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands-text {
+    width: 600px;
+    margin: 0 auto;
+}
+.text-img {
+    margin-bottom: 45px;
+}
+.text-img img {
+    position: relative;
+    left: 12%;
+}
+
+/* 맥스본 인트로 로고이미지+ 텍스트 랩박스 */
+.mnp-text {
+    text-align: center;
+}
+.mnp-text h4 {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    letter-spacing: -2.2px;
+}
+.mnp-text p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 2.3;
+    letter-spacing: -1.4px;
+    font-weight: bold;
+}
+
+/******************************************** 4. 창업자 스토리 ********************************************/
+div#founder-story-wrap {
+    position: relative;
+    height: 105vh;
+}
+
+article.founder-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+.found-txt {
+    margin: 0 auto;
+    margin-left: 90px;
+}
+
+.found-txt h4{
+    margin: 25px 0; 
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.found-txt p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #222;
+}
+.dog-img-bx{
+    margin-right: 20px;
+}
+.dog-img-bx img {
+    width: 33vw;
+}
+
+/* 레이어 이미지 박스 */
+.mnp-free-items2 {
+    position: relative;
+}
+/* 까만원 레이어 이미지 박스 */
+.mnp-layer5 {
+    position: absolute;
+    top: -70px;
+    left: 12%;
+}
+/* 핑크색 원 레이어 이미지 박스 */
+.mnp-layer6 {
+    position: absolute;
+    top: -70px;
+    left: 22%;
+}
+
+/* 패턴 레이어이미지 박스 1 */
+.mnp-layer7 {
+    position: absolute;
+    top: 99px;
+    left: 10%;
+}
+.mnp-layer7 img {
+    width: 88px;
+}
+
+/* 패턴 레이어이미지 박스 2 */
+.mnp-layer8 {
+    position: absolute;
+    right: 31%;
+    top: 124px;
+}
+.mnp-layer9 {
+    position: absolute;
+    right: 16%;
+    top: 218px;
 }
