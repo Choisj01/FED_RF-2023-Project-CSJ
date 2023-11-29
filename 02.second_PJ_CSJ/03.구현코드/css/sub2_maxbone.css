@@ -112,3 +112,36 @@ h2.mb-visual-title {
     letter-spacing: -1.8px;
     font-weight: bold;
 }
+
+/********************************** 5. 창업자 스토리 영역  **********************************/
+article.founder-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.found-txt {
+    margin: 0 auto;
+    margin-left: 90px;
+}
+
+.found-txt h4{
+    margin: 25px 0; 
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.found-txt p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222;
+}
+.dog-img-bx{
+    margin-right: 20px;
+}
+.dog-img-bx img {
+    width: 33vw;
+}
