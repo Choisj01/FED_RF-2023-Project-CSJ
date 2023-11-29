@@ -9,3 +9,15 @@
 
 @import url(./common.css);
 
+/****************************** 2. 밀크앤페퍼 브랜드 타이틀+이미지 영역 ******************************/
+.mnp-visual {
+    max-width: 1450px;
+    height: 127vh;
+    margin: 0 auto;
+}
+
+.mnp-visual-txt h2 {
+    text-align: center;
+    font-size: 7.1rem;
+    font-weight: bold;
+}
