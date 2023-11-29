@@ -11,7 +11,7 @@
 
 /***************************************** 3. maxbone 브랜드 타이틀+이미지 영역 *****************************************/
 div#sub-maxbone-visual-wrap {
-    height: 180vh;
+    height: 160vh;
 }
 /* 타이틀 텍스트 박스 */
 .mb-visual-txt {
@@ -109,7 +109,7 @@ h2.mb-visual-title {
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
-    letter-spacing: -1.8px;
+    letter-spacing: -0.4px;
     font-weight: bold;
 }
 
@@ -170,7 +170,7 @@ div#mb-vid-bx {
     height: 828px;
 }
 /* 맥스본 동영상 박스 영역 레이어 이미지 박스 */
-.layer-img-bx {
+.mb-layer4 {
     position: absolute;
     right: 7%;
     top: 91px;
@@ -229,3 +229,273 @@ div#mb-vid-bx {
     }
   }
 
+/********************************* 7. 콜라보 소개 영역 **********************************/
+/* 전체 랩핑 박스 */
+div#colab-intro-wrap {
+    position: relative;
+    height: 960px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+/* 전체싸는 속박스 */
+.colab-inbox {
+    width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+/* 콜라보 영역 텍스트 랩 박스 */
+.colab-txt-bx {
+    text-align: center;
+    position: relative;
+    top: -165px;
+}
+/* 콜라보 영역 텍스트 h3태그 */
+.colab-txt-bx h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    margin-bottom: 35px;
+}
+
+
+/* 콜라보 영역 텍스트 p태그 */
+.colab-txt-bx p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.9;
+    letter-spacing: -0.1px;
+}
+
+.mb-layer5 {
+    width: 704px;
+    position: relative;
+    left: 52%;
+    top: -460px;
+}
+
+/************************************* 8. 맥스본 매거진 컬렉션 박스 *************************************/
+/* 맥스본 매거진 속박스  */
+.mb-magazin-inbox {
+    max-width: 1200px;
+    height: 1600px;
+    margin: 0 auto;
+}
+
+/* ul 감싸는 박스 */
+.cont-bx {
+    width: 100%;
+    height: 100%;
+}
+
+/* 매거진 컨텐츠 첫째줄 ul 박스 */
+ul.cont-flex1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 85px;
+    position: relative;
+    top: 80px;
+}
+ul.cont-flex1>li:first-child {
+    position: relative;
+    top: -80px;
+}
+
+
+/* 매거진 컨텐츠 둘째줄 ul 박스 */
+ul.cont-flex2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 85px;
+    position: relative;
+    top: 120px;
+}
+.cont-flex2>li:last-child {
+    position: relative;
+    top: 80px;
+}
+
+
+/* 매거진 전체 ul 박스 내부 img 크기  */
+.cont-bx img {
+    width: 480px;
+    height: 590px;
+}
+.cont-bx h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 1.4;
+    margin-top: 22px;
+}
+
+/************************************* 9.MD's CHOICE *************************************************/
+/* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
+div#newproduct-wrap {
+    height: 110vh;
+    padding-bottom: 100px;
+}
+.new-product-list{
+  /* 드래그선택 안되게하기 */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+/* newproduct 타이틀 h2 */
+.new-txt-bx {
+margin-bottom: 65px;
+}
+
+.new-txt-bx h2{
+font-size: 6.7rem;
+text-align: center;
+font-family: 'Lora', serif;
+}
+
+.mySwiper{
+padding-left: 12%;
+}
+ul.new-lists-bx img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+ul.new-lists-bx h3 {
+font-size: 1.3rem;
+font-family: 'Lora', serif;
+font-weight: bold;
+margin: 10px 0;
+}
+.new-lists-bx span{
+font-size: 1.1rem;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 스와이퍼 적용 CSS */
+.swiper-wrapper{
+margin-bottom: 200px;
+}
+
+/* 스와이퍼 개별 슬라이드 리스트 li */
+.swiper-slide {
+font-size: 18px;
+
+}
+
+/* 직접 이미지요소를 배경처럼 사용! */
+
+.imbx{
+width: 400px;
+height: 600px;
+}
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+}
+/* 마우스 오버시 이미지 변경 */
+.imbx {
+position: relative;
+width: 480px;
+height: 600px;
+overflow: hidden;
+}
+
+.imbx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: auto;
+transition: opacity 0.3s ease-in-out;
+}
+
+.imbx img:first-child {
+z-index: 1; /* 첫 번째 이미지를 위로 표시 */
+}
+
+.imbx img:last-child {
+opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:first-child {
+opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:last-child {
+opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
+z-index: 1;
+}
+/* 마우스 오버시 이미지 변경 끝 */
+
+.swiper-txt-bx{
+position: absolute;
+}
+
+.swiper-button-next{
+top: auto;
+right: 40%;
+transform: translateY(-70%);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+.swiper-button-prev{
+top: auto;
+left: 40%;
+transform: translateY(-70%) rotate(180deg);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+background: #f00;
+content: '';
+}
+
+/*************************************** 9. 페이지 이동 박스 영역 : maxbone (패럴렉스 사용필요) ***************************************/
+.move-page-inbox {
+    position: relative;
+    width: 100%;
+}
+
+.move-page-inbox b {
+    position: absolute;
+    top: 33%;
+    left: 28%;
+    font-size: 8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
+}
+
+
+.move-page-inbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.move-page-inbox a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+
+.txt_inner {
+    position: absolute;
+    top: 57%;
+    left: 42%;
+}
+
+
+.txt_inner span {
+    font-size: 2.8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
+}
