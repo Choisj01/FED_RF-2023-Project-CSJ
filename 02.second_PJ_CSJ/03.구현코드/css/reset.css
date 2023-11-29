@@ -5,7 +5,7 @@
 
 /* 공사중 표시 */
 body *{
-    outline: 2px dashed green;
+    /* outline: 2px dashed green; */
 }
 
 /* 1. 마진,패딩 없애기 */
