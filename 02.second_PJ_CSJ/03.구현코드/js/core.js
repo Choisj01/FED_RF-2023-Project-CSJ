@@ -96,7 +96,7 @@ var swiper = new Swiper(".mySwiper", {
 
   const imgTg = $(".image-container");
   imgTg.addClass('on');
-  setTimeout(addOnClass,3000);
+  setTimeout(addOnClass,2500);
   function addOnClass(){
     imgTg.removeClass('on');
     setTimeout(()=>{
