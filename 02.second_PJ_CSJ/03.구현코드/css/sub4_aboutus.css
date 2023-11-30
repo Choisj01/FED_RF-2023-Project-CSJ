@@ -9,7 +9,7 @@
 
 @import url(./common.css);
 
-/*********************************************** 2. 꼬띠샵 소개 ***********************************************/
+/*********************************************** 2. 꼬띠샵 소개 영역 ***********************************************/
 .abu-inbox {
     max-width: 1650px;
     margin: 0 auto;
@@ -18,3 +18,38 @@
 .abu-title-bx {
     text-align: center;
 }
+.abu-title-bx h1 {
+    font-size: 6.6rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    padding: 33px 0;
+}
+/* about us 메인 비주얼 컨텐츠 플렉스박스 공통 */
+.flex-cont-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+}
+
+/* 3. 꼬띠샵 추구 가치 소개 영역 */
+.cont-bx2-inbox {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cont2-img-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont2-txt-bx {
+    text-align: center;
+}
+
+/* 4. 꼬띠샵 슬로건 이미지 영역 */
+
+/* 5. 꼬띠샵 마스코트 소개영역 */
+
+/* 6. 위치 안내 영역 */
