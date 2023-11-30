@@ -9,3 +9,12 @@
 
 @import url(./common.css);
 
+/*********************************************** 2. 꼬띠샵 소개 ***********************************************/
+.abu-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+}
+
+.abu-title-bx {
+    text-align: center;
+}
