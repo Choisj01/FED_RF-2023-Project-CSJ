@@ -308,6 +308,10 @@ section.title h2{
     position: relative;
     left: -5.6%;
     margin-top: 100px;
+
+    /* 커서 추가 */
+    cursor: url(../images/main/cursor-see.png),auto;
+    
 }
 
 
