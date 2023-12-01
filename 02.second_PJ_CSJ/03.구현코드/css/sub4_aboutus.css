@@ -30,6 +30,8 @@
     align-items: center;
     justify-content: center;
     gap: 95px;
+
+    margin-bottom: 50px;
 }
 
 /* 3. 꼬띠샵 추구 가치 소개 영역 */
@@ -46,6 +48,28 @@
 
 .cont2-txt-bx {
     text-align: center;
+}
+.txt-bx h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding-bottom: 30px;
+}
+.txt-bx p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.cont-bx2-inbox {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 130px;
+    box-sizing: border-box;
+}
+.cont2-txt-bx h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 15px 0;
 }
 
 /* 4. 꼬띠샵 슬로건 이미지 영역 */
