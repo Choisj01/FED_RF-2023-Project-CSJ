@@ -186,5 +186,13 @@
     padding-top: 33px;
     padding-bottom: 20px;
 }
+ul.profile-txt {
+    text-align: center;
+}
 
+ul.profile-ani {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /**************************************** 6. 위치 안내 영역 ****************************************/
