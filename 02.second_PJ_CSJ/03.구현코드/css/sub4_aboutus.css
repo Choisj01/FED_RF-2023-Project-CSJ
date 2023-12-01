@@ -10,14 +10,17 @@
 @import url(./common.css);
 
 /*********************************************** 2. 꼬띠샵 소개 영역 ***********************************************/
+/* 소개 속박스 */
 .abu-inbox {
     max-width: 1650px;
     margin: 0 auto;
+    height: 2000px;
 }
-
+/* 소개 타이틀 박스 */
 .abu-title-bx {
     text-align: center;
 }
+/* 소개 타이틀 박스 h1태그 */
 .abu-title-bx h1 {
     font-size: 6.6rem;
     font-weight: bold;
@@ -29,12 +32,75 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 95px;
+    gap: 100px;
 
     margin-bottom: 50px;
 }
 
-/* 3. 꼬띠샵 추구 가치 소개 영역 */
+/* 패턴 레이어이미지 박스1 */
+.layer-img1 {
+    position: relative;
+    right: 32%;
+    top: 211px;
+}
+
+/* 텍스트 박스 h3 */
+.txt-bx h3 {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    padding-bottom: 30px;
+}
+/* 텍스트 박스 p */
+.txt-bx p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* 타이틀 이미지 박스1 위치 */
+.abu-visual-img-bx1 {
+    position: relative;
+    left: 3%;
+}
+/* 타이틀 이미지박스2 위치 */
+.abu-visual-img-bx2 {
+    position: relative;
+    right: 11%;
+    bottom: 113px;
+}
+/* 타이틀 텍스트2 박스 위치 */
+.abu-txt2 {
+    position: relative;
+    right: 7.3%;
+}
+
+/* 패턴 레이어 이미지박스 2 */
+.layer-img2 {
+    width: 96px;
+    position: relative;
+    left: 65%;
+    bottom: 713px;
+}
+/* 패턴 레이어 이미지박스 3 */
+.layer-img3 {
+    width: 117px;
+    position: relative;
+    left: 82.6%;
+    bottom: 659px;
+}
+/* 패턴 레이어 이미지박스 4 */
+.layer-img4 {
+    width: 107px;
+    position: relative;
+    left: 93%;
+    bottom: 300px;
+}
+
+/******************************** 3. 꼬띠샵 추구 가치 소개 영역 ********************************/
 .cont-bx2-inbox {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,16 +114,6 @@
 
 .cont2-txt-bx {
     text-align: center;
-}
-.txt-bx h3 {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    padding-bottom: 30px;
-}
-.txt-bx p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-weight: bold;
 }
 
 .cont-bx2-inbox {
