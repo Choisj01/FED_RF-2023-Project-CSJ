@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>상위 박스 클릭하여 하위 박스 토글</title>
+  <style>
+    /* 하위 박스 숨김 */
+    .sub-box {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 상위 박스 -->
+  <div class="main-box" onclick="toggleSubBox()">
+    상위 박스를 클릭하세요.
+    <!-- 하위 박스 -->
+    <div class="sub-box">
+      하위 박스가 보입니다.
+    </div>
+  </div>
+
+  <script>
+    var subBoxVisible = false; // 하위 박스 상태를 추적하는 변수
+
+    // JavaScript로 하위 박스를 토글하는 함수
+    function toggleSubBox() {
+      var subBox = document.querySelector('.sub-box');
+
+      // 상태에 따라 보이기/안보이기를 토글합니다.
+      if (subBoxVisible) {
+        subBox.style.display = 'none';
+      } else {
+        subBox.style.display = 'block';
+      }
+      subBoxVisible = !subBoxVisible; // 상태를 변경합니다.
+    }
+
+  </script>
+</body>
+</html>
+
