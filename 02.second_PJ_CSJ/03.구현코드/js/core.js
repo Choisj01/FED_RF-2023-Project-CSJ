@@ -104,3 +104,4 @@ var swiper = new Swiper(".mySwiper", {
       setTimeout(addOnClass,2000);      
     },1000)
   }
+
