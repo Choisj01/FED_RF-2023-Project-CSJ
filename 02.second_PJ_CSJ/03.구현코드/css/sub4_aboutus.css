@@ -125,11 +125,66 @@
 .cont2-txt-bx h1 {
     font-size: 2rem;
     line-height: 1.5;
-    padding: 15px 0;
+    padding: 42px 0;
+}
+.cont2-txt-bx p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-bottom: 75px;
 }
 
-/* 4. 꼬띠샵 슬로건 이미지 영역 */
+/****************************** 4. 꼬띠샵 슬로건 이미지 영역 ******************************/
+/* 속박스 */
+.psc-title-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+/* 슬로건 박스 타이틀 h1 */
+.psc-title-inbox h1 {
+    text-align: center;
+    font-size: 7.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-top: 75px;
+    padding-bottom: 60px;
+}
+/* 슬로건 이미지 박스 가운데 정렬 */
+.psc-title-img-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* 5. 꼬띠샵 마스코트 소개영역 */
 
-/* 6. 위치 안내 영역 */
+/**************************************** 5. 꼬띠샵 마스코트 소개영역 ****************************************/
+/* 전체싸는 속박스 */
+.abu-who-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+}
+/* 레이어 이미지 박스 가운데 정렬 */
+.about-section__title figure {
+    text-align: center;
+    padding-top: 100px;
+}
+.about-section__title h2 {
+    text-align: center;
+    font-size: 6.1rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* 프로필 b태그 */
+.about-who__profile b {
+    text-align: center;
+    display: block;
+    font-size: 2.2rem;
+    /* padding: 10px 0; */
+    padding-top: 33px;
+    padding-bottom: 20px;
+}
+
+/**************************************** 6. 위치 안내 영역 ****************************************/
