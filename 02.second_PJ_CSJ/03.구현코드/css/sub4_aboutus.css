@@ -141,7 +141,6 @@
 .psc-title-inbox {
     max-width: 1650px;
     margin: 0 auto;
-    margin-bottom: 100px;
 }
 /* 슬로건 박스 타이틀 h1 */
 .psc-title-inbox h1 {
@@ -166,14 +165,14 @@
 .abu-who-inbox {
     max-width: 1650px;
     margin: 0 auto;
-    height: 1600px;
+    height: 1500px;
     margin-bottom: 102px;
     box-sizing: border-box;
 }
 /* 강아지 gif 박스 */
 .puppy-img-bx {
     position: relative;
-    top: 125px;
+    top: 300px;
     left: -11%;
 }
 /* 레이어 이미지 박스 가운데 정렬 */
