@@ -72,6 +72,16 @@ h2.mb-visual-title {
     top: -35px;
 }
 
+/* 맥스본 타이틀 내 레이어 이미지 애니메이션 적용 JS */
+/* 초기에 숨김 상태 */
+.mb-layer2 img,
+.mb-layer3 img {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out; /* 애니메이션을 위한 트랜지션 효과 설정 */
+}
+
+
+
 /********************************* 4. 컨텐츠 박스 - maxbone 인트로소개 *********************************/
 .maxbone-title {
     max-width: 1600px;
@@ -209,15 +219,15 @@ div#mb-vid-bx {
   }
   
   .image-container.on .image1 {
-    animation-delay: 1.8s; /* 첫 번째 이미지에 1.8초 딜레이 */
+    animation-delay: 1.2s; /* 첫 번째 이미지에 1.8초 딜레이 */
   }
   
   .image-container.on .image2 {
-    animation-delay: 1.4s; /* 두 번째 이미지에 1.4초 딜레이 */
+    animation-delay: 1s; /* 두 번째 이미지에 1.4초 딜레이 */
   }
   
   .image-container.on .image3 {
-    animation-delay: 1s; /* 세 번째 이미지에 1초 딜레이 */
+    animation-delay: .8s; /* 세 번째 이미지에 1초 딜레이 */
   }
   
   @keyframes fadeIn {
@@ -308,6 +318,15 @@ ul.cont-flex1>li:first-child {
     position: relative;
     top: -80px;
 }
+
+/* 초기에 숨김 상태 - JS 적용 */
+.cont-flex1 li,
+.cont-flex2 li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 
 
 /* 매거진 컨텐츠 둘째줄 ul 박스 */
