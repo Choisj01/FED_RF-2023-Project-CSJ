@@ -1,6 +1,7 @@
-// Second PJ(cotieshop) 메인 JS - main.js
+// Second PJ(cotieshop) 메인 JS - main.js( 메인페이지 레이어 이미지 스크롤 이벤트)
 
 import dFn from './dom.js';
+
 
 
 window.addEventListener('scroll',showFn)
@@ -104,7 +105,7 @@ function showFn(){
 //         },
 //     },
 // });
-
+// 아이템 스와이프 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -125,3 +126,24 @@ var swiper = new Swiper(".mySwiper", {
       setTimeout(addOnClass,2000);      
     },1000)
   }
+
+// cotielog li박스 스크롤 이벤트
+const items = document.querySelectorAll('.cotielog-cont ul li');
+const windowHeight = window.innerHeight;
+
+function checkItems() {
+  items.forEach(item => {
+    const top = item.getBoundingClientRect().top;
+    if (top < windowHeight * 0.8) {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }
+  });
+}
+
+window.addEventListener('scroll', checkItems);
+
+// 페이지 로딩 시 처음에 한 번 실행
+checkItems();
+
+
