@@ -28,6 +28,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .col-12 {width: 100%;}
 /* 참고 : https://www.w3schools.com/css/css_rwd_grid.asp */
 
+/* 스와이프 플러그인 css */
 /************************* 컨텐츠 박스 - newproduct *************************/
 .new-product-list{
     /* 드래그선택 안되게하기 */
