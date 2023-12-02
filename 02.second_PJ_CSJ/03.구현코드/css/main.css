@@ -24,7 +24,7 @@
 /* 메인비주얼 텍스트 랩핑박스 */
 .main-visual-txt {
     position: absolute;
-    top: -27%;
+    top: -22%;
     left: -33%;
     transform: translate(-50%,-50%);
     z-index: 99;
