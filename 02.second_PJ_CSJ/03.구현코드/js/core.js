@@ -1,6 +1,7 @@
-// Second PJ(cotieshop) 공통 JS - core.js
+// Second PJ(cotieshop) 공통 JS - core.js(상단영역,스와이프)
 
 import dFn from './dom.js';
+
 
 
 window.addEventListener('scroll',showFn)
@@ -102,6 +103,13 @@ var swiper = new Swiper(".mySwiper", {
     setTimeout(()=>{
       imgTg.addClass('on');
       setTimeout(addOnClass,2000);      
-    },1000)
+    },500)
   }
 
+  // const toggleButton = document.getElementById('toggleButton');
+  // const footerInfoText = document.getElementById('footerInfoText');
+  
+  // toggleButton.addEventListener('click', function() {
+  //     footerInfoText.classList.toggle('show');
+  // });
+  
