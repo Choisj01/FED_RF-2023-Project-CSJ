@@ -14,7 +14,6 @@
     width: 100%;
 }
 
-
 .main-visual{
     max-width: 45vw;
     position: relative;
@@ -640,6 +639,14 @@ div#flow-txt-bx {
 .cotielog-cont ul {
     position: relative;
 }
+
+/* 박스 스크롤시 보이도록 css 적용 */
+.cotielog-cont ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
 
 .cotielog-cont li:nth-of-type(1) {
     position: relative;
