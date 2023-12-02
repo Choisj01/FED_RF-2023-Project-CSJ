@@ -64,6 +64,8 @@ div#sub-milkpepper-visual-wrap {
     left: 5%;
     z-index: 110;
 }
+
+
 /* 고양이 손,하트 레이어 이미지 박스 */
 .mnp-layer3 {
     position: absolute;
@@ -73,9 +75,16 @@ div#sub-milkpepper-visual-wrap {
 .mnp-layer4 {
     position: absolute;
     top: 321px;
-    /* right: 12px; */
     left: -24%;
 }
+
+/* 처음에 안보임 - JS 적용 */
+.mnp-layer3,
+.mnp-layer4 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 
 /***************************** 3. 컨텐츠 박스 - 밀크앤페퍼 인트로소개 *****************************/
 .mnp-title {
