@@ -86,7 +86,7 @@ p.product-information__price span {
     padding-left: 30px;
     padding-right: 30px;
 }
-/* /// */
+/* 공유하기 버튼 안보이게 */
 .share-bx>a>span {
     display: none;
 }
