@@ -38,4 +38,7 @@ h1,h2,h3,h4,h5,h6{
     /* font-size: 100%; */
     /* html의 기본글자크기(16px)와 일치 초기화 */
 }
+em{
+    font-style: normal;
+}
 
