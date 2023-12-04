@@ -146,6 +146,40 @@ window.addEventListener('scroll', checkItems);
 // 페이지 로딩 시 처음에 한 번 실행
 checkItems();
 
+//탑버튼 클릭이벤트
+document.addEventListener("DOMContentLoaded", () => {
+  let btt = document.querySelector("#go-top");
+  // 문서 자체로 스크롤 양 확인
+  // document.documentElement.scrollTop
+  // 윈도우 기준 페이지 스크롤 양 확인
+  // window.pageYOffset
+  let scrollAmt;
+
+  // 윈도우에 이벤트 스크롤 발생시 할일 함수
+  window.addEventListener("scroll", () => {
+      scrollAmt = window.pageYOffset;
+      console.log(scrollAmt);
+
+      if (scrollAmt > 300) {
+          btt.classList.add("active");
+          // btt.className='active';
+      }
+      else{
+          btt.classList.remove("active");
+      }
+  }); ////////// scroll //////////
+
+  btt.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+      });
+  });
+}); //////////////////로드 구역 //////////////
+
+
 // 하단영역 회사정보 클릭시 보이고 닫기
 $('.footer-info-txt').hide();
 
@@ -155,7 +189,7 @@ $('.footer-info').css({
 })
 $('.footer-info a').click(e=>{
   e.preventDefault();
-  $('.footer-info-txt').slideToggle(300);
+  $('.footer-info-txt').slideToggle(500);
 
 })
 
