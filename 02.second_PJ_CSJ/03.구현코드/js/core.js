@@ -85,12 +85,12 @@ function showFn(){
 //         },
 //     },
 // });
-
+// 페이지 이동시 
 let pgNm = location.pathname.split('/');
 pgNm = pgNm[pgNm.length-1].split('.')[0];
 
 console.log(pgNm);
-
+//스와이퍼 해당 페이지 적용
 if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_milknpepper"){
   var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
@@ -159,4 +159,17 @@ $('.gnb a').click(e=>{
     location.href = pgLoc[txt]+'.html';
     pgCvr.delay(1000).animate({height:"0"})
   })
+})
+
+// 하단영역 회사정보 클릭시 보이고 닫기
+$('.footer-info-txt').hide();
+
+$('.footer-info').css({
+  width:"723px",
+  hight:"41px"
+})
+$('.footer-info a').click(e=>{
+  e.preventDefault();
+  $('.footer-info-txt').slideToggle(300);
+
 })
