@@ -176,7 +176,9 @@ ul.inner-style-bx li {
 }
 
 .info-add-inner2 {
-    padding: 20px 0;
+    /* padding: 20px 0; */
+    padding-top: 20px;
+    padding-bottom: 157px;
 }
 .info-add-inner2 b {
     font-size: 1.2rem;
@@ -198,4 +200,18 @@ li.padding-bx {
     content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
     color: gray; /* 까만 점 색상 */
     margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+/**************************************************** 3. 제품 정보 상세소개 영역 ****************************************************/
+div#detail-wrap {
+    margin-top: 170px;
+}
+
+.detail-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.product-info-illust2 {
+    text-align: center;
 }
