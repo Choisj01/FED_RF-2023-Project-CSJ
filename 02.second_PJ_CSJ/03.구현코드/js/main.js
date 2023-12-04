@@ -146,6 +146,7 @@ window.addEventListener('scroll', checkItems);
 // 페이지 로딩 시 처음에 한 번 실행
 checkItems();
 
+// 하단영역 회사정보 클릭시 보이고 닫기
 $('.footer-info-txt').hide();
 
 $('.footer-info').css({
