@@ -53,6 +53,10 @@ ul.flex-bx1 > li {
     font-weight: bold;
     padding-bottom: 30px;
 }
+.product-info-inner>h1>b {
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
 
 p.product-information__price em {
     font-size: 2.1rem;
