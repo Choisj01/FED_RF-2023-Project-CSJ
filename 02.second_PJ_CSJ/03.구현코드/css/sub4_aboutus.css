@@ -157,6 +157,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 43px;
 }
 
 /**************************************** 5. 꼬띠샵 마스코트 소개영역 ****************************************/
@@ -171,7 +173,7 @@
 /* 강아지 gif 박스 */
 .puppy-img-bx {
     position: relative;
-    top: 300px;
+    top: 244px;
     left: -11%;
 }
 /* 레이어 이미지 박스 가운데 정렬 */
