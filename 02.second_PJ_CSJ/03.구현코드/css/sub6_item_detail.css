@@ -207,6 +207,26 @@ div#detail-wrap {
     margin-top: 170px;
 }
 
+.product-info-illust {
+    width: 160px;
+    height: 60px;
+}
+
+/* 애니메이션을 요소에 적용하고 무한 반복 */
+.product-info-illust2 .grass-img-bx2 img {
+    animation: moveUp 0.8s ease alternate infinite;
+}
+
+/* 애니메이션을 정의 - 위아래 이동 애니 */
+@keyframes moveUp {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-16px);
+    }
+}
+
 .detail-inner {
     max-width: 1600px;
     margin: 0 auto;
@@ -214,4 +234,10 @@ div#detail-wrap {
 
 .product-info-illust2 {
     text-align: center;
+}
+
+/* 제품 상세 이미지 영역 */
+.info-detail-img-box {
+    max-width: 1000px;
+    margin: 0 auto;
 }
