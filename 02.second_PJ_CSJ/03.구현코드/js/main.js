@@ -146,4 +146,16 @@ window.addEventListener('scroll', checkItems);
 // 페이지 로딩 시 처음에 한 번 실행
 checkItems();
 
+$('.footer-info-txt').hide();
+
+$('.footer-info').css({
+  width:"723px",
+  hight:"41px"
+})
+$('.footer-info a').click(e=>{
+  e.preventDefault();
+  $('.footer-info-txt').slideToggle(300);
+
+})
+
 
