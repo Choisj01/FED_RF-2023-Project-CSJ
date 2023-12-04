@@ -224,7 +224,7 @@ h1#logo {
 }
 .smenu ul{
     background: #000;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 /* 상위메뉴 li 마우스 오버시 하위 메뉴 */
