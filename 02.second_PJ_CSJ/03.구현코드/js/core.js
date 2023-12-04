@@ -121,45 +121,45 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
   //     footerInfoText.classList.toggle('show');
   // });
   
-
-  $("body")
-  .css({opacity:1})
-  .append('<div class="pageCover"></div>');
+ //화면 전환박스 js 
+//   $("body")
+//   .css({opacity:1})
+//   .append('<div class="pageCover"></div>');
   
-  const pgCvr = $('.pageCover');
-pgCvr.css({
-  position:"fixed",
-  top:"0",
-  left:"0",
-  width: "100vw",
-  height:pgNm==='index'?"0":"100vh",
-  background:'#eee',
-  zIndex:"9999"
-})
+//   const pgCvr = $('.pageCover');
+// pgCvr.css({
+//   position:"fixed",
+//   top:"0",
+//   left:"0",
+//   width: "100vw",
+//   height:pgNm==='index'?"0":"100vh",
+//   background:'#eee',
+//   zIndex:"9999"
+// })
 
-setTimeout(()=>{
-  pgCvr.animate({height:"0"},500)
-},1000)
+// setTimeout(()=>{
+//   pgCvr.animate({height:"0"},500)
+// },1000)
 
 
-const pgLoc = {
-  "Brands":"sub1_petsochic",
-  "PET SO CHIC":"sub1_petsochic",
-  "MAXBONE":"sub2_maxbone",
-  "MILK&PEPPER":"sub3_milknpepper",
-  // "Outdoor":"sub4_aboutus",
-}
+// const pgLoc = {
+//   "Brands":"sub1_petsochic",
+//   "PET SO CHIC":"sub1_petsochic",
+//   "MAXBONE":"sub2_maxbone",
+//   "MILK&PEPPER":"sub3_milknpepper",
+//   // "Outdoor":"sub4_aboutus",
+// }
 
-$('.gnb a').click(e=>{
-  e.preventDefault();
-  let txt = $(e.currentTarget).text();
-  console.log(txt)
-  pgCvr.animate({height:"100vh"},500,()=>{
+// $('.gnb a').click(e=>{
+//   e.preventDefault();
+//   let txt = $(e.currentTarget).text();
+//   console.log(txt)
+//   pgCvr.animate({height:"100vh"},500,()=>{
     
-    location.href = pgLoc[txt]+'.html';
-    pgCvr.delay(1000).animate({height:"0"})
-  })
-})
+//     location.href = pgLoc[txt]+'.html';
+//     pgCvr.delay(1000).animate({height:"0"})
+//   })
+// })
 
 // 하단영역 회사정보 클릭시 보이고 닫기
 $('.footer-info-txt').hide();
