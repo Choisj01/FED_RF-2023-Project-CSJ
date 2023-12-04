@@ -68,27 +68,37 @@ p.product-information__price span {
 .go-buy-bx {
     display: flex;
     justify-content: flex-start;
-    gap: 430px;
+    gap: 400px;
     padding: 50px 0;
+    cursor: url(../images/main/cursorhand1.png),auto;
 }
-.go-buy-bx a {
+.go-buy-bx>a {
     display: block;
     padding: 20px 0;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
-
+    cursor: url(../images/main/cursorhand1.png),auto;
 }
-.go-buy-bx>a {
-    border: 3px solid #000;
-    border-radius: 49%;
+.go-buy-bx>a:nth-of-type(1) {
+    border: 2px solid #000;
+    border-radius: 52%;
     background-color: #000;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 34px;
+    padding-right: 29px;
 }
+
 /* 공유하기 버튼 안보이게 */
+.share-bx>a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
 .share-bx>a>span {
     display: none;
+}
+
+.share-bx>a>img{
+    width: 65px;
+    height: 65px;
 }
 
 .product-info-illust {
@@ -115,4 +125,77 @@ p.info-desc {
     font-size: 1.1rem;
     font-family: "Noto Sans KR", sans-serif;
     line-height: 1.9;
+    padding: 40px 0;
+}
+
+.info-add-bx1 {
+    border-top: 3px solid #000;
+    border-bottom: 3px solid;
+}
+
+.info-add-ibox1 {
+    padding: 31px 0;
+}
+
+.info-add-ibox1 b {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+}
+
+.info-add-inner b {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.inner-style-bx li>p::before{
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: gray; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+.info-add-inner>ul>li:nth-of-type(1) {
+    padding: 22px 0;
+}   
+.info-add-inner p {
+    font-size: 1rem;
+    color: gray;
+    font-weight: bold;
+}
+ul.inner-style-bx li {
+    padding: 15px 0;
+}
+
+.info-add-ibox2 b {
+    font-size: 1.7rem;
+    font-family: 'Lora', serif;
+}
+
+
+.info-add-ibox2 {
+    border-top: 3px solid;
+    padding: 25px 0;
+}
+
+.info-add-inner2 {
+    padding: 20px 0;
+}
+.info-add-inner2 b {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 9px 0;
+}
+.info-add-inner2>ul>li {
+    padding: 25px 0;
+}
+
+li.padding-bx {
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+}
+.padding-bx>p::before{
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: gray; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
 }
