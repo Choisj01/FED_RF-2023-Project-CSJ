@@ -19,15 +19,25 @@ $(()=>{
     })
     
     //상세 정보 이미지 박스 버튼 클릭 열고 닫기
-    const detailImgHide = $('.hide-wrap');
-    const moreBtn = $('.dt-more-btn');
+    // const detailImgHide = $('.hide-wrap');
+    // const moreBtn = $('.dt-more-btn');
 
-    $(detailImgHide).hide();
+    // $(detailImgHide).hide();
 
-    $(moreBtn).click(e=>{
-        e.preventDefault();
-        detailImgHide.slideToggle(300);
-    })
+    // $(moreBtn).click(e=>{
+    //     e.preventDefault();
+    //     detailImgHide.slideToggle(300);
+    // })
+
+    $(document).ready(function() {
+        $('.hide-wrap').hide(); // 페이지가 로드될 때 hide-wrap 요소를 숨깁니다.
+    
+        $('.dt-more-btn').click(function() {
+            $('.hide-wrap').toggle(); // 버튼을 클릭할 때 hide-wrap 요소를 토글하여 보이거나 숨깁니다.
+        });
+    });
+    
+    
 });
 
 
