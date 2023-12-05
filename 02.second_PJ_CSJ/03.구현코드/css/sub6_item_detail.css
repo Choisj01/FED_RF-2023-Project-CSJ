@@ -177,7 +177,6 @@ p.info-desc {
 
 }
 
-
 .info-add-ibox1 b {
     font-size: 1.8rem;
     font-family: 'Lora', serif;
@@ -233,9 +232,13 @@ ul.inner-style-bx li {
     font-size: 26px;
     font-weight: bold;
 }
-.tab-wrap button:hover {
-    transform: rotate(45deg);
-    transition: .3s ease-out;
+.info-add-ibox1:hover .btn-wrap button {
+    transform: rotate(45deg); /* 여기서 각도를 조절할 수 있어요 */
+    transition: transform 0.3s ease; /* 부드러운 애니메이션 효과를 위한 설정 */
+}
+.info-add-ibox2:hover .btn-wrap button {
+    transform: rotate(45deg); /* 여기서 각도를 조절할 수 있어요 */
+    transition: transform 0.3s ease; /* 부드러운 애니메이션 효과를 위한 설정 */
 }
 
 ul.inner-style-bx3 {
