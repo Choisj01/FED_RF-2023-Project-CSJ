@@ -25,6 +25,8 @@
 
 /* 제품정보 랩핑박스 */
 .pruduct-info-wrap {
+    position: relative;
+    height: 1154px;
     /* 상단영역이랑 거리두기 */
     margin-top: 100px;
 }
@@ -41,11 +43,27 @@ ul.flex-bx1 {
     display: flex;
     gap: 12px;
 }
+
+.sticky-bx{
+    position:relative; 
+    /* height: 1000px; */
+}
+.sticky-bx .skt-bx{
+    /* position: sticky;
+    top: 50px; */
+}
+
+
 ul.flex-bx1 > li {
     padding: 15px 0;
     font-size: 1rem;
     font-weight: bold;
     color: rgb(156, 154, 154);
+}
+
+.product-info-inner {
+    position: sticky;
+    top: 50px;
 }
 
 .product-info-inner h1 {
@@ -130,16 +148,33 @@ p.info-desc {
     font-family: "Noto Sans KR", sans-serif;
     line-height: 1.9;
     padding: 40px 0;
+    position: relative;
+    top: 40px;
 }
 
 .info-add-bx1 {
     border-top: 3px solid #000;
     border-bottom: 3px solid;
+    position: relative;
+    top: 145px;
 }
 
 .info-add-ibox1 {
     padding: 31px 0;
 }
+.info-add-ibox1::after{
+    content: '∧';
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    left: 90%;
+    bottom: 47px;
+
+}
+
 
 .info-add-ibox1 b {
     font-size: 1.8rem;
@@ -167,6 +202,20 @@ p.info-desc {
 ul.inner-style-bx li {
     padding: 15px 0;
 }
+.info-add-ibox2 {
+    border-top: 3px solid;
+    padding: 25px 0;
+}
+/* 가상요소 버튼 */
+.info-add-ibox2::after {
+    content: '∧';
+    width: 15px;
+    height: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    left: 37%;
+}
 
 .info-add-ibox2 b {
     font-size: 1.7rem;
@@ -174,15 +223,11 @@ ul.inner-style-bx li {
 }
 
 
-.info-add-ibox2 {
-    border-top: 3px solid;
-    padding: 25px 0;
-}
 
 .info-add-inner2 {
     /* padding: 20px 0; */
-    padding-top: 20px;
-    padding-bottom: 157px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 30px; */
 }
 .info-add-inner2 b {
     font-size: 1.2rem;
@@ -214,6 +259,7 @@ div#detail-wrap {
 .product-info-illust {
     width: 160px;
     height: 60px;
+    padding: 15px 0;
 }
 
 /* 애니메이션을 요소에 적용하고 무한 반복 */
