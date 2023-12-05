@@ -38,6 +38,7 @@ body {
     padding-left: 60px;
     gap: 0 3vw;
     transition: .4s;
+    right: 25px;
 }
 #header.on .header_inner{
     padding: 0;
@@ -159,6 +160,7 @@ h1#logo {
     position: relative;
     top: 6px;
     right: -10px;
+    width: 15px;
 }
 
 .etc-menu a {
