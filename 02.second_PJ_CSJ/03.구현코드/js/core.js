@@ -121,6 +121,7 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
   //     footerInfoText.classList.toggle('show');
   // });
   
+
  //화면 전환박스 js 
 //   $("body")
 //   .css({opacity:1})
@@ -160,6 +161,7 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
 //     pgCvr.delay(1000).animate({height:"0"})
 //   })
 // })
+
 
 //탑버튼 클릭시 상단이동 
 //탑버튼 클릭이벤트
