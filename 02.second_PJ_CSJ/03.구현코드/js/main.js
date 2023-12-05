@@ -2,6 +2,15 @@
 
 import dFn from './dom.js';
 
+//
+$(document).ready(function() {
+  $('.top-menu > li').click(function() {
+    // 가상 요소의 표시 여부를 제어하기 위해 클래스를 토글합니다.
+    $(this).toggleClass('active');
+  });
+});
+
+
 
 window.addEventListener('scroll',showFn)
 
