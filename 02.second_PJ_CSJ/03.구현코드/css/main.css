@@ -7,6 +7,28 @@
 @import url(./core.css);
 @import url(./common.css);
 
+div#searchModal {
+    display: block;
+    position: relative;
+    z-index: 999999;
+    left: 80%;
+    /* border: 2px solid; */
+    width: 350px;
+    /* height: 68px; */
+}
+
+.modal-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    /* height: 500px; */
+}
+.modal-content button {
+    border: 1px solid;
+    list-style: none;
+    background-color: transparent;
+}
+
 /* 메인비주얼 영역 */
 #main-visual-wrap{
    
