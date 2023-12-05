@@ -7,74 +7,25 @@
 /************************************* 2. cotielog-content 영역 *************************************/
 
 /* cotielog 메인 컨테이너 박스 */
-div#cotielog-maincontainer {
-    padding-top: 200px;
-}
-/* cotielog 내부랩핑 박스 */
-.cotielog-inner {
-    max-width: 1650px;
-    height: 1000px;
-    margin: 0 auto;
+.container {
     display: flex;
+    padding-top: 200px;
+    max-width: 1650px;
+    margin: 0 auto;
 }
-.cotielog-cat-bx{
-    display: inline-block;
-}
-.cotielog-cat-bx h1 {
-    width: 500px;
-    font-size: 5.8rem;
-    font-family: 'Lora', serif;
-}
-ul.dogsleep-img-bx {
-    /* display: flex; */
-    position: relative;
-    top: 90px;
-    right: 40%;
-}
-/* 고정박스 */
-.cotielog-cat-bx {
-    width: 500px;
-    height: 1000px;
-    /* 스티키 고정 */
+  
+.sticky-box {
     position: sticky;
-    top: 50px;
+    top: 0;
+    height: 1000px;
+    width: 500px;
+    background-color: transparent;
 }
-
-.scrollable-content {
+  
+  .scrollable-content {
     flex: 1;
     overflow-y: auto; /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
     height: 400px; /* 스크롤 가능한 내용의 높이를 설정 */
     /* 다른 스타일 설정 */
   }
-
-  .news-wrap{
-    height: 1000px;
-  }
-ul.category-box {
-    display: flex;
-    gap: 20px;
-}
-
-ul.dogsleep-img-bx img {
-    position: relative;
-    right: 20%;
-}
-
-/* cotielog 뉴스 랩핑 박스 */
-.news-wrap {
-    width: 850px;
-    display: inline-block;
-    /* position: relative;
-    left: 50%; */
-}
-
-.ct-img-bx {
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 20px;
-}
-
-.ct-img-bx img {
-    width: 480px;
-}
+  
