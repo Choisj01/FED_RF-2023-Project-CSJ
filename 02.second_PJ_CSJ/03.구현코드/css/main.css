@@ -713,6 +713,7 @@ div#flow-txt-bx {
 	opacity: 0;
 	visibility: hidden;
 	transition:opacity 0.5s;
+    z-index: 99999999;
 }
 #go-top.active{
 	opacity: 1;
