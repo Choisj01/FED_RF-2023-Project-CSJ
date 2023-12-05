@@ -307,3 +307,9 @@ div#detail-wrap {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+/*  상세보기 버튼 중앙정렬 */
+.detail-more-bx {
+    text-align: center;
+    padding-bottom: 50px;
+}
