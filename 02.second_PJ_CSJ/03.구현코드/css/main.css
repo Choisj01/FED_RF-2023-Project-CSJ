@@ -413,15 +413,15 @@ section.title h2{
   }
   
   .image-container.on .image1 {
-    animation-delay: 1.8s; /* 첫 번째 이미지에 1초 딜레이 */
+    animation-delay: 1.2s; /* 첫 번째 이미지에 1초 딜레이 */
   }
   
   .image-container.on .image2 {
-    animation-delay: 1.4s; /* 두 번째 이미지에 2초 딜레이 */
+    animation-delay: 1s; /* 두 번째 이미지에 2초 딜레이 */
   }
   
   .image-container.on .image3 {
-    animation-delay: 1s; /* 세 번째 이미지에 3초 딜레이 */
+    animation-delay: .8s; /* 세 번째 이미지에 3초 딜레이 */
   }
   
   @keyframes fadeIn {
