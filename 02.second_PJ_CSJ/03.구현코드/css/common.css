@@ -70,6 +70,23 @@ h1#logo {
     padding: 0 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 상위 메뉴 마우스 오버시 가상요소 만들기 */
 .top-menu > li:nth-child(1):before {
     content: "";
@@ -137,7 +154,7 @@ h1#logo {
     transition: opacity 0.4s ease-in-out; /* 트랜지션 효과를 적용 */
 }
 /* 마우스 오버시 메뉴위에 까만점 보이기 */
-.top-menu > li:hover::before {
+.top-menu > li.active::before {
     opacity: 1;
 }
 
