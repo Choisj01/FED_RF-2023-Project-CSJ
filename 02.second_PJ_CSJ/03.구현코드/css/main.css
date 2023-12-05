@@ -15,6 +15,7 @@ div#searchModal {
     /* border: 2px solid; */
     width: 350px;
     /* height: 68px; */
+    top: -12px;
 }
 
 .modal-content {
