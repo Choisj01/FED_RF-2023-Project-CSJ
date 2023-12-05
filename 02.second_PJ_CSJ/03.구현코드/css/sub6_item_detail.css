@@ -158,20 +158,22 @@ p.info-desc {
     position: relative;
     top: 145px;
 }
+/* 플렉스로 b태그 버튼 정렬 */
+.tab-wrap {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    
+}
 
 .info-add-ibox1 {
-    padding: 31px 0;
-}
-.info-add-ibox1::after{
-    content: '∧';
-    display: block;
-    width: 20px;
-    height: 20px;
-    font-size: 35px;
-    font-weight: bold;
-    position: relative;
-    left: 90%;
-    bottom: 47px;
+    padding: 30px 0;
+    /* 비율줘서 버튼태그 옆으로 보내기 */
+    /* width: 90%; */
+    display: flex;
+    /* width: 90%; */
+    align-items: center;
+    justify-content: space-between;
 
 }
 
@@ -179,6 +181,7 @@ p.info-desc {
 .info-add-ibox1 b {
     font-size: 1.8rem;
     font-family: 'Lora', serif;
+    display: block;
 }
 
 .info-add-inner b {
@@ -202,20 +205,6 @@ p.info-desc {
 ul.inner-style-bx li {
     padding: 15px 0;
 }
-.info-add-ibox2 {
-    border-top: 3px solid;
-    padding: 25px 0;
-}
-/* 가상요소 버튼 */
-.info-add-ibox2::after {
-    content: '∧';
-    width: 15px;
-    height: 15px;
-    font-size: 35px;
-    font-weight: bold;
-    position: relative;
-    left: 37%;
-}
 
 .info-add-ibox2 b {
     font-size: 1.7rem;
@@ -223,11 +212,33 @@ ul.inner-style-bx li {
 }
 
 
+.info-add-ibox2 {
+    border-top: 3px solid;
+    padding: 30px 0; 
+      /* 비율줘서 버튼태그 옆으로 보내기 */
+    /* width: 90%; */
+    display: flex;
+    /* width: 90%; */
+    align-items: center;
+    justify-content: space-between;
+}
+/* 버튼 공통 디자인  */
+.tab-wrap button {
+    /* 초기화 */
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
 
-.info-add-inner2 {
-    /* padding: 20px 0; */
-    /* padding-top: 20px; */
-    /* padding-bottom: 30px; */
+    /* 디자인 주기 */
+    
+}
+
+ul.inner-style-bx3 {
+    padding-top: 10px;
+    padding-bottom: 23px;
 }
 .info-add-inner2 b {
     font-size: 1.2rem;
