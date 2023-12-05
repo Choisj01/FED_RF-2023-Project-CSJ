@@ -113,3 +113,25 @@
     z-index: 1;
     }
     /* 마우스 오버시 이미지 변경 끝 */
+
+    /* 탑버튼 CSS  */
+/* GOTOP BTN */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+	background-color:#444;
+	color:#fff;
+	opacity: 0;
+	visibility: hidden;
+	transition:opacity 0.5s;
+    z-index: 99999999;
+}
+#go-top.active{
+	opacity: 1;
+	visibility: visible;
+}   
