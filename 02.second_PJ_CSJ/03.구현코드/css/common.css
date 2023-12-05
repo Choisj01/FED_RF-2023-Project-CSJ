@@ -425,16 +425,16 @@ h1#logo {
 
 /* 하단영역 인포박스 가상요소만들기 - 클릭시 정보 보이도록 클릭용 */
 .footer-info a::after{
-    content: '∨';
+    content: '＋';
     display: block;
     width: 20px;
     height: 20px;
+    font-size: 20px;
     color: #fff;
     position: relative;
-    top: -20px;
-    left: 11%;
+    top: -23px;
+    left: 10%;
     font-weight: bold;
-
 }
 
 .copy-right-bx {
