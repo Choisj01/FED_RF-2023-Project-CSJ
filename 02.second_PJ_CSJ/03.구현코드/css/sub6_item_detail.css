@@ -310,10 +310,10 @@ div#detail-wrap {
 
 /*  상세보기 버튼 중앙정렬 */
 .detail-more-bx {
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     text-align: center;
     position: relative;
-    bottom: 311px;
+    bottom: 325px;
 }
 
 
