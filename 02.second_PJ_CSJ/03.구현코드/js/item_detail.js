@@ -18,4 +18,16 @@ $(()=>{
         delReturnInfo.slideToggle(300);
     })
     
+    //상세 정보 이미지 박스 버튼 클릭 열고 닫기
+    const detailImgHide = $('.hide-wrap');
+    const moreBtn = $('.dt-more-btn');
+
+    $(detailImgHide).hide();
+
+    $(moreBtn).click(e=>{
+        e.preventDefault();
+        detailImgHide.slideToggle(300);
+    })
 });
+
+
