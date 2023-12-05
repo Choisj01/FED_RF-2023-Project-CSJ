@@ -39,7 +39,7 @@
 
 /******************************************* 3. 아이템 리스트 박스 - 그리드 *******************************************/
 .product-list-bx {
-    padding-bottom: 220px;
+    padding-bottom: 150px;
 }
 
 /* 그리드 박스 */
@@ -136,3 +136,11 @@
 	opacity: 1;
 	visibility: visible;
 }   
+
+/* 강아지 gif 이미지 박스 */
+.dog-tail-img-bx {
+    width: 570px;
+    position: relative;
+    left: 36%;
+    bottom: 100px;
+}
