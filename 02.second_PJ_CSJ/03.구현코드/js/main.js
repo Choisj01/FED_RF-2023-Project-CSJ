@@ -62,6 +62,9 @@ function showFn(){
 
 } /////////////// showFn 함수 /////////////
 
+
+
+
 // // 메인페이지 new-product 영역 스와이퍼 JS
 // var swiper = new Swiper(".mySwiper", {
 //     // autoplay: {
@@ -177,6 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 }); //////////////////로드 구역 //////////////
+
+$(()=>{
+  $('#searchModal').hide();
+
+  $('.search').click(e=>{
+    e.preventDefault();
+    $('#searchModal').slideToggle(300);
+  })
+})
 
 
 // 하단영역 회사정보 클릭시 보이고 닫기
