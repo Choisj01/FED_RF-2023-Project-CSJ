@@ -229,11 +229,13 @@ ul.inner-style-bx li {
     list-style: none;
     background-color: transparent;
     border: none;
+
     font-size: 26px;
     font-weight: bold;
-
-    /* 디자인 주기 */
-    
+}
+.tab-wrap button:hover {
+    transform: rotate(45deg);
+    transition: .3s ease-out;
 }
 
 ul.inner-style-bx3 {
