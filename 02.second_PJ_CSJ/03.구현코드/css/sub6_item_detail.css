@@ -310,6 +310,19 @@ div#detail-wrap {
 
 /*  상세보기 버튼 중앙정렬 */
 .detail-more-bx {
-    text-align: center;
     padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+    bottom: 311px;
+}
+
+
+button.dt-more-btn {
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 20px 34px;
+    width: 45vw;
+    box-shadow: 6px -22px 37px rgb(107 105 92 / 85%);
 }
