@@ -3,6 +3,17 @@
 import dFn from './dom.js';
 
 
+ // 모달창 토글 함수
+ function toggleModal() {
+  var modal = document.getElementById("searchModal");
+  if (modal.style.display === "none" || modal.style.display === "") {
+      modal.style.display = "block";
+  } else {
+      modal.style.display = "none";
+  }
+}
+
+
 
 window.addEventListener('scroll',showFn)
 
