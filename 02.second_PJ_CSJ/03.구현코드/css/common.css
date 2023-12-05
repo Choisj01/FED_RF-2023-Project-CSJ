@@ -416,6 +416,7 @@ h1#logo {
 .footer-info a {
     color: #fff;
     display: block;
+    width: 680px;
 }
 .footer-info-txt p {
     color: #fff;
