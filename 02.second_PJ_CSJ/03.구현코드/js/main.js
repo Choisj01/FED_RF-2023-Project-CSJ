@@ -181,16 +181,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // 하단영역 회사정보 클릭시 보이고 닫기
-$('.footer-info-txt').hide();
+// $('.footer-info-txt').hide();
 
-$('.footer-info').css({
-  width:"723px",
-  hight:"41px"
-})
-$('.footer-info a').click(e=>{
-  e.preventDefault();
-  $('.footer-info-txt').slideToggle(500);
+// $('.footer-info').css({
+//   width:"723px",
+//   hight:"41px"
+// })
+// $('.footer-info a').click(e=>{
+//   e.preventDefault();
+//   $('.footer-info-txt').slideToggle(300);
 
-})
+// })
 
 
