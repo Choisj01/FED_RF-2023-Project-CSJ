@@ -437,5 +437,27 @@ content: '';
 .txt_inner span {
     font-size: 2.8rem;
     color: #fff;
-    font-family: 'Lora', serif;
+    font-family: 'Lora', serif;transition: .3s ease-in-out;
 }
+
+.txt_inner span {
+    position: relative;
+  }
+  
+  .txt_inner span::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #fff; 
+    /* 밑줄 색상을 원하는 색상으로 변경해주세요 */
+    transition: width 0.3s ease-in-out; 
+    /* 전환 효과 적용 */
+  }
+  
+  .txt_inner span:hover::after {
+    width: 100%;
+  }
+  
