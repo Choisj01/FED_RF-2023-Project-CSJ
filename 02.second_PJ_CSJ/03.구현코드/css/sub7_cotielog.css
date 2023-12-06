@@ -15,6 +15,7 @@
     margin: 0 auto;
     gap: 52px;
 }
+
 .sticky-box {
     position: sticky;
     top: 0;
@@ -22,6 +23,55 @@
     width: 500px;
     background-color: transparent;
 }
+.sticky-box h1 {
+  font-size: 6rem;
+}
+ul.category-bx {
+  display: flex;
+  gap: 22px;
+  padding: 20px 0;
+}
+.img-bx-wrap {
+  position: relative;
+  right: 65%;
+  top: 72px;
+}
+.img-bx{
+  position: relative;
+  overflow: hidden;
+  width: 750px;
+  height: 422px;
+}
+.img-bx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.img-bx img:first-child {
+  z-index: 1; /* 첫 번째 이미지를 위로 표시 */
+}
+
+.img-bx img:last-child {
+  opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
+  z-index: 0;
+}
+
+.img-bx:hover img:first-child {
+  opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
+  z-index: 0;
+}
+
+.img-bx:hover img:last-child {
+  opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
+  z-index: 1;
+}
+/* 마우스 오버시 이미지 변경 끝 */
+
+
+
   
   .scrollable-content {
     flex: 1;
