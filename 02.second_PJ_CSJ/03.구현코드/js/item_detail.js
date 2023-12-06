@@ -18,6 +18,16 @@ $(()=>{
         delReturnInfo.slideToggle(300);
     })
     
+    $(window).scroll(()=>{
+        let scTop = $(window).scrollTop();
+        // console.log(scTop);
+        
+        if(scTop===0) {
+            infoBox.hide();
+            delReturnInfo.hide();
+        }
+    })
+    
     //상세 정보 이미지 박스 버튼 클릭 열고 닫기
     // const detailImgHide = $('.hide-wrap');
     // const moreBtn = $('.dt-more-btn');

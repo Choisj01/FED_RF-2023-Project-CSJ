@@ -153,10 +153,13 @@ p.info-desc {
 }
 
 .info-add-bx1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 45px;
+    
     border-top: 3px solid #000;
     border-bottom: 3px solid;
-    position: relative;
-    top: 145px;
+    
 }
 /* 플렉스로 b태그 버튼 정렬 */
 .tab-wrap {
