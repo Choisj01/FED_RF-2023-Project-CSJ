@@ -151,6 +151,8 @@ const pgLoc = {
   "MAXBONE":"sub2_maxbone",
   "MILK&PEPPER":"sub3_milknpepper",
   "Outdoor":"sub5_outdoor",
+  "Indoor":"sub6_indoor",
+  "Store":"sub7_cotielog"
 }
 
 $('.gnb a').click(e=>{
