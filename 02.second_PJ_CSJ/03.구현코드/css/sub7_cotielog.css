@@ -32,6 +32,36 @@ ul.category-bx {
     gap: 22px;
     padding: 20px 0;
 }
+ul.category-bx>ul>li>a{
+  display: inline-block;
+}
+/* 가상요소로 밑줄 만들기 */
+ul.category-bx>li>a::after{
+  content: '';
+  display: block;
+
+   /* 변경요소 */
+   width: 0%;
+   margin-left: 100%;
+
+   /* 글자와의 간격 */
+   margin-top: 4px;
+
+   height: 2px;
+   background-color: #000;
+   
+   /* 트랜지션 */
+   transition: all 0.3s;
+}
+
+/* 상위메뉴 li에 오버시 밑줄 */
+ul.category-bx>li:hover a::after{
+  width: 100%;
+  margin-left: 0%;
+  /* 트랜지션 : 오버시엔 왼쪽 마진값은 무애니! (애니를 하지 말아라!) */
+  transition: width 0.3s;
+}
+
 .img-bx-wrap {
     position: relative;
     right: 65%;
@@ -76,7 +106,7 @@ ul.category-bx {
     overflow-y: auto; /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
     height: 1000px; /* 스크롤 가능한 내용의 높이를 설정 */
     /* 다른 스타일 설정 */
-    padding: 180px 0;
+    padding: 130px 0;
 }
 
 .cont-bx {
@@ -90,6 +120,7 @@ ul.category-bx {
 .cont-bx li {
   font-size: 1.4rem;
   font-weight: bold;
+  padding-bottom: 100px;
 }
 li.first {
   position: relative;
@@ -100,4 +131,42 @@ li.first {
   padding-bottom: 13px;
 }
 
+
+/* 컨텐츠 a태그 버튼 */
+/* 버튼 랩박스  */
+div#cotie-btn-wrap {
+  width: 300px;
+  height: 100px;
+  /* margin: 0 auto; */
+  cursor: url(../images/main/cursorhand1.png),auto;
+  position: relative;
+  left: 55%;
+  bottom: -2px;
+}
+
+.ab-btn-bx{
+  width: 150px;
+  margin: 0 auto;
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 5px;
+  transform: scale(1);
+}
+
+.ab-btn-bx>a{
+  display: flex;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: none;
+  justify-content: center;
+}
+.ab-btn-bx:hover{
+  background-color: #222;
+  transform: scale(1.1);
+}
+.ab-btn-bx:hover a{
+  color: #fff;
+  cursor: url(../images/main/cursorhand1.png),auto;
+}
 
