@@ -150,7 +150,7 @@ const pgLoc = {
   "PET SO CHIC":"sub1_petsochic",
   "MAXBONE":"sub2_maxbone",
   "MILK&PEPPER":"sub3_milknpepper",
-  // "Outdoor":"sub4_aboutus",
+  "Outdoor":"sub5_outdoor",
 }
 
 $('.gnb a').click(e=>{
