@@ -152,7 +152,8 @@ const pgLoc = {
   "MILK&PEPPER":"sub3_milknpepper",
   "Outdoor":"sub5_outdoor",
   "Indoor":"sub6_indoor",
-  "Store":"sub7_cotielog"
+  "Cotielog":"sub7_cotielog"
+  // "Store":"sub8_store"
 }
 
 $('.gnb a').click(e=>{
