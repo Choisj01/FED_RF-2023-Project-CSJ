@@ -31,6 +31,7 @@
 
 .img-bx-wrap {
     position: relative;
+    left: 11%;
 }
 .img-bx {
     position: relative;
@@ -71,10 +72,56 @@
     flex: 1;
     /* overflow-y: auto;  */
     /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
-    height: 5500px;
+    height: 7100px;
      /* 스크롤 가능한 내용의 높이를 설정 */
     /* 다른 스타일 설정 */
     padding: 130px 0;
 }
 
+.cont-bx {
+    position: relative;
+    left: 20%;
+}
+.cont-bx>ul>li{
+    width: 1100px;
+    height: 1200px;
+}
+.cont-bx>ul>li>h3 {
+    font-size: 2.2rem;
+    padding: 15px 0;
+}
 
+.cont-bx>ul>li>h4 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.cont-bx>ul>li>p {
+    font-size: 1.1rem;
+    /* padding: 33px 0; */
+    padding-top: 20px;
+    padding-bottom: 70px;
+    font-weight: bold;
+}
+/* 버튼 랩핑 박스 */
+div#store-btn-wrap {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 58px;
+}
+
+.st-btn-bx a {
+    display: block;
+    position: relative;
+    top: 26px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#store-btn-wrap:hover,
+#store-btn-wrap:hover .more-btn span {
+    background-color: black; /* 마우스 오버 시 배경색을 검은색으로 변경 */
+    color: white; /* 마우스 오버 시 글자색을 흰색으로 변경 */
+}
