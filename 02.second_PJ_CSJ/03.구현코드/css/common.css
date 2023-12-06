@@ -316,6 +316,7 @@ h1#logo {
     top: 4px;
     /* 애니메이션 실행 */
     animation: moveUpDown .9s ease-in-out infinite alternate;
+    padding-top: 40px;
 }
 .footer-move{
     position: relative;
