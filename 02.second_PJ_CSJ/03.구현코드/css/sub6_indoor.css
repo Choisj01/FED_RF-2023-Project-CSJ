@@ -137,10 +137,3 @@
 	visibility: visible;
 }   
 
-/* 강아지 gif 이미지 박스 */
-.dog-tail-img-bx {
-    width: 570px;
-    position: relative;
-    left: 36%;
-    bottom: 100px;
-}
