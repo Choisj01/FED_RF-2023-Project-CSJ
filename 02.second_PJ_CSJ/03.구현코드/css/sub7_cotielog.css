@@ -25,6 +25,7 @@
 }
 .sticky-box h1 {
   font-size: 6rem;
+  font-family: 'Lora', serif;
 }
 ul.category-bx {
   display: flex;
