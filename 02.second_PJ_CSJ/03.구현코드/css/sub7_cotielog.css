@@ -24,68 +24,80 @@
     background-color: transparent;
 }
 .sticky-box h1 {
-  font-size: 6rem;
-  font-family: 'Lora', serif;
+    font-size: 6rem;
+    font-family: "Lora", serif;
 }
 ul.category-bx {
-  display: flex;
-  gap: 22px;
-  padding: 20px 0;
+    display: flex;
+    gap: 22px;
+    padding: 20px 0;
 }
 .img-bx-wrap {
-  position: relative;
-  right: 65%;
-  top: 72px;
+    position: relative;
+    right: 65%;
+    top: 72px;
 }
-.img-bx{
-  position: relative;
-  overflow: hidden;
-  width: 750px;
-  height: 422px;
+.img-bx {
+    position: relative;
+    overflow: hidden;
+    width: 750px;
+    height: 422px;
 }
-.img-bx img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.3s ease-in-out;
+.img-bx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
 }
 .img-bx img:first-child {
-  z-index: 1; /* 첫 번째 이미지를 위로 표시 */
+    z-index: 1; /* 첫 번째 이미지를 위로 표시 */
 }
 
 .img-bx img:last-child {
-  opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
-  z-index: 0;
+    opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
+    z-index: 0;
 }
 
 .img-bx:hover img:first-child {
-  opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
-  z-index: 0;
+    opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
+    z-index: 0;
 }
 
 .img-bx:hover img:last-child {
-  opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
-  z-index: 1;
+    opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
+    z-index: 1;
 }
 /* 마우스 오버시 이미지 변경 끝 */
 
-
-
-  
-  .scrollable-content {
+.scrollable-content {
     flex: 1;
-     overflow-y: auto; /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
+    overflow-y: auto; /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
     height: 1000px; /* 스크롤 가능한 내용의 높이를 설정 */
     /* 다른 스타일 설정 */
-  }
-  
-  .cont-bx img {
-    width: 480px;
+    padding: 180px 0;
 }
 
+.cont-bx {
+    /* padding-top: 55px; */
+}
+/* 컨텐츠 박스 ul */
 .cont-bx ul {
     display: flex;
-    gap: 10px;
+    gap: 80px;
 }
+.cont-bx li {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+li.first {
+  position: relative;
+  top: -130px;
+}
+.cont-bx img {
+  width: 480px;
+  padding-bottom: 13px;
+}
+
+
