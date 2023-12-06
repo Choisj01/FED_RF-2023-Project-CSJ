@@ -1,0 +1,354 @@
+/* 서브페이지 하위 페이지인 제품 상세 페이지 - sub6_item_detail.css */
+
+/* 공통 외부 css */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/*********************************************** 2. 제품 정보 영역 ***********************************************/
+
+/* 랩박스 크기 설정 및 가운데 정렬 */
+.product-wrap {
+    width: 1600px;
+    margin: 0 auto;
+}
+/* 이미지 박스 + info 박스 플렉스로 정렬 */
+.info-inbox {
+    display: flex;
+    justify-content: space-around;
+}
+/* 이미지2 박스 */
+.main-img2 {
+    position: relative;
+    bottom: 5px;
+}
+
+/* 제품정보 랩핑박스 */
+.pruduct-info-wrap {
+    position: relative;
+    height: 1154px;
+    /* 상단영역이랑 거리두기 */
+    margin-top: 100px;
+}
+/* 제품 브랜드 정보 박스 */
+.brand-info {
+    padding: 22px 0;
+}
+.brand-info b {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+}
+/* 해쉬태그 ul 박스 */
+ul.flex-bx1 {
+    display: flex;
+    gap: 12px;
+}
+
+.sticky-bx{
+    position:relative; 
+    /* height: 1000px; */
+}
+.sticky-bx .skt-bx{
+    /* position: sticky;
+    top: 50px; */
+}
+
+
+ul.flex-bx1 > li {
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(156, 154, 154);
+}
+
+.product-info-inner {
+    position: sticky;
+    top: 50px;
+}
+
+.product-info-inner h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.product-info-inner>h1>b {
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+p.product-information__price em {
+    font-size: 2.1rem;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+p.product-information__price span {
+    font-size: 2rem;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.go-buy-bx {
+    display: flex;
+    justify-content: flex-start;
+    gap: 400px;
+    padding: 50px 0;
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+.go-buy-bx>a {
+    display: block;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+.go-buy-bx>a:nth-of-type(1) {
+    border: 2px solid #000;
+    border-radius: 52%;
+    background-color: #000;
+    padding-left: 34px;
+    padding-right: 29px;
+}
+
+/* 공유하기 버튼 안보이게 */
+.share-bx>a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+.share-bx>a>span {
+    display: none;
+}
+
+.share-bx>a>img{
+    width: 65px;
+    height: 65px;
+}
+
+.product-info-illust {
+    width: 160px;
+    height: 60px;
+}
+
+/* 애니메이션을 요소에 적용하고 무한 반복 */
+.product-info-illust .grass-img-bx img {
+    animation: moveUp 0.8s ease alternate infinite;
+}
+
+/* 애니메이션을 정의 - 위아래 이동 애니 */
+@keyframes moveUp {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-16px);
+    }
+}
+
+p.info-desc {
+    font-size: 1.1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 1.9;
+    padding: 40px 0;
+    position: relative;
+    top: 40px;
+}
+
+.info-add-bx1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 45px;
+    
+    border-top: 3px solid #000;
+    border-bottom: 3px solid;
+    
+}
+/* 플렉스로 b태그 버튼 정렬 */
+.tab-wrap {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    
+}
+
+.info-add-ibox1 {
+    padding: 30px 0;
+    /* 비율줘서 버튼태그 옆으로 보내기 */
+    /* width: 90%; */
+    display: flex;
+    /* width: 90%; */
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.info-add-ibox1 b {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    display: block;
+}
+
+.info-add-inner b {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.inner-style-bx li>p::before{
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: gray; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+.info-add-inner>ul>li:nth-of-type(1) {
+    padding: 22px 0;
+}   
+.info-add-inner p {
+    font-size: 1rem;
+    color: gray;
+    font-weight: bold;
+}
+ul.inner-style-bx li {
+    padding: 15px 0;
+}
+
+.info-add-ibox2 b {
+    font-size: 1.7rem;
+    font-family: 'Lora', serif;
+}
+
+
+.info-add-ibox2 {
+    border-top: 3px solid;
+    padding: 30px 0; 
+      /* 비율줘서 버튼태그 옆으로 보내기 */
+    /* width: 90%; */
+    display: flex;
+    /* width: 90%; */
+    align-items: center;
+    justify-content: space-between;
+}
+/* 버튼 공통 디자인  */
+.tab-wrap button {
+    /* 초기화 */
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+    border: none;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+.info-add-ibox1:hover .btn-wrap button {
+    transform: rotate(45deg); /* 여기서 각도를 조절할 수 있어요 */
+    transition: transform 0.3s ease; /* 부드러운 애니메이션 효과를 위한 설정 */
+}
+.info-add-ibox2:hover .btn-wrap button {
+    transform: rotate(45deg); /* 여기서 각도를 조절할 수 있어요 */
+    transition: transform 0.3s ease; /* 부드러운 애니메이션 효과를 위한 설정 */
+}
+
+ul.inner-style-bx3 {
+    padding-top: 10px;
+    padding-bottom: 23px;
+}
+.info-add-inner2 b {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 9px 0;
+}
+.info-add-inner2>ul>li {
+    padding: 25px 0;
+}
+
+li.padding-bx {
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+}
+.padding-bx>p::before{
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: gray; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+/**************************************************** 3. 제품 정보 상세소개 영역 ****************************************************/
+div#detail-wrap {
+    margin-top: 170px;
+}
+
+.product-info-illust {
+    width: 160px;
+    height: 60px;
+    padding: 15px 0;
+}
+
+/* 애니메이션을 요소에 적용하고 무한 반복 */
+.product-info-illust2 .grass-img-bx2 img {
+    animation: moveUp 0.8s ease alternate infinite;
+}
+
+/* 애니메이션을 정의 - 위아래 이동 애니 */
+@keyframes moveUp {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-16px);
+    }
+}
+
+.detail-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.product-info-illust2 {
+    text-align: center;
+}
+
+/* 제품 상세 이미지 영역 */
+.info-detail-img-box {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*  상세보기 버튼 중앙정렬 */
+.detail-more-bx {
+    /* padding-bottom: 50px; */
+    text-align: center;
+    position: relative;
+    bottom: 325px;
+}
+
+
+button.dt-more-btn {
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 20px 34px;
+    width: 45vw;
+    box-shadow: 6px -22px 37px #a29f97;
+}
+
+
+/* 탑버튼 CSS  */
+/* GOTOP BTN */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+	background-color:#444;
+	color:#fff;
+	opacity: 0;
+	visibility: hidden;
+	transition:opacity 0.5s;
+    z-index: 99999999;
+}
+#go-top.active{
+	opacity: 1;
+	visibility: visible;
+}   

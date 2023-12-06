@@ -1,0 +1,450 @@
+
+
+/* Second PJ(cotieshop) 서브4(ABOUT US) CSS - sub4_aboutus.css */
+
+/* 공통 외부 css */
+@import url(./reset.css);
+/* 상단, 하단영역 공통 css */
+@import url(./core.css);
+
+@import url(./common.css);
+
+/*********************************************** 2. 꼬띠샵 소개 영역 ***********************************************/
+/* 소개 속박스 */
+.abu-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+    height: 2000px;
+}
+/* 소개 타이틀 박스 */
+.abu-title-bx {
+    text-align: center;
+}
+/* 소개 타이틀 박스 h1태그 */
+.abu-title-bx h1 {
+    font-size: 6.6rem;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    padding: 33px 0;
+}
+/* about us 메인 비주얼 컨텐츠 플렉스박스 공통 */
+.flex-cont-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    margin-bottom: 50px;
+}
+
+/* 패턴 레이어이미지 박스1 */
+.layer-img1 {
+    position: relative;
+    right: 32%;
+    top: 211px;
+}
+
+/* 텍스트 박스 h3 */
+.txt-bx h3 {
+    font-size: 1.6rem;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    padding-bottom: 30px;
+}
+/* 텍스트 박스 p */
+.txt-bx p {
+    font-size: 1.1rem;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* 타이틀 이미지 박스1 위치 */
+.abu-visual-img-bx1 {
+    position: relative;
+    left: 3%;
+}
+/* 타이틀 이미지박스2 위치 */
+.abu-visual-img-bx2 {
+    position: relative;
+    right: 11%;
+    bottom: 113px;
+}
+/* 타이틀 텍스트2 박스 위치 */
+.abu-txt2 {
+    position: relative;
+    right: 7.3%;
+}
+
+/* 패턴 레이어 이미지박스 2 */
+.layer-img2 {
+    width: 96px;
+    position: relative;
+    left: 65%;
+    bottom: 713px;
+}
+/* 패턴 레이어 이미지박스 3 */
+.layer-img3 {
+    width: 117px;
+    position: relative;
+    left: 82.6%;
+    bottom: 659px;
+}
+/* 패턴 레이어 이미지박스 4 */
+.layer-img4 {
+    width: 107px;
+    position: relative;
+    left: 93%;
+    bottom: 300px;
+}
+
+/******************************** 3. 꼬띠샵 추구 가치 소개 영역 ********************************/
+.cont-bx2-inbox {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cont2-img-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont2-txt-bx {
+    text-align: center;
+}
+
+.cont-bx2-inbox {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 130px;
+    box-sizing: border-box;
+}
+.cont2-txt-bx h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 42px 0;
+}
+.cont2-txt-bx p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-bottom: 75px;
+}
+
+/****************************** 4. 꼬띠샵 슬로건 이미지 영역 ******************************/
+/* 속박스 */
+.psc-title-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+}
+/* 슬로건 박스 타이틀 h1 */
+.psc-title-inbox h1 {
+    text-align: center;
+    font-size: 7.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    font-family: "Lora", serif;
+}
+/* 슬로건 이미지 박스 가운데 정렬 */
+.psc-title-img-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 43px;
+}
+
+/**************************************** 5. 꼬띠샵 마스코트 소개영역 ****************************************/
+/* 전체싸는 속박스 */
+.abu-who-inbox {
+    max-width: 1650px;
+    margin: 0 auto;
+    height: 1500px;
+    margin-bottom: 102px;
+    box-sizing: border-box;
+}
+/* 강아지 gif 박스 */
+.puppy-img-bx {
+    position: relative;
+    top: 244px;
+    left: -11%;
+}
+/* 레이어 이미지 박스 가운데 정렬 */
+.about-section__title figure {
+    text-align: center;
+    padding-top: 100px;
+}
+.about-section__title h2 {
+    text-align: center;
+    font-size: 6.1rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* 프로필 b태그 */
+.about-who__profile b {
+    text-align: center;
+    display: block;
+    font-size: 2.2rem;
+    /* padding: 10px 0; */
+    padding-top: 33px;
+    padding-bottom: 20px;
+}
+ul.profile-txt {
+    text-align: center;
+}
+
+ul.profile-ani {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 125px;
+}
+ul.profile-txt {
+    position: relative;
+}
+
+ul.profile-txt li {
+    padding: 13px 0;
+}
+/* 가상요소 밑줄 */
+ul.profile-txt li:nth-of-type(1):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    position: absolute;
+    left: 35.7%;
+    top: -4px;
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(2):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 15.5%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(3):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 32.2%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(4):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 49%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(5):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 65.5%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(6):before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 82.4%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt li:nth-of-type(6)::after {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 8px;
+    left: 35.7%;
+    top: 98.7%;
+    position: absolute;
+
+    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+}
+ul.profile-txt span {
+    display: inline-block;
+    font-size: 1.7rem;
+}
+ul.profile-ani {
+    /* position: relative; */
+    /* width: 100%;
+    list-style: none;
+    overflow: hidden;
+    white-space: nowrap; */
+}
+
+/* 마스코트 이미지 박스 */
+ul.profile-ani li {
+    display: inline-block;
+    margin-right: 20px; /* 이미지 간격 조정 */
+    opacity: 0; /* 초기에는 이미지 숨김 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 투명도 애니메이션 설정 */
+}
+.item1 {
+    /* 첫 번째 이미지에 적용될 스타일 */
+    transform: translateX(10px) rotate(-20deg);
+}
+
+.item2 {
+    /* 두 번째 이미지에 적용될 스타일 */
+    /* transform: translateY(50px) rotate(180deg); */
+}
+
+.item3 {
+    /* 세 번째 이미지에 적용될 스타일 */
+    transform: translateX(10px) rotate(20deg);
+}
+
+/**************************************** 6. 위치 안내 영역 ****************************************/
+
+div#cotie-info-wrap {
+    padding: 110px 0;
+}
+
+.layer-img5 {
+    text-align: center;
+}
+
+div#cotie-info-wrap h1 {
+    font-family: "Lora", serif;
+    font-weight: bold;
+    font-size: 6.8rem;
+    text-align: center;
+}
+
+.map-bx {
+    text-align: center;
+    width: 1450px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 60px;
+}
+
+.map-bx iframe {
+    width: 1450px;
+    height: 600px;
+}
+.map-bx::before{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 155px;
+    background: url(../images/aboutus/marker.png) no-repeat;
+    position: relative;
+    z-index: 100;
+    left: 60.4%;
+    top: 310px;
+}
+
+.size-relax {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+.info-flex-bx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 150px;
+}
+div.info-txt-bx1 {
+    padding: 50px 0;
+}
+div.info-txt-bx1 h3 {
+    font-size: 1.5rem;
+}
+
+/* ul 박스 밑 li */
+.info-bx1 li{
+    padding: 10px 0;
+}
+.info-bx1 li b::before {
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: black; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+div.info-txt-bx2 {
+    padding: 50px 0;
+}
+div.info-txt-bx2 h3 {
+    font-size: 1.5rem;
+}
+/* ul 박스 밑 li */
+.info-bx2{
+    padding: 10px 0;
+}
+.info-bx2 li {
+    padding: 10px 0;
+}
+.info-bx2 li b::before {
+    content: "•"; /* 가상 요소에 까만 점 문자 콘텐츠 추가 */
+    color: black; /* 까만 점 색상 */
+    margin-right: 5px; /* 점과 텍스트 사이 간격 조절 */
+}
+
+ul.info-bx1>li>b {
+    font-size: 1.3rem;
+}
+
+ul.info-bx1>li>p {
+    font-size: 1.1rem;
+}
+ul.info-bx2>li>b {
+    font-size: 1.3rem;
+}
+
+ul.info-bx2>li>p {
+    font-size: 1.1rem;
+}
+
+/* 탑버튼 CSS  */
+/* GOTOP BTN */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+	background-color:#444;
+	color:#fff;
+	opacity: 0;
+	visibility: hidden;
+	transition:opacity 0.5s;
+    z-index: 99999999;
+}
+#go-top.active{
+	opacity: 1;
+	visibility: visible;
+}   

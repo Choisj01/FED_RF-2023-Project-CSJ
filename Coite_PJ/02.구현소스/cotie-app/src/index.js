@@ -1,14 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-// import './index.css';
+// index.js는 public/index.html 페이지에 적용되는 컴포넌트다!->루트 컴포넌트
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { Main } from "./pages/Main";
+import { Layout } from "./layout/Layout";
+import { Sub1Petsochic } from "./pages/Sub1Petsochic";
 
-export default function App(){
-  return(
-    <>
-      <h2>sadjhkas</h2>
-    </>
-  )
-}
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* 중요!!! 레이아웃 컴포넌트를 루트로 설정! */}
+        <Route path="/" element={<Layout />}>
+          {/* 하위 라우트 셋팅 
+          - path대신 index만 쓰면 첫페이지로 로딩함! 
+          -> path는 Layout의 Link to="/" 에 해당하는 셋팅*/}
+          <Route index element={<Main />} />
+          <Route path="sub1" element={<Sub1Petsochic />} />
+          
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+} ///////////// App 컴포넌트 ///////////////////
 
-const root = ReactDOM.createRoot(document.querySelector('#root'));
-root.render(<App />)
+// 컴포넌트 출력 //////////
+// 먼저 root객체만들고
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+// render메서드로 출력
+root.render(<App />);

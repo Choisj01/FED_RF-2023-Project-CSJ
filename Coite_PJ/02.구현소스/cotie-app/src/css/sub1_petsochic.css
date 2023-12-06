@@ -1,0 +1,441 @@
+
+
+/* Second PJ(cotieshop) 서브1(PET SO CHIC) CSS - sub1_petsochic.css */
+
+/* 공통 외부 css */
+@import url(./reset.css);
+/* 상단, 하단영역 공통 css */
+@import url(./core.css);
+
+@import url(./common.css);
+
+/********************* 2. 펫소시크 페이지 메인이미지 영역 *********************/
+/* petsochic 브랜드 타이틀+이미지+레이어 이미지 랩핑박스 */
+div#sub-petsochic-visual-wrap {
+    width: 100%;
+    position: relative;
+}
+
+/* 펫소시크 타이틀+ 이미지 속박스 */
+.psc-visual {
+    max-width: 1450px;
+    height: 127vh;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+}
+/* 펫소시크 타이틀 h2 */
+.psc-visual-txt h2 {
+    font-size: 8.1rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+/* 펫소시크 메인 이미지 랩핑 박스 */
+.psc-img-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 56%;
+}
+/* 펫소시크 메인 이미지 */
+.psc-img-wrap img {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+/* 펫소시크 레이어 이미지 랩핑박스 */
+.psc-free-items {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* 펫소시크 메인 이미지 레이어 이미지1 */
+.layer-img-bx.psc-layer1 {
+    position: absolute;
+    left: 10%;
+    top: 24%;
+    width: 18%;
+    /* width: 330px; */
+}
+
+/* 펫소시크 메인 이미지 레이어 이미지2 */
+.layer-img-bx.psc-layer2 {
+    width: 39%;
+    position: absolute;
+    right: 100px;
+    top: 70%;
+}
+
+.psc-img-wrap img {
+    position: relative;
+    z-index: 10;
+}
+
+/******************************* 3. 펫소시크 브랜드 소개 영역  *******************************/
+.petsochic{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* 브랜드 텍스트 랩박스 */
+.brands-text{
+    margin: 0 auto;
+}
+
+/* 브랜드 이미지svg 박스 */
+.text-img {
+    text-align: center;
+    width: 100%;
+}
+
+/* 브랜드 이미지 svg */
+.text-img img {
+    width: 60%;
+}
+
+.psc-text{
+    margin: 55px 0;
+    text-align: center;
+}
+
+.psc-text h4 {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 35px;
+
+}
+
+.psc-text p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 1.7;
+    padding: 0 31px;
+    color: #222;
+}
+
+/********************************** 4. 창업자 스토리 영역  **********************************/
+article.founder-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.found-txt{
+    margin: 0 auto;
+    margin-left: 20px;
+}
+
+.found-txt h4{
+    margin: 25px 0; 
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.found-txt p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222;
+}
+.hello-img-bx img {
+    width: 80%;
+    margin-left: 47px;
+}
+
+/****************************************** 5. 펫소시크 동영상 영역  ******************************************/
+#psc-brand-vid{
+    margin-top: 220px;
+    margin-bottom: 200px;
+}
+
+.psc-vid-inbox{
+    max-width: 1600px;
+    height: 800px;
+    position: relative;
+}
+.psc-vid-inbox iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -90px;
+}
+ /* 동영상 박스 왼쪽 정렬을 위한 기존 클래스 지우기 기존 display:flex + 가운데 정렬이 있었음 */
+.vp-center {
+    display: block;
+}
+
+/******************************************** 6. 펫소시크 철학 소개 영역 ********************************************/
+/* 속박스 */
+.philosophy-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 167px; */
+}
+/* 철학 소개 이미지 gif */
+.phil-img-bx img {
+    width: 32vw;
+}
+/* 펫소시크 철학 소개 텍스트 박스 */
+.phil-txt-bx {
+    margin: 0 auto;
+}
+/* 철학소개 텍스트 h4 */
+.phil-txt-bx h4 {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    text-align: center;
+    line-height: 2.4;
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+/* 철학소개 텍스트 p */
+.phil-txt-bx p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 0.2px;
+}
+
+.psc-p2 {
+    position: relative;
+    top: -30px;
+
+    margin-bottom: 200px;
+}
+
+.phil-img1 {
+    /* margin-right: 35px; */
+    position: relative;
+    right: 11%;
+}
+/* 목줄한 강아지 이미지 박스 */
+.phil-img2{
+    width: 600px;
+}
+.phil-img2 img{
+    width: 600px;
+}
+
+
+/*************************************************** 7.펫소시크 브랜드 타이틀 영역 ***************************************************/
+
+.psc-title-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.psc-title-inbox h1{
+    text-align: center;
+    font-size: 6.2rem;
+    font-weight: bold;
+    font-family: "Lora", serif;
+}
+.psc-title-img-bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+/************************************ 8.md's choice (스와이퍼 적용 영역) ************************************/
+/* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
+div#newproduct-wrap {
+    height: 110vh;
+    padding-bottom: 100px;
+}
+.new-product-list{
+  /* 드래그선택 안되게하기 */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+/* newproduct 타이틀 h2 */
+.new-txt-bx {
+margin-bottom: 65px;
+}
+
+.new-txt-bx h2{
+font-size: 6.7rem;
+text-align: center;
+font-family: 'Lora', serif;
+}
+
+.mySwiper{
+padding-left: 12%;
+}
+ul.new-lists-bx img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+ul.new-lists-bx h3 {
+font-size: 1.3rem;
+font-family: 'Lora', serif;
+font-weight: bold;
+margin: 10px 0;
+}
+.new-lists-bx span{
+font-size: 1.1rem;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 스와이퍼 적용 CSS */
+.swiper-wrapper{
+margin-bottom: 200px;
+}
+
+/* 스와이퍼 개별 슬라이드 리스트 li */
+.swiper-slide {
+font-size: 18px;
+
+}
+
+/* 직접 이미지요소를 배경처럼 사용! */
+
+.imbx{
+width: 400px;
+height: 600px;
+}
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+}
+/* 마우스 오버시 이미지 변경 */
+.imbx {
+position: relative;
+width: 480px;
+height: 600px;
+overflow: hidden;
+}
+
+.imbx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: auto;
+transition: opacity 0.3s ease-in-out;
+}
+
+.imbx img:first-child {
+z-index: 1; /* 첫 번째 이미지를 위로 표시 */
+}
+
+.imbx img:last-child {
+opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:first-child {
+opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:last-child {
+opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
+z-index: 1;
+}
+/* 마우스 오버시 이미지 변경 끝 */
+
+.swiper-txt-bx{
+position: absolute;
+}
+
+.swiper-button-next{
+top: auto;
+right: 40%;
+transform: translateY(-70%);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+.swiper-button-prev{
+top: auto;
+left: 40%;
+transform: translateY(-70%) rotate(180deg);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+background: #f00;
+content: '';
+}
+
+/* 탑버튼 CSS  */
+/* GOTOP BTN */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+	background-color:#444;
+	color:#fff;
+	opacity: 0;
+	visibility: hidden;
+	transition:opacity 0.5s;
+    z-index: 99999999;
+}
+#go-top.active{
+	opacity: 1;
+	visibility: visible;
+}   
+
+/************************* 9. 페이지 이동 박스 영역 -> maxbone으로 *************************/
+.move-page-inbox {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/sub1_petsochic/pagination-maxbone.jpg) no-repeat fixed center/cover;
+}
+
+.move-page-inbox b {
+    position: absolute;
+    top: 33%;
+    left: 32%;
+    font-size: 8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
+}
+
+.move-page-inbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+.move-page-inbox a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+
+.txt_inner {
+    position: absolute;
+    top: 57%;
+    left: 45%;
+}
+
+.txt_inner span {
+    font-size: 2.8rem;
+    color: #fff;
+    font-family: 'Lora', serif;
+}

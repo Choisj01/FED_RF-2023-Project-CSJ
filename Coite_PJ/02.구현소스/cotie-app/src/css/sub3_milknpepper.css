@@ -1,0 +1,548 @@
+
+
+/* Second PJ(cotieshop) 서브3(MILK & PEPPER) CSS - sub3_milknpepper.css */
+
+/* 공통 외부 css */
+@import url(./reset.css);
+/* 상단, 하단영역 공통 css */
+@import url(./core.css);
+
+@import url(./common.css);
+
+/****************************** 2. 밀크앤페퍼 브랜드 타이틀+이미지 영역 ******************************/
+
+/* 밀크앤 페퍼 메인 타이틀 전체 랩핑 박스 */
+div#sub-milkpepper-visual-wrap {
+    height: 137vh;
+    margin-top: 100px;
+    position: relative;
+    
+}
+/* 메인 타이틀 영역 속박스 */
+.mnp-visual {
+    max-width: 1450px;
+    height: 127vh;
+    margin: 0 auto;
+}
+
+/* 밀크앤 페퍼 타이틀 h2 */
+.mnp-visual-txt h2 {
+    text-align: center;
+    font-size: 10rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+/* 밀크앤페퍼 타이틀 이미지 랩박스 */
+.mp-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+.mp-img-wrap img {
+    width: 50vw;
+}
+
+/* 밀크페퍼 메인 타이틀 영역 레이어 이미지 박스  */
+.mnp-free-items {
+    /* position: absolute; */
+    position: relative;
+    top: -818px;
+    left: 0;
+}
+/* 레이어 이미지 각 박스 공통 css */
+.layer-img-bx{
+    position: absolute;
+}
+
+/*  고양이 레이어 이미지 박스 */
+.mnp-layer2 {
+    position: absolute;
+    top: 315px;
+    left: 5%;
+    z-index: 110;
+}
+
+
+/* 고양이 손,하트 레이어 이미지 박스 */
+.mnp-layer3 {
+    position: absolute;
+    right: -12%;
+}
+/* 고양이 손,하트 레이어이미지 박스 속 하트 이미지 박스 */
+.mnp-layer4 {
+    position: absolute;
+    top: 321px;
+    left: -24%;
+}
+
+/* 처음에 안보임 - JS 적용 */
+.mnp-layer3,
+.mnp-layer4 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+/***************************** 3. 컨텐츠 박스 - 밀크앤페퍼 인트로소개 *****************************/
+.mnp-title {
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands-text {
+    width: 600px;
+    margin: 0 auto;
+}
+.text-img {
+    margin-bottom: 45px;
+}
+.text-img img {
+    position: relative;
+    left: 12%;
+}
+
+/* 맥스본 인트로 로고이미지+ 텍스트 랩박스 */
+.mnp-text {
+    text-align: center;
+}
+.mnp-text h4 {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    letter-spacing: -2.2px;
+}
+.mnp-text p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 2.3;
+    letter-spacing: -1.4px;
+    font-weight: bold;
+}
+
+/******************************************** 4. 창업자 스토리 ********************************************/
+div#founder-story-wrap {
+    position: relative;
+    height: 1000px;
+}
+
+article.founder-inbox{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+.found-txt {
+    margin: 0 auto;
+    margin-left: 90px;
+}
+
+.found-txt h4{
+    margin: 25px 0; 
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.found-txt p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #222;
+}
+.dog-img-bx{
+    margin-right: 20px;
+}
+.dog-img-bx img {
+    width: 33vw;
+}
+
+/* 레이어 이미지 박스 */
+.mnp-free-items2 {
+    position: relative;
+}
+/* 까만원 레이어 이미지 박스 */
+.mnp-layer5 {
+    position: absolute;
+    top: -70px;
+    left: 12%;
+}
+/* 핑크색 원 레이어 이미지 박스 */
+.mnp-layer6 {
+    position: absolute;
+    top: -70px;
+    left: 22%;
+}
+
+/* 패턴 레이어이미지 박스 1 */
+.mnp-layer7 {
+    position: absolute;
+    top: 210px;
+    left: 10%;
+}
+.mnp-layer7 img {
+    width: 88px;
+}
+
+/* 패턴 레이어이미지 박스 2 */
+.mnp-layer8 {
+    position: absolute;
+    right: 31%;
+    top: 124px;
+}
+.mnp-layer9 {
+    position: absolute;
+    right: 16%;
+    top: 218px;
+}
+
+/****************************** 5. 밀크앤페퍼 동영상 박스영역  ******************************/
+
+/* 동영상 랩핑박스 */
+div#mnp-vid-wrap {
+    position: relative;
+    height: 1163px;
+}
+/* 동영상 속박스 */
+.vid-inbox {
+    position: relative;
+    width: 1650px;
+}
+
+
+.vid-inbox iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    z-index: 100;
+}
+.mnp-layer10 {
+    position: absolute;
+    right: -3.9%;
+    top: 292px;
+}
+.mnp-layer10 img {
+    width: 110px;
+}
+.mnp-layer11 {
+    position: absolute;
+    right: 22%;
+    bottom: -120px;
+}
+.mnp-layer11 img {
+    width: 120px;
+}
+
+/*********************************** 6. 흐르는 글자 박스 영역 ***********************************/
+div#flow-txt-bx {
+    height: 210px;
+    position: relative;
+    top: -160px;
+}
+/* 내부 흘러가는 박스(움직일 박스) */
+.flow-txt{
+    position: relative;
+    left: 0;
+    width: 200vw;
+    display: flex;
+    margin-top: 150px;
+}
+.flow-txt ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex:1;
+    display: flex;
+}
+.flow-txt li{
+    flex: 1;
+    text-align: center;
+    font-size: 6rem;
+    white-space: nowrap;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 2px rgba(128, 128, 128, 0.76);
+    padding: 32px 52px;
+}
+
+/* 흘러가는 텍스트 애니 클래스1 */
+.txt-ani1{
+    animation: txt-ani1 12s linear infinite;
+}
+/*  흘러가는 글자 키프레임1 */
+@keyframes txt-ani1 {
+    to{
+        left: -100%;
+    }
+}
+
+/********************************** 7.밀크앤페퍼 특징 소개 영역 **********************************/
+.mnp-ft-intro-inbox {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+ul.flex-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+/* 강아지 gif 이미지 li */
+.ft-part1 li:nth-of-type(1) {
+    margin-left: -33px;
+}
+.ft-part1 li:nth-of-type(1) img {
+    width: 750px;
+}
+.ft-part1 li:nth-of-type(2) {
+    position: relative;
+    top: -90px;
+}
+
+.ft-part1 h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.ft-part1 p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.ft-part2 p {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+
+}
+
+.ft-part2 li:nth-of-type(1) {
+    position: relative;
+    left: 9%;
+    top: -130px;
+}
+.ft-part2 li:nth-of-type(2) {
+    position: relative;
+    top: -200px;
+    right: -128px;
+}
+
+/******************************************** 8.MD's CHOICE ********************************************/
+/* 스와이프 */
+/* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
+div#newproduct-wrap {
+    height: 110vh;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+.new-product-list{
+  /* 드래그선택 안되게하기 */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+/* newproduct 타이틀 h2 */
+.new-txt-bx {
+margin-bottom: 65px;
+}
+
+.new-txt-bx h2{
+font-size: 6.7rem;
+text-align: center;
+font-family: 'Lora', serif;
+}
+
+.mySwiper{
+padding-left: 12%;
+}
+ul.new-lists-bx img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+ul.new-lists-bx h3 {
+font-size: 1.3rem;
+font-family: 'Lora', serif;
+font-weight: bold;
+margin: 10px 0;
+}
+.new-lists-bx span{
+font-size: 1.1rem;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 스와이퍼 적용 CSS */
+.swiper-wrapper{
+margin-bottom: 200px;
+}
+
+/* 스와이퍼 개별 슬라이드 리스트 li */
+.swiper-slide {
+font-size: 18px;
+
+}
+
+/* 직접 이미지요소를 배경처럼 사용! */
+
+.imbx{
+width: 400px;
+height: 600px;
+}
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+}
+/* 마우스 오버시 이미지 변경 */
+.imbx {
+position: relative;
+width: 480px;
+height: 600px;
+overflow: hidden;
+}
+
+.imbx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: auto;
+transition: opacity 0.3s ease-in-out;
+}
+
+.imbx img:first-child {
+z-index: 1; /* 첫 번째 이미지를 위로 표시 */
+/* 첫번째 이미지만 1개로 오버시 css 안되도록 1줌! */
+opacity: 1 !important;
+}
+
+.imbx img:last-child {
+opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:first-child {
+opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
+z-index: 0;
+}
+
+.imbx:hover img:last-child {
+opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
+z-index: 1;
+}
+/* 마우스 오버시 이미지 변경 끝 */
+
+.swiper-txt-bx{
+position: absolute;
+}
+
+.swiper-button-next{
+top: auto;
+right: 40%;
+transform: translateY(-70%);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+.swiper-button-prev{
+top: auto;
+left: 40%;
+transform: translateY(-70%) rotate(180deg);
+width: 100px;
+background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+background: #f00;
+content: '';
+}
+
+/* 탑버튼 CSS  */
+/* GOTOP BTN */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+	background-color:#444;
+	color:#fff;
+	opacity: 0;
+	visibility: hidden;
+	transition:opacity 0.5s;
+    z-index: 99999999;
+}
+#go-top.active{
+	opacity: 1;
+	visibility: visible;
+}   
+
+/************************************* 9. 페이지 이동 박스 영역 : 밀크앤페퍼 *************************************/
+.move-page-inbox {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* filter: brightness(0.8); */
+    background: url(../images/sub3_milkpepper/pagination-petsochic.jpg) no-repeat fixed center/cover;
+    /* z-index: -1; */
+}
+
+.move-page-inbox b {
+    position: absolute;
+    top: 33%;
+    left: 28%;
+    font-size: 8rem;
+    color: rgb(98, 98, 98);
+    font-family: 'Lora', serif;
+}
+
+
+.move-page-inbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: brightness(0.7); */
+}
+.move-page-inbox a{
+    cursor: url(../images/main/cursorhand1.png),auto;
+}
+
+.txt_inner {
+    position: absolute;
+    top: 57%;
+    left: 42%;
+}
+
+
+.txt_inner span {
+    font-size: 2.8rem;
+    color: rgb(98, 98, 98);
+    font-family: 'Lora', serif;
+}
+
+
