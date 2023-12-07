@@ -168,10 +168,23 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
 // })
 
 ///////////////화면전환 JS 끝 //////////////////////////////
-$('.smenu > ul > li').click(function() {
-  $('.top-menu > li').removeClass('on'); // 모든 li에서 'on' 클래스 제거
-  $(this).closest('.top-menu > li').addClass('on'); // 클릭된 li의 부모 li에 'on' 클래스 추가
+
+
+// gnb메뉴 li 클릭하여 다른페이지 이동시 해당하는 페이지li 가상요소 유지!
+$(document).ready(function() {
+  // 현재 URL에서 경로를 가져옵니다.
+  var path = window.location.pathname;
+
+  // 메뉴 항목에 해당 URL 경로와 일치하는 링크가 있는지 확인합니다.
+  $('.top-menu > li a').each(function() {
+      if ($(this).attr('href') === path) {
+          $(this).closest('li').addClass('active');
+      }
+  });
 });
+
+
+
 
 
 
