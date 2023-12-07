@@ -34,7 +34,13 @@ ul.category-bx {
     display: flex;
     gap: 22px;
     padding: 20px 0;
+    cursor: url(../images/main/cursor-pointer.png),auto;
 }
+ul.category-bx>li{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 ul.category-bx>ul>li>a{
   display: inline-block;
 }
