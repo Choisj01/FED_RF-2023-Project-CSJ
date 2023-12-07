@@ -113,21 +113,53 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
       setTimeout(addOnClass,2000);      
     },500)
   }
-
-  // const toggleButton = document.getElementById('toggleButton');
-  // const footerInfoText = document.getElementById('footerInfoText');
-  
-  // toggleButton.addEventListener('click', function() {
-  //     footerInfoText.classList.toggle('show');
-  // });
   
 
  //화면 전환박스 js ///////////////////////////////////////////////////
-  $("body")
-  .css({opacity:1})
-  .append('<div class="pageCover"></div>');
+  // $("body")
+  // .css({opacity:1})
+  // .append('<div class="pageCover"></div>');
 
-  const pgCvr = $('.pageCover');
+  // const pgCvr = $('.pageCover');
+
+  
+
+  // $('.pageCover').html(`
+  //   <div id="roaf-bx">
+  //     <img id="roaf" src="./images/main/transition-collar-lead.svg" alt="svg이미지">  
+  //     <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
+  //   </div>
+  //   <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
+  
+  // `);
+  
+// 커버박스가 지연시간만큼 있다가 위로 올라감!
+// setTimeout(()=>{
+//   pgCvr.animate({top:"-100%"},500)
+// },2000);
+
+
+
+// const pgLoc = {
+//   "Brands":"sub1_petsochic",
+//   "PET SO CHIC":"sub1_petsochic",
+//   "MAXBONE":"sub2_maxbone",
+//   "MILK&PEPPER":"sub3_milknpepper",
+//   "Outdoor":"sub5_outdoor",
+//   "Indoor":"sub6_indoor",
+//   "Cotielog":"sub7_cotielog",
+//   "Store":"sub8_store"
+// }
+
+
+
+
+const currentPage = "index"; // 현재 페이지가 index인 것으로 가정합니다.
+
+if (currentPage !== "index") {
+  $("body")
+    .css({opacity: 1})
+    .append('<div class="pageCover"></div>');
 
   $('.pageCover').html(`
     <div id="roaf-bx">
@@ -135,26 +167,24 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
       <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
     </div>
     <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
-  
   `);
-  
-// 커버박스가 지연시간만큼 있다가 위로 올라감!
-setTimeout(()=>{
-  pgCvr.animate({top:"-100%"},500)
-},2000);
 
-
+  // 커버박스가 지연시간만큼 있다가 위로 올라감!
+  setTimeout(() => {
+    $('.pageCover').animate({top:"-100%"},500);
+  }, 2000);
+}
 
 const pgLoc = {
-  "Brands":"sub1_petsochic",
-  "PET SO CHIC":"sub1_petsochic",
-  "MAXBONE":"sub2_maxbone",
-  "MILK&PEPPER":"sub3_milknpepper",
-  "Outdoor":"sub5_outdoor",
-  "Indoor":"sub6_indoor",
-  "Cotielog":"sub7_cotielog",
-  "Store":"sub8_store"
-}
+  "Brands": "sub1_petsochic",
+  "PET SO CHIC": "sub1_petsochic",
+  "MAXBONE": "sub2_maxbone",
+  "MILK&PEPPER": "sub3_milknpepper",
+  "Outdoor": "sub5_outdoor",
+  "Indoor": "sub6_indoor",
+  "Cotielog": "sub7_cotielog",
+  "Store": "sub8_store"
+};
 
 $('.gnb a').click(e=>{
   e.preventDefault();
