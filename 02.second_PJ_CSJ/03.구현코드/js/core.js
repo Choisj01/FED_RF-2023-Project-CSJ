@@ -116,84 +116,13 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
   
 
  //화면 전환박스 js ///////////////////////////////////////////////////
-  // $("body")
-  // .css({opacity:1})
-  // .append('<div class="pageCover"></div>');
-
-  // const pgCvr = $('.pageCover');
-
-  
-
-  // $('.pageCover').html(`
-  //   <div id="roaf-bx">
-  //     <img id="roaf" src="./images/main/transition-collar-lead.svg" alt="svg이미지">  
-  //     <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
-  //   </div>
-  //   <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
-  
-  // `);
-  
-// 커버박스가 지연시간만큼 있다가 위로 올라감!
-// setTimeout(()=>{
-//   pgCvr.animate({top:"-100%"},500)
-// },2000);
-
-
-
-// const pgLoc = {
-//   "Brands":"sub1_petsochic",
-//   "PET SO CHIC":"sub1_petsochic",
-//   "MAXBONE":"sub2_maxbone",
-//   "MILK&PEPPER":"sub3_milknpepper",
-//   "Outdoor":"sub5_outdoor",
-//   "Indoor":"sub6_indoor",
-//   "Cotielog":"sub7_cotielog",
-//   "Store":"sub8_store"
-// }
-
-// $('.gnb a').click(e=>{
-//   e.preventDefault();
-//   let txt = $(e.currentTarget).text();
-//   console.log(txt)
-//   pgCvr.animate({height:"100vh"},500,()=>{
-    
-//     location.href = pgLoc[txt]+'.html';
-//     pgCvr.delay(1000).animate({height:"0"})
-//   })
-// })
-
-///////////////화면전환 JS 끝 //////////////////////////////
-
-
-// 챗 선생님 버전////////////////////////////////////////////////////////
-
-const currentPage = window.location.pathname; // 현재 페이지 경로를 가져옵니다.
-const isIndexPage = currentPage === '/index.html'; // index 페이지 여부를 확인합니다.
-
-if (isIndexPage) {
-  const pgLoc = {
-    "Brands":"sub1_petsochic",
-    "PET SO CHIC":"sub1_petsochic",
-    "MAXBONE":"sub2_maxbone",
-    "MILK&PEPPER":"sub3_milknpepper",
-    "Outdoor":"sub5_outdoor",
-    "Indoor":"sub6_indoor",
-    "Cotielog":"sub7_cotielog",
-    "Store":"sub8_store"
-  };
-
-  $('.gnb a').click(e=>{
-    e.preventDefault();
-    let txt = $(e.currentTarget).text();
-    console.log(txt);
-    location.href = pgLoc[txt]+'.html';
-  });
-} else {
   $("body")
-    .css({opacity:1})
-    .append('<div class="pageCover"></div>');
+  .css({opacity:1})
+  .append('<div class="pageCover"></div>');
 
   const pgCvr = $('.pageCover');
+
+  
 
   $('.pageCover').html(`
     <div id="roaf-bx">
@@ -201,37 +130,40 @@ if (isIndexPage) {
       <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
     </div>
     <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
+  
   `);
+  
+// 커버박스가 지연시간만큼 있다가 위로 올라감!
+setTimeout(()=>{
+  pgCvr.animate({top:"-100%"},500)
+},2000);
 
-  // 커버박스가 지연시간만큼 있다가 위로 올라감!
-  setTimeout(()=>{
-    pgCvr.animate({top:"-100%"},500)
-  },2000);
 
-  const pgLoc = {
-    "Brands":"sub1_petsochic",
-    "PET SO CHIC":"sub1_petsochic",
-    "MAXBONE":"sub2_maxbone",
-    "MILK&PEPPER":"sub3_milknpepper",
-    "Outdoor":"sub5_outdoor",
-    "Indoor":"sub6_indoor",
-    "Cotielog":"sub7_cotielog",
-    "Store":"sub8_store"
-  };
 
-  $('.gnb a').click(e=>{
-    e.preventDefault();
-    let txt = $(e.currentTarget).text();
-    console.log(txt);
-    pgCvr.animate({height:"100vh"},500,()=>{
-      location.href = pgLoc[txt]+'.html';
-      pgCvr.delay(1000).animate({height:"0"});
-    });
-  });
+const pgLoc = {
+  "Brands":"sub1_petsochic",
+  "PET SO CHIC":"sub1_petsochic",
+  "MAXBONE":"sub2_maxbone",
+  "MILK&PEPPER":"sub3_milknpepper",
+  "Outdoor":"sub5_outdoor",
+  "Indoor":"sub6_indoor",
+  "Cotielog":"sub7_cotielog",
+  "Store":"sub8_store"
 }
 
+$('.gnb a').click(e=>{
+  e.preventDefault();
+  let txt = $(e.currentTarget).text();
+  console.log(txt)
+  pgCvr.animate({height:"100vh"},500,()=>{
+    
+    location.href = pgLoc[txt]+'.html';
+    pgCvr.delay(1000).animate({height:"0"})
+  })
+})
 
-/////////////////////////////////////////////////////////////////////////
+///////////////화면전환 JS 끝 //////////////////////////////
+
 
 
 //탑버튼 클릭시 상단이동 
