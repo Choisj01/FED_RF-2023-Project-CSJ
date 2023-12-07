@@ -123,68 +123,51 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
   
 
  //화면 전환박스 js ///////////////////////////////////////////////////
-  // $("body")
-  // .css({opacity:1})
-  // .append('<div class="pageCover"></div>');
+  $("body")
+  .css({opacity:1})
+  .append('<div class="pageCover"></div>');
 
-  // const pgCvr = $('.pageCover');
+  const pgCvr = $('.pageCover');
 
-  // $('.pageCover').html(`
-  //   <div id="roaf-bx">
-  //     <img id="roaf" src="./images/main/transition-collar-lead.svg" alt="svg이미지">  
-  //     <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
-  //   </div>
-  //   <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
+  $('.pageCover').html(`
+    <div id="roaf-bx">
+      <img id="roaf" src="./images/main/transition-collar-lead.svg" alt="svg이미지">  
+      <img id="neck" src="./images/main/transition-collar-choker.svg" alt="svg이미지">  
+    </div>
+    <img id="paw" src="./images/main/transition-paw-rock.svg" alt="svg이미지">  
   
-  // `);
+  `);
   
 // 커버박스가 지연시간만큼 있다가 위로 올라감!
-// setTimeout(()=>{
-//   pgCvr.animate({top:"-100%"},500)
-// },3000);
+setTimeout(()=>{
+  pgCvr.animate({top:"-100%"},500)
+},2000);
 
 
 
-// const pgLoc = {
-//   "Brands":"sub1_petsochic",
-//   "PET SO CHIC":"sub1_petsochic",
-//   "MAXBONE":"sub2_maxbone",
-//   "MILK&PEPPER":"sub3_milknpepper",
-//   "Outdoor":"sub5_outdoor",
-//   "Indoor":"sub6_indoor",
-//   "Cotielog":"sub7_cotielog",
-//   "Store":"sub8_store"
-// }
+const pgLoc = {
+  "Brands":"sub1_petsochic",
+  "PET SO CHIC":"sub1_petsochic",
+  "MAXBONE":"sub2_maxbone",
+  "MILK&PEPPER":"sub3_milknpepper",
+  "Outdoor":"sub5_outdoor",
+  "Indoor":"sub6_indoor",
+  "Cotielog":"sub7_cotielog",
+  "Store":"sub8_store"
+}
 
-// $('.gnb a').click(e=>{
-//   e.preventDefault();
-//   let txt = $(e.currentTarget).text();
-//   console.log(txt)
-//   pgCvr.animate({height:"100vh"},500,()=>{
+$('.gnb a').click(e=>{
+  e.preventDefault();
+  let txt = $(e.currentTarget).text();
+  console.log(txt)
+  pgCvr.animate({height:"100vh"},500,()=>{
     
-//     location.href = pgLoc[txt]+'.html';
-//     pgCvr.delay(1000).animate({height:"0"})
-//   })
-// })
+    location.href = pgLoc[txt]+'.html';
+    pgCvr.delay(1000).animate({height:"0"})
+  })
+})
 
 ///////////////화면전환 JS 끝 //////////////////////////////
-
-
-// gnb메뉴 li 클릭하여 다른페이지 이동시 해당하는 페이지li 가상요소 유지!
-$(document).ready(function() {
-  // 현재 URL에서 경로를 가져옵니다.
-  var path = window.location.pathname;
-
-  // 메뉴 항목에 해당 URL 경로와 일치하는 링크가 있는지 확인합니다.
-  $('.top-menu > li a').each(function() {
-      if ($(this).attr('href') === path) {
-          $(this).closest('li').addClass('active');
-      }
-  });
-});
-
-
-
 
 
 
