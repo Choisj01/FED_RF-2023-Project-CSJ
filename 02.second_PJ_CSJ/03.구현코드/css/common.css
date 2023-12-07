@@ -140,19 +140,6 @@ h1#logo {
   /* 트랜지션 효과를 적용 */
 }
 
-.top-menu > li.active::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 
 /* 마우스 오버시 메뉴위에 까만점 보이기 */
 .top-menu > li:hover:before {
@@ -491,20 +478,51 @@ h1#logo {
 
 .pageCover #roaf-bx {
   position: absolute;
-  top: -20%;
-  left: 50%;
+  top: -17%;
+  left: 53%;
   width: 10vw;
   height: 100vh;
   transform: translateX(-50%);
   transform-origin: top;
-  animation: roafAni 1s ease-in-out 1s 2 alternate;
+  /* animation: roafAni 1s ease 1s alternate; */
+  animation: roafAni 1.5s linear alternate;
 }
 
-@keyframes roafAni {
+/* @keyframes roafAni {
   to {
     transform: rotate(30deg);
   }
+} */
+
+/* @keyframes roafAni {
+
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} */
+
+@keyframes roafAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
+
+
 
 .pageCover img#roaf {
   position: absolute;
@@ -523,11 +541,11 @@ h1#logo {
 
 .pageCover img#paw {
   position: absolute;
-  bottom: -40%;
+  bottom: -42%;
   left: 50%;
   transform: translateX(-50%);
   width: 10vw;
-  animation: pawAni 2s ease-in-out 1s forwards;
+  animation: pawAni 1.5s ease 1s forwards;
 }
 
 @keyframes pawAni {
