@@ -170,7 +170,25 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
 const currentPage = window.location.pathname; // 현재 페이지 경로를 가져옵니다.
 const isIndexPage = currentPage === '/index.html'; // index 페이지 여부를 확인합니다.
 
-if (!isIndexPage) {
+if (isIndexPage) {
+  const pgLoc = {
+    "Brands":"sub1_petsochic",
+    "PET SO CHIC":"sub1_petsochic",
+    "MAXBONE":"sub2_maxbone",
+    "MILK&PEPPER":"sub3_milknpepper",
+    "Outdoor":"sub5_outdoor",
+    "Indoor":"sub6_indoor",
+    "Cotielog":"sub7_cotielog",
+    "Store":"sub8_store"
+  };
+
+  $('.gnb a').click(e=>{
+    e.preventDefault();
+    let txt = $(e.currentTarget).text();
+    console.log(txt);
+    location.href = pgLoc[txt]+'.html';
+  });
+} else {
   $("body")
     .css({opacity:1})
     .append('<div class="pageCover"></div>');
@@ -204,15 +222,13 @@ if (!isIndexPage) {
   $('.gnb a').click(e=>{
     e.preventDefault();
     let txt = $(e.currentTarget).text();
-    console.log(txt)
+    console.log(txt);
     pgCvr.animate({height:"100vh"},500,()=>{
       location.href = pgLoc[txt]+'.html';
-      pgCvr.delay(1000).animate({height:"0"})
+      pgCvr.delay(1000).animate({height:"0"});
     });
   });
 }
-
-
 
 
 /////////////////////////////////////////////////////////////////////////
