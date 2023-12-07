@@ -168,6 +168,11 @@ if(pgNm==="index"||pgNm==="sub1_petsochic"||pgNm==="sub2_maxbone"||pgNm==="sub3_
 // })
 
 ///////////////화면전환 JS 끝 //////////////////////////////
+$('.smenu > ul > li').click(function() {
+  $('.top-menu > li').removeClass('on'); // 모든 li에서 'on' 클래스 제거
+  $(this).closest('.top-menu > li').addClass('on'); // 클릭된 li의 부모 li에 'on' 클래스 추가
+});
+
 
 
 //탑버튼 클릭시 상단이동 
