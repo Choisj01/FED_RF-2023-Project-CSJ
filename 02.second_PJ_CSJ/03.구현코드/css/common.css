@@ -136,9 +136,16 @@ h1#logo {
   opacity: 0; /* 처음에는 보이지 않게 설정 */
   transition: opacity 0.4s ease-in-out; /* 트랜지션 효과를 적용 */
 }
+
+
+
 /* 마우스 오버시 메뉴위에 까만점 보이기 */
 .top-menu > li:hover:before {
   opacity: 1;
+}
+
+.top-menu > li.on::before {
+  opacity: 1; /* 'on' 클래스가 추가되면 점이 나타남 */
 }
 
 .top-menu > li > a {
