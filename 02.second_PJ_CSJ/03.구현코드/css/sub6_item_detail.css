@@ -304,6 +304,8 @@ div#detail-wrap {
 
 .product-info-illust2 {
     text-align: center;
+    position: relative;
+    top: 140px;
 }
 
 /* 제품 상세 이미지 영역 */
