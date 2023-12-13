@@ -733,7 +733,7 @@ button {
 
 /************ 미디어 쿼리 *******************/
 @media screen and (max-width:1100px) {
-    
+   
     
     .gnb{
         display: none;
@@ -745,6 +745,20 @@ button {
     position: relative;
     left: 50px;
    }
+   .ham-btn a {
+    font-size: 1.7rem;
+}
 
 
+}
+
+@media screen and (max-width:1000px) {
+    
+}
+@media screen and (max-width:800px) {
+    
+}
+
+@media screen and (max-width:700px) {
+    
 }
