@@ -15,6 +15,14 @@ const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
 
 const getBCR = (ele) => ele.getBoundingClientRect().top;
 
+// 제이쿼리 코드 구역
+$(()=>{
+  const hamBox = $('.ham-btn');
+  
+
+
+}); /////// JQB ///////////////
+
 window.addEventListener("load", () => {
   // 변경 대상: #slide
   const slide = qs("#slide");
