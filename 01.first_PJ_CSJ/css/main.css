@@ -751,6 +751,9 @@ button {
         position: relative;
         left: 50px;
     }
+    .ham-btn{
+        display: block;
+    }
     .ham-btn a {
         font-size: 1.7rem;
     }
@@ -771,5 +774,8 @@ button {
     }
 }
 @media screen and (max-width: 500px) {
+  
+}
+@media screen and (max-width: 400px) {
   
 }
