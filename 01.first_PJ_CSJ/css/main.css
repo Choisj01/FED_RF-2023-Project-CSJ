@@ -180,7 +180,6 @@ header.top {
 
 .ham-menu {
     width: 45px;
-
 }
 
 /***************** 배너파트 ************************/
@@ -663,6 +662,16 @@ button {
     height: 60px;
     border-radius: 7px;
 }
+
+/* 미디어 쿼리 전 안보이도록 함 */
+.ham-btn{
+    display: none;
+}
+
+.ham-btn a{
+    font-size: 2rem;
+}
+
 /* 하단영역 sns */
 .sns-link {
     position: relative;
@@ -730,35 +739,37 @@ button {
     top: 28px;
 }
 
-
 /************ 미디어 쿼리 *******************/
-@media screen and (max-width:1100px) {
-   
-    
-    .gnb{
+@media screen and (max-width: 1100px) {
+    .gnb {
         display: none;
     }
-    .etc-menu{
+    .etc-menu {
         display: none;
     }
-   .logo-part{
-    position: relative;
-    left: 50px;
-   }
-   .ham-btn a {
-    font-size: 1.7rem;
-}
-
-
-}
-
-@media screen and (max-width:1000px) {
-    
-}
-@media screen and (max-width:800px) {
+    .logo-part {
+        position: relative;
+        left: 50px;
+    }
+    .ham-btn a {
+        font-size: 1.7rem;
+    }
     
 }
 
-@media screen and (max-width:700px) {
-    
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 800px) {
+    .con1> .part-box{
+        aspect-ratio: 16/8.3;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .con1> .part-box{
+        aspect-ratio: 16/8.3;
+    }
+}
+@media screen and (max-width: 500px) {
+  
 }
