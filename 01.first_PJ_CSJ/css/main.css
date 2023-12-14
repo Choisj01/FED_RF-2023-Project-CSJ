@@ -664,11 +664,11 @@ button {
 }
 
 /* 미디어 쿼리 전 안보이도록 함 */
-.ham-btn{
+.ham-btn {
     display: none;
 }
 
-.ham-btn a{
+.ham-btn a {
     font-size: 2rem;
 }
 
@@ -741,6 +741,12 @@ button {
 
 /************ 미디어 쿼리 *******************/
 @media screen and (max-width: 1100px) {
+    #top-aria{
+        width: 430px;
+    }
+    .inbox{
+        /* width: 430px; */
+    }
     .gnb {
         display: none;
     }
@@ -751,31 +757,102 @@ button {
         position: relative;
         left: 50px;
     }
-    .ham-btn{
+    .ham-btn {
         display: block;
     }
     .ham-btn a {
         font-size: 1.7rem;
     }
-    
 }
 
 @media screen and (max-width: 1000px) {
+    
+    .con1 > .part-box {
+        aspect-ratio: 16/5.8;
+    }
 }
+@media screen and (max-width: 1000px) {
+    .con1 > .part-box {
+        aspect-ratio: 16/5.8;
+    }
+}
+
+
 @media screen and (max-width: 800px) {
-    .con1> .part-box{
+    /* 레이아웃구성 */
+    .col2-1 {
+        width: 8.33%;
+    }
+    .col2-2 {
+        width: 16.66%;
+    }
+    .col2-3 {
+        width: 25%;
+    }
+    .col2-4 {
+        width: 33.33%;
+    }
+    .col2-5 {
+        width: 41.66%;
+    }
+    .col2-6 {
+        width: 50%;
+    }
+    .col2-7 {
+        width: 58.33%;
+    }
+    .col2-8 {
+        width: 66.66%;
+    }
+    .col2-9 {
+        width: 75%;
+    }
+    .col2-10 {
+        width: 83.33%;
+    }
+    .col2-11 {
+        width: 91.66%;
+    }
+    .col2-12 {
+        width: 100%;
+    }
+
+    .con1 > .part-box {
         aspect-ratio: 16/8.3;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .con1> .part-box{
-        aspect-ratio: 16/8.3;
+    .con1 > .part-box {
+        aspect-ratio: 16/8.8;
     }
 }
 @media screen and (max-width: 500px) {
-  
+     .ham-btn {
+        display: block;
+        position: relative;
+        right: 20px;
+    }
+    .con1 > .part-box {
+        aspect-ratio: 16/8.8;
+    }
+    .inbox{
+        display: block;
+    }
+    .cont2{
+        padding: 0 0;
+    }
+    .video-box {
+        padding: 0 0;
+        display: block;
+    }
+    .video-box iframe{
+        width: 430px;
+        height: 350px;
+        border-radius: 0;
+    }
 }
+
 @media screen and (max-width: 400px) {
-  
+   
 }
