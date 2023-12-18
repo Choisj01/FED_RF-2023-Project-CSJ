@@ -45,37 +45,37 @@ export const TopArea = memo(({ chgPageFn }) => {
                         </Link>
                       </li>
                       <li>
-                        <a href="sub2_maxbone.html">
+                        <Link to="sub2">
                           <span>MAXBONE</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="sub3_milknpepper.html">
+                        <Link to="sub3">
                           <span>MILK&amp;PEPPER</span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li className="m7">
-                  <a href="sub5_outdoor.html">
+                  <Link to="sub5">
                     <span>Outdoor</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="m3">
-                  <a href="sub6_indoor.html">
+                  <Link to="sub6">
                     <span>Indoor</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="sub7_cotielog.html">
+                  <Link to="sub7">
                     <span>Cotielog</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="https://smartstore.naver.com/cotie_shop">
                     <span>Store</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -90,13 +90,13 @@ export const TopArea = memo(({ chgPageFn }) => {
               <div className="buy-shop">
                 <ul className="line-ani">
                   <li>
-                    <a href="https://smartstore.naver.com/cotie_shop">
+                    <Link to="https://smartstore.naver.com/cotie_shop">
                       Buy Shop
                       <i
                         className="fa-solid fa-basket-shopping"
                         style={{ color: "#000000" }}
                       ></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
