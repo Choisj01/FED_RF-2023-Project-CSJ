@@ -1,4 +1,6 @@
 // 메인페이지 메인컨텐츠
+import React from "react";
+import { Link } from "react-router-dom";
 
 import "../css/main.css";
 
@@ -22,9 +24,9 @@ export function Main(){
                     <h3>값진 소재와 세련된 디자인을 함께 즐기고 만족할 수 있습니다.</h3>
                     <div id="btn-wrap">
                         <div className="ab-btn-bx">
-                            <a href="sub4_aboutus.html" className="more-btn ab-btn">
+                            <Link to="sub4">
                                 <span>Discover more</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
