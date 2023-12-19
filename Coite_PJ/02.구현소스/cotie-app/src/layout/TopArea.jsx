@@ -73,7 +73,7 @@ export const TopArea = memo(({ chgPageFn }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="https://smartstore.naver.com/cotie_shop">
+                  <Link to="sub8">
                     <span>Store</span>
                   </Link>
                 </li>

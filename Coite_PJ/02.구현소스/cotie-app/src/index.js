@@ -5,6 +5,12 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import { Main } from "./pages/Main";
 import { Layout } from "./layout/Layout";
 import { Sub1Petsochic } from "./pages/Sub1Petsochic";
+import { Sub2Maxbone } from "./pages/Sub2Maxbone";
+import { Sub3MilkNPepper } from "./pages/Sub3MilkNPepper";
+import { Sub5Outdoor } from "./pages/Sub5Outdoor";
+import { Sub6Indoor } from "./pages/Sub6Indoor";
+import { Sub7Cotielog } from "./pages/Sub7Cotielog";
+import { Sub8Store } from "./pages/Sub8Store";
 
 export default function App() {
   return (
@@ -17,7 +23,12 @@ export default function App() {
           -> path는 Layout의 Link to="/" 에 해당하는 셋팅*/}
           <Route index element={<Main />} />
           <Route path="sub1" element={<Sub1Petsochic />} />
-          
+          <Route path="sub2" element={<Sub2Maxbone />} />
+          <Route path="sub3" element={<Sub3MilkNPepper />} />
+          <Route path="sub5" element={<Sub5Outdoor />} />
+          <Route path="sub6" element={<Sub6Indoor />} />
+          <Route path="sub7" element={<Sub7Cotielog />} />
+          <Route path="sub8" element={<Sub8Store />} />       
         </Route>
       </Routes>
     </BrowserRouter>
