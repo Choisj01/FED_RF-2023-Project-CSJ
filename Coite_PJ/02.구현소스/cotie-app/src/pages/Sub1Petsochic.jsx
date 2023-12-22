@@ -226,7 +226,7 @@ export function Sub1Petsochic(){
         {/* <!-- 9. 페이지 이동 박스 영역 : maxbone (패럴렉스 사용필요) --> */}
         <div id="move-page-wrap">
             <div class="move-page-inbox">
-                <img src="./images/sub1_petsochic/pagination-maxbone.jpg" alt="맥스본 이동페이지 이미지"/>
+                <img src="../../public/images/sub1_petsochic/pagination-maxbone.jpg" alt="맥스본 이동페이지 이미지"/>
                 <a href="sub2_maxbone.html">
                     <b>MAXBONE</b>
                     <div class="txt_inner">
