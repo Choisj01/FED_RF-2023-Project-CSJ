@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 // 폰트어썸
 import {FaArrowUp} from '@fortawesome/free-solid-svg-icons'
