@@ -49,7 +49,7 @@ export function Sub1Petsochic() {
               alt="petsoshic-img"
             />
           </div>
-          <div className="brands-text">
+          <div className="psc-brands-text">
             <div className="psc-text-img">
               <img
                 src="./images/main/logo-petsoshic.svg"
@@ -75,7 +75,7 @@ export function Sub1Petsochic() {
       </div>
 
       {/* <!-- 4. 창업자 스토리 영역  --> */}
-      <div id="founder-story-wrap">
+      <div id="psc-founder-story-wrap">
         <article className="founder-inbox">
           <div className="found-txt">
             <h4>창업자 스토리</h4>
