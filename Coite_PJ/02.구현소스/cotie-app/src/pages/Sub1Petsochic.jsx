@@ -101,10 +101,7 @@ export function Sub1Petsochic() {
       <div id="psc-brand-vid">
         <div className="psc-vid-inbox">
           <iframe
-            src="https://player.vimeo.com/video/579214369?autoplay=1&loop=1&autopause=0&muted=1"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+            src="https://player.vimeo.com/video/579214369?autoplay=1&loop=1&autopause=0&muted=1"></iframe>
         </div>
       </div>
 

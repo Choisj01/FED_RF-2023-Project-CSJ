@@ -95,10 +95,10 @@ h2.mb-visual-title {
     width: 600px;
     margin: 0 auto;
 }
-.text-img {
+.mb-text-img {
     margin-bottom: 45px;
 }
-.text-img img {
+.mb-text-img img {
     position: relative;
     left: 12%;
 }

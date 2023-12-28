@@ -34,31 +34,31 @@ export function Main(){
         </div>
         {/* 메인페이지 레이어 이미지 박스 */}
         <div className="free-items">
-            <div className="layer-img-bx main-layer1">
+            <div className="main-layer-img-bx main-layer1">
                 <img src="./images/main/layer-bib.png" alt="레이어 이미지1" />
             </div>
-            <div className="layer-img-bx main-layer2">
+            <div className="main-layer-img-bx main-layer2">
                 <img src="./images/main/layer-bone.png" alt="레이어 이미지1" />
             </div>
-            <div className="layer-img-bx main-layer3">
+            <div className="main-layer-img-bx main-layer3">
                 <img src="./images/main/layer-cloud.png" alt="레이어 이미지1" />
             </div>
         </div>
         {/* 메인페이지 레이어 이미지 박스 */}
         <div className="brand-free-items">
-            <div className="layer-img-bx fish-layer">
+            <div className="main-layer-img-bx fish-layer">
                 <img src="./images/main/layer-fish.png" alt="레이어 이미지1" />
             </div>
         </div>
         {/* 3. 컨텐츠 박스 - brands */}
-        <div id="brands-wrap">
+        <div id="main-brands-wrap">
             <section className="title">
                 <h2>Brands</h2>
-                <div className="petsochic">
+                <div className="main-psc">
                     <div className="move-dog">
                         <img src="./images/main/brand-petsoshic.gif" alt="petsoshic-img" />
                     </div>
-                    <div className="brands-text">
+                    <div className="main-brands-text">
                         <div className="text-img">
                             <img src="./images/main/logo-petsoshic.svg" alt="" />
                         </div>
@@ -81,26 +81,26 @@ export function Main(){
                 </div>
                 {/* 동영상 영역 레이어 이미지 박스 */}
                 <div className="vid-free-items">
-                    <div className="layer-img-bx vid-layer1">
+                    <div className="main-layer-img-bx vid-layer1">
                         <img src="./images/main/pattern-grass-01.jpg" alt="레이어 이미지1" />
                     </div>
-                    <div className="layer-img-bx vid-layer2">
+                    <div className="main-layer-img-bx vid-layer2">
                         <img src="./images/main/pattern-grass-02.jpg" alt="레이어 이미지1" />
                     </div>
-                    <div className="layer-img-bx vid-layer3">
+                    <div className="main-layer-img-bx vid-layer3">
                         <img src="./images/main/pattern-footprint.png" alt="레이어 이미지1" />
                     </div>
-                    <div className="layer-img-bx vid-layer4">
+                    <div className="main-layer-img-bx vid-layer4">
                         <img src="./images/main/pattern-grass-03.jpg" alt="레이어 이미지1" />
                     </div>
-                    <div className="layer-img-bx vid-layer5">
+                    <div className="main-layer-img-bx vid-layer5">
                         <img src="./images/main/pattern-grass-05.jpg" alt="레이어 이미지1" />
                     </div>
                 </div>
                 {/* 컨텐츠 브랜드 동영상 */}
                 <div id="main-brands-vid">
                     <div className="main-brands-vid col-12">
-                        <iframe src="https://player.vimeo.com/video/579214369?autoplay=1&loop=1&autopause=0&muted=1" allowFullScreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/579214369?autoplay=1&loop=1&autopause=0&muted=1"></iframe>
                     </div>
                 </div>
             </section>
@@ -146,8 +146,8 @@ export function Main(){
                             <img src="./images/main/layer-maxbone-text.jpg" alt="맥스본 텍스트 이미지" />
                         </div>
                     </div>
-                    <div className="mb-vid-bx">
-                        <iframe src="https://player.vimeo.com/video/579215391?autoplay=1&loop=1&autopause=0&muted=1" frameborder="0"></iframe>
+                    <div className="main-mb-vid-bx">
+                        <iframe src="https://player.vimeo.com/video/579215391?autoplay=1&loop=1&autopause=0&muted=1"></iframe>
                     </div>
                 </div>
         </div>

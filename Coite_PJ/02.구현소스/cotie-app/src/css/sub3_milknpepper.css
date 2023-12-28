@@ -99,10 +99,10 @@ div#sub-milkpepper-visual-wrap {
     width: 600px;
     margin: 0 auto;
 }
-.text-img {
+.mp-text-img {
     margin-bottom: 45px;
 }
-.text-img img {
+.mp-text-img img {
     position: relative;
     left: 12%;
 }
