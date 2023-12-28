@@ -6,11 +6,11 @@ export function Sub7Cotielog(){
     return(
         <>
               {/* <!-- 2. cotielog-content 영역 --> */}
-        <div class="container">
-            <div class="sticky-box">
-                <div class="sticky-inbx">
+        <div className="container">
+            <div className="sticky-box">
+                <div className="sticky-inbx">
                     <h1>Cotielog</h1>
-                    <ul class="category-bx">
+                    <ul className="category-bx">
                         <li>
                             <a href="">ALL</a>
                         </li>
@@ -28,19 +28,19 @@ export function Sub7Cotielog(){
                         </li>
                     </ul>
                     {/* <!-- 이미지 박스-부모 --> */}
-                    <div class="img-bx-wrap">
+                    <div className="img-bx-wrap">
                         {/* <!-- 자식요소 박스 --> */}
-                        <div class="img-bx">
+                        <div className="img-bx">
                             <img src="./images/cotielog/cotielog-character-base.jpg" alt="강아지 레이어이미지" />
                             <img src="./images/cotielog/cotielog-character-hover.jpg" alt="강아지 레이어이미지" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="scrollable-content">
-                <div class="cont-bx">
+            <div className="scrollable-content">
+                <div className="cont-bx">
                     <ul>
-                        <li class="first">
+                        <li className="first">
                             <a href="">
                                 <img src="./images/cotielog/cotielog1.jpg" alt="이벤트 공지" />
                             </a>
@@ -54,7 +54,7 @@ export function Sub7Cotielog(){
                         </li>
                     </ul>
                     <ul>
-                        <li class="first">
+                        <li className="first">
                             <a href="#">
                                 <img src="./images/cotielog/cotielog3.jpg" alt="이벤트 공지" />
                             </a>
@@ -68,7 +68,7 @@ export function Sub7Cotielog(){
                         </li>
                     </ul>
                     <ul>
-                        <li class="first">
+                        <li className="first">
                             <a href="#">
                                 <img src="./images/cotielog/cotielog5.jpg" alt="이벤트 공지" />
                             </a>
@@ -86,8 +86,8 @@ export function Sub7Cotielog(){
         </div>
         {/* <!-- 더보기 버튼 박스 --> */}
         <div id="cotie-btn-wrap">
-            <div class="ab-btn-bx">
-                <a href="sub7_cotielog.html" class="more-btn">
+            <div className="ab-btn-bx">
+                <a href="sub7_cotielog.html" className="more-btn">
                     <span>＋ more</span>
                 </a>
             </div>

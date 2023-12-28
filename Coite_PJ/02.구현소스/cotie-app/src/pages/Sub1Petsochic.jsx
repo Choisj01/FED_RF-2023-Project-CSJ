@@ -50,7 +50,7 @@ export function Sub1Petsochic() {
             />
           </div>
           <div className="brands-text">
-            <div className="text-img">
+            <div className="psc-text-img">
               <img
                 src="./images/main/logo-petsoshic.svg"
                 alt="펫 소 시크 로고이미지"

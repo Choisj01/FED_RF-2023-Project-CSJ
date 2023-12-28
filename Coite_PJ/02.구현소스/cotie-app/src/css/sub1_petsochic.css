@@ -89,13 +89,13 @@ div#sub-petsochic-visual-wrap {
 }
 
 /* 브랜드 이미지svg 박스 */
-.text-img {
+.psc-text-img {
     text-align: center;
     width: 100%;
 }
 
 /* 브랜드 이미지 svg */
-.text-img img {
+.psc-text-img img {
     width: 60%;
 }
 

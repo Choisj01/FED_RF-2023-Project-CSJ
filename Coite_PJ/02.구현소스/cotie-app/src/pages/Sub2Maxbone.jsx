@@ -7,23 +7,23 @@ export function Sub2Maxbone() {
         <>
             {/* <!-- 2. maxbone 브랜드 타이틀+이미지 영역 --> */}
             <div id="sub-maxbone-visual-wrap">
-                <div class="maxbone-visual">
-                    <div class="mb-visual-txt">
-                        <h2 class="mb-visual-title">MAXBONE</h2>
+                <div className="maxbone-visual">
+                    <div className="mb-visual-txt">
+                        <h2 className="mb-visual-title">MAXBONE</h2>
                     </div>
-                    <div class="mb-img-wrap">
+                    <div className="mb-img-wrap">
                         <img src="./images/sub2_maxbone/visual-maxbone.gif" alt="맥스본 이미지" />
                     </div>
                 </div>
                 {/* <!-- 펫소시크 레이어 이미지 박스 --> */}
-                <div class="mb-free-items">
-                    <div class="layer-img-bx mb-layer1">
+                <div className="mb-free-items">
+                    <div className="layer-img-bx mb-layer1">
                         <img src="./images/sub2_maxbone/layer-line-black.jpg" alt="레이어 선 이미지" />
                     </div>
-                    <div class="layer-img-bx mb-layer2">
+                    <div className="layer-img-bx mb-layer2">
                         <img src="./images/sub2_maxbone/layer-heart-broken.jpg" alt="맥스본 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mb-layer3">
+                    <div className="layer-img-bx mb-layer3">
                         <img src="./images/sub2_maxbone/layer-loop.png" alt="맥스본 레이어 이미지" />
                     </div>
                 </div>
@@ -31,15 +31,15 @@ export function Sub2Maxbone() {
 
             {/* <!-- 3. 컨텐츠 박스 - maxbone 인트로소개 --> */}
             <div id="brands-wrap">
-                <div class="maxbone-title">
-                    <div class="mb-intro-img">
+                <div className="maxbone-title">
+                    <div className="mb-intro-img">
                         <img src="./images/sub2_maxbone/intro-maxbone-01.jpg" alt="맥스본 이미지" />
                     </div>
-                    <div class="brands-text">
-                        <div class="text-img">
+                    <div className="brands-text">
+                        <div className="text-img">
                             <img src="./images/sub2_maxbone/logo-maxbone.svg" alt="맥스본 로고이미지" />
                         </div>
-                        <div class="mb-text">
+                        <div className="mb-text">
                             <h4>
                                 모든 반려동물은 최상의 것을 <br />
                                 누릴 자격이 있습니다.
@@ -57,8 +57,8 @@ export function Sub2Maxbone() {
 
             {/* <!-- 4. 창업자 스토리 영역  --> */}
             <div id="founder-story-wrap">
-                <article class="founder-inbox">
-                    <div class="found-txt">
+                <article className="founder-inbox">
+                    <div className="found-txt">
                         <h4>창업자 스토리</h4>
                         <p>
                             패션 디자이너였던 Parisa Fowles-Pazdro는 <br />
@@ -69,7 +69,7 @@ export function Sub2Maxbone() {
                             맥스본이 공식 출시하게 되었습니다.
                         </p>
                     </div>
-                    <div class="dog-img-bx">
+                    <div className="dog-img-bx">
                         <img src="./images/sub2_maxbone/intro-maxbone-02.jpg" alt="니트입은 강아지 이미지" />
                     </div>
                 </article>
@@ -78,18 +78,18 @@ export function Sub2Maxbone() {
             {/* <!-- 5. 맥스본 동영상 + 글자이미지 박스 --> */}
             <div id="mb-vid-wrap">
                 <div id="mb-vid-bx">
-                    <div class="show-txt image-container">
-                        <div class="delayed-image image1">
+                    <div className="show-txt image-container">
+                        <div className="delayed-image image1">
                             <img src="./images/main/layer-maxbone-text.jpg" alt="맥스본 텍스트 이미지" />
                         </div>
-                        <div class="delayed-image image2">
+                        <div className="delayed-image image2">
                             <img src="./images/main/layer-maxbone-text.jpg" alt="맥스본 텍스트 이미지" />
                         </div>
-                        <div class="delayed-image image3">
+                        <div className="delayed-image image3">
                             <img src="./images/main/layer-maxbone-text.jpg" alt="맥스본 텍스트 이미지" />
                         </div>
                     </div>
-                    <div class="mb-vid-bx">
+                    <div className="mb-vid-bx">
                         <iframe
                             src="https://player.vimeo.com/video/579215391?autoplay=1&loop=1&autopause=0&muted=1"
                             frameborder="0"
@@ -97,18 +97,18 @@ export function Sub2Maxbone() {
                     </div>
                 </div>
                 {/* <!-- 레이어 이미지 박스 --> */}
-                <div class="layer-img-bx mb-layer4">
+                <div className="layer-img-bx mb-layer4">
                     <img src="./images/sub2_maxbone/pattern-feed.jpg" alt="패턴 레이어 이미지" />
                 </div>
             </div>
 
             {/* <!-- 6. 콜라보 소개 --> */}
             <div id="colab-intro-wrap">
-                <div class="colab-inbox">
-                    <div class="colab-img-bx">
+                <div className="colab-inbox">
+                    <div className="colab-img-bx">
                         <img src="./images/sub2_maxbone/intro-maxbone-03.jpg" alt="맥스본 이미지" />
                     </div>
-                    <div class="colab-txt-bx">
+                    <div className="colab-txt-bx">
                         <h3>매력적인 콜라보레이션</h3>
                         <p>
                             맥스본은 유명 브랜드들과 꾸준한 콜라보레이션을 이어가고 있습니다. <br />
@@ -118,16 +118,16 @@ export function Sub2Maxbone() {
                         </p>
                     </div>
                 </div>
-                <div class="layer-img-bx mb-layer5">
+                <div className="layer-img-bx mb-layer5">
                     <img src="./images/sub2_maxbone/intro-maxbone-05.gif" alt=" 3단 레이어 이미지" />
                 </div>
             </div>
 
             {/* <!-- 7. 맥스본 매거진 컬렉션 박스 --> */}
             <div id="magazine-wrap">
-                <div class="mb-magazin-inbox">
-                    <div class="cont-bx">
-                        <ul class="cont-flex1">
+                <div className="mb-magazin-inbox">
+                    <div className="cont-bx">
+                        <ul className="cont-flex1">
                             <li>
                                 <a href="sub7_cotielog.html">
                                     <img
@@ -150,7 +150,7 @@ export function Sub2Maxbone() {
                                 </a>
                             </li>
                         </ul>
-                        <ul class="cont-flex2">
+                        <ul className="cont-flex2">
                             <li>
                                 <a href="sub7_cotielog.html">
                                     <img
@@ -178,68 +178,68 @@ export function Sub2Maxbone() {
 
             {/* <!-- 8.MD's CHOICE --> */}
             <div id="newproduct-wrap">
-                <div class="new-product-inbox">
-                    <div class="new-txt-bx">
+                <div className="new-product-inbox">
+                    <div className="new-txt-bx">
                         <h2>MD's CHOICE</h2>
                     </div>
                     {/* <!-- 스와이프 박스 --> */}
-                    <div class="new-product-list mySwiper">
-                        <ul class="new-lists-bx swiper-wrapper">
-                            <li class="swiper-slide">
+                    <div className="new-product-list mySwiper">
+                        <ul className="new-lists-bx swiper-wrapper">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods7.jpg" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods7-1.jpg" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>맥스본 Weather Ready Parka teal 웨더 레디 파카 청록</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods6.jpg" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods6-1.jpg" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>맥스본 Weather Ready Parka teal 웨더 레디 파카 핑크</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods4.jpg" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods4-1.jpg" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>맥스본 Curly Knit Jumper (컬리 니트 점퍼) Peach (피치)</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods3.jpg" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods3-1.jpg" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>맥스본 Curly Knit Jumper (컬리 니트 점퍼) Sand (샌드)</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods2.png" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods2-1.png" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>
                                             맥스본 Christian Cowan x max-bone Jumper
@@ -249,13 +249,13 @@ export function Sub2Maxbone() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods1.png" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods1-1.png" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>
                                             맥스본 Christian Cowan x max-bone Jumper
@@ -265,21 +265,21 @@ export function Sub2Maxbone() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub2_maxbone/goods/goods5.jpg" alt="상품이미지" />
                                         <img src="./images/sub2_maxbone/goods/goods5-1.jpg" alt="상품이미지" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MAXBONE</h3>
                                         <span>맥스본 Fox Poop Bag Holder (폭스 풉백 홀더)</span>
                                     </div>
                                 </a>
                             </li>
                         </ul>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
+                        <div className="swiper-button-prev"></div>
                     </div>
                     {/* <!-- 스와이프 박스 끝 --> */}
                 </div>
@@ -288,16 +288,16 @@ export function Sub2Maxbone() {
 
             {/* <!-- 탑버튼 --> */}
             <a href="#" id="go-top" title="Back to Top">
-                <i class="fas fa-arrow-up"></i>
+                <i className="fas fa-arrow-up"></i>
             </a>
 
             {/* <!-- 9. 페이지 이동 박스 영역 : 밀크앤페퍼 (패럴렉스 사용필요) --> */}
             <div id="move-page-wrap">
-                <div class="move-page-inbox">
+                <div className="move-page-inbox">
                     <img src="./images/sub2_maxbone/pagination-milknpepper.jpg" alt="밀크앤페퍼 이동페이지 이미지" />
                     <a href="sub3_milknpepper.html">
                         <b>MILK &amp; PEPPER</b>
-                        <div class="txt_inner">
+                        <div className="txt_inner">
                             <span>BRAND VIEW</span>
                         </div>
                     </a>

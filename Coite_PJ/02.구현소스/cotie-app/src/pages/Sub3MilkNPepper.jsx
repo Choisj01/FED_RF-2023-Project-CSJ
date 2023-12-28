@@ -7,25 +7,25 @@ export function Sub3MilkNPepper() {
         <>
             {/* <!-- 2. 밀크앤페퍼 브랜드 타이틀+이미지 영역 --> */}
             <div id="sub-milkpepper-visual-wrap">
-                <div class="mnp-visual">
-                    <div class="mnp-visual-txt">
-                        <h2 class="mnp-visual-title">MILK &amp; PEPPER</h2>
+                <div className="mnp-visual">
+                    <div className="mnp-visual-txt">
+                        <h2 className="mnp-visual-title">MILK &amp; PEPPER</h2>
                     </div>
-                    <div class="mp-img-wrap">
+                    <div className="mp-img-wrap">
                         <img src="./images/sub3_milkpepper/visual-milknpepper.gif" alt="밀크앤페퍼 타이틀 이미지" />
                     </div>
                 </div>
                 {/* <!-- 밀크앤페퍼 레이어 이미지 박스 --> */}
-                <div class="mnp-free-items">
-                    <div class="layer-img-bx mnp-layer1">
+                <div className="mnp-free-items">
+                    <div className="layer-img-bx mnp-layer1">
                         <img src="./images/sub3_milkpepper/layer-line-color.png" alt="레이어 선 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer2">
+                    <div className="layer-img-bx mnp-layer2">
                         <img src="./images/sub3_milkpepper/layer-cat.png" alt="고양이 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer3">
+                    <div className="layer-img-bx mnp-layer3">
                         <img src="./images/sub3_milkpepper/layer-hand.png" alt="고양이 손 레이어 이미지" />
-                        <div class="layer-img-bx mnp-layer4">
+                        <div className="layer-img-bx mnp-layer4">
                             <img src="./images/sub3_milkpepper/layer-heart.png" alt="하트 레이어 이미지" />
                         </div>
                     </div>
@@ -34,15 +34,15 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 3. 컨텐츠 박스 - 밀크앤페퍼 인트로소개 --> */}
             <div id="brands-wrap">
-                <div class="mnp-title">
-                    <div class="mnp-intro-img">
+                <div className="mnp-title">
+                    <div className="mnp-intro-img">
                         <img src="./images/sub3_milkpepper/intro-milknpepper-01.jpg" alt="밀크앤페퍼 이미지" />
                     </div>
-                    <div class="brands-text">
-                        <div class="text-img">
+                    <div className="brands-text">
+                        <div className="text-img">
                             <img src="./images/sub3_milkpepper/logo-milkpepper.svg" alt="밀크앤페퍼 로고이미지" />
                         </div>
-                        <div class="mnp-text">
+                        <div className="mnp-text">
                             <h4>나의 반려동물을 위한 시크하고 트렌디한 패션 아이템</h4>
                             <p>
                                 밀크 앤 페퍼는 실용성은 물론 반려견에게 가장 편안한 착용감을 선사하는 것을 목표로
@@ -60,8 +60,8 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 4. 창업자 스토리 --> */}
             <div id="founder-story-wrap">
-                <article class="founder-inbox">
-                    <div class="found-txt">
+                <article className="founder-inbox">
+                    <div className="found-txt">
                         <h4>창업자 스토리</h4>
                         <p>
                             2009년 프랑스 아동복 브랜드의 아트 디렉터인 <br />
@@ -71,25 +71,25 @@ export function Sub3MilkNPepper() {
                             밀크 앤 페퍼는 이제 전 세계적으로 인정받고 있습니다.
                         </p>
                     </div>
-                    <div class="dog-img-bx">
+                    <div className="dog-img-bx">
                         <img src="./images/sub3_milkpepper/intro-milknpepper-02.jpg" alt="강아지 이미지" />
                     </div>
                 </article>
                 {/* <!-- 레이어 이미지 박스 --> */}
-                <div class="mnp-free-items2">
-                    <div class="layer-img-bx mnp-layer5">
+                <div className="mnp-free-items2">
+                    <div className="layer-img-bx mnp-layer5">
                         <img src="./images/sub3_milkpepper/layer-circle-black.png" alt="원 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer6">
+                    <div className="layer-img-bx mnp-layer6">
                         <img src="./images/sub3_milkpepper/layer-circle-pink.png" alt="원 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer7">
+                    <div className="layer-img-bx mnp-layer7">
                         <img src="./images/sub3_milkpepper/pattern-grass-03.jpg" alt="패턴 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer8">
+                    <div className="layer-img-bx mnp-layer8">
                         <img src="./images/sub3_milkpepper/pattern-grass-01.jpg" alt="패턴 레이어 이미지" />
                     </div>
-                    <div class="layer-img-bx mnp-layer9">
+                    <div className="layer-img-bx mnp-layer9">
                         <img src="./images/sub3_milkpepper/pattern-grass-02.jpg" alt="패턴 레이어 이미지" />
                     </div>
                 </div>
@@ -97,16 +97,16 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 5. 밀크앤페퍼 동영상 박스 영역 --> */}
             <div id="mnp-vid-wrap">
-                <div class="vid-inbox">
+                <div className="vid-inbox">
                     <iframe
                         src="https://player.vimeo.com/video/579216314?autoplay=1&loop=1&autopause=0&muted=1"
                         frameborder="0"
                     ></iframe>
                     {/* <!-- 동영상 박스 내 레이어 이미지 박스 --> */}
-                    <div class="mnp-layer10">
+                    <div className="mnp-layer10">
                         <img src="./images/sub3_milkpepper/pattern-grass-03.jpg" alt="패턴 레이어 이미지" />
                     </div>
-                    <div class="mnp-layer11">
+                    <div className="mnp-layer11">
                         <img src="./images/sub3_milkpepper/pattern-grass-04.jpg" alt="패턴 레이어 이미지" />
                     </div>
                 </div>
@@ -114,7 +114,7 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 6. 흐르는 글자박스영역 --> */}
             <div id="flow-txt-bx">
-                <div class="flow-txt txt-ani1">
+                <div className="flow-txt txt-ani1">
                     <ul>
                         <li>La marque préférée par vos chiens.</li>
                         <li>La marque préférée par vos chiens.</li>
@@ -128,8 +128,8 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 7.밀크앤페퍼 특징 소개 영역 --> */}
             <div id="mnp-ft-intro-wrap">
-                <div class="mnp-ft-intro-inbox">
-                    <ul class="flex-bx ft-part1">
+                <div className="mnp-ft-intro-inbox">
+                    <ul className="flex-bx ft-part1">
                         <li>
                             <img
                                 src="./images/sub3_milkpepper/intro-milknpepper-03.gif"
@@ -146,7 +146,7 @@ export function Sub3MilkNPepper() {
                             </p>
                         </li>
                     </ul>
-                    <ul class="flex-bx ft-part2">
+                    <ul className="flex-bx ft-part2">
                         <li>
                             <p>
                                 Des produits chics et tendances pour <br />
@@ -162,31 +162,31 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 8.MD's CHOICE --> */}
             <div id="newproduct-wrap">
-                <div class="new-product-inbox">
-                    <div class="new-txt-bx">
+                <div className="new-product-inbox">
+                    <div className="new-txt-bx">
                         <h2>MD's CHOICE</h2>
                     </div>
                     {/* <!-- 스와이프 박스 --> */}
-                    <div class="new-product-list mySwiper">
-                        <ul class="new-lists-bx swiper-wrapper">
-                            <li class="swiper-slide">
+                    <div className="new-product-list mySwiper">
+                        <ul className="new-lists-bx swiper-wrapper">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods1.jpg" alt="리드줄" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>밀크 앤 페퍼 THETA Leash NavyGolden 쎄타 리드줄 네이비골드</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods2.jpg" alt="스웨터" />
                                         <img src="./images/sub3_milkpepper/goods/goods2-1.jpg" alt="스웨터" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>
                                             밀크 앤 페퍼 [불독전용] ALISTER Sweater Off white <br />
@@ -195,37 +195,37 @@ export function Sub3MilkNPepper() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods3.jpg" alt="강아지 보타이" />
                                         <img src="./images/sub3_milkpepper/goods/goods3-1.jpg" alt="강아지 보타이" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>밀크 앤 페퍼 Bow (강아지 보타이/ 나비넥타이)</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods4.jpg" alt="강아지 장난감" />
                                         <img src="./images/sub3_milkpepper/goods/goods4-1.jpg" alt="강아지 장난감" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>밀크 앤 페퍼 FLAMAND 플라밍고 강아지 장난감</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods5.jpg" alt="고양이 목줄" />
                                         <img src="./images/sub3_milkpepper/goods/goods5-1.jpg" alt="고양이 목줄" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>
                                             밀크 앤 페퍼 STARDUST Red Cat Collar <br />
@@ -234,25 +234,25 @@ export function Sub3MilkNPepper() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods6.jpg" alt="강아지 후디" />
                                         <img src="./images/sub3_milkpepper/goods/goods6-1.jpg" alt="강아지 후디" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>밀크 앤 페퍼 ROOKIE Hoody (루키 후디)</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li className="swiper-slide">
                                 <a href="sub6_item_detail.html">
-                                    <div class="imbx">
+                                    <div className="imbx">
                                         <img src="./images/sub3_milkpepper/goods/goods7.jpg" alt="고양이 목줄" />
                                         <img src="./images/sub3_milkpepper/goods/goods7-1.jpg" alt="고양이 목줄" />
                                     </div>
-                                    <div class="swiper-txt-bx">
+                                    <div className="swiper-txt-bx">
                                         <h3>MILK & PEPPER</h3>
                                         <span>
                                             밀크 앤 페퍼 STARDUST Titan Cat Collar <br />
@@ -262,8 +262,8 @@ export function Sub3MilkNPepper() {
                                 </a>
                             </li>
                         </ul>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
+                        <div className="swiper-button-prev"></div>
                     </div>
                     {/* <!-- 스와이프 박스 끝 --> */}
                 </div>
@@ -272,16 +272,16 @@ export function Sub3MilkNPepper() {
 
             {/* <!-- 탑버튼 --> */}
             <a href="#" id="go-top" title="Back to Top">
-                <i class="fas fa-arrow-up"></i>
+                <i className="fas fa-arrow-up"></i>
             </a>
 
             {/* <!-- 9. 페이지 이동 박스 영역 : 밀크앤페퍼 (패럴렉스 사용필요) --> */}
             <div id="move-page-wrap">
-                <div class="move-page-inbox">
+                <div className="move-page-inbox">
                     <img src="./images/sub3_milkpepper/pagination-petsochic.jpg" alt="펫소시크 이동페이지 이미지" />
                     <a href="sub1_petsochic.html">
                         <b>PET SO CHIC</b>
-                        <div class="txt_inner">
+                        <div className="txt_inner">
                             <span>BRAND VIEW</span>
                         </div>
                     </a>
