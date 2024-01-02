@@ -76,8 +76,8 @@ export function Sub1Petsochic() {
 
       {/* <!-- 4. 창업자 스토리 영역  --> */}
       <div id="psc-founder-story-wrap">
-        <article className="founder-inbox">
-          <div className="found-txt">
+        <article className="psc-founder-inbox">
+          <div className="psc-found-txt">
             <h4>창업자 스토리</h4>
             <p>
               반려동물을 사랑하는 파리지앵 Julien과 Raphaël은 <br />
@@ -164,13 +164,13 @@ export function Sub1Petsochic() {
       </div>
 
       {/* <!-- 8. MD's choice 영역 --> */}
-      <div id="newproduct-wrap">
+      <div id="psc-newproduct-wrap">
         <div className="new-product-inbox">
-          <div className="new-txt-bx">
+          <div className="psc-new-txt-bx">
             <h2>MD's CHOICE</h2>
           </div>
           {/* <!-- 스와이프 박스 --> */}
-          <div className="new-product-list mySwiper">
+          <div className="psc-new-product-list mySwiper">
             <ul className="new-lists-bx swiper-wrapper">
               <li className="swiper-slide">
                 <a href="sub6_item_detail.html">
@@ -324,14 +324,14 @@ export function Sub1Petsochic() {
 
       {/* <!-- 9. 페이지 이동 박스 영역 : maxbone (패럴렉스 사용필요) --> */}
       <div id="move-page-wrap">
-        <div className="move-page-inbox">
+        <div className="psc-move-page-inbox">
           <img
             src="./images/sub1_petsochic/pagination-maxbone.jpg"
             alt="맥스본 이동페이지 이미지"
           />
           <a href="sub2_maxbone.html">
             <b>MAXBONE</b>
-            <div className="txt_inner">
+            <div className="psc-txt_inner">
               <span>BRAND VIEW</span>
             </div>
           </a>
