@@ -91,7 +91,7 @@ h2.mb-visual-title {
     justify-content: center;
 }
 
-.brands-text {
+.mb-brands-text {
     width: 600px;
     margin: 0 auto;
 }
@@ -124,7 +124,7 @@ h2.mb-visual-title {
 }
 
 /********************************** 5. 창업자 스토리 영역  **********************************/
-article.founder-inbox{
+article.mb-founder-inbox{
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
@@ -133,26 +133,26 @@ article.founder-inbox{
     margin-bottom: 70px;
 }
 
-.found-txt {
+.mb-found-txt {
     margin: 0 auto;
     margin-left: 90px;
 }
 
-.found-txt h4{
+.mb-found-txt h4{
     margin: 25px 0; 
     font-size: 1.6rem;
     font-weight: bold;
 }
-.found-txt p{
+.mb-found-txt p{
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.5;
     color: #222;
 }
-.dog-img-bx{
+.mb-dog-img-bx{
     margin-right: 20px;
 }
-.dog-img-bx img {
+.mb-dog-img-bx img {
     width: 33vw;
 }
 /**************** 6. 맥스본 동영상박스 + 글자이미지박스 ****************/
