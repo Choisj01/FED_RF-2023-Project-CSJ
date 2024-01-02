@@ -17,13 +17,13 @@ export function Sub2Maxbone() {
                 </div>
                 {/* <!-- 펫소시크 레이어 이미지 박스 --> */}
                 <div className="mb-free-items">
-                    <div className="layer-img-bx mb-layer1">
+                    <div className="mb-layer-img-bx mb-layer1">
                         <img src="./images/sub2_maxbone/layer-line-black.jpg" alt="레이어 선 이미지" />
                     </div>
-                    <div className="layer-img-bx mb-layer2">
+                    <div className="mb-layer-img-bx mb-layer2">
                         <img src="./images/sub2_maxbone/layer-heart-broken.jpg" alt="맥스본 레이어 이미지" />
                     </div>
-                    <div className="layer-img-bx mb-layer3">
+                    <div className="mb-layer-img-bx mb-layer3">
                         <img src="./images/sub2_maxbone/layer-loop.png" alt="맥스본 레이어 이미지" />
                     </div>
                 </div>
@@ -97,7 +97,7 @@ export function Sub2Maxbone() {
                     </div>
                 </div>
                 {/* <!-- 레이어 이미지 박스 --> */}
-                <div className="layer-img-bx mb-layer4">
+                <div className="mb-layer-img-bx mb-layer4">
                     <img src="./images/sub2_maxbone/pattern-feed.jpg" alt="패턴 레이어 이미지" />
                 </div>
             </div>
@@ -118,7 +118,7 @@ export function Sub2Maxbone() {
                         </p>
                     </div>
                 </div>
-                <div className="layer-img-bx mb-layer5">
+                <div className=" mb-layer-img-bx mb-layer5">
                     <img src="./images/sub2_maxbone/intro-maxbone-05.gif" alt=" 3단 레이어 이미지" />
                 </div>
             </div>
