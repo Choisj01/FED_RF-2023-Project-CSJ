@@ -178,6 +178,7 @@ div#mb-vid-bx {
 .mb-vid-bx iframe {
     width: 652px;
     height: 828px;
+    border: none;
 }
 /* 맥스본 동영상 박스 영역 레이어 이미지 박스 */
 .mb-layer4 {

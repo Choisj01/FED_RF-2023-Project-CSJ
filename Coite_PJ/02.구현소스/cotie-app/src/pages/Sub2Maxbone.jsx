@@ -91,9 +91,7 @@ export function Sub2Maxbone() {
                     </div>
                     <div className="mb-vid-bx">
                         <iframe
-                            src="https://player.vimeo.com/video/579215391?autoplay=1&loop=1&autopause=0&muted=1"
-                            frameborder="0"
-                        ></iframe>
+                            src="https://player.vimeo.com/video/579215391?autoplay=1&loop=1&autopause=0&muted=1"></iframe>
                     </div>
                 </div>
                 {/* <!-- 레이어 이미지 박스 --> */}
