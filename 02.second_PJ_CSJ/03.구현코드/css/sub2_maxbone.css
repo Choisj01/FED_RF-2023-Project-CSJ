@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 
 /* Second PJ(cotieshop) 서브2(MAXBONE) CSS - sub2_maxbone.css */
 
@@ -95,10 +95,10 @@ h2.mb-visual-title {
     width: 600px;
     margin: 0 auto;
 }
-.text-img {
+.mb-text-img {
     margin-bottom: 45px;
 }
-.text-img img {
+.mb-text-img img {
     position: relative;
     left: 12%;
 }
@@ -469,7 +469,7 @@ top: auto;
 right: 40%;
 transform: translateY(-70%);
 width: 100px;
-background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+background: url(../../public/images/main/rigth_btn.png) no-repeat 0/100% 100%;
 
 }
 .swiper-button-prev{
@@ -477,7 +477,7 @@ top: auto;
 left: 40%;
 transform: translateY(-70%) rotate(180deg);
 width: 100px;
-background: url(../images/main/rigth_btn.png) no-repeat 0/100% 100%;
+background: url(../../public/images/main/rigth_btn.png) no-repeat 0/100% 100%;
 
 }
 
@@ -548,11 +548,7 @@ content: '';
     color: #fff;
     font-family: 'Lora', serif;
 }
-.txt_inner span {
-    position: relative;
-  }
-  
-  .txt_inner span::after {
+.txt_inner span::after {
     content: '';
     position: absolute;
     bottom: -3px;
