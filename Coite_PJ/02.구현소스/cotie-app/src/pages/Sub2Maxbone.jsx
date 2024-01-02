@@ -35,8 +35,8 @@ export function Sub2Maxbone() {
                     <div className="mb-intro-img">
                         <img src="./images/sub2_maxbone/intro-maxbone-01.jpg" alt="맥스본 이미지" />
                     </div>
-                    <div className="brands-text">
-                        <div className="text-img">
+                    <div className="mb-brands-text">
+                        <div className="mb-text-img">
                             <img src="./images/sub2_maxbone/logo-maxbone.svg" alt="맥스본 로고이미지" />
                         </div>
                         <div className="mb-text">
@@ -56,9 +56,9 @@ export function Sub2Maxbone() {
             </div>
 
             {/* <!-- 4. 창업자 스토리 영역  --> */}
-            <div id="founder-story-wrap">
-                <article className="founder-inbox">
-                    <div className="found-txt">
+            <div id="mb-founder-story-wrap">
+                <article className="mb-founder-inbox">
+                    <div className="mb-found-txt">
                         <h4>창업자 스토리</h4>
                         <p>
                             패션 디자이너였던 Parisa Fowles-Pazdro는 <br />
@@ -69,7 +69,7 @@ export function Sub2Maxbone() {
                             맥스본이 공식 출시하게 되었습니다.
                         </p>
                     </div>
-                    <div className="dog-img-bx">
+                    <div className="mb-dog-img-bx">
                         <img src="./images/sub2_maxbone/intro-maxbone-02.jpg" alt="니트입은 강아지 이미지" />
                     </div>
                 </article>
