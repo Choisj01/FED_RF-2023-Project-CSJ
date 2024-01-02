@@ -131,17 +131,17 @@ article.psc-founder-inbox{
     margin-bottom: 80px;
 }
 
-.found-txt{
+.psc-found-txt{
     margin: 0 auto;
     margin-left: 20px;
 }
 
-.found-txt h4{
+.psc-found-txt h4{
     margin: 25px 0; 
     font-size: 1.6rem;
     font-weight: bold;
 }
-.found-txt p{
+.psc-found-txt p{
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.5;
@@ -163,11 +163,12 @@ article.psc-founder-inbox{
     height: 800px;
     position: relative;
 }
-.psc-vid-inbox iframe{
+.psc-vid-inbox iframe {
     width: 100%;
     height: 100%;
     position: absolute;
     left: -90px;
+    border: none;
 }
  /* 동영상 박스 왼쪽 정렬을 위한 기존 클래스 지우기 기존 display:flex + 가운데 정렬이 있었음 */
 .vp-center {
@@ -252,21 +253,21 @@ article.psc-founder-inbox{
 
 /************************************ 8.md's choice (스와이퍼 적용 영역) ************************************/
 /* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
-div#newproduct-wrap {
+div#psc-newproduct-wrap {
     height: 110vh;
     padding-bottom: 100px;
 }
-.new-product-list{
+.psc-new-product-list{
   /* 드래그선택 안되게하기 */
   user-select: none;
   -webkit-user-drag: none;
 }
 /* newproduct 타이틀 h2 */
-.new-txt-bx {
+.psc-new-txt-bx {
 margin-bottom: 65px;
 }
 
-.new-txt-bx h2{
+.psc-new-txt-bx h2{
 font-size: 6.7rem;
 text-align: center;
 font-family: 'Lora', serif;
@@ -402,14 +403,14 @@ content: '';
 }   
 
 /************************* 9. 페이지 이동 박스 영역 -> maxbone으로 *************************/
-.move-page-inbox {
+.psc-move-page-inbox {
     position: relative;
     width: 100%;
     height: 100vh;
     background: url(../../public/images/sub1_petsochic/pagination-maxbone.jpg) no-repeat fixed center/cover;
 }
 
-.move-page-inbox b {
+.psc-move-page-inbox b {
     position: absolute;
     top: 33%;
     left: 32%;
@@ -418,24 +419,42 @@ content: '';
     font-family: 'Lora', serif;
 }
 
-.move-page-inbox img {
+.psc-move-page-inbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.8);
 }
-.move-page-inbox a{
+.psc-move-page-inbox a{
     cursor: url(../../public/images/main/cursorhand1.png),auto;
 }
 
-.txt_inner {
+.psc-txt_inner {
     position: absolute;
     top: 57%;
     left: 45%;
 }
 
-.txt_inner span {
+.psc-txt_inner span {
     font-size: 2.8rem;
     color: #fff;
     font-family: 'Lora', serif;
 }
+
+.psc-txt_inner span::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #fff; 
+    /* 밑줄 색상을 원하는 색상으로 변경해주세요 */
+    transition: width 0.3s ease-in-out; 
+    /* 전환 효과 적용 */
+  }
+  
+  .psc-txt_inner span:hover::after {
+    width: 100%;
+  }
+  
