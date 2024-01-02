@@ -104,17 +104,6 @@ export const TopArea = memo(({ chgPageFn }) => {
           </header>
         </div>
       </div>
-
-      {/* 검색 모달창 */}
-      <div className="modal" id="searchModal">
-        <div className="modal-content">
-          {/* 검색 폼 등의 내용 */}
-          <form action="/search" method="GET">
-            <input type="text" name="query" placeholder="검색어를 입력하세요" />
-            <button type="submit">검색</button>
-          </form>
-        </div>
-      </div>
     </>
   );
 }); ////////////// TopArea 컴포넌트 ///////////
