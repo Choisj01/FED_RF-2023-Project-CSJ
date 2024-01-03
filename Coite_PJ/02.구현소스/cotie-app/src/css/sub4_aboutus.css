@@ -223,7 +223,7 @@ ul.profile-txt li:nth-of-type(1):before {
     position: absolute;
     left: 35.7%;
     top: -4px;
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(2):before {
     content: "";
@@ -234,7 +234,7 @@ ul.profile-txt li:nth-of-type(2):before {
     top: 15.5%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(3):before {
     content: "";
@@ -245,7 +245,7 @@ ul.profile-txt li:nth-of-type(3):before {
     top: 32.2%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(4):before {
     content: "";
@@ -256,7 +256,7 @@ ul.profile-txt li:nth-of-type(4):before {
     top: 49%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(5):before {
     content: "";
@@ -267,7 +267,7 @@ ul.profile-txt li:nth-of-type(5):before {
     top: 65.5%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(6):before {
     content: "";
@@ -278,7 +278,7 @@ ul.profile-txt li:nth-of-type(6):before {
     top: 82.4%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt li:nth-of-type(6)::after {
     content: "";
@@ -289,7 +289,7 @@ ul.profile-txt li:nth-of-type(6)::after {
     top: 98.7%;
     position: absolute;
 
-    background: url(../images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
+    background: url(../../public/images/aboutus/cotie-profile-line.jpg) no-repeat center/cover;
 }
 ul.profile-txt span {
     display: inline-block;
@@ -359,7 +359,7 @@ div#cotie-info-wrap h1 {
     display: block;
     width: 200px;
     height: 155px;
-    background: url(../images/aboutus/marker.png) no-repeat;
+    background: url(../../public/images/aboutus/marker.png) no-repeat;
     position: relative;
     z-index: 100;
     left: 60.4%;
