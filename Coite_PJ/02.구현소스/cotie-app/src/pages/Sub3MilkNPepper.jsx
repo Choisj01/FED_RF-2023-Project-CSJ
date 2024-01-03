@@ -39,7 +39,7 @@ export function Sub3MilkNPepper() {
                         <img src="./images/sub3_milkpepper/intro-milknpepper-01.jpg" alt="밀크앤페퍼 이미지" />
                     </div>
                     <div className="brands-text">
-                        <div className="text-img">
+                        <div className="mp-text-img">
                             <img src="./images/sub3_milkpepper/logo-milkpepper.svg" alt="밀크앤페퍼 로고이미지" />
                         </div>
                         <div className="mnp-text">

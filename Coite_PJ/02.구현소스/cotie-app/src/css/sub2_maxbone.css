@@ -183,12 +183,12 @@ div#mb-vid-bx {
 /* 맥스본 동영상 박스 영역 레이어 이미지 박스 */
 .mb-layer4 {
     position: absolute;
-    right: 7%;
+    right: 5%;
     top: 91px;
 }
 
 /* 맥스본 글자 애니메이션 랩박스 */
-.show-txt {
+.mb-show-txt {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +203,7 @@ div#mb-vid-bx {
     margin-right: 20px;
 }
 /* 맥스본 로고 이미지 애니메이션 효과로 글자 나타났다가 사라지기 반복 */
-.image-container {
+.mb-image-container {
     display: flex;
     justify-content: space-between;
   }
@@ -214,20 +214,20 @@ div#mb-vid-bx {
     transform: scale(0);
     /* opacity: 0; */
 }
-.image-container.on .delayed-image{
+.mb-image-container.on .delayed-image{
       animation: fadeIn 1s forwards; 
 
   }
   
-  .image-container.on .image1 {
+  .mb-image-container.on .image1 {
     animation-delay: 1.2s; /* 첫 번째 이미지에 1.8초 딜레이 */
   }
   
-  .image-container.on .image2 {
+  .mb-image-container.on .image2 {
     animation-delay: 1s; /* 두 번째 이미지에 1.4초 딜레이 */
   }
   
-  .image-container.on .image3 {
+  .mb-image-container.on .image3 {
     animation-delay: .8s; /* 세 번째 이미지에 1초 딜레이 */
   }
   

@@ -78,7 +78,7 @@ export function Sub2Maxbone() {
             {/* <!-- 5. 맥스본 동영상 + 글자이미지 박스 --> */}
             <div id="mb-vid-wrap">
                 <div id="mb-vid-bx">
-                    <div className="show-txt image-container">
+                    <div className="mb-show-txt mb-image-container">
                         <div className="delayed-image image1">
                             <img src="./images/main/layer-maxbone-text.jpg" alt="맥스본 텍스트 이미지" />
                         </div>
