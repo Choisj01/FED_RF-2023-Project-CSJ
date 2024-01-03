@@ -110,6 +110,8 @@ div#sub-milkpepper-visual-wrap {
 /* 맥스본 인트로 로고이미지+ 텍스트 랩박스 */
 .mnp-text {
     text-align: center;
+    position: relative;
+    right: 26px;
 }
 .mnp-text h4 {
     font-size: 1.4rem;
@@ -351,7 +353,7 @@ ul.flex-bx {
 /******************************************** 8.MD's CHOICE ********************************************/
 /* 스와이프 */
 /* 전체 감싸는 박스 높이값,패딩값 줌(페이지 이동 박스랑 간격 주기위함) */
-div#newproduct-wrap {
+div#mp-newproduct-wrap {
     height: 110vh;
     padding-top: 30px;
     padding-bottom: 100px;
@@ -362,11 +364,11 @@ div#newproduct-wrap {
   -webkit-user-drag: none;
 }
 /* newproduct 타이틀 h2 */
-.new-txt-bx {
+.mp-new-txt-bx {
 margin-bottom: 65px;
 }
 
-.new-txt-bx h2{
+.mp-new-txt-bx h2{
 font-size: 6.7rem;
 text-align: center;
 font-family: 'Lora', serif;
