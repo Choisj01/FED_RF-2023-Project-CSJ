@@ -161,9 +161,9 @@ export function Sub3MilkNPepper() {
             </div>
 
             {/* <!-- 8.MD's CHOICE --> */}
-            <div id="newproduct-wrap">
+            <div id="mp-newproduct-wrap">
                 <div className="new-product-inbox">
-                    <div className="new-txt-bx">
+                    <div className="mp-new-txt-bx">
                         <h2>MD's CHOICE</h2>
                     </div>
                     {/* <!-- 스와이프 박스 --> */}
