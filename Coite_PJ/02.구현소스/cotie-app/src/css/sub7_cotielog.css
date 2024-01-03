@@ -7,7 +7,7 @@
 /************************************* 2. cotielog-content 영역 *************************************/
 
 /* cotielog 메인 컨테이너 박스 */
-.container {
+.ctlog-container {
     display: flex;
     padding-top: 200px;
     max-width: 1650px;
@@ -16,17 +16,17 @@
     gap: 52px;
 }
 
-.sticky-box {
+.ctlog-sticky-box {
     /* height: 1000px; */
     width: 500px;
     background-color: transparent;
 }
-.sticky-inbx{
+.ctlog-sticky-inbx{
     position: sticky;
     top: 200px;
 
 }
-.sticky-box h1 {
+.ctlog-sticky-box h1 {
     font-size: 6rem;
     font-family: "Lora", serif;
 }
@@ -65,18 +65,18 @@ ul.category-bx>li:hover a::after{
   transition: width 0.3s;
 }
 
-.img-bx-wrap {
+.ctlog-img-bx-wrap {
     position: relative;
     right: 65%;
     top: 72px;
 }
-.img-bx {
+.ctlog-img-bx {
     position: relative;
     overflow: hidden;
     width: 750px;
     height: 422px;
 }
-.img-bx img {
+.ctlog-img-bx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -84,27 +84,27 @@ ul.category-bx>li:hover a::after{
     height: auto;
     transition: opacity 0.3s ease-in-out;
 }
-.img-bx img:first-child {
+.ctlog-img-bx img:first-child {
     z-index: 1; /* 첫 번째 이미지를 위로 표시 */
 }
 
-.img-bx img:last-child {
+.ctlog-img-bx img:last-child {
     opacity: 0; /* 두 번째 이미지는 처음에 숨김 */
     z-index: 0;
 }
 
-.img-bx:hover img:first-child {
+.ctlog-img-bx:hover img:first-child {
     opacity: 0; /* 마우스 오버시 첫 번째 이미지 숨김 */
     z-index: 0;
 }
 
-.img-bx:hover img:last-child {
+.ctlog-img-bx:hover img:last-child {
     opacity: 1; /* 마우스 오버시 두 번째 이미지 보임 */
     z-index: 1;
 }
 /* 마우스 오버시 이미지 변경 끝 */
 
-.scrollable-content {
+.ctlog-scrollable-content {
     flex: 1;
     /* overflow-y: auto;  */
     /* 수직 스크롤이 필요한 경우 스크롤바를 표시 */
@@ -113,15 +113,15 @@ ul.category-bx>li:hover a::after{
     padding: 130px 0;
 }
 
-.cont-bx {
+.ctlog-cont-bx {
     /* padding-top: 55px; */
 }
 /* 컨텐츠 박스 ul */
-.cont-bx ul {
+.ctlog-cont-bx ul {
     display: flex;
     gap: 80px;
 }
-.cont-bx li {
+.ctlog-cont-bx li {
   font-size: 1.4rem;
   font-weight: bold;
   padding-bottom: 100px;
