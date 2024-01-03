@@ -14,6 +14,7 @@ import { Sub5Outdoor } from "./pages/Sub5Outdoor";
 import { Sub6Indoor } from "./pages/Sub6Indoor";
 import { Sub7Cotielog } from "./pages/Sub7Cotielog";
 import { Sub8Store } from "./pages/Sub8Store";
+import { Sub4AboutUs } from "./pages/Sub4AboutUs";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="sub1" element={<Sub1Petsochic />} />
           <Route path="sub2" element={<Sub2Maxbone />} />
           <Route path="sub3" element={<Sub3MilkNPepper />} />
+          <Route path="sub4" element={<Sub4AboutUs />} />
           <Route path="sub5" element={<Sub5Outdoor />} />
           <Route path="sub6" element={<Sub6Indoor />} />
           <Route path="sub7" element={<Sub7Cotielog />} />
