@@ -6,9 +6,9 @@ export function Sub7Cotielog(){
     return(
         <>
               {/* <!-- 2. cotielog-content 영역 --> */}
-        <div className="container">
-            <div className="sticky-box">
-                <div className="sticky-inbx">
+        <div className="ctlog-container">
+            <div className="ctlog-sticky-box">
+                <div className="ctlog-sticky-inbx">
                     <h1>Cotielog</h1>
                     <ul className="category-bx">
                         <li>
@@ -28,17 +28,17 @@ export function Sub7Cotielog(){
                         </li>
                     </ul>
                     {/* <!-- 이미지 박스-부모 --> */}
-                    <div className="img-bx-wrap">
+                    <div className="ctlog-img-bx-wrap">
                         {/* <!-- 자식요소 박스 --> */}
-                        <div className="img-bx">
+                        <div className="ctlog-img-bx">
                             <img src="./images/cotielog/cotielog-character-base.jpg" alt="강아지 레이어이미지" />
                             <img src="./images/cotielog/cotielog-character-hover.jpg" alt="강아지 레이어이미지" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="scrollable-content">
-                <div className="cont-bx">
+            <div className="ctlog-scrollable-content">
+                <div className="ctlog-cont-bx">
                     <ul>
                         <li className="first">
                             <a href="">
