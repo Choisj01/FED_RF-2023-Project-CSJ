@@ -34,14 +34,14 @@ export function SwiperApp() {
       img_second: "./images/main/Bandana-red-front.jpg",
       img_desc: "반다나레드",
       tit: "MILK & PEPPER",
-      tit_desc: "밀크 앤 페퍼 YAEL Bandana Rayé Rouge 야엘 줄무늬 반다나 ",
+      tit_desc: "밀크 앤 페퍼 YAEL Bandana Rayé Rouge 야엘 줄무늬 반다나레드",
     },
     {
       img_first: "./images/main/rain-coat1.jpg",
       img_second: "./images/main/rain-coat2.jpg",
       img_desc: "야자수 레인코드",
       tit: "MILK & PEPPER",
-      tit_desc: "밀크 앤 페퍼 PALOMA Palmier Orange-Kaki 팔로마 오렌지",
+      tit_desc: "밀크 앤 페퍼 PALOMA Palmier Orange-Kaki 팔로마 오렌지 야자수 레인코드",
     },
     {
       img_first: "./images/main/SUZANNE-Harnais1.jpg",
@@ -63,7 +63,7 @@ export function SwiperApp() {
     <>
       <Swiper
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
