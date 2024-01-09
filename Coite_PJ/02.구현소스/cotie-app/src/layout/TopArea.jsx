@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 // 폰트어썸 불러오기
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { memo, useContext } from "react";
 
@@ -82,8 +82,10 @@ export const TopArea = memo(({ chgPageFn }) => {
             <div className="etc-menu nav">
               <div className="search">
                 <a href="#">
-                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass">
-                  </FontAwesomeIcon>
+                  <span>
+                    <FontAwesomeIcon className="fontawsome" icon={faMagnifyingGlass} />
+                  </span>
+
                 </a>
               </div>
               <div className="buy-shop">

@@ -260,6 +260,10 @@ h1#logo {
   text-align: center;
 }
 
+.fontawsome {
+  transform: scale(1.5);
+}
+
 /******************* 서브메뉴 마우스 오버시 *******************/
 /* 가상요소로 밑줄만들기 - 공통클래스로 독립 */
 .line-ani > li > a::after {
