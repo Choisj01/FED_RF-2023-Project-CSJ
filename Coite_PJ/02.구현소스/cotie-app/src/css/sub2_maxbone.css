@@ -323,9 +323,9 @@ ul.cont-flex1>li:first-child {
 /* 초기에 숨김 상태 - JS 적용 */
 .cont-flex1 li,
 .cont-flex2 li {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* opacity: 0; */
+  /* transform: translateY(20px); */
+  /* transition: opacity 0.5s ease, transform 0.5s ease; */
 }
 
 

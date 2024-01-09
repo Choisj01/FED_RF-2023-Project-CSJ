@@ -23,7 +23,7 @@ export function Sub8Store(){
             </div>
         </div>
         <div className="scrollable-content">
-            <div className="cont-bx">
+            <div className="store-cont-bx">
                 <ul>
                     <li>
                         <img src="./images/store/store1.jpg" alt="스토어 이미지"/>

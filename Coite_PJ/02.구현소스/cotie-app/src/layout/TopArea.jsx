@@ -82,9 +82,8 @@ export const TopArea = memo(({ chgPageFn }) => {
             <div className="etc-menu nav">
               <div className="search">
                 <a href="#">
-                  <i className="fa-solid fa-magnifying-glass">
-                    <span className="ir"></span>
-                  </i>
+                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass">
+                  </FontAwesomeIcon>
                 </a>
               </div>
               <div className="buy-shop">
@@ -92,15 +91,14 @@ export const TopArea = memo(({ chgPageFn }) => {
                   <li>
                     <Link to="https://smartstore.naver.com/cotie_shop">
                       Buy Shop
-                      <i
-                        className="fa-solid fa-basket-shopping"
-                        style={{ color: "#000000" }}
-                      ></i>
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
+            <div className="ham">
+                        <span></span> <span></span> <span></span>
+                    </div>
           </header>
         </div>
       </div>

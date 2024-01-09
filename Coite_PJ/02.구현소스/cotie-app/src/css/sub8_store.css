@@ -78,25 +78,25 @@
     padding: 130px 0;
 }
 
-.cont-bx {
+.store-cont-bx {
     position: relative;
     left: 20%;
 }
-.cont-bx>ul>li{
+.store-cont-bx>ul>li{
     width: 1100px;
     height: 1200px;
 }
-.cont-bx>ul>li>h3 {
+.store-cont-bx>ul>li>h3 {
     font-size: 2.2rem;
     padding: 15px 0;
 }
 
-.cont-bx>ul>li>h4 {
+.store-cont-bx>ul>li>h4 {
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-.cont-bx>ul>li>p {
+.store-cont-bx>ul>li>p {
     font-size: 1.1rem;
     /* padding: 33px 0; */
     padding-top: 20px;
