@@ -1,0 +1,613 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+
+
+	<title>기프티콘 - 마음을 전하는 새로운 방법! 기프티콘</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-itunes-app" content="app-id=575114946" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no target-densitydpi=medium-dpi" />
+	<meta name="robots" content="noindex" />
+	
+	<link rel="shortcut icon" href="/mobile/images/common/icon_32x32.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/mobile/images/common/icon_114x114.png" />
+	<link rel="apple-touch-icon-precomposed" href="/mobile/images/common/icon_57x57.png" />	
+	<link rel="stylesheet" type="text/css" href="/mobile/common/css/mobile.css" />	
+	<link rel="stylesheet" type="text/css" href="/mobile/common/css/flexslider.css" />
+	<link rel="stylesheet" type="text/css" href="/mobile/common/css/m_tmp.css" />
+	
+	
+	<script type="text/javascript" src="/mobile/common/js/jquery-1.4.2.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/jquery.cfTouchSwipe.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/jquery.cycle.all.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/mobileui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/scroller1.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/swipeview.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/mobile/common/js/jquery.model.js"></script>
+	<script type="text/javascript" src="/mobile/common/js/jquery.form.js"></script>
+	<script type="text/javascript" src="/mobile/common/js/iscroll.js"></script>
+	<script type="text/javascript" src="/mobile/common/js/validateAccountNo.js"></script>
+	
+<script type = "text/javascript">
+<!--
+
+/**
+ * 검색.
+ */
+function topSearch(){
+	if($("#top_search_keyword").val() == "") {
+		alert("검색어를 입력하시기 바랍니다.");
+		return false;
+	} else {
+		var keyword = $("#top_search_keyword").val();
+		var searchHistory = localStorage.getItem("cookieword");
+		
+		if(searchHistory == "" || searchHistory == null || searchHistory == undefined)
+			localStorage.setItem("cookieword", keyword);
+		else {
+			var arr = searchHistory.split("#");
+			var hasKeyword = false;
+			
+			for(var i=0 ; i<arr.length ; i++) {
+				if(arr[i] == keyword) {
+					hasKeyword = true;
+				}
+			}
+			
+			var history = keyword;
+			if(hasKeyword) {
+				for(var i=0 ; i<arr.length ; i++) {
+					if(arr[i] != keyword)
+						history = history + "#" + arr[i];
+				}
+				
+				localStorage.setItem("cookieword", history);
+			} else {
+				localStorage.setItem("cookieword", keyword + "#" + searchHistory);
+			}
+		}
+		
+		var searchUrl = location.href;
+		if(searchUrl.indexOf("https") != -1) {
+			$("#frmTopSearch").attr("action", "/util/search.do");
+		}
+		
+		$("#frmTopSearch").submit(); 
+	}
+}
+
+/**
+ * 빠른선물찾기 ajax 구현.
+ */
+function getQuickMenu() {
+	var hasQuickMenu = $("#quickMenu").html();
+	if(hasQuickMenu == "") {
+		var url = "";
+		
+		var searchUrl = location.href;
+		if(searchUrl.indexOf("https") != -1) url = "/util/quicksearch.do";
+		else url = "/m-util/quicksearch.do";
+		
+		$.get(url, function(data) {
+			if(data != "") {
+				$("#quickMenu").html(data);
+				checckAllSelect();
+				createHistory();
+				quickTabSet();
+			}
+		});
+	} else {
+		$("#quickMenu").show();
+	}
+}
+
+function quickTabSet(){
+	$("#quickMenu .tapstyle1 li a").bind("click", function(e) {
+		e.preventDefault();	
+		$("#quickMenu .tapstyle1 li a").removeClass('on');
+		$(this).addClass('on');
+		var idx = $("#quickMenu .tapstyle1 li a").index($(this));
+		
+		//메인 빠른 선물 찾기
+		if ( $(e.currentTarget).parent().parent().parent().siblings('.searchContents').length > 0 ){
+			if ( idx == '0' ){
+				$('.searchContents .quickSearch').show();
+				$('.searchContents .searchHistoryList').hide();
+				$('#quick-search .historyBtn').hide();
+				
+				$('.categoryItem').iosSlider('destroy');
+				quickSliderSet();
+			} else {
+				$('.searchContents .quickSearch').hide();
+				$('.searchContents .searchHistoryList').show();
+				$('#quick-search .historyBtn').css('display','block');
+			}
+		}
+	});
+}
+
+/**
+ * 검색 히스토리 불러오기.
+ */
+function createHistory() {
+	var searchHistory = localStorage.getItem("cookieword");
+	if(searchHistory == "" || searchHistory == null || searchHistory == undefined)
+		$("#searchHistory").html("<li><a>검색 기록이 없습니다.</a></li>");
+	else {
+		var arr = searchHistory.split("#");
+		var history = "";
+		for(var i=0 ; i<arr.length ; i++) {
+			history += "<li><a onclick=\"searchInHistory('" + arr[i] + "');\">" + arr[i] + "</a></li>"
+		}
+		$("#searchHistory").html(history);
+	}
+}
+
+/**
+ * 검색.
+ */
+function doSearch() {
+	$("#top_search_keyword").val("");
+	var cate = $("#category").val();
+	var brand = $("#brand").val();
+	
+	if(brand == "" && cate == "") {
+		alert("카테고리 및 브랜드 선택이 잘못되었습니다.");
+		return;
+	}
+	
+	if($("#aa").is(":checked") != true && brand == "") {
+		alert("하나의 브랜드 혹은 전체 브랜드를 선택하셔야 합니다.");
+		return;
+	}
+	
+	$("#salePrc").val($("input[name='qs-radio']:checked").val());
+	
+	var searchUrl = location.href;
+	if(searchUrl.indexOf("https") != -1) {
+		$("#searchForm").attr("action", "/util/search.do");
+	}
+	$("#searchForm").submit();
+}
+
+/**
+ * 히스토리로 검색.
+ */
+function searchInHistory(history) {
+	$("#top_search_keyword").val(history);
+	topSearch();
+}
+
+/**
+ * 카테고리 선택.
+ */
+function selectCategory(prodDispId, element) {
+	$("#category").val(prodDispId);
+	$(".searchContents .categoryItemWrap .categoryItem .item li").removeAttr("class");
+	
+	var url = "/product/ajaxQuickSearchBrand.do";
+	var searchUrl = location.href;
+	if(searchUrl.indexOf("https") != -1) {
+		url = "/util/ajaxQuickSearchBrand.do";
+	}
+	
+	$.get(url, { code : prodDispId }, function(data) {
+		if(data != "")
+			$("#brandbox").html(data);
+	});
+	
+	$(element).addClass("selectItem");
+}
+
+/**
+ * 브랜드 선택.
+ */
+function selectBrand(prodDispId, idx) {
+	$("#aa").removeAttr("checked");
+	
+	$("#brand").val(prodDispId);
+	
+	$("#brandbox li").each(function(i) {
+		if(i != idx -1) $(this).removeAttr("class");
+		else $(this).attr("class", "selectItem");
+	});
+}
+
+/**
+ * 검색기록삭제.
+ */
+function clearHistory() {
+	localStorage.clear();
+	alert("삭제되었습니다.");
+	$("#searchHistory").html("<li><a>검색 기록이 없습니다.</a></li>");
+}
+
+/**
+ * 전체 체크.
+ */
+function checckAllSelect() {
+	if($("#aa").is(":checked") == true) {
+		$("#brand").val("");
+		
+		$("#brandbox li").each(function(i) {
+			$(this).removeAttr("class");
+		});
+	}
+}
+
+/**
+ * 빠른선물찾기 닫기.
+ */
+function closeQuickMenu() {
+	$("#quickMenu").hide();
+}
+
+//-->
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#gnb_header1").attr("src", "/mobile/images/common/gnb1.gif");
+	$("#gnb_header2").attr("src", "/mobile/images/common/gnb2_on.gif").parent().addClass('on');
+	$("#gnb_header3").attr("src", "/mobile/images/common/gnb3.gif");
+	$("#gnb_header4").attr("src", "/mobile/images/common/gnb4.gif");
+	$("#gnb_header5").attr("src", "/mobile/images/common/gnb5.gif");	
+});
+</script>
+
+<script type = "text/javascript">
+	function sortlist(type,id){
+		$(".tapstyle02 li a").removeClass('bulletbt_on');
+		$(".tapstyle02 li a").addClass('bulletbt');
+		$(".tapstyle02 li a.commbt").removeClass('bulletbt');
+		$(id).addClass('bulletbt_on');
+		$("#order_type").val(type);
+
+		$.post("/shopping/shopping_brandview.do",{startPrice : $("#startPrice").val(), endPrice : $("#endPrice").val(), order_type : type, prodDispId : $("#categorycd").val(), ajax_type : 'Y'},function(data){
+			$("#brand_list").html(data);
+		});
+	}
+	
+	var html = "";
+	var viewSize = parseInt('0');
+	var listEnd = false;
+	
+	function ajax_pagecall(pageNum){
+		var type = $("#order_type").val();
+		viewSize += parseInt('0');
+		
+		if(viewSize >= parseInt('0')){
+			viewSize = parseInt('0');
+			listEnd = true;
+		}
+		
+		/* 
+		var str = "/shopping/shopping_brandview.do?ajax_type=Y&prodDispId=FS001452&order_type=A&";
+		var lit = str.length - 1;
+		var url = str.substring(0,lit);
+		 */
+		// $.post(url,{pageNumber : pageNum, more_view : "Y", order_type : type},function(data){
+		$.post("/shopping/shopping_brandview.do",{pageNumber : pageNum, more_view : "Y", order_type : type, startPrice : $("#startPrice").val(), endPrice : $("#endPrice").val(), order_type : type, prodDispId : $("#categorycd").val(), ajax_type : 'Y'},function(data){
+			html += data;
+			$("#viewmore").html(html);
+		});
+	}
+</script>
+
+</head>
+<body>
+<div id="wrap" class="main_wrap">
+	<!--header-->
+	
+
+
+
+<script type="text/javascript">
+
+	var isFocused = true;
+
+	$(document).ready(function() {
+		//메인상단 APP다운로드 배너 노출
+		if($(location).attr('pathname') == "/main.do") {
+
+			$(window).blur(function()	{ isFocused = false; });
+			$(window).focus(function()	{ isFocused = true;  });
+
+			$(".top_banner").show();
+			
+			//모웹 상단 다운받기 배너 닫기 버튼 클릭시
+			$(".top_banner .btn_close").click(function(){
+				$(".top_banner").hide();
+			});
+			
+			//모웹 상단 다운받기 배너 다운로드 클릭시
+			$('#app_down_link').click(function() {
+		        let osNmTmp = navigator.userAgent.toUpperCase();
+				let chromeVersion = "";
+
+				// 안드로이드
+				if (osNmTmp.indexOf("ANDROID") > 0) {
+					setTimeout(function() {
+						if (isFocused) {
+							location.href = "https://play.google.com/store/apps/details?id=com.skmnc.gifticon";
+						}
+					}, 1000);
+
+					if (osNmTmp.indexOf("CHROME") > 0) {
+						chromeVersion = navigator.appVersion.match(/Chrome\/\d+.\d+/)[0].split("/")[1];
+					}
+
+					if(chromeVersion != "") {
+						if (chromeVersion > 25) {
+							location.href = "intent://web?redirectUrl=/app45/mygifticon/main.do?kind=receive#Intent;package=com.skmnc.gifticon;scheme=gifticon;end;";
+						} else {
+							$("#__check_app__").attr("src", "gifticon://web?redirectUrl=/app45/mygifticon/main.do?kind=receive");
+						}
+					}
+					else {
+						$("#__check_app__").attr("src", "gifticon://web?redirectUrl=/app45/mygifticon/main.do?kind=receive");
+					}
+				}
+				// iOS
+				else if (osNmTmp.indexOf("IPHONE") > 0 || osNmTmp.indexOf("IPAD") > 0) {
+					setTimeout(function() {
+						if (isFocused) {
+							location.replace("http://itunes.apple.com/us/app/gipeutikon/id575114946?ls=1&mt=8");
+						}
+					}, 1000);
+					window.location = "gifticon://4";
+				}
+
+				$("#__check_app__").hide();
+		    });
+		}
+		else {
+			$("#__check_app__").hide();
+		}
+	});
+
+</script>
+<iframe id="__check_app__" width="0" height="0"></iframe>
+
+<div id="appInsDiv" style="border-bottom: solid 1px #ffffff; display: none; margin-top: -1px; background: url('/mobile/images/temp/topslide_bg_pattern.jpg') repeat;">
+	<a href="#" id="appInsClose" style="position: absolute; margin-left: 1%; margin-top: 1%"><img src="/mobile/images/temp/btn_close.png" alt="닫기" style="height: 25px;" /></a>
+	<a href="#" id="appInsGo" style="position: absolute; margin-left: 80%; margin-top: 2%;"><img src="/mobile/images/temp/btn_down.png" alt="다운로드/APP실행" style="height: 52px;"></a>
+	<img src="/mobile/images/temp/img_background.png" alt="빼빼로 500원" style="width:320px; height: 70px;">
+	<iframe id="chkFrame" name="chkFrame" style="display: none;"></iframe>
+</div>
+
+<!-- 모웹 상단 다운받기 배너 -->
+<div class="top_banner" style="display: none;">
+	<p>기프티콘을 앱으로 만나보세요!</p>
+	<div class="btn_area">
+		<button class="btn_down" id="app_down_link"><i class="ico_down"></i>다운받기</button>
+		<button class="btn_close"><img src="/mobile/images/common/x_btn.png" height="20" alt="닫기"></button>
+	</div>
+</div>
+
+<form id="frmTopSearch" id="frmTopSearch" name="frmTopSearch" action="/product/search.do" method="post">
+	<div id="header">
+		<div class="topmenu">
+			<span class="topmenuL" id="sessioncheck">
+				
+
+
+
+
+
+
+
+<a href='/util/util_login.do' class='login'>로그인</a>
+
+			</span>
+			<span class="topmenuR">
+
+				<!--
+				<em><a href="/util/test_login.do" class='login'>test 비회원 로그인 |  </a></em>
+				<em><a href='/util/util_logout.do' class='login'>test로그아웃</a></em>
+				 -->
+				<em><a href="/event/main.do">이벤트</a></em>
+				<em><a href="/mygifticon/index.do">마이기프티콘</a></em>
+				
+			</span>
+		</div>
+		<div class="mainsearch">
+			<h1 style="padding-top:7px;"><a href="/main.do"><img src="/mobile/images/common/logo_m_54x29.png" alt="" /></a></h1>
+			<div class="searchbg">
+				<span class="schbar">
+					<input type="text" id="top_search_keyword" name="keyword" onkeypress="if(event.keyCode==13) topSearch();" value="" onclick="getQuickMenu();"/>
+				</span>
+				<a href="javascript:void(0);" onclick="topSearch();">검색</a>
+			</div>
+		</div>
+		
+		<div id="quickMenu"></div>
+		<div id="gnb">
+			<ul>
+				<li><a href="/main.do"><img id="gnb_header1" src="/mobile/images/common/gnb1_on.gif"  alt="" /> 홈</a></li>
+				<li><a href="/shopping/shopping_brandshop.do"><img id="gnb_header2" src="/mobile/images/common/gnb2.gif"  alt="" />브랜드샵</a></li>
+				<li><a href="/shopping/shopping_category.do"><img id="gnb_header3" src="/mobile/images/common/gnb3.gif"  alt="" />종류별상품</a></li>
+				<li><a href="/shopping/shopping_newproduct.do"><img id="gnb_header4" src="/mobile/images/common/gnb4.gif"  alt="" /> 신상품</a></li>
+				<li><a href="/event/event_spec.do"><img id="gnb_header5" src="/mobile/images/common/gnb5.gif"  alt="" />테마/기획전</a></li>
+			</ul>
+		</div>
+	</div>
+</form>
+	<!--header-->
+	
+	<div id="container">
+		<div class="tapcon" style="overflow:hidden;" >
+			<div class="mapsearch">
+				
+				<div class="mysearch">
+					<span class="bradnveiwimg">
+						<img src="/upload/images/202205/20220525170436673_닷컴_153x77.jpg" alt="쉐이크쉑로고" />
+					</span>
+					<span class="bradnveiwtx">
+						<img src="/upload/images/202205/20220525170436620_쉐이크쉑_category.png" alt="쉐이크쉑타이틀" />
+					</span>
+
+					<input type = "hidden" id = "categorycd" value = "FS001452"/>
+					<input type = "hidden" id = "order_type" value = "A"/>
+					<input type = "hidden" id = "startPrice" value = ""/>
+					<input type = "hidden" id = "endPrice" value = ""/>
+				
+					<ul class="tapstyle02">
+						<li>
+							<span>
+								<a id = "sorttypeA" href="javascript:sortlist('A','#sorttypeA')" class="bulletbt_on">인기순</a>
+								<a id = "sorttypeD" href="javascript:sortlist('D','#sorttypeD')" class="bulletbt">최신순</a>
+								<a id = "sorttypeL" href="javascript:sortlist('L','#sorttypeL')" class="bulletbt">가격순</a>
+								<a href="/shopping/shopping_brandshop.do" class="btnList">목록으로</a>
+							</span>							
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="mylist" id="brand_list">
+					
+					
+					
+				</div>
+				
+				<div class="mylist2" id="viewmore"></div>
+				<div class="morebt" id="morebt">
+					
+				</div>
+				
+
+			</div>
+		</div>
+		
+		
+		
+		
+	</div>
+	<!--footer-->
+	
+
+
+
+<script type="text/javascript">
+<!--
+
+function checkOS() {
+	var userAgent = navigator.userAgent;
+
+	if(userAgent.match(/Android/) != null) {
+		window.location.href = "http://m.tstore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000141675&strPrePageNm=0c05003H&strDisplayOrder=1&strPid=0000141675&strBannerId=&strSearchword=gifticon";
+	} else if(userAgent.match(/iPhone|iPod|iPad/) != null) {
+		window.location.href = "https://itunes.apple.com/kr/app/id575114946?mt=8";
+	} else {
+		alert("OS 정보를 확인할 수 없습니다. 모바일 OS인지 확인이 필요합니다.");
+	}
+}
+
+//-->
+</script>
+
+<div id="footer">
+	<div class="inr">
+		<ul class="customer_inquiry">
+			<li>
+				<dl>
+					<dt><span class="sr_only">전화문의</span><a href="tel:18000133"><em>1800-0133(유료)</em></a></dt>
+					<dd>평일 10:00 ~ 17:00</dd>
+					<dd>점심시간 : 12:00 ~ 13:00</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/cdn-cgi/l/email-protection#3b5c525d4f525854557b0a0a484f155854155049" target="_blank">메일 문의</a></dt>
+					<dd><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93f4faf5e7faf0fcfdd3a2a2e0e7bdf0fcbdf8e1">[email&#160;protected]</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<ul class="global_link">
+			<li>
+
+
+
+
+
+<span><a href="/util/util_login.do">로그인</a></span></li>
+			<li><a href="/customer/index.do">고객센터</a></li>
+			<li><a href="http://www.gifticon.com/main.do?fixingYn=Y">PC버전</a></li>
+			<li><button type="button" onclick="javascript:checkOS();">앱 다운로드</button></li>
+		</ul>
+
+		<p class="copy">Copyright © 2018 11Street Co.,Ltd. All Rights Reserved.</p>
+
+		<ul class="company_link">
+			<li><a href="http://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2018301013030201453&pageUnit=10&searchCnd=wrkr_no&searchKrwd=8158101244&pageIndex=1" target="_blank">사업자정보 확인</a></li>
+			<li><a href="/customer/customer_info.do?info=4">이용약관</a></li>
+			<li><a href="/customer/customer_info.do?info=5" style="color:red; font-weight: bold;">개인정보처리방침</a></li>
+		</ul>
+
+		<div class="company_info">
+			<button type="button" class="btn_more" aria-expanded="false" aria-controls="ar-acc_con">11번가(주) 사업자 정보</button>
+			<div id="ar-acc_con" class="inr" style="display: none;">
+				<dl>
+					<dt>사업자:</dt>
+					<dd>11번가(주)</dd>
+					<dt>대표:</dt>
+					<dd>하형일, 안정은</dd>
+					<dt>사업자등록번호:</dt>
+					<dd>815-81-01244</dd>
+				</dl>
+				<p>(04637) 서울특별시 중구 한강대로 416 (남대문로5가, 서울스퀘어)</p>
+				<dl>
+					<dt>통신판매업신고:</dt>
+					<dd>2018-서울중구-1445</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+	$(function(){
+		$('.btn_more').click(function(){
+			var $obj = $(this);
+			if(!$obj.hasClass('on')){
+				$obj.addClass('on').attr('aria-expanded', 'true');
+				$obj.next('.inr').show();
+			} else {
+				$obj.removeClass('on').attr('aria-expanded', 'false');
+				$obj.next('.inr').hide();
+			}
+		});
+	});
+</script>
+
+
+ <script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-21307413-12', 'm.gifticon.com');
+  ga('send', 'pageview');
+</script>
+
+
+	<!--footer-->
+</div>
+<script>(function(){var js = "window['__CF$cv$params']={r:'844388ac1ce1c17b',t:'MTcwNTA0Mjk0NS45NzQwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>
+ 

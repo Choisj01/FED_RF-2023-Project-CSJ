@@ -1,0 +1,1608 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="keywords" content="KT GIFTISHOW" />
+<title>내 마음의 선물, 기프티쇼</title>
+<link rel="stylesheet" type="text/css" href="/css/w_layout.css?version=20231219073253" />
+<link rel="stylesheet" href="/css/ui-lightness/jquery-ui-1.10.4.min.css?version=20231219073253" />
+<link rel="stylesheet" type="text/css" href="/css/renewal.css?version=20231219073253" />
+<link rel="shortcut icon" href="/images/favicon/giftishow_favicon.ico" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie7.css?version=20231219073253"><![endif]-->
+<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/jquery/jquery-ui-1.10.4.min.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/date.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/jquery/scrollnews.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js?version=20231219073253" ></script>
+<script type="text/javascript" src="/js/common/ui.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/cookies.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/common.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/httpClient.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/goodsList.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/search.js?version=20231219073253"></script>
+<!-- 크리테오 스크립트 2017.11.29 -->
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+window.criteo_q.push(
+{ event: "setAccount", account: 42904 },
+{ event: "setEmail", email: "" },
+{ event: "setSiteType", type: "d" },
+{ event: "viewList", item:[ 
+"G00001960969","G00001950944","G00001960983" 
+]}
+);
+</script>
+<!-- 크리테오 스크립트 2017.11.29 -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	// Header 하이라이팅 처리
+	$(".gnb01").addClass("on");
+	$('.border').borderEffect();
+
+	// 무한스크롤 처리
+	$(window).scroll(function() {
+		var page 		= Number($("#page").val()); // 현제페이지
+		var totalPage 	= Number($("#totalPage").val()); // 총페이지
+
+		var scrollTop= $(window).scrollTop();
+		var scrollHeight= $(window).height();
+		var contentHeight= $(document).height();
+
+		if (scrollTop + $("#footer").height() >= contentHeight-scrollHeight) {
+			if(totalPage > page) {	//더 볼 페이지가 있는 경우만 진입
+				$("#page").val(page+1);
+				searchGoodsList();
+			}
+		}
+	});
+
+	// temp input 제거
+	//$("#tempTotalPage").remove();
+	//$("#tempGoodsListCount").remove();
+
+	var temp = document.getElementById("tempTotalPage");
+	temp.parentNode.removeChild(temp);
+	temp = document.getElementById("tempGoodsListCount");
+	temp.parentNode.removeChild(temp);
+
+});
+
+//정렬 유형 선택 이벤트
+function listingType(type){
+
+	// 선택된 정렬 유형에 따라 상품 리스트 가져오기
+	$("#sort_type").val(type);
+	$("#page").val("1");
+
+	searchGoodsList();
+}
+
+
+// 상품리스트 추가로 가져오기
+function searchGoodsList(){
+
+	// 로딩바 표출 (공통 common.js)
+	showLoadingMessage();
+
+	var param = $("form[name=goodSearchForm]").serialize();
+	commonAjax("post", "/brand/brandGoodsListAjax.mhows", param, searchGoodsListCbFn, {});
+
+}
+
+function searchGoodsListCbFn(data){
+	// 정렬유형 강조 클래스 부여
+	var sortType= $("#sort_type").val();
+	$(".tab a").removeClass("on");
+	$(".tab a."+sortType).addClass("on");
+
+	if($("#page").val()=="1"){
+		// 상품 리스트 초기화 후 다시그리기
+		$("#goodsSection").html("");
+		$("#goodsSection").html(data);
+	}else{
+		// 상품 리스트 이어붙이기
+		$("#goodsSection").append(data);
+	}
+
+	// temp input 제거
+	//$("#tempTotalPage").remove();
+	//$("#tempGoodsListCount").remove();
+
+	var temp = document.getElementById("tempTotalPage");
+	temp.parentNode.removeChild(temp);
+	temp = document.getElementById("tempGoodsListCount");
+	temp.parentNode.removeChild(temp);
+
+	// 로딩바 숨기기
+	if($("#loading").css("display")=="block"){
+		showComplateMessage(); // 공통 common.js
+	}
+}
+
+
+
+
+</script>
+<!-- PlayD Tera-->
+
+
+
+<!-- 카카오모먼트 -->
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script>
+    // 카카오모먼트 (방문)
+    kakaoPixel('967469331380875899').pageView();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 857028071 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-857028071"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+    gtag('config', 'AW-857028071');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BVQYFBW25"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8BVQYFBW25');    // Universal Analytics property.
+</script>
+
+<!-- 상단 선언 스크립트 : 모든페이지 공통 상단 필수 -->
+<!-- PlayD TERA Log Definition Script Start -->
+<script>
+    (function(win,name){
+        win['LogAnalyticsObject']=name;
+        win[name]=win[name]||function(){(win[name].q=win[name].q||[]).push(arguments)}
+    })(window,'_LA');
+</script>
+
+
+
+
+<!-- head 내 공통 삽입 script -->
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '563312805209731');
+    fbq('track', 'PageView');
+
+
+
+
+</script>
+<noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=563312805209731&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body>
+
+<!-- top슬라이딩팝업 -->
+<div id="wrapper">
+	<!-- header -->
+	
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/renewal.css?version=20231219073253" />
+<link rel="stylesheet" type="text/css" href="/css/layout.css?version=20231219073253" />
+<script type="text/javascript" src="/js/jquery/jquery.cookie.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/jquery/jquery.insetborder.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js?version=20231219073253" ></script>
+<script type="text/javascript" src="/js/common/cookies.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/search.js?version=20231219073253"></script>
+<script type="text/javascript" src="/js/common/lottie-player.js?version=20231219073253"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> 
+<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"> </script>
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_3226eb087a67";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script>
+
+<!-- WIDERPLANET  SCRIPT START 2015.9.8 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wptg_tagscript_vars = wptg_tagscript_vars || [];
+wptg_tagscript_vars.push(
+(function() {
+	return {
+		wp_hcuid:"",   	/*Cross device targeting을 원하는 광고주는 로그인한 사용자의 Unique ID (ex. 로그인 ID, 고객넘버 등)를 암호화하여 대입.
+							*주의: 로그인 하지 않은 사용자는 어떠한 값도 대입하지 않습니다.*/
+		ti:"23178",			/*광고주 코드*/
+		ty:"Home",		/*트래킹태그 타입*/
+		device:"web"		/*디바이스 종류 (web 또는 mobile)*/
+	};
+}));
+</script>
+<script type="text/javascript" async src="//astg.widerplanet.com/js/wp_astg_4.0.js"></script>
+<!-- // WIDERPLANET  SCRIPT END 2015.9.8 -->
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/857028071/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- 구글 GDN 2017.11.08 -->
+
+<!-- MOBILE로 접속시 모바일웹으로 리다이렉트 -->
+<script type="text/javascript">
+	var uAgent = navigator.userAgent.toLowerCase();
+	var mobilePhones = new Array('iphone','ipod','android','blackberry','windows ce','nokia','webos','opera mini','sonyericsson','opera mobi','iemobile');
+	var url = "/main/main.mhows";
+	
+	var suburl = document.location.href.split("giftishow.com")[1];
+	if( suburl.indexOf("/main/main.mhows") < 0 ) {
+		for(var i=0;i<mobilePhones.length;i++){
+			if(uAgent.indexOf(mobilePhones[i]) != -1) {
+				document.location.href = "https://m.giftishow.com/" + suburl;
+				break;
+			}
+		}	
+	}
+</script>
+
+
+<script type="text/javascript">
+var nonmemberFlag = "";
+
+$(document).ready(function() {
+
+
+	var cartInfo  = $.cookie("cartInfo");
+	var tmpVal;
+	var cartInfoLength;
+	if(cartInfo != "" && cartInfo != null) {
+		tmpVal = cartInfo.split(",");
+		cartInfoLength = tmpVal.length;
+	}else{
+		cartInfoLength = 0;
+	}
+	$('#cartInfoLength').html(cartInfoLength);
+
+
+	$.ajax({
+		async : true,    // true : 비동기, false : 동기
+		type : "get",    // GET, POST 방식
+		dataType:"json",
+		url : "/main/useImmediatelyCount.mhows",// 요청 URL
+		success : function(data) { // 요청 처리 성공시
+			if(data.errorCode == "0000") {
+				var couponCnt = Number(data.couponCount) + Number(data.gishowpickCnt);
+				var gishowpickCnt = Number(data.gishowpickCnt);
+				if(gishowpickCnt >0){
+					var context = "https://www.giftishow.com/jsp/brand/goodsList.jsp";
+					if (  context.indexOf("main/main") != -1 ) {
+						$(".myGiftlayer").show();
+						$("#gishowpickCnt").text(gishowpickCnt);
+					}
+				}
+				//console.log("쿠폰건수 >>>", couponCnt);
+				//console.log("gishowpickCnt쿠폰건수 >>>", gishowpickCnt);
+				if(couponCnt < 100 && couponCnt > 0) {
+					$(".my-gift-num").show().text(couponCnt);
+				} else if(couponCnt > 100) {
+					$(".my-gift-num").show().text("99+");
+				}
+				else {
+					$(".my-gift-num").hide();
+				}
+
+				// 회원등급 조회 후 팝업띄우기
+				if (data.userGradeChangeChk == "Y"){
+					var levelValidStartDate = data.levelValidStartDate;
+					var yyyy = levelValidStartDate.substring(0,4);
+					var mm = levelValidStartDate.substring(4,6);
+					var dd = levelValidStartDate.substring(6,8);
+					$("#levelValidStartDate").append(yyyy + "년 " + mm + "월 "+ dd + "일기준");
+					$("#layerPopLevel").show();
+				}
+			}
+		},
+		error : function(data, status, err) { // 요청 처리 실패시
+		}
+	});
+
+	$("#replyCancelBtn").click(function() {
+		replyCancelAjax();
+	});
+});
+
+// 답례하기 취소
+function replyCancelAjax() {
+	$.ajax({
+		type : "post",    // type : post or get
+        async: false,     // default : false
+        dataType: "jsonp", // type : json, script , xml ...
+        timeout: 10000,
+        url : 'https://www.giftishow.com/' + "myzone/replyCancel.mhows",// 요청 URL
+		success : function(data) { // 요청 처리 성공시
+			if( data.resultCode == "0000" ) {
+				$("#replyDiv").hide();
+			} else {
+				alert(data.resultMsg);
+			}
+		},
+		error : function(data, status, err) { // 요청 처리 실패시
+			alert("서버와의 통신이 실패했습니다.");
+			return;
+		}
+	});
+}
+
+// SUB MAIN 이동
+function goMenu(type){
+	switch(type){
+		case "1"://브랜드별
+			location.href = "/brand/brandList.mhows";
+			break;
+		
+		case "2"://핫픽
+			location.href = "/hotpick/hotpick.mhows";
+			break; 
+		/*	
+		case "2"://영상선물
+			location.href = "/brand/brandGoodsList.mhows?brand_no=844";
+			break; 
+		*/	
+		case "3"://테마별
+			location.href = "/theme/theme.mhows";
+			break;
+			
+		case "4"://이벤트
+			location.href = "/event/eventList.mhows";
+			break;
+			
+		case "5"://기업고객서비스
+			if( nonmemberFlag != "Y" ) {
+				location.href = "https://nb2b.giftishow.com/";
+			} else {
+				alert("회원가입 후 이용 가능한 메뉴입니다.");
+			}
+			break;
+		case "6"://기프티쇼비즈	
+			window.open("https://biz.giftishow.com?utm_source=giftishow&utm_medium=upper_banner&utm_campaign=left" , '_blank');
+			break;
+
+		case "7"://답례선물
+			location.href = "/gift/giftInReturn.mhows";
+			break;
+
+		case "8"://기쇼픽
+			location.href = "/gift/gishowPick.mhows";
+			break;
+
+	};
+	
+}
+
+// TOP MENU 이동
+function goTopLnb(type){
+	if(openPop) openPop.close();
+	switch(type){
+		case "1"://로그아웃
+			location.href = "/login/logout.mhows";
+			break;
+
+		case "2"://고객센터
+			location.href = "/customer/operationGuideList.mhows";
+			break;
+		
+		case "3"://마이페이지
+			location.href = "/myzone/myzoneMain.mhows";
+			break;
+			
+		case "4"://받은선물
+			location.href = "/myzone/receiveList.mhows?input=first";
+			break;
+			
+		case "5"://장바구니
+			location.href = "/myzone/shoppingCart.mhows";
+			break;
+
+		case "6"://회원가입
+			location.href = "/user/join.mhows";
+			break;
+			
+		case "7"://로그인
+			location.href = "/login/loginForm.mhows";
+			break;	
+	};
+}
+
+// 마이페이지 메뉴 이동
+function goMyzoneMenu(type, url) {
+	
+	if( nonmemberFlag == "Y" ) {	// 비회원 로그인 상태인 경우
+		if( type == "Y" ) {
+			alert("기프티쇼 회원 로그인이 필요한 메뉴입니다.");
+		} else {
+			location.href = url;	
+		}
+	} else {
+		location.href = url;
+	}
+}
+
+// 즐겨찾기
+function addBookmark() {
+	var url = document.URL;
+	var title = document.title;
+	// IE
+	if(document.all) {
+		window.external.AddFavorite(url, title);
+	}
+	// chrome
+	else if( window.chrome ) {
+		alert("Ctrl + D 키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+	}
+	// firefox
+	else if( window.sidebar ) {
+		window.sidebar.addPanel(title, url, "");
+	}
+	// opera
+	else if( window.opera && window.print ) {
+		var element = document.createElement("a");
+		element.setAttribute("href", url);
+		element.setAttribute("title", title);
+		element.setAttribute("rel", "sidebar");
+		element.click();
+	}
+	// etc.
+	else {
+		// IE11
+		if(navigator.userAgent.search('Trident')) {
+			window.external.AddFavorite(url, title);	
+		}
+		// etc.
+		else {
+			alert("Ctrl + D 키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+		}
+		
+	}
+}
+
+
+// 회원 등급 변경 닫기
+function closePopLevel() {
+	$("#layerPopLevel").hide();
+}
+
+</script>
+
+
+<form id="header_form" name="header_form" method="post" action="/goods/goodsSearchResult.mhows" >
+<input type="hidden" id="session_b2b_flag" name="session_b2b_flag" value="" />
+<!--[if lt IE 9]>
+		<div class="ie8" style="" >
+			<p>고객님께서 사용하시는 브라우저는 Internet Explorer 8 이하 버전입니다.</p>
+			<p>기프티쇼는 Internet Explorer 9 이상에 최적화되어 있습니다.
+			현재 사용하시는 Internet Explorer를 업그레이드하거나, 크롬 브라우저를
+			사용하시기 바랍니다.</p>
+			<a href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank" >Internet Explorer 최신버전 다운로드</a>&nbsp;&nbsp;<a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">크롬 다운로드</a>
+			
+			<a href="#" class="popClose"><img src="/images/common/btn_close.png" alt="닫기" /></a>
+		</div>
+	<![endif]-->
+<!-- header -->
+	<header id="header">
+		<div class="inner-wrap">
+			<div class="top-menu">
+
+				
+					
+					
+						<a href="javascript:goTopLnb('7')">로그인</a>
+						<a href="javascript:goTopLnb('6')" class="fc-01">회원가입</a>
+					
+				
+
+				<a href="javascript:goTopLnb('2')">고객센터</a>
+				<div class="btnBizDiv">
+					<a href="https://biz.giftishow.com/home?utm_source=giftishow&utm_medium=upbanner&utm_campaign=cross" target="_blank" class="btnBiz">기업용 대량구매</a>
+					<a href="https://biz.giftishow.com/home?utm_source=giftishow&utm_medium=upbanner&utm_campaign=cross" target="_blank" class="icon_link"><em class="a11y-hidden">기쇼비즈 바로가기</em></a>
+				</div>
+			</div>
+			<div class="header-wrap">
+				<h1><a href="/"><span class="a11y-hidden">기프티쇼</span></a></h1>
+				<nav>
+					<a href="javascript:goMenu('1');">카테고리</a>
+					<a href="javascript:goMenu('7');" class="add-tag">답례선물<span>대량발송</span></a>
+					<a href="javascript:goMenu('3');">테마</a>
+					<a href="javascript:goMenu('4');">이벤트</a>
+					<a href="javascript:goMenu('8');" class="add-tag">기쇼픽<span class="pick">상대방이 고르는</span></a>
+				</nav>
+				<div class="util-wrap">
+					<div id="search">
+						<input type="text" id="searchvalue" name="searchvalue" value="" autocomplete="off" onkeydown="javascript: if( event.keyCode == 13) common_goSearch(); " onkeyup="javascript: common_valFilter('searchvalue'); " placeholder="브랜드, 상품명 검색">
+						<a href="javascript:void(0);" onclick="javascript:common_goSearch();" class="btn-search"><span class="a11y-hidden">검색</span></a>
+					</div>
+					<div class="util-menu">
+						<a href="javascript:goTopLnb('3');" class="my"><span class="a11y-hidden">마이페이지</span></a>
+						<a href="javascript:goTopLnb('4');" class="my-gift"><span class="a11y-hidden">받은선물</span><em class="my-gift-num"></em></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+<!-- 기쇼픽 선물 -->
+
+		<div class="myGiftlayer" style="display: none;">
+			<h2>
+				아직 선택하지 않은
+				<span>기쇼픽 선물함이 <em id="gishowpickCnt"></em>개 있어요!</span>
+			</h2>
+			<div class="prod_Img">
+				<img src="../images/product_00.png" alt="선물함 이미지">
+			</div>
+			<a href="/myzone/receiveList.mhows" class="Btn btn-lg btn-primary">선물 픽하러 가기</a>
+		</div>
+		<!-- //기쇼픽 선물 -->
+	</header>
+
+
+
+<!-- //header -->
+
+	<!-- 회원등급변경 팝업 -->
+		<div class="LayerPop levelPop" id="layerPopLevel" style="display: none">
+			<div class="head">
+				<h1>회원 등급 변경</h1>
+				<a href="javascript:closePopLevel();"></a>
+			</div>
+			<div class="body">
+				<div class="Text">
+					
+					<strong>고객님</strong>의<br/>
+					이번 달 회원 등급을 알려드립니다.
+				</div>
+				<div class="Level ">
+					<img src="" alt="" />
+					<span> 등급</span>
+				</div>
+
+				<div class="Date">
+					<span id = levelValidStartDate></span>
+
+				</div>
+
+			</div>
+			<div class="BtnWrap">
+				<a href="javascript:common_goUrl('/myzone/userLevelInfo.mhows');" class="Btn btn-lg btn-black">등급 혜택 자세히보기</a>
+				
+			</div>
+		</div>
+	<!-- //회원등급변경 팝업-->
+
+	<!-- 휴면회원 전환 완료 레이어팝업 START -->
+	
+	<!-- 휴면회원 전환 완료 레이어팝업 END -->
+		  
+</form>
+<iframe name="downloadIframe" id="downloadIframe" src="" height="0"></iframe>	
+	<!-- //header -->
+
+	<!-- 로딩바 -->
+	
+
+
+<!-- 로딩중 페이지 -->
+<div id="loading" style="display:none;position: fixed; width: 100%; height: 100%; background: url(/images/loading/bbg.png); top: 0; left: 0; bottom:0; right:0;margin:0;z-index:9998;">
+	<div style="width: 300px; height: 200px; background: url(/images/loading/bg.png); z-index: 9999; hidden;padding-top: 60px; margin:-150px 0 0 -150px; position:absolute; top:50%; left:50%; text-align:center;">
+		<img src="/images/loading/ajax-loader.gif" alt="프리로딩"/>
+		<p style="margin-top:15px;"><img src="/images/loading/tt.png" alt="로딩중입니다" /></p>
+	</div>
+</div>
+	<!-- // 로딩바 -->
+
+	
+	<form name="goodSearchForm" id="goodSearchForm" method="post" >
+		<input type="hidden" id="brand_no"     name="brand_no"     value="640" />
+		<input type="hidden" id="sort_type"    name="sort_type"    value="hot" />
+		<input type="hidden" id="page" 		   name="page" 		   value="1" />
+		<input type="hidden" id="totalPage"    name="totalPage"    value="3" />
+	</form>
+
+	<!-- 2016 리뉴얼-->
+	<div id="renewal">
+		<div class="comp">
+			<div class="brandInfo">
+				
+				<img src="/Resource/brand/20191004_135848061.jpg" class="Img_brand" />
+				<!--<img src="/images/temp/@brand01.jpg" class="Img_brand">-->
+				<span>쉐이크쉑</span> 상품을 모두 모았어요.
+			</div>
+		</div>
+		
+		<div class="comp">
+			<!-- 상품 총 개수, 정렬유형 -->
+			
+
+
+<div class="tabWrap">
+  <p class="total"> 총 <strong id="goodsListCnt">43</strong> 개</p>
+  <div class="tab">
+    <a href="javascript:listingType('hot');" class="hot on">인기순</a>
+    <a href="javascript:listingType('latest');" class="latest">최신순</a>
+    <a href="javascript:listingType('lowPrice');" class="lowPrice">낮은가격순</a>
+    <a href="javascript:listingType('highPrice');" class="highPrice">높은가격순</a>
+  </div>
+</div>
+			<!-- // 상품 총 개수, 정렬유형 -->
+
+			<!-- 상품 리스트 영역 (goodsList.jsp 공통)-->
+			<div class="itemListWrap">
+				<ul class="itemList" id="goodsSection">
+					
+
+
+<input type="hidden" id="tempTotalPage" name="tempTotalPage" value="3" />
+<input type="hidden" id="tempGoodsListCount" name="tempGoodsListCount" value="43" />
+
+
+  <li class = "" id="G00001960969">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001960969', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001960969/G00001960969.jpg" alt="쉑버거 2개+치킨쉑2개+프라이+치즈 프라이+소다(S) 4잔">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">1</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거 2개+치킨쉑2개+프라이+치즈 프라이+소다(S) 4잔</p>
+      <div class="price">
+        <span class="Price">55,100</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950944">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950944', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950944/G00001950944.jpg" alt="쉑버거+스모크쉑+치킨쉑+프라이+소다(S) 3잔">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">2</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거+스모크쉑+치킨쉑+프라이+소다(S) 3잔</p>
+      <div class="price">
+        <span class="Price">40,500</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001960983">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001960983', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001960983/G00001960983.jpg" alt="쉑버거 3개+프라이+소다(S) 3잔">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">3</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거 3개+프라이+소다(S) 3잔</p>
+      <div class="price">
+        <span class="Price">38,700</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950940">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950940', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950940/G00001950940.jpg" alt="SHACK n SMOKE">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">4</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">SHACK n SMOKE</p>
+      <div class="price">
+        <span class="Price">33,200</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950939">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950939', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950939/G00001950939.jpg" alt="SHACK n SHROOM">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">5</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">SHACK n SHROOM</p>
+      <div class="price">
+        <span class="Price">32,600</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001960962">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001960962', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001960962/G00001960962.jpg" alt="SHACK n SHACK">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">6</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">SHACK n SHACK</p>
+      <div class="price">
+        <span class="Price">31,000</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950938">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950938', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950938/G00001950938.jpg" alt="SHACK n CHICKEN">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">7</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">SHACK n CHICKEN</p>
+      <div class="price">
+        <span class="Price">30,600</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950945">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950945', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950945/G00001950945.jpg" alt="쉑버거 2개+프라이+소다(S) 2잔">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">8</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거 2개+프라이+소다(S) 2잔</p>
+      <div class="price">
+        <span class="Price">27,400</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950948">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950948', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950948/G00001950948.jpg" alt="쉑스택+프라이+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">9</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑스택+프라이+소다(S)</p>
+      <div class="price">
+        <span class="Price">22,500</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950950">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950950', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950950/G00001950950.jpg" alt="쉑버거+프라이+쉐이크">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">10</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거+프라이+쉐이크</p>
+      <div class="price">
+        <span class="Price">19,700</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001960990">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001960990', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001960990/G00001960990.jpg" alt="스모크쉑+프라이+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">11</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">스모크쉑+프라이+소다(S)</p>
+      <div class="price">
+        <span class="Price">18,300</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950947">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950947', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950947/G00001950947.jpg" alt="슈룸 버거+프라이+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">12</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">슈룸 버거+프라이+소다(S)</p>
+      <div class="price">
+        <span class="Price">17,700</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001961004">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001961004', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001961004/G00001961004.jpg" alt="쉑버거+프라이+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">13</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거+프라이+소다(S)</p>
+      <div class="price">
+        <span class="Price">16,100</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950946">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950946', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950946/G00001950946.jpg" alt="치킨쉑+프라이+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">14</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">치킨쉑+프라이+소다(S)</p>
+      <div class="price">
+        <span class="Price">15,700</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950951">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950951', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950951/G00001950951.jpg" alt="쉑스택(Shack Stack)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">15</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑스택(Shack Stack)</p>
+      <div class="price">
+        <span class="Price">14,800</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+  <li class = "" id="G00001950949">
+    
+    <a href="javascript:goGoodsDetail('640', 'G00001950949', '', '');" class="inner">
+      <!-- 상품 이미지 (로컬테스트 후 개발 반영시 이미지 경로 원복하기)-->
+      <div class="prod_img">
+        <img src="/Resource/goods/2023/G00001950949/G00001950949.jpg" alt="쉑버거+소다(S)">
+    
+       <!-- 등수 UI가 필요한 경우 rank 클래스 show -->
+       <div class="rank" style="display: none">16</div>
+        <em style="display: none;"></em>
+    </div>
+    <!-- // 상품 이미지 -->
+
+    <!-- 상품 정보 -->
+    <div class="txtWrap">
+      
+        <span class="brandNm">쉐이크쉑</span>
+      
+      <p class="itemNm">쉑버거+소다(S)</p>
+      <div class="price">
+        <span class="Price">11,300</span><!-- 판매가 -->
+        
+        
+            </div>
+            
+          </div>
+          <!-- // 상품 정보 -->
+        </a>
+  </li>
+
+
+
+				</ul>
+			</div>
+			<!-- // 상품 리스트 영역 (goodsList.jsp 공통)-->
+		</div>
+
+	</div>
+
+	<!-- quick menu -->
+	
+
+
+
+
+
+<script type="text/javascript" src="/js/common/cookies.js?version=20231219073253"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 쿠키에 저장된 최근 본 상품	
+		var goodsInfo = getCookie("goodsInfo");
+		var brandInfo = getCookie("brandInfo");
+		var appendHtml = "";
+		
+		if(goodsInfo && brandInfo){
+			var cookieGoodsValue = goodsInfo.split(",");
+			var cookieBrandValue = brandInfo.split(",");
+			
+			for( var i=0; i<cookieGoodsValue.length; i++ ) {
+				var goodsSplit = cookieGoodsValue[i].split("/");
+				var goodsImgName = goodsSplit[goodsSplit.length - 1];
+				var goodsSeq = goodsImgName.substring(0, goodsImgName.indexOf("."));
+				var goodsImg = cookieGoodsValue[i];
+
+				appendHtml +=
+					"<li>" +
+					"	<a href=\"javascript:goDetail('"+goodsSeq+"', '"+cookieBrandValue[i]+"');\" class=\"img-wrap\"><img src=\"/Resource"+goodsImg+"\" alt=\"\" /></a>" +
+					"</li>";
+			}
+		}
+
+
+		if(appendHtml) {
+			//console.log("최근"+appendHtml);
+			$(".quick-lately").html(appendHtml);
+		}
+		//쿠키 값으로 quickMenu 보일 여부 결정
+		var quick_menu_flag = getCookie("quick_menu_flag");
+
+
+		var navbar = document.getElementById("quick");
+		var sticky = navbar.offsetTop-55;
+		function quickFn() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky");
+			} else {
+				navbar.classList.remove("sticky");
+			}
+		}
+
+		if($(".main-banner").length) {
+			window.onscroll = function () {
+				quickFn()
+			};
+		}else {
+			navbar.classList.add("sticky2");
+		}
+	});
+	
+	
+	// 퀵 메뉴 버튼 클릭 이벤트
+	function changeQuickMenu(){
+	
+		var quick_menu_flag = getCookie("quick_menu_flag");
+		
+		if(quick_menu_flag == 'Y' || !quick_menu_flag){
+			quick_menu_flag = 'N';
+		} else{
+			quick_menu_flag = 'Y';	
+		}
+		setCookie("quick_menu_flag", quick_menu_flag ,"");	
+	}
+	
+	// 상품 상세조회
+	function goDetail(goodsSeq, brandNo) {
+		common_goUrl("/brand/brandGoodsDetail.mhows?goods_seq=" + goodsSeq + "&brand_no="+brandNo);
+	}
+
+</script> 
+<!-- quick menu -->
+<article id="quick" class="quick-menu">
+
+	<h3 class="quick-tt">최근 본</h3>
+	<ul class="quick-lately">
+		<li class="img-wrap">상품이<br>없습니다.</li>
+	</ul>
+	<div class="quick-bt">
+		<div id="gotop"><a href="#none" class="gotop">TOP</a></div>
+		<div><a href="/myzone/userLike.mhows">찜</a></div>
+	</div>
+</article>
+<!-- //quick menu -->
+	<!-- //quick menu -->
+
+	<!-- //2016 리뉴얼-->
+
+</div>
+<!--wrapper끝--> 
+
+<!-- footer -->
+
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+	});
+
+	var openPop;
+	/**
+	* type - 1:회사소개, 2:이용약관, 3:개인정보취급방침, 4:사이트맵, 5:이메일무단수집거부, 6:마케팅정보수집및이용
+	*/
+	function goFooterMenu(type){
+		if(openPop) openPop.close();
+
+		switch(type){
+			case "1"://회사소개
+				openPop = window.open("https://www.ktalpha.com/index", "winPop", "");
+				break;
+			case "2"://이용약관
+				location.href="/info/termsInfo.mhows?trms_type=01";
+				break;
+			case "3"://개인정보취급방침
+				location.href="/info/privateInfo.mhows?trms_type=02";
+				break;
+			case "4"://사이트맵
+				openPop = window.open("", "winPop", "width=550px, height=850px, scrollbars=0, resizable=0");
+				break;
+			case "5"://이메일무단수집거부
+				openPop = window.open("", "winPop", "width=445px, height=260px, scrollbars=0, resizable=0");
+				break;
+			case "6"://마케팅정보수집및이용
+				location.href="/info/youthInfo.mhows?trms_type=03";
+				break;
+			case "8"://제휴문의
+				location.href="/customer/contactInsertForm.mhows";
+				break;
+			case "9": //위치기반서비스 이용약관
+				location.href="/info/gpsTermsInfo.mhows?trms_type=04";
+				break;
+		}
+	}
+
+	function openIsms(){
+		window.open("../images/popup_ISMS.png", "winPop", "width=600px, height=800px, scrollbars=0, resizable=0");
+	}
+
+
+	// 기쇼픽 선물함 결제 확인 열기
+	function openPopPay(dispNo) {
+
+		$(".gishowpick_payPop").hide();
+		$("ul#gishowpick_theme_"+dispNo).show(); // 선택한 기쇼픽 테마에 맞는 결제창 보여주기
+
+		// 상품이 없는 경우 결제 확인 팝업 열지 않음
+		if($("ul#gishowpick_theme_"+dispNo+" li").length <= 0){
+			return false;
+		}
+
+		//  (상품중 가장 높은 가격)
+		var totalPayPrice= 0;
+		var goods_seq ="";
+		$("ul#gishowpick_theme_"+dispNo+" li").each(function(index ,item){
+
+			var tempPrice= $(this).find("input[name=realPrice]").val();
+			if(parseInt(tempPrice) >= totalPayPrice){
+				totalPayPrice= parseInt(tempPrice);
+				goods_seq = $(this).find("input[name=prod_seq]").val();
+				$("#goods_seq").val(goods_seq);
+
+			}
+		})
+
+		$("#totalGishowpickPrice").html(common_fnViewComma(totalPayPrice));
+
+		$("#popPay").show();
+		$('body').css({'overflow': 'hidden'});
+	}
+
+	// 기쇼픽 선물함 결제 확인 닫기
+	function closePopPay() {
+		$("#popPay").hide();
+		$('body').css({'overflow': 'visible'});
+	}
+
+	// 결제하기
+	function goGishowPickPay(){
+
+		// SNS 간편회원(준회원) 체크
+		if("" == "Y") {
+			location.href = "/user/sns/ci/form";
+			return;
+		}
+
+		// =================== 1. 상품번호를 넘기고자 할 경우 사용 (2번내용 주석처리)
+
+		// 결제창에 있는 상품번호 가져오기
+
+		var selectedUiId= "";
+		$(".gishowpick_payPop").each(function(index,item){
+			if($(item).css("display")!= "none"){
+				selectedUiId= $(item).prop("id");
+			}
+		})
+
+		var gishowpick_goods_list= "";  // 상품번호 3개 "상품번호1,상품번호2,상품번호3"
+		$("ul#"+selectedUiId+" li").each(function(index, item){
+			var prefix= (index==0) ? "" : ",";
+			gishowpick_goods_list+= prefix + $(item).prop("id").split("_")[1];
+			$("#gishowpick_goods_list").val(gishowpick_goods_list);
+		})
+
+		//console.log(gishowpick_goods_list);
+		var form = document.giftInReturnGoodsInfoForm;
+
+		form.action = "/order/orderStep.mhows";
+
+		$("#giftInReturnGoodsInfoForm").submit();
+
+	}
+
+	// 이벤트 팝업 ( 오늘 하루 보지 않기 )
+	function eventPopTodayClose() {
+		// 쿠키값 셋팅
+		setCookie("eventPopup", 'Y', 1);
+
+		// 이벤트 레이어팝업 숨기기
+		$("#LayerPopEvent").hide();
+	}
+
+	// 공지사항 팝업 ( 오늘 하루 보지 않기 )
+	function noticePopTodayClose() {
+		// 쿠키값 세팅
+		setCookie("noticePopup", "Y", 1);
+
+		// 공지사항 레이어팝업 숨기기
+		$("#LayerPopNoti").hide();
+	}
+</script>
+
+<!-- footer -->
+<footer id="footer">
+	<div class="linkSet">
+		<div class="inner ">
+			<a href="javascript:goFooterMenu('1');">회사소개</a> <em>&middot;</em>
+			<a href="javascript:goFooterMenu('2');">이용약관</a> <em>&middot;</em>
+			<a href="javascript:goFooterMenu('9');">위치기반서비스 이용약관</a> <em>&middot;</em>
+			<a href="javascript:goFooterMenu('3');" class="on">개인정보처리방침</a> <em>&middot;</em>
+			<a href="javascript:goFooterMenu('6');">마케팅 정보 수집 및 이용</a> <em>&middot;</em>
+			<a href="javascript:goFooterMenu('8');">제휴문의</a> <em>&middot;</em>
+			<a href="/customer/giftishow.mhows" class="on"><span class="fc-01">기프티쇼 앱 다운로드</span></a>
+		</div>
+		<div class="snsLink">
+			<a href="https://www.facebook.com/ktgiftishow" target="_blank" class="btnFb"><em class="a11y-hidden">기프티쇼페이스북 바로가기</em></a>
+			<a href="https://blog.naver.com/ktmhows_giftishow" target="_blank" class="btnBlog"><em class="a11y-hidden">기프티쇼 블로그 바로가기</em></a>
+		</div>
+	</div>
+	<div class="copyWrap">
+		<div class="info">
+			<address>(주)케이티알파<span> | </span>대표이사 조성수<span> | </span>서울특별시 동작구 신대방2동 보라매로5길 23 kt alpha<br>
+				사업자등록번호 : <a href="http://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank">211-81-79649</a><span> | </span>통신판매업 : 제 2019-서울동작-0381호<span> | </span>개인정보 보호 책임자 : 한상봉</address>
+			<p class="copy">Copyright ⓒ kt alpha Co., Ltd. All rights reserved.</p>
+		</div>
+
+		<div class="logoSet">
+			
+			<span><a href="javascript:window.open('/html/pop-ismsp.html', '기프티쇼 인증범위 및 유효기간 안내', 'top=10, left=10, width=500px, height=400px, status=no, menubar=no, toolbar=no, resizable=no');" ><img src="/images/logo_ismsp.png" alt="기프티쇼 서비스 운영 로고"><em>인증범위 및 유효기간 보기</em></a></span>
+			<span><img src="/images/logo_kolsa.png" alt="한국온라인쇼핑협회 로고"><em>한국온라인쇼핑협회</em></span>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+
+<!-- 기쇼픽 선물함 결제 팝업 -->
+
+<form name="giftInReturnGoodsInfoForm" id="giftInReturnGoodsInfoForm" method="post" >
+	<input type="hidden" id="gishowpick_goods_list"           name="gishowpick_goods_list"       value="" />
+	<input type="hidden" id="goods_seq"                       name="goods_seq"                   value="" />
+</form>
+
+<div class="backdrop" id="popPay" style="display:none;">
+	<div class="LayerPop popGiftPay">
+		<div class="head">
+			<h1>기쇼픽 선물함</h1>
+			<a href="javascript:closePopPay();" class="close"></a>
+		</div>
+		<div class="body">
+
+			
+			<div class="priceWrap">
+				최종결제금액
+				<span><em id="totalGishowpickPrice"></em>원</span>
+
+			</div>
+			<div class="Info">
+				<ul>
+					<li>기쇼픽은 선택된 3개의 상품 중 금액이 제일 큰 상품가격으로 선 결제되며, 선물 받는 분이 가장 마음에 드는 상품 선택 시 금액 차이만큼 부분취소
+						환불됩니다.</li>
+					<li><strong>부분취소 환불은 결제수단 별 상이하며, 평균 영업일 기준 2~7일 이내 자동 환불됩니다.</strong></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="BtnWrap">
+			<a href="javascript:goGishowPickPay()" class="Btn btn-xlg btn-primary">결제하기</a>
+		</div>
+	</div>
+</div>
+<!-- 기쇼픽 선물함 결제 팝업 -->
+
+
+<!-- 공지 팝업-->
+
+<!-- //공지 팝업-->
+
+
+
+
+<!-- 기본 레이어 팝업-->
+<div class="backdrop" id="LayerPop" style="display: none">
+	<div class="LayerPop">
+		<div class="head">
+			<h1>구매확정 포인트 안내</h1>
+			<a href="javascript:PopLayer();"></a>
+		</div>
+		<div class="body" style="max-height:500px;">
+			<div class="bodyinner"><!-- cms에서 웹에디터로 작성시 pre 부터 삭제 --><pre>안녕하세요 기프티쇼입니다.
+
+기프티쇼 위치기반서비스 이용약관이 개정되어 공지드립니다.
+
+1. 개정사유
+1)  위치정보법 개정사항 반영
+2)  위치정보관리책임자 변경
+3)  위치기반서비스 현행화</pre><!-- //cms에서 웹에디터로 작성시 pre 부터 삭제 --></div>
+		</div>
+		<div class="BtnWrap double"><!-- 버튼 1개시 class 에서 double 삭제 -->
+			<a href="#" class="Btn btn-xlg btn-secondary">취소</a>
+			<a href="#" class="Btn btn-xlg btn-black">확인</a>
+			<!--<a href="#" class="Btn btn-xlg btn-black">확인</a>-->
+		</div>
+	</div>
+</div>
+<!-- //기본 레이어 팝업-->
+
+<!-- 이벤트 팝업 -->
+
+<!-- //이벤트 팝업-->
+
+<!-- 회원등급변경 팝업-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 이벤트 팝업 -->
+	
+	<!-- //이벤트 팝업 -->
+
+	<!-- 공지 팝업-->
+	
+
+
+<!-- //공지 팝업-->
+
+
+<!-- //footer -->
+
+
+
+<!-- 공통 호출 하단 스크립트 : 모든페이지 하단 설치 -->
+<script>
+    //<!-- PlayD TERA Log Script v1.2 -->
+    var _nSA=(function(_g,_s,_p,_d,_i,_h){
+        if(_i.wgc!=_g){_i.wgc=_g;_i.wrd=(new Date().getTime());
+            var _sc=_d.createElement('script');_sc.src=_p+'//sas.techhub.co.kr/'+_s+'gc='+_g+'&rd='+_i.wrd;
+            var _sm=_d.getElementsByTagName('script')[0];_sm.parentNode.insertBefore(_sc, _sm);} return _i;
+    })('TR10238806077','sa-w.js?',location.protocol,document,window._nSA||{},location.hostname);
+    //--<!-- LogAnalytics Script Install -->
+
+    //mobion - Enliple Tracker Start
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', 'giftishow', { device: 'W' });  // W:웹, M: 모바일, B: 반응형
+    enp('send', 'common', 'giftishow');
+    //--mobion - Enliple Tracker End
+
+</script>
+
+</body>
+</html>
