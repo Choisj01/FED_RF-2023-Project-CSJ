@@ -1,0 +1,32 @@
+/* 쉑쉑PJ 공통모듈  CSS - common.css */
+/* 상단,메인,하단 공통 */
+
+/* 상단 영역 SNS 랩핑 박스 */
+div#sns-wrap {
+    background-color: #000;
+    width:100%;
+}
+
+.sns-bx {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sns-bx>p {
+    font-size: min(20px,3vw);
+    color: #fff;
+    font-weight: bold;
+}
+ul.sns-icon-bx {
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    gap: 20px;
+}
+
+ul.sns-icon-bx li>a>img {
+    width: 2vw;
+}
