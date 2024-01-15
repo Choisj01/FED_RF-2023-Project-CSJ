@@ -30,3 +30,36 @@ ul.sns-icon-bx {
 ul.sns-icon-bx li>a>img {
     width: 2vw;
 }
+
+
+header#top-wrap {
+    width: 100%;
+    /* text-align: center; */
+    /* display: flex; */
+}
+
+.top-box {
+    width: 80vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+    left: 5%;
+}
+
+.logo-bx img {
+    width: 2.5vw;
+}
+ul.gnb {
+    width: 33vw;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+ul.gnb a {
+    font-size: min(20px,3vw);
+    font-weight: bold;
+}
